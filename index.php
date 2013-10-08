@@ -12,7 +12,7 @@
     </header>
     <div id="APPContainer">
       <section>
-        <h3>Valle Imperial Testing Index</h3>      
+        <h3>Valle Imperial Testing Index</h3>
       </section>
     </div>
   </body>
@@ -22,5 +22,4 @@
   <script src="app/JS/libs/backbone.js"></script>
   <script src="app/JS/libs/bootstrapJS.js"></script>
   <script src="app/JS/libs/backboneLocalStorage.js"></script>--!>
-
 </html>
