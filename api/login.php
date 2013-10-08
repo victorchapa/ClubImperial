@@ -23,15 +23,15 @@
 			$_SESSION["permiso"] = $row['Permiso'];
 			$_SESSION["club"] = "SI";
 			$_SESSION["ultimoAcceso"]= date("Y-n-j H:i:s");
-            echo "<script type=text/javascript>window.location.href=\"http://localhost:8088/clubimperial/index.php\";</script>";
+            echo "<script type=text/javascript>window.location.href=\"http://localhost/clubimperial/index.php\";</script>";
         }else{
             echo "<script> alert(\"La contraseña no es correcta\"); </script>";
-			echo "<script type=text/javascript>window.location.href=\"http://localhost:8088/clubimperial/autenticar.php\";</script>";
+			echo "<script type=text/javascript>window.location.href=\"http://localhost/clubimperial/autenticar.php\";</script>";
         }
     }else{
         echo "<script> alert(\"El nombre de usuario no es correcto\"); </script>";
-		echo "<script type=text/javascript>window.location.href=\"autenticar.php\";</script>";
+		echo "<script type=text/javascript>window.location.href=\"http://localhost/clubimperial/autenticar.php\";</script>";
     }
 ?>
-</body>
+    </body>
 </html>
