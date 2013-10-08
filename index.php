@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Club Valle Imperial</title>
-	<h1>Bienvenido</h1>
-	
     <!--<link rel="stylesheet" href="app/css/bootstrap.css">
     <link rel="stylesheet" href="app/css/main.css"> --!>
   </head>
   <body>
+    <header>
+        <h1>Bienvenido</h1>
+    </header>
     <div id="APPContainer">
       <section>
         <h3>Valle Imperial Testing Index</h3>      
