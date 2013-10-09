@@ -5,6 +5,9 @@
     <title>Club Valle Imperial</title>
     <!--<link rel="stylesheet" href="app/css/bootstrap.css">
     <link rel="stylesheet" href="app/css/main.css"> --!>
+    <script src="assets/js/libs/jquery.js"></script>
+    <script src="assets/js/libs/underscore.js"></script>
+    <script src="assets/js/libs/backbone.js"></script>
   </head>
   <body>
     <header>
@@ -17,9 +20,11 @@
     </div>
   </body>
   <!--Scrypting-->
-  <!--<script src="app/JS/libs/jquery.js"></script>
-  <script src="app/JS/libs/underscore.js"></script>
-  <script src="app/JS/libs/backbone.js"></script>
-  <script src="app/JS/libs/bootstrapJS.js"></script>
-  <script src="app/JS/libs/backboneLocalStorage.js"></script>--!>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/router.js"></script>
+
+  <!-- Models --!>
+  <!-- Collections --!>
+  <!-- Views --!>
+
 </html>
