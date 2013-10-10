@@ -13,6 +13,7 @@
   <body>
     <header>
         <h1>Bienvenido</h1>
+        <h2>Prueba</h2>
     </header>
     <div id="APPContainer">
       <section>
