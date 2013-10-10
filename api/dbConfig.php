@@ -2,5 +2,5 @@
 	$serverAddress="localhost";
 	$dbName="clubimperial";
 	$user="root";
-	$passwd="";
+	$passwd="root";
 ?>
