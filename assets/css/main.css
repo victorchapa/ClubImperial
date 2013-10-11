@@ -1,0 +1,13 @@
+#formSocio input {
+  text-align: center;
+}
+
+.navLeft {
+  width: 15%;
+}
+
+#mainDisplayer {
+  width: 85%;
+  margin-top: -7%;
+  float: right;
+}

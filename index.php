@@ -13,20 +13,23 @@
   <body>
     <header>
         <h1>Bienvenido</h1>
-        <h2>Prueba</h2>
     </header>
     <div id="APPContainer">
-      <section>
-        <h3>Valle Imperial Testing Index</h3>
+      <h3>Valle Imperial Index</h3>
+      <section class="navLeft">
+        <input class="altaSocioShow" type="button" value="Dar de Alta Socio">
       </section>
+      <div id="mainDisplayer"></div>
     </div>
   </body>
   <!--Scrypting-->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/router.js"></script>
+  <script src="templates/formSocios.js"></script>
 
   <!-- Models --!>
   <!-- Collections --!>
   <!-- Views --!>
+  <script src="assets/js/app/views/mainView.js"></script>
 
 </html>
