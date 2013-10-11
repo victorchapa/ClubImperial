@@ -1,6 +1,6 @@
 TEMPLATES = {
   formUser:
-    "<form id='formSocio' method='post' action='addSocio.php'>" +
+    "<form id='formSocio' method='post' action='api/AddSocio.php'>" +
     "<h1>Favor de ingresar los datos correspondientes:</h1>" +
     "<p>Nombres: <input type='text' name='Nombre' maxlength='30'></p>" +
     "<p>Fecha de Nacimiento: <input type='text' name='FNacimiento' maxlength='10' placeholder='dd/mm/aaaa'></p>" +
