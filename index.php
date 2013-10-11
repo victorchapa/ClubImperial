@@ -13,6 +13,7 @@
   <body>
     <header>
         <h1>Bienvenido</h1>
+        <a href="api/salir.php">Salir</a>
     </header>
     <div id="APPContainer">
       <h3>Valle Imperial Index</h3>
