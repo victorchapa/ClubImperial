@@ -1,5 +1,5 @@
 TEMPLATES = {
-  formUser:
+  formSocio:
     "<form id='formSocio' method='post' action='api/AddSocio.php'>" +
     "<h1>Favor de ingresar los datos correspondientes:</h1>" +
     "<p>Nombres: <input type='text' name='Nombre' maxlength='30'></p>" +

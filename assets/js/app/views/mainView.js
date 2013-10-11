@@ -12,7 +12,7 @@ var MainView = Backbone.View.extend({
 
     renderFormSocio: function(e){
         if($("#formSocio").length == 0){
-            $("#mainDisplayer").html(_.template(TEMPLATES.formUser));
+            $("#mainDisplayer").html(_.template(TEMPLATES.formSocio));
         }else{
             $("#formSocio").show();
         }
