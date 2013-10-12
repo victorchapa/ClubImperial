@@ -3,7 +3,7 @@ TEMPLATES = {
     "<form id='formSocio' method='post' action='api/AddSocio.php'>" +
     "<h1>Favor de ingresar los datos correspondientes:</h1>" +
     "<p>Nombres: <input type='text' name='Nombre' maxlength='30'></p>" +
-    "<p>Fecha de Nacimiento: <input type='text' name='FNacimiento' maxlength='10' placeholder='dd/mm/aaaa'></p>" +
+    "<p>Fecha de Nacimiento: <input id='datePicker' type='text' name='FNacimiento' placeholder='mm/dd/aaaa' readonly></p>" +
     "<p>Parentesco: <input type='radio' name='Parentesco' value='Padre'> Padre." +
                  "<input type='radio' name='Parentesco' value='Madre'> Madre." +
                  "<input type='radio' name='Parentesco' value='Hijo'> Hijo." +
@@ -25,7 +25,7 @@ TEMPLATES = {
                   "<option value='Individual'>Individual</option>" +
                 "</select>" +
     "</p>" +
-    "<p>Fecha de Alta: <input type='text' name='FAlta' maxlength='10' placeholder='dd/mm/aaaa'></p>" +
+    "<p>Fecha de Alta: <input id='datePicker' type='text' name='FAlta' placeholder='mm/dd/aaaa' readonly></p>" +
     "<p>Afiliación: <input type='text' name='Afiliacion' maxlength='30' placeholder='Golfistas, tenistas, etc.'></p>" +
     "<input type='submit' value='Agregar Usuario'>" +
     "</form>",
