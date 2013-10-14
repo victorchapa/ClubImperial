@@ -14,8 +14,24 @@
   </head>
   <body>
     <header>
-        <h1>Bienvenido</h1>
-        <a href="api/salir.php">Salir</a>
+        <div class="loginAs">
+          <p>Loggeado cómo: (<a href="api/salir.php">Salir</a>)</p>
+        </div>
+        <div class="logoContainer">
+          <div class="VLogo">
+            <img src="assets/img/logoValle.png" alt="Valle Imperial Logo.">
+          </div>
+          <div class="triangule"></div>
+        </div>
+        <nav class="mainNav">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Socios</a></li>
+            <li><a href="#">Bienvenido</a></li>
+            <li><a href="#">Bienvenido</a></li>
+            <li><a href="#">Bienvenido</a></li>
+          </ul>
+        </nav>
     </header>
     <div id="APPContainer">
       <h3>Valle Imperial Index</h3>

@@ -1,9 +1,91 @@
+header {
+  margin-top: 1%;
+  height: 115px;
+}
+
 #formSocio input {
   text-align: center;
 }
 
+.logoContainer {
+  background-color: #0B0B61;
+  height: 120px;
+  width: 177px;
+}
+
+.triangule {
+  margin-left: 177px;
+  position: absolute;
+  width:0;
+  height:0;
+  border-color:transparent transparent #0B0B61 #0B0B61;
+  border-style:solid;
+  border-width:60px;
+  z-index: -1;
+}
+
+.VLogo {
+  background: white;
+  border-radius: 0 10px 10px 0;
+  float: left;
+  margin-top: 10%;
+  width: 180px;
+  height: 86px;
+}
+
+.VLogo img {
+  border-radius: 10px;
+  float: right;
+}
+
+.mainNav {
+  width: 87%;
+  margin-top: -82px;
+  margin-left: 177px;
+  padding-top: 7px;
+  background-color: #0B0B61;
+  height: 65%;
+}
+
+.mainNav ul {
+  text-align: center;
+  background-color: white;
+  height: 34px;
+  margin-left: 2%;
+  width: 65%;
+  border-radius: 5px;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.mainNav ul li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+.mainNav ul li a {
+  text-decoration: none;
+  color: #B18904;
+}
+
 .navLeft {
   width: 15%;
+}
+
+.loginAs {
+  float: right;
+  border: #BDBDBD solid 1px;
+  background-color: #E6E6E6;
+  margin-right: 5px;
+  border-radius: 17px;
+  height: 33px;
+  width: 180px;
+}
+
+.loginAs p {
+  text-align: center;
+  margin-top: 9px;
+  font-size: 12px;
 }
 
 #mainDisplayer {
