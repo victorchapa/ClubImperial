@@ -1,4 +1,4 @@
-<form method="post" action="addSocio.php">
+<form method="post" action="api/addSocio.php" enctype="multipart/form-data">
   <h1>Favor de ingresar los datos correspondientes:</h1>
   <p>Nombres: <input type="text" name="Nombre" maxlength="30"></p>
   <p>Fecha de Nacimiento: <input type="text" name="FNacimiento" maxlength="10" placeholder="dd/mm/aaaa"></p>
@@ -7,7 +7,7 @@
                  <input type="radio" name="Parentesco" value="Hijo"> Hijo.
                  <input type="radio" name="Parentesco" value="Soltero(a)"> Soltero(a).
   </p>
-  <p>Domicilio: <input type="text" name="Domucilio"></p>
+  <p>Domicilio: <input type="text" name="Domicilio"></p>
   <p>Manzana: <input type="text" name="Manzana"></p>
   <p>Lote: <input type="text" name="Lote"></p>
   <p>Coto: <input type="text" name="Coto"></p>
@@ -24,4 +24,6 @@
   </p>
   <p>Fecha de Alta: <input type="text" name="FAlta" maxlength="10" placeholder="dd/mm/aaaa"></p>
   <p>Afiliación: <input type="text" name="Afiliacion" maxlength="30" placeholder="Golfistas, tenistas, etc."></p>
+  <p>Foto: <input type="file" name="Foto"></p>
+  <input type="submit" name="Enviar">
 </form>
