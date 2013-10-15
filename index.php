@@ -25,7 +25,7 @@
         </div>
         <nav class="mainNav">
           <ul>
-            <li><a href="#">Inicio</a></li>
+            <li class="active"><a href="#">Inicio</a></li>
             <li><a href="#">Socios</a></li>
             <li><a href="#">Bienvenido</a></li>
             <li><a href="#">Bienvenido</a></li>
@@ -34,7 +34,6 @@
         </nav>
     </header>
     <div id="APPContainer">
-      <h3>Valle Imperial Index</h3>
       <section class="navLeft">
         <input class="altaSocioShow" type="button" value="Dar de Alta Socio">
       </section>
