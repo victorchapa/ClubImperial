@@ -1,13 +1,191 @@
+header {
+  margin-top: 1%;
+  height: 115px;
+}
+
 #formSocio input {
   text-align: center;
 }
 
+.logoContainer {
+  background-color: #0B0B61;
+  height: 120px;
+  width: 177px;
+}
+
+.triangule {
+  margin-left: 177px;
+  position: absolute;
+  width:0;
+  height:0;
+  border-color:transparent transparent #0B0B61 #0B0B61;
+  border-style:solid;
+  border-width:60px;
+  z-index: -1;
+}
+
+.VLogo {
+  background: white;
+  border-radius: 0 10px 10px 0;
+  float: left;
+  margin-top: 10%;
+  width: 180px;
+  height: 86px;
+}
+
+.VLogo img {
+  border-radius: 10px;
+  float: right;
+}
+
+.mainNav {
+  width: 86%;
+  margin-top: -82px;
+  margin-left: 188px;
+  padding-top: 7px;
+  background-color: #0B0B61;
+  height: 65%;
+}
+
+.mainNav ul {
+  text-align: center;
+  background-color: white;
+  height: 34px;
+  margin-left: 2%;
+  width: 65%;
+  border-radius: 5px;
+  list-style: none;
+  padding: 1px 0 1px 0;
+}
+
+.mainNav ul li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+
+.mainNav ul li:hover {
+  padding-bottom: 0px;
+  background-color: #2E9AFE;
+  border-bottom: #A9E2F3 3px solid;
+  border-radius: 30px;
+}
+
+
+.mainNav ul li a {
+  text-decoration: none;
+  color: #B18904;
+}
+
+.mainNav ul li.active {
+  background: url("../img/leaf.png");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  padding-top: 5px;
+  border-bottom: #2E9AFE 5px solid;
+  padding-bottom: 0px;
+}
+
 .navLeft {
   width: 15%;
+  margin-top: 5px;
+  background-color: silver;
+  height: 300px;
+  border-bottom: #585858 1px solid;
+  border-right: #585858 1px solid;
+  border-radius: 0 0 45px 0;
+}
+
+.loginAs {
+  float: right;
+  border: #BDBDBD solid 1px;
+  background-color: #E6E6E6;
+  margin-right: 5px;
+  border-radius: 17px;
+  height: 33px;
+  width: 180px;
+}
+
+.loginAs p {
+  text-align: center;
+  margin-top: 9px;
+  font-size: 12px;
 }
 
 #mainDisplayer {
-  width: 85%;
-  margin-top: -7%;
-  float: right;
+  width: 84%;
+  margin-top: -290px;
+  margin-left: 16%;
 }
+
+.indexImages img {
+  box-shadow: 5px 5px 5px #aaa;
+  position: absolute;
+  width: 83%;
+  height: 77%;
+}
+
+@keyframes indexFadeInOut {
+  0% {
+  opacity:1;
+  }
+  17% {
+  opacity:1;
+  }
+  33% {
+  opacity:0;
+  }
+  83% {
+  opacity:0;
+  }
+  100% {
+  opacity:1;
+  }
+}
+
+@-webkit-keyframes indexFadeInOut{
+  0% {
+  opacity:1;
+  }
+  17% {
+  opacity:1;
+  }
+  33% {
+  opacity:0;
+  }
+  83% {
+  opacity:0;
+  }
+  100% {
+  opacity:1;
+  }
+}
+
+.indexImages img {
+  -webkit-animation-name: indexFadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 30s;
+  animation-name: indexFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+}
+
+.indexImages img:nth-of-type(1) {
+  -webkit-animation-delay: 30s;
+  animation-delay: 30s;
+}
+.indexImages img:nth-of-type(2) {
+  -webkit-animation-delay: 20s;
+  animation-delay: 20s;
+}
+.indexImages img:nth-of-type(3) {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+}
+
+
+
+

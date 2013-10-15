@@ -8,11 +8,13 @@ var MainView = Backbone.View.extend({
     },
 
     initialize: function(){
+        $("#mainDisplayer").html(_.template(TEMPLATES.index));
     },
 
     renderFormSocio: function(e){
         if($("#formSocio").length == 0){
             $("#mainDisplayer").html(_.template(TEMPLATES.formSocio));
+            $("#datePicker").datepicker();
         }else{
             $("#formSocio").show();
         }

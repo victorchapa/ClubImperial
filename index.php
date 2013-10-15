@@ -3,20 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Club Valle Imperial</title>
-    <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/cupertino/jquery-uiCupertino.css">
     <script src="assets/js/libs/jquery.js"></script>
     <script src="assets/js/libs/underscore.js"></script>
     <script src="assets/js/libs/backbone.js"></script>
     <script src="assets/js/libs/IEChecker.js"></script>
+    <script src="assets/js/libs/jquery-uiDatePicker.js"></script>
   </head>
   <body>
     <header>
-        <h1>Bienvenido</h1>
-        <a href="api/salir.php">Salir</a>
+        <div class="loginAs">
+          <p>Loggeado cómo: (<a href="api/salir.php">Salir</a>)</p>
+        </div>
+        <div class="logoContainer">
+          <div class="VLogo">
+            <img src="assets/img/logoValle.png" alt="Valle Imperial Logo.">
+          </div>
+          <div class="triangule"></div>
+        </div>
+        <nav class="mainNav">
+          <ul>
+            <li class="active"><a href="#">Inicio</a></li>
+            <li><a href="#">Socios</a></li>
+            <li><a href="#">Bienvenido</a></li>
+            <li><a href="#">Bienvenido</a></li>
+            <li><a href="#">Bienvenido</a></li>
+          </ul>
+        </nav>
     </header>
     <div id="APPContainer">
-      <h3>Valle Imperial Index</h3>
       <section class="navLeft">
         <input class="altaSocioShow" type="button" value="Dar de Alta Socio">
       </section>
