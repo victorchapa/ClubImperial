@@ -36,6 +36,9 @@
     <div id="APPContainer">
       <section class="navLeft">
         <input class="altaSocioShow" type="button" value="Dar de Alta Socio">
+        <div class="lotLeafs">
+          <img src="assets/img/lotLeafs.gif">
+        </div>
       </section>
       <div id="mainDisplayer"></div>
     </div>
@@ -49,5 +52,6 @@
   <!-- Collections --!>
   <!-- Views --!>
   <script src="assets/js/app/views/mainView.js"></script>
+  <script src="assets/js/app/views/navMainView.js"></script>
 
 </html>

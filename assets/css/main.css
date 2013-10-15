@@ -94,7 +94,7 @@ header {
   height: 300px;
   border-bottom: #585858 1px solid;
   border-right: #585858 1px solid;
-  border-radius: 0 0 45px 0;
+  border-radius: 0 0 15px 0;
 }
 
 .loginAs {
@@ -114,16 +114,28 @@ header {
 }
 
 #mainDisplayer {
+  position: absolute;
   width: 84%;
-  margin-top: -290px;
+  height: 77%;
+  top: 145px;
   margin-left: 16%;
 }
 
 .indexImages img {
   box-shadow: 5px 5px 5px #aaa;
   position: absolute;
-  width: 83%;
-  height: 77%;
+  width: 99%;
+  height: 100%;
+}
+
+.lotLeafs {
+  margin-top: 276px;
+  height: 75%;
+}
+
+.lotLeafs img {
+  height: 100%;
+  width: 96%;
 }
 
 @keyframes indexFadeInOut {

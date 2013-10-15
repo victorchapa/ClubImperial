@@ -4,27 +4,18 @@ var MainView = Backbone.View.extend({
 
     events: {
         "click .altaSocioShow"                  :   "renderFormSocio",
-        "click .altaSocioHide"                  :   "hideFormSocio",
     },
 
-    initialize: function(){
-        $("#mainDisplayer").html(_.template(TEMPLATES.index));
-    },
+    initialize: function(){},
 
     renderFormSocio: function(e){
         if($("#formSocio").length == 0){
             $("#mainDisplayer").html(_.template(TEMPLATES.formSocio));
             $(".datePicker").datepicker();
-        }else{
-            $("#formSocio").show();
         }
-        $(e.target).addClass("altaSocioHide");
-        $(e.target).removeClass("altaSocioShow");
+        var lastActive = $(".active", ".mainNav");
+        $(lastActive).removeClass("active");
+        var addSocio = $("ul", ".mainNav");
+        $("li:nth-child(2)", addSocio).addClass("active");
     },
-
-    hideFormSocio: function(e){
-        $(e.target).removeClass("altaSocioHide");
-        $(e.target).addClass("altaSocioShow");
-        $("#formSocio").hide();
-    }
 });  
