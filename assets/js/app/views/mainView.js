@@ -14,7 +14,7 @@ var MainView = Backbone.View.extend({
     renderFormSocio: function(e){
         if($("#formSocio").length == 0){
             $("#mainDisplayer").html(_.template(TEMPLATES.formSocio));
-            $("#datePicker").datepicker();
+            $(".datePicker").datepicker();
         }else{
             $("#formSocio").show();
         }
