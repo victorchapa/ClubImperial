@@ -1,6 +1,49 @@
+.clear:before, .clear:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+  
+.clear:after {
+  clear: both;
+}
+
+.display-none {
+  display: none;
+}
+
+
 header {
   margin-top: 1%;
   height: 115px;
+}
+
+.btn {
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px black;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.btnNormal{
+  background-color: #2E64FE;
+  border-color: blue;
+  color: silver;
+}
+
+.btnFunctions{
+  color: black;
+}
+
+.btnSuccess {
+  color: white;
+  background: #04B404;
+  border-color: #088A08;
+}
+
+input.btn[disabled] {
+  opacity: 0.5;
 }
 
 #formSocio input {
@@ -72,10 +115,10 @@ header {
   border-radius: 30px;
 }
 
-
 .mainNav ul li a {
   text-decoration: none;
   color: #B18904;
+  font-weight: bold;
 }
 
 .mainNav ul li.active {
@@ -87,8 +130,11 @@ header {
   padding-bottom: 0px;
 }
 
-.navLeft {
+.leftPanel {
   width: 15%;
+}
+
+.navLeft {
   margin-top: 5px;
   background-color: silver;
   height: 300px;
@@ -115,10 +161,13 @@ header {
 
 #mainDisplayer {
   position: absolute;
-  width: 84%;
+  width: 83%;
   height: 77%;
   top: 145px;
   margin-left: 16%;
+  border-top: 4px solid #BDBDBD;
+  border-left: 4px solid #BDBDBD;
+  border-radius: 10px;
 }
 
 .indexImages img {
@@ -129,13 +178,62 @@ header {
 }
 
 .lotLeafs {
-  margin-top: 276px;
-  height: 75%;
+  height: 230px;
 }
 
 .lotLeafs img {
   height: 100%;
   width: 96%;
+}
+
+.btnGroup{
+  text-align: center; 
+}
+
+.btnGroup p input{
+  margin-right: 20px;
+}
+
+/* Styling for Socio Template */
+#formSocio {
+  width: 77%;
+  margin-left: 20px;
+  background: #fcfcfc repeat-x left bottom;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #bbb;
+  border-top: 1px solid #ddd;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+#formSocio h1 {
+  color: #0B0B61;
+}
+
+.data1, .data2 {
+  float: left;
+  width: 430px;
+}
+
+.data1 p, .data2 p {
+  padding-right: 45px;
+}
+
+input.datePicker {
+  width: 90px;
+}
+
+.data1 p input[type="text"], .data2 p input[type="text"], .data1 p span, .data2 p select {
+  float: right;
+}
+
+.data2 p select {
+  width: 143px;
+}
+
+.data2 p:nth-child(3) input {
+  width: 35px;
 }
 
 @keyframes indexFadeInOut {
@@ -197,7 +295,3 @@ header {
   -webkit-animation-delay: 10s;
   animation-delay: 10s;
 }
-
-
-
-
