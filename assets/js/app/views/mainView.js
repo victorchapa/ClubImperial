@@ -3,12 +3,17 @@ var MainView = Backbone.View.extend({
     el: '#APPContainer',
 
     events: {
-        "click .altaSocioShow"                  :   "renderFormSocio",
+        "click .addSocios"                  :   "renderFormSocio",
     },
 
     initialize: function(){},
 
     renderFormSocio: function(e){
+        var lastActive = $(".active", ".mainNav");
+        $(lastActive).removeClass("active");
+        var addSocio = $("ul", ".mainNav");
+        $("li:nth-child(2)", addSocio).addClass("active");
+
         if($("#formSocio").length == 0){
             $("#mainDisplayer").html(_.template(TEMPLATES.formSocio));
             $(".datePicker").datepicker();
@@ -17,12 +22,9 @@ var MainView = Backbone.View.extend({
                 setInterval(function(){
                     $('#fileName').html($('#upLoad').val());
                 },1);
+                return false;
             });
         }
-        var lastActive = $(".active", ".mainNav");
-        $(lastActive).removeClass("active");
-        var addSocio = $("ul", ".mainNav");
-        $("li:nth-child(2)", addSocio).addClass("active");
     },
 
 });  

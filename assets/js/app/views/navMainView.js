@@ -11,6 +11,7 @@ var NavMainView = Backbone.View.extend({
     },
 
     render: function(e){
+
         var target = $(e.target).text();
         var lastActive = $(".active", this.el);
         $(lastActive).removeClass("active");
@@ -30,16 +31,19 @@ var NavMainView = Backbone.View.extend({
     },
 
     renderSociosTemplate: function(e){
-        if($("#formSocio").length == 0){
-            $("#mainDisplayer").html(_.template(TEMPLATES.formSocio));
-            $(".datePicker").datepicker();
-            $(".btnUpLoad").on("click", function(){
-                $("#upLoad").click();
-                setInterval(function(){
-                    $('#fileName').html($('#upLoad').val());
-                },1);
-                return false;
-            });
-        }
+        var compiledTemplate = _.template($("#thisTemplate").html());
+        var collectionSocios = new CollectionSocios(); 
+        collectionSocios.fetch({
+            success: function(){
+            }
+        }).done(function(){
+                var data = collectionSocios.toJSON();
+                var valores = {socios:[data]};
+                console.log(valores);
+                $("#mainDisplayer").html(compiledTemplate(valores));
+        });
+
     }
+    
+    
 });

@@ -18,7 +18,7 @@
 	$celular = $_POST['Celular'];
 	$membresia = $_POST['Membresia'];
 	$sangre = $_POST['Sangre'];
-	$falta = $_POST['Falta'];
+	$falta = $_POST['FAlta'];
 	$afiliacion = $_POST['Afiliacion'];
 	$conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);

@@ -46,8 +46,9 @@ TEMPLATES = {
         "</div>" +
         "</div>" +
         "<div class='btnGroup'>" +
-            "<p><input id='upLoad' class='display-none' type='file' name='Foto'><input class='btn btnFunctions btnUpLoad' type='button' value='Subir Foto'><span id='fileName'></span>" +
+            "<p><input id='upLoad' class='display-none' type='file' name='Foto'><input class='btn btnFunctions btnUpLoad' type='button' value='Subir Foto'>" +
             "<input class='btn btnSuccess' type='submit' value='Agregar Usuario'></p>" +
+            "<p><span id='fileName'></span></p>" +
         "</div>" +
         "</form>",
     index: 
@@ -55,6 +56,29 @@ TEMPLATES = {
             "<img src='assets/img/casaclub1.jpg'>" +
             "<img src='assets/img/casaclub2.jpg'>" +
             "<img src='assets/img/casaclub3.jpg'>" +
-        "</div>"
-
+        "</div>",
+    allSocios:
+        "<script type='text/template' id='template'>" +
+        "<table border='1'>" +
+            "<tr>" +
+                "<th>Nombre</th>" +
+                "<th>Fecha de Nacimiento</th>" +
+                "<th>Parentesco</th>" +
+                "<th>Domicilio</th>" +
+                "<th>Manzana</th>" +
+                "<th>Lote</th>" +
+                "<th>Coto</th>" +
+                "<th>Télefono</th>" +
+                "<th>Célular</th>" +
+                "<th>Membresia</th>" +
+                "<th>Sangre</th>" +
+                "<th>Fecha de alta</th>" +
+                "<th>Afiliación</th>" +
+                "<th>Acciones</th>" +
+            "</tr>" +
+            "<tr>" +
+                "</tr>" +
+            "</tbody>" +
+            "</table>" +
+            "</script>",
 };
