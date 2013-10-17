@@ -33,6 +33,13 @@ var NavMainView = Backbone.View.extend({
         if($("#formSocio").length == 0){
             $("#mainDisplayer").html(_.template(TEMPLATES.formSocio));
             $(".datePicker").datepicker();
+            $(".btnUpLoad").on("click", function(){
+                $("#upLoad").click();
+                setInterval(function(){
+                    $('#fileName').html($('#upLoad').val());
+                },1);
+                return false;
+            });
         }
     }
 });
