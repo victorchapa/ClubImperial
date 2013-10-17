@@ -34,8 +34,10 @@
         </nav>
     </header>
     <div id="APPContainer">
-      <section class="navLeft">
-        <input class="altaSocioShow" type="button" value="Dar de Alta Socio">
+      <section class="leftPanel">
+        <div class="navLeft">
+          <input class="btn btnNormal altaSocioShow" type="button" value="Dar de Alta Socio">
+        </div>
         <div class="lotLeafs">
           <img src="assets/img/lotLeafs.gif">
         </div>
