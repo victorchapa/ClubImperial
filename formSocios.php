@@ -1,5 +1,6 @@
-<form method="post" action="api/addSocio.php" enctype="multipart/form-data">
+<form method="post" action="api/EditSocio.php" enctype="multipart/form-data">
   <h1>Favor de ingresar los datos correspondientes:</h1>
+  <input type="hidden" name="Id" value="">
   <p>Nombres: <input type="text" name="Nombre" maxlength="30"></p>
   <p>Fecha de Nacimiento: <input type="text" name="FNacimiento" maxlength="10" placeholder="dd/mm/aaaa"></p>
   <p>Parentesco: <input type="radio" name="Parentesco" value="Padre"> Padre.
