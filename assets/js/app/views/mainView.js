@@ -20,7 +20,9 @@ var MainView = Backbone.View.extend({
             $(".btnUpLoad").on("click", function(){
                 $("#upLoad").click();
                 setInterval(function(){
-                    $('#fileName').html($('#upLoad').val());
+                    var name = $('#upLoad').val();
+                    var fileName = name.split("\\");
+                    $('#fileName').text(fileName[2]);
                 },1);
                 return false;
             });
