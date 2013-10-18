@@ -35,12 +35,10 @@ var NavMainView = Backbone.View.extend({
         var collectionSocios = new CollectionSocios(); 
         collectionSocios.fetch({
             success: function(){
-            }
-        }).done(function(){
                 var data = collectionSocios.toJSON();
-                var valores = {socios:[data]};
-                console.log(valores);
-                $("#mainDisplayer").html(compiledTemplate(valores));
+                var socios = {socios: data};
+                $("#mainDisplayer").html(compiledTemplate(socios));
+            }
         });
 
     }
