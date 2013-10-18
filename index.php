@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Club Valle Imperial</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/bootstrapModal.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/cupertino/jquery-uiCupertino.css">
     <script src="assets/js/libs/jquery.js"></script>
@@ -11,6 +12,7 @@
     <script src="assets/js/libs/backbone.js"></script>
     <script src="assets/js/libs/IEChecker.js"></script>
     <script src="assets/js/libs/jquery-uiDatePicker.js"></script>
+    <script src="assets/js/libs/bootstrapModal.js"></script>
   </head>
   <body>
     <header>
@@ -44,6 +46,23 @@
       </section>
       <div id="mainDisplayer"></div>
     </div>
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Ficha del Socio</h4>
+        </div>
+        <div id="modalDisplayer" class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
   <!--Template-->
         <script type='text/template' id='thisTemplate'> 
           <table border='1'>
@@ -63,7 +82,7 @@
                 <th>Afiliación</th>
                 <th>Acciones</th>
             </tr>
-                <% _.each(socios[0], function(socio) { %>
+                <% _.each(socios, function(socio) { %>
                 <tr>
                     <td><% print(socio.Nombre); %></td>
                     <td><% print(socio.FNacimiento); %></td>
@@ -78,7 +97,7 @@
                     <td><% print(socio.Sangre); %></td>
                     <td><% print(socio.FAlta); %></td>
                     <td><% print(socio.Afiliacion); %></td>
-                    <td><a href="verSocio.php?id=<% print(socio.IdSocio); %>">Ver perfil</a></td>
+                    <td><div class="idSocio"><span class="display-none"><% print(socio.IdSocio); %></span><p>Ver perfil</p></div></td>
                 </tr>
                 <% }); %>
             </table>
@@ -95,5 +114,6 @@
   <!-- Views --!>
   <script src="assets/js/app/views/mainView.js"></script>
   <script src="assets/js/app/views/navMainView.js"></script>
+  <script src="assets/js/app/views/socioView.js"></script>
   </body>
 </html>

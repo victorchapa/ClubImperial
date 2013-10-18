@@ -87,13 +87,13 @@ input.btn[disabled] {
   margin-left: 188px;
   padding-top: 7px;
   background-color: #0B0B61;
-  height: 65%;
+  height: 72%;
 }
 
 .mainNav ul {
   text-align: center;
   background-color: white;
-  height: 34px;
+  height: 43px;
   margin-left: 2%;
   width: 65%;
   border-radius: 5px;
@@ -141,6 +141,10 @@ input.btn[disabled] {
   border-bottom: #585858 1px solid;
   border-right: #585858 1px solid;
   border-radius: 0 0 15px 0;
+}
+
+.navLeft input {
+  margin: 10px 0 5px 10px;
 }
 
 .loginAs {
@@ -213,7 +217,7 @@ input.btn[disabled] {
 
 .data1, .data2 {
   float: left;
-  width: 430px;
+  width: 400px;
 }
 
 .data1 p, .data2 p {
@@ -234,6 +238,19 @@ input.datePicker {
 
 .data2 p:nth-child(3) input {
   width: 35px;
+}
+
+.idSocio p {
+  color: #0101DF;
+  cursor: pointer;
+}
+
+#modalDisplayer img.fotoSocio {
+  width: 150px;
+  height: 150px;
+}
+#modalDisplayer .clear .data1, #modalDisplayer .clear .data2 {
+  width: 265px;
 }
 
 @keyframes indexFadeInOut {
