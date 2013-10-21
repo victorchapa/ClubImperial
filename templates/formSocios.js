@@ -51,7 +51,7 @@ TEMPLATES = {
         "</div>" +
         "</div>" +
         "<div class='btnGroup'>" +
-            "<p><input id='upLoad' class='display-none' type='file' name='Foto'><input class='btn btnFunctions btnUpLoad' type='button' value='Subir Foto'>" +
+            "<p><input id='upLoad' class='display-none' type='file' name='Foto' accept='image/jpeg, image/bmp'><input class='btn btnFunctions btnUpLoad' type='button' value='Subir Foto'>" +
             "<input class='btn btnSuccess' type='submit' value='Agregar Usuario'></p>" +
             "<p><span id='fileName'></span></p>" +
         "</div>" +
