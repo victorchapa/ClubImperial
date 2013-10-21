@@ -31,7 +31,8 @@ var NavMainView = Backbone.View.extend({
     },
 
     renderSociosTemplate: function(e){
-        var compiledTemplate = _.template($("#thisTemplate").html());
+        var template = TEMPLATES.allSocios;
+        var compiledTemplate = _.template($(template).html());
         var collectionSocios = new CollectionSocios(); 
         collectionSocios.fetch({
             success: function(){
