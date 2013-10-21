@@ -13,7 +13,7 @@ var SocioView = Backbone.View.extend({
         var father = $(target).parent();
         var id = $("span", father).text();
         $.ajax({
-            url:"/clubimperial/verSocio.php?id=" + id,
+            url:"/clubimperial/api/verSocio.php?id=" + id,
             type: "GET",
         }).done(function(data){
             var dataHTML = $.parseHTML(data);
