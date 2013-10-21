@@ -41,12 +41,12 @@ TEMPLATES = {
             "</p>" +
             "<p>Fecha de Alta: <input class='datePicker' type='text' name='FAlta' placeholder='mm/dd/aaaa' readonly></p>" +
             "<p>Afiliación: " + 
-                "<span><span><input type='checkbox' name='Afiliacion' value='Golf'> Golfista.</span>" +
-                "<span><input type='checkbox' name='Afiliacion' value='Futbol'> Futbolista.</span>" +
-                "<span><input type='checkbox' name='Afiliacion' value='Tenista'> Tenista.</span><br>" +
-                "<span><input type='checkbox' name='Afiliacion' value='Piscina'> Piscina.</span>" +
-                "<span><input type='checkbox' name='Afiliacion' value='Gym'> GYM.</span>" +
-                "<span><input type='checkbox' name='Afiliacion' value='SPA'> SPA.</span></span>" +
+                "<span><span><input type='checkbox' name='Afiliacion[]' value='Golf'> Golfista.</span>" +
+                "<span><input type='checkbox' name='Afiliacion[]' value='Futbol'> Futbolista.</span>" +
+                "<span><input type='checkbox' name='Afiliacion[]' value='Tenista'> Tenista.</span><br>" +
+                "<span><input type='checkbox' name='Afiliacion[]' value='Piscina'> Piscina.</span>" +
+                "<span><input type='checkbox' name='Afiliacion[]' value='Gym'> GYM.</span>" +
+                "<span><input type='checkbox' name='Afiliacion[]' value='SPA'> SPA.</span></span>" +
             "</p>" +
         "</div>" +
         "</div>" +
