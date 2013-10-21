@@ -5,13 +5,9 @@ TEMPLATES = {
         "<div class='clear'>" +
         "<div class='data1'>" +
             "<p>Nombres: <input type='text' name='Nombre' maxlength='30'></p>" +
+            "<p>Apellido Paterno: <input type='text' name='ApellidoP' maxlength='30'></p>" +
+            "<p>Apellido Materno: <input type='text' name='ApellidoM' maxlength='30'></p>" +
             "<p>Fecha de Nacimiento: <input class='datePicker' type='text' name='FNacimiento' placeholder='mm/dd/aaaa' readonly></p>" +
-            "<p>Parentesco: " +
-                "<span><input type='radio' name='Parentesco' value='Padre'> Padre." +
-                 "<input type='radio' name='Parentesco' value='Madre'> Madre." +
-                 "<input type='radio' name='Parentesco' value='Hijo'> Hijo." +
-                 "<input type='radio' name='Parentesco' value='Soltero(a)'> Soltero(a).</span>" +
-            "</p>" +
             "<p>Domicilio: <input type='text' name='Domicilio'></p>" +
             "<p>Manzana: <input type='text' name='Manzana'></p>" +
             "<p>Lote: <input type='text' name='Lote'></p>" +
@@ -32,17 +28,26 @@ TEMPLATES = {
                 "<option value='AB+'>AB+</option>" +
                 "</select>" +
             "</p>" +
-            "<p>Membresia: <select name='Membresia'>" +
+            "<p>Membresia: " +
+            "<span><input type='radio' name='Membresia' value='Propietario'> Propietario." +
+            "<input type='radio' name='Membresia' value='Rentista'> Rentista.</span>" +
+            "</p>" +
+            "<p>Tipo de membresia: <select name='TipoMembresia'>" +
                   "<option value='0'>Elige una opción</option>" +
-                  "<option value='Propietario'>Propietario</option>" +
-                  "<option value='Rentista'>Rentista</option>" +
-                  "<option value='Jr'>Jr</option>" +
                   "<option value='Familiar'>Familiar</option>" +
                   "<option value='Individual'>Individual</option>" +
+                  "<option value='Jr'>Jr</option>" +
                 "</select>" +
             "</p>" +
             "<p>Fecha de Alta: <input class='datePicker' type='text' name='FAlta' placeholder='mm/dd/aaaa' readonly></p>" +
-            "<p>Afiliación: <input type='text' name='Afiliacion' maxlength='30' placeholder='Golfistas, tenistas, etc.'></p>" +
+            "<p>Afiliación: " + 
+                "<span><span><input type='checkbox' name='Afiliacion' value='Golf'> Golfista.</span>" +
+                "<span><input type='checkbox' name='Afiliacion' value='Futbol'> Futbolista.</span>" +
+                "<span><input type='checkbox' name='Afiliacion' value='Tenista'> Tenista.</span><br>" +
+                "<span><input type='checkbox' name='Afiliacion' value='Piscina'> Piscina.</span>" +
+                "<span><input type='checkbox' name='Afiliacion' value='Gym'> GYM.</span>" +
+                "<span><input type='checkbox' name='Afiliacion' value='SPA'> SPA.</span></span>" +
+            "</p>" +
         "</div>" +
         "</div>" +
         "<div class='btnGroup'>" +
