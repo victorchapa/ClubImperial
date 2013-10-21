@@ -66,7 +66,12 @@
   <!--Scrypting-->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/router.js"></script>
+  <script src="templates/templates.js"></script>
+
+  <!-- Templates -->
+  <script src="templates/index.js"></script>
   <script src="templates/formSocios.js"></script>
+  <script src="templates/allSocios.js"></script>
 
   <!-- Collections --!>
   <script src="assets/js/app/collections/socios.js"></script>
