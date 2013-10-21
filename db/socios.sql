@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-10-2013 a las 22:38:48
+-- Tiempo de generación: 21-10-2013 a las 18:03:17
 -- Versión del servidor: 5.6.12-log
--- Versión de PHP: 5.4.16
+-- Versión de PHP: 5.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -29,7 +29,9 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `socios` (
   `IdSocio` int(5) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
-  `Parentesco` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `ApellidoP` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
+  `ApellidoM` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
+  `FNacimiento` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
   `Domicilio` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `Manzana` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `Lote` int(10) NOT NULL,
@@ -42,7 +44,14 @@ CREATE TABLE IF NOT EXISTS `socios` (
   `Foto` varchar(500) COLLATE utf8_spanish_ci NOT NULL,
   `Afiliacion` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`IdSocio`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `socios`
+--
+
+INSERT INTO `socios` (`IdSocio`, `Nombre`, `ApellidoP`, `ApellidoM`, `FNacimiento`, `Domicilio`, `Manzana`, `Lote`, `Coto`, `Telefono`, `Celular`, `Membresia`, `Sangre`, `FAlta`, `Foto`, `Afiliacion`) VALUES
+(1, 'Osho2', '', '', '24/11/1990', 'domicilio 1', 'manzana 1', 0, 0, 123, 1234567890, 'Rentista', 'A', '14/10/2013', 'socios/1/perfil.jpg', 'Golf');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
