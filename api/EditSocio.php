@@ -7,6 +7,7 @@
   <head>
     <meta charset="utf-8">
   </head>
+  
 <?php
 	$id = $_POST['id'];
 	$nombre = $_POST['Nombre'];
