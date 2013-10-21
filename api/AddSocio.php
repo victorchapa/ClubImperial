@@ -26,7 +26,7 @@
     mysql_select_db($dbName);
 	mysql_query ("SET NAMES 'utf8'");
 	mysql_query("INSERT INTO socios (Nombre, ApellidoP, ApellidoM, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion) 
-		VALUES ('$nombre', '$apellidop', '$apellidom', '$fnacimiento', '$domicilio', '$manzana', '$lote', '$coto', '$telefono', '$celular', '$membresia', '$TipoMembresia', '$sangre', '$falta', '$afiliacion')");
+		VALUES ('$nombre', '$apellidop', '$apellidom', '$fnacimiento', '$domicilio', '$manzana', '$lote', '$coto', '$telefono', '$celular', '$membresia', '$tipomembresia', '$sangre', '$falta', '$afiliacion')");
 	$id= mysql_insert_id();
 	mkdir ("socios/".$id);
 	$rutaServidor = "socios/".$id;
