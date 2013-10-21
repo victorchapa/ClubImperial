@@ -22,7 +22,7 @@
 	$membresia = $_POST['Membresia'];
 	$sangre = $_POST['Sangre'];
 	$falta = $_POST['FAlta'];
-	$afiliacion = $_POST['Afiliacion'];
+	$afiliacion = implode(', ', $_POST['Afiliacion']);
 	$conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
 	mysql_query ("SET NAMES 'utf8'");
