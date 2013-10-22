@@ -199,7 +199,7 @@ input.btn[disabled] {
 }
 
 /* Styling for Socio Template */
-#formSocio {
+#formSocio, #editSocioForm {
   width: 77%;
   margin-left: 20px;
   background: #fcfcfc repeat-x left bottom;
@@ -209,6 +209,18 @@ input.btn[disabled] {
   border-radius: 10px;
   margin-top: 15px;
   padding-left: 20px;
+}
+
+#editSocioForm {
+  width: 90%;
+}
+
+#editSocioForm .btnSuccess {
+  margin-top: 10px;
+}
+
+#editSocioForm .btnUpLoad {
+  margin-left: 20px;
 }
 
 #formSocio h1 {
@@ -241,19 +253,20 @@ input.datePicker {
   width: 143px;
 }
 
-.data2 p:nth-child(3) input {
-  width: 35px;
-}
-
 .idSocio p {
   color: #0101DF;
   cursor: pointer;
 }
 
-#modalDisplayer img.fotoSocio {
+#modalDisplayer img.fotoSocio, img.fotoSocioEdit {
   width: 150px;
   height: 150px;
 }
+
+img.fotoSocioEdit {
+  margin-left: 25%;
+}
+
 #modalDisplayer .clear .data1, #modalDisplayer .clear .data2 {
   width: 265px;
 }

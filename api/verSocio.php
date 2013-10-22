@@ -25,3 +25,4 @@
     echo "<p>Afiliación: <label>".$socios["0"]["Afiliacion"]."</label></p>";
     echo "</div></div>";
   } 
+?>
