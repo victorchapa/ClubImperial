@@ -13,6 +13,15 @@
     <script src="assets/js/libs/IEChecker.js"></script>
     <script src="assets/js/libs/jquery-uiDatePicker.js"></script>
     <script src="assets/js/libs/bootstrapModal.js"></script>
+    <!--<script type="text/javascript">
+      $(function() {
+        $( ".datePicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true,
+            changeDay: true
+        });
+      });
+    </script> -->
   </head>
   <body>
     <header>
