@@ -31,13 +31,17 @@ var NavMainView = Backbone.View.extend({
     },
 
     renderSociosTemplate: function(e){
-        var compiledTemplate = _.template($("#thisTemplate").html());
+
+        $("#mainDisplayer").html(TEMPLATES.socioNav);
+
+        var template = TEMPLATES.allSocios;
+        var compiledTemplate = _.template($(template).html());
         var collectionSocios = new CollectionSocios(); 
         collectionSocios.fetch({
             success: function(){
                 var data = collectionSocios.toJSON();
                 var socios = {socios: data};
-                $("#mainDisplayer").html(compiledTemplate(socios));
+                $(".socioBody").html(compiledTemplate(socios));
             }
         });
 

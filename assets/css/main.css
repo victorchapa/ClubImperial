@@ -258,6 +258,42 @@ input.datePicker {
   width: 265px;
 }
 
+ul.navSocio {
+  margin: 3px 0 0 0;
+  list-style: none;
+  border-bottom: 3px solid #BDBDBD;
+  border-radius: 0 0 10px 0;
+}
+
+div.backgroundNav {
+  background-color: #D8D8D8;
+  padding-top: 1px;
+  border-radius: 3px 6px 6px 0;
+}
+
+ul.navSocio > li {
+  margin-bottom: -3px;
+}
+ul.navSocio li a {
+  text-decoration: none;
+}
+ul.navSocio li.active a {
+  border: 3px solid #BDBDBD;
+  background-color: white;
+  border-bottom-color: white;
+}
+
+ul.navSocio > li > a {
+  padding: 10px 15px;
+  display: block;
+  border: 3px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+
+ul.navSocio li {
+  display: inline-block;
+}
+
 @keyframes indexFadeInOut {
   0% {
   opacity:1;

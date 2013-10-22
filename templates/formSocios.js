@@ -1,5 +1,4 @@
-TEMPLATES = {
-    formSocio:
+TEMPLATES.formSocio =
         "<form id='formSocio' method='post' action='api/AddSocio.php' enctype='multipart/form-data'>" +
         "<h1>Favor de ingresar los datos correspondientes:</h1>" +
         "<div class='clear'>" +
@@ -55,35 +54,4 @@ TEMPLATES = {
             "<input class='btn btnSuccess' type='submit' value='Agregar Usuario'></p>" +
             "<p><span id='fileName'></span></p>" +
         "</div>" +
-        "</form>",
-    index: 
-        "<div class='indexImages'>" +
-            "<img src='assets/img/casaclub1.jpg'>" +
-            "<img src='assets/img/casaclub2.jpg'>" +
-            "<img src='assets/img/casaclub3.jpg'>" +
-        "</div>",
-    allSocios:
-        "<script type='text/template' id='template'>" +
-        "<table border='1'>" +
-            "<tr>" +
-                "<th>Nombre</th>" +
-                "<th>Fecha de Nacimiento</th>" +
-                "<th>Parentesco</th>" +
-                "<th>Domicilio</th>" +
-                "<th>Manzana</th>" +
-                "<th>Lote</th>" +
-                "<th>Coto</th>" +
-                "<th>Télefono</th>" +
-                "<th>Célular</th>" +
-                "<th>Membresia</th>" +
-                "<th>Sangre</th>" +
-                "<th>Fecha de alta</th>" +
-                "<th>Afiliación</th>" +
-                "<th>Acciones</th>" +
-            "</tr>" +
-            "<tr>" +
-                "</tr>" +
-            "</tbody>" +
-            "</table>" +
-            "</script>",
-};
+        "</form>";
