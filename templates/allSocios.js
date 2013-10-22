@@ -32,7 +32,7 @@ TEMPLATES.allSocios =
                     "<td><% print(socio.Sangre); %></td>" +
                     "<td><% print(socio.FAlta); %></td>" +
                     "<td><% print(socio.Afiliacion); %></td>" +
-                    "<td><div class='idSocio'><span class='display-none'><% print(socio.IdSocio); %></span><p>Ver perfil</p></div></td>" +
+                    "<td><div class='idSocio'><span class='display-none'><% print(socio.IdSocio); %></span><p id='sSocio'>Ver perfil</p><p id='eSocio'>Editar</p></div></td>" +
                 "</tr>" +
                 "<% }); %>" +
             "</table>" +

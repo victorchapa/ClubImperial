@@ -31,6 +31,9 @@ var NavMainView = Backbone.View.extend({
     },
 
     renderSociosTemplate: function(e){
+
+        $("#mainDisplayer").html(TEMPLATES.socioNav);
+
         var template = TEMPLATES.allSocios;
         var compiledTemplate = _.template($(template).html());
         var collectionSocios = new CollectionSocios(); 
@@ -38,7 +41,7 @@ var NavMainView = Backbone.View.extend({
             success: function(){
                 var data = collectionSocios.toJSON();
                 var socios = {socios: data};
-                $("#mainDisplayer").html(compiledTemplate(socios));
+                $(".socioBody").html(compiledTemplate(socios));
             }
         });
 
