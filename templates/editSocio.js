@@ -1,0 +1,61 @@
+TEMPLATES.editSocio =
+        "<script type='text/template'>" + 
+        "<form id='editSocioForm' method='post' action='api/EditSocio.php' enctype='multipart/form-data'>" +
+        "<h1>Favor de ingresar los datos a Editar:</h1>" +
+        "<div class='clear'>" +
+        "<div class='data1'>" +
+            "<img class='fotoSocioEdit' src='api/<% print(socio.Foto); %>'>" +
+            "<input type='hidden' name='id' value='<% print(socio.IdSocio); %>'>" +
+            "<input id='upLoad' class='display-none' type='file' name='Foto'><input class='btn btnFunctions btnUpLoad' type='button' value='Editar Foto'>" +
+            "<p><span class='display-none' id='fileName'></span></p>" +
+            "<p>Nombres: <input type='text' name='Nombre' maxlength='30' value='<% print(socio.Nombre); %>'></p>" +
+            "<p>Apellido Paterno: <input type='text' name='ApellidoP' maxlength='30' value=''></p>" +
+            "<p>Apellido Materno: <input type='text' name='ApellidoM' maxlength='30' value=''></p>" +
+            "<p>Fecha de Nacimiento: <input class='datePicker' type='text' name='FNacimiento' placeholder='mm/dd/aaaa' readonly></p>" +
+            "<p>Domicilio: <input type='text' name='Domicilio' value='<% print(socio.Domicilio); %>'></p>" +
+            "<p>Manzana: <input type='text' name='Manzana' value='<% print(socio.Manzana); %>'></p>" +
+        "</div>" +
+        "<div class='data2'>" +
+            "<p>Lote: <input type='text' name='Lote' value='<% print(socio.Lote); %>'></p>" +
+            "<p>Coto: <input type='text' name='Coto' value='<% print(socio.Coto); %>'></p>" +
+            "<p>Teléfono: <input type='text' name='Telefono' maxlength='10' value='<% print(socio.Telefono); %>'></p>" +
+            "<p>Celular: <input type='text' name='Celular' maxlength='10' value='<% print(socio.Celular); %>'></p>" +
+            "<p>Tipo de Sangre: <select name='Sangre'>" +
+                "<option value='0'><% print(socio.Sangre); %></option>" +
+                "<option value='O-'>O-</option>" +
+                "<option value='O+'>O+</option>" +
+                "<option value='A-'>A-</option>" +
+                "<option value='A+'>A+</option>" +
+                "<option value='B-'>B-</option>" +
+                "<option value='B+'>B+</option>" +
+                "<option value='AB-'>AB-</option>" +
+                "<option value='AB+'>AB+</option>" +
+                "</select>" +
+            "</p>" +
+            "<p>Membresia: " +
+            "<span><input type='radio' name='Membresia' value='Propietario'> Propietario." +
+            "<input type='radio' name='Membresia' value='Rentista'> Rentista.</span>" +
+            "</p>" +
+            "<p>Tipo de membresia: <select name='TipoMembresia'>" +
+                  "<option value='0'>Elige una opción</option>" +
+                  "<option value='Familiar'>Familiar</option>" +
+                  "<option value='Individual'>Individual</option>" +
+                  "<option value='Jr'>Jr</option>" +
+                "</select>" +
+            "</p>" +
+            "<p>Fecha de Alta: <input class='datePicker' type='text' name='FAlta' placeholder='mm/dd/aaaa' readonly value='<% print(socio.FAlta); %>'></p>" +
+            "<p>Afiliación: " + 
+                "<span><span><input type='checkbox' name='Afiliacion' value='Golf'> Golfista.</span>" +
+                "<span><input type='checkbox' name='Afiliacion' value='Futbol'> Futbolista.</span>" +
+                "<span><input type='checkbox' name='Afiliacion' value='Tenista'> Tenista.</span><br>" +
+                "<span><input type='checkbox' name='Afiliacion' value='Piscina'> Piscina.</span>" +
+                "<span><input type='checkbox' name='Afiliacion' value='Gym'> GYM.</span>" +
+                "<span><input type='checkbox' name='Afiliacion' value='SPA'> SPA.</span></span>" +
+            "</p>" +
+        "</div>" +
+        "<div class='btnGroup'>" +
+            "<p><input class='btn btnSuccess' type='submit' value='Editar Usuario'></p>" +
+        "</div>" +
+        "</div>" +
+        "</form>" +
+        "</script>";

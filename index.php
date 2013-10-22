@@ -80,6 +80,7 @@
   <!-- Templates -->
   <script src="templates/index.js"></script>
   <script src="templates/formSocios.js"></script>
+  <script src="templates/editSocio.js"></script>
   <script src="templates/socioNav.js"></script>
   <script src="templates/allSocios.js"></script>
 

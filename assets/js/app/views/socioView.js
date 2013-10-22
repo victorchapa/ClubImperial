@@ -3,7 +3,9 @@ var SocioView = Backbone.View.extend({
     el: "#mainDisplayer", 
 
     events: {
-        "click .idSocio" : "renderOptions",
+        "click .idSocio"                    : "renderOptions",
+        "click .showS"                      : "showSociosTable",
+        "click .showE"                      : "showEditarSocio",
     },
 
     initialize: function(){},
@@ -24,7 +26,7 @@ var SocioView = Backbone.View.extend({
                     self.showSocio(data);
                     break;
                 case "eSocio":
-                    self.editarSocio(data);
+                    self.editarSocio(id);
             }
         });
     },
@@ -34,9 +36,62 @@ var SocioView = Backbone.View.extend({
         $("#modalDisplayer").html(dataHTML);
         $("#Modal").modal("show");
     },
+    
+    hideSociosTable: function(){
+        $("table", ".socioBody").hide();                
+    },
 
-    editarSocio: function(data){
-        console.log("EDITAR");             
+    showSociosTable: function(e){
+        $(".navSocio li:nth-child(1)").addClass("active");
+        $(".navSocio li:nth-child(2)").removeClass("active");
+        $("table", ".socioBody").show();                
+    },
+    
+    editSocioInitializer: function(){
+        $(".navSocio li:nth-child(1)").removeClass("active");
+        $(".navSocio li:nth-child(2)").addClass("active");
+        this.hideSociosTable();
+    },
+
+    editarSocio: function(id){
+        this.editSocioInitializer();
+
+        var div = document.createElement("div");
+        div.id = "editSocio";
+        $(".socioBody").append(div);
+
+        var template = TEMPLATES.editSocio;
+        var compiledTemplate = _.template($(template).html());
+        var modelSocio = new ModelSocio(id);
+        modelSocio.fetch({
+            success: function(data){
+                var data = data.toJSON()[0];
+                var socio = {socio: data};
+                $("#editSocio").html(compiledTemplate(socio));
+                console.log(socio);
+                $(".datePicker").datepicker();
+                $(".btnUpLoad").on("click", function(){
+                $("#upLoad").click();
+                setInterval(function(){
+                    var name = $('#upLoad').val();
+                    var fileName = name.split("\\");
+                    $('#fileName').text(fileName[2]);
+                },1);
+                return false;
+            });
+            },
+        });
+
+    },
+
+    showEditarSocio: function(data){
+        this.editSocioInitializer();
+
+        var editSocio = $("#editSocio");
+        if(editSocio.length != 1){
+            console.log("Elija un Socio para editar.");    
+        }
+    
     },
 
 });
