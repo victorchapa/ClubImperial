@@ -11,7 +11,7 @@
 	$id = $_POST['id'];
 	$nombre = $_POST['Nombre'];
 	$apellidop = $_POST['ApellidoP'];
-	$appelidom = $_POST['ApellidoM'];
+	$apellidom = $_POST['ApellidoM'];
 	$fnacimiento = $_POST['FNacimiento'];
 	$domicilio = $_POST['Domicilio'];
 	$manzana = $_POST['Manzana'];
