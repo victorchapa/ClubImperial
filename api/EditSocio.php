@@ -20,6 +20,7 @@
 	$telefono = $_POST['Telefono'];
 	$celular = $_POST['Celular'];
 	$membresia = $_POST['Membresia'];
+	$tipomembresia = $_POST['TipoMembresia'];
 	$sangre = $_POST['Sangre'];
 	$falta = $_POST['FAlta'];
 	$afiliacion = implode(', ', $_POST['Afiliacion']);
