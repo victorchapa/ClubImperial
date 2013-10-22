@@ -3,7 +3,9 @@ var SocioView = Backbone.View.extend({
     el: "#mainDisplayer", 
 
     events: {
-        "click .idSocio" : "renderOptions",
+        "click .idSocio"                    : "renderOptions",
+        "click .showS"                      : "showSociosTable",
+        "click .showE"                      : "showEditarSocio",
     },
 
     initialize: function(){},
@@ -34,9 +36,36 @@ var SocioView = Backbone.View.extend({
         $("#modalDisplayer").html(dataHTML);
         $("#Modal").modal("show");
     },
+    
+    hideSociosTable: function(){
+        $("table", ".socioBody").hide();                
+    },
+
+    showSociosTable: function(e){
+        $(".navSocio li:nth-child(1)").addClass("active");
+        $(".navSocio li:nth-child(2)").removeClass("active");
+        $("table", ".socioBody").show();                
+    },
+    
+    editSocioInitializer: function(){
+        $(".navSocio li:nth-child(1)").removeClass("active");
+        $(".navSocio li:nth-child(2)").addClass("active");
+        this.hideSociosTable();
+    },
 
     editarSocio: function(data){
-        console.log("EDITAR");             
+        this.editSocioInitializer();
+        console.log("EDIT!"); 
+    },
+
+    showEditarSocio: function(data){
+        this.editSocioInitializer();
+
+        var editSocio = $("#editSocio");
+        if(editSocio.length != 1){
+            console.log("Elija un Socio para editar.");    
+        }
+    
     },
 
 });
