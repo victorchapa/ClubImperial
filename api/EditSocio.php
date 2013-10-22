@@ -26,20 +26,24 @@
 	$conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
 	mysql_query ("SET NAMES 'utf8'");
-	mysql_query("UPDATE socios SET Nombre='$nombre', ApellidoP='$apellidop', ApellidoM='$apellidom', FNacimiento='$fnacimiento', Domicilio= '$domicilio', Manzana = '$manzana', Lote = '$lote', Coto = '$coto', Telefono = '$telefono', Celular = '$celular', Membresia= '$membresia', TipoMembresia= '$tipomembresia', Sangre ='$sangre', FAlta = '$falta', Afiliacion = '$afiliacion' WHERE IdSocio = '$id'");
+	//mysql_query("UPDATE socios SET Nombre='$nombre', ApellidoP='$apellidop', ApellidoM='$apellidom', FNacimiento='$fnacimiento', Domicilio= '$domicilio', Manzana = '$manzana', Lote = '$lote', Coto = '$coto', Telefono = '$telefono', Celular = '$celular', Membresia= '$membresia', TipoMembresia= '$tipomembresia', Sangre ='$sangre', FAlta = '$falta', Afiliacion = '$afiliacion' WHERE IdSocio = '$id'");
 	
 	$oldfoto=consultar("SELECT Foto FROM socios WHERE IdSocio='$id'");
 	$oldfoto=$oldfoto[0]["Foto"];
-	if(isset($oldfoto)){
+	echo $oldfoto." ";
+	echo $_FILES["Foto"]["tmp_name"];
+	/*if ($oldfoto[0]["Foto"] = $_FILES["Foto"]["tmp_name"]){
+		$foto = $oldfoto[0]["Foto"];
+	} else {
 		unlink($oldfoto);
+		$rutaServidor = "socios/".$id;
+		$rutaTemporal = $_FILES["Foto"]["tmp_name"];
+		$nombreImagen = $_FILES["Foto"]["name"];
+		$foto = $rutaServidor.'/'.$nombreImagen;
 	}
-	echo $oldfoto;
-	$rutaServidor = "socios/".$id;
-	$rutaTemporal = $_FILES["Foto"]["tmp_name"];
-	$nombreImagen = $_FILES["Foto"]["name"];
-	$foto = $rutaServidor.'/'.$nombreImagen;
 	move_uploaded_file($rutaTemporal, $foto);
 	mysql_query("UPDATE socios SET Foto='$foto' WHERE IdSocio = '$id'");
 	echo "<script type=text/javascript>window.location.href=\"http://localhost/clubimperial/index.php\";</script>";
+	*/
 ?>
 </html>
