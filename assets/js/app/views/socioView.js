@@ -103,24 +103,15 @@ var SocioView = Backbone.View.extend({
             },
         });
         $("#editSocio").show();
-        //var alertSocio = document.getElementsByClassName("alertSocio");
-        //alertSocio[0].remove();
     },
 
     showEditarSocio: function(data){
-        this.editSocioInitializer();
 
         var editSocio = $("#editSocio");
         if(editSocio.length != 1){
-            if($(".alertSocio").length != 0){
-                var alertSocio = document.getElementsByClassName("alertSocio");
-                alertSocio[0].remove();
-            }else{
-                var div = document.createElement("div");
-                div.className = div.className + "alertSocio";
-                $(".socioBody").append(div);
-            }
+            //console.log("No se puede hasta escojer Socio");
         }else{
+            this.editSocioInitializer();
             $("#editSocio").show();
         }
     
