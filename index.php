@@ -1,3 +1,6 @@
+<?php
+  include ("api/seguridad.php");
+?>
 <!DOCTYPE html>
 <html>
   <head>
