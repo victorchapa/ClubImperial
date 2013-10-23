@@ -94,7 +94,7 @@ var SocioView = Backbone.View.extend({
         if(editSocio.length != 1){
             if($(".alertSocio").length != 0){
                 var alertSocio = document.getElementsByClassName("alertSocio");
-                alertSocio.remove();
+                alertSocio[0].remove();
             }else{
                 var div = document.createElement("div");
                 div.className = div.className + "alertSocio";
