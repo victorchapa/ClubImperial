@@ -31,15 +31,16 @@
 	
 	$oldfoto=consultar("SELECT Foto FROM socios WHERE IdSocio='$id'");
 	$oldfoto=$oldfoto[0]["Foto"];
-	
-	if (isset($_FILES["Foto"])){
-		unlink($oldfoto);
+	if ($_FILES["Foto"]["name"] != ""){
+		if(isset($oldfoto)){
+			unlink($oldfoto);
+		}
+
 		$rutaServidor = "socios/".$id;
 		$rutaTemporal = $_FILES["Foto"]["tmp_name"];
 		$nombreImagen = $_FILES["Foto"]["name"];
 		$foto = $rutaServidor.'/'.$nombreImagen;
 		move_uploaded_file($rutaTemporal, $foto);
-		echo $rutaTemporal." ".$foto;
 		$conexion =  mysql_connect($serverAddress, $user, $passwd);
     	mysql_select_db($dbName);
 		mysql_query("UPDATE socios SET Foto='$foto' WHERE IdSocio='$id'");
