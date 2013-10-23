@@ -77,14 +77,29 @@ var SocioView = Backbone.View.extend({
                 $("#editSocio").html(compiledTemplate(socio));
                 $(".datePicker").datepicker();
                 $(".btnUpLoad").on("click", function(){
-                $("#upLoad").click();
-                setInterval(function(){
-                    var name = $('#upLoad').val();
-                    var fileName = name.split("\\");
-                    $('#fileName').text(fileName[2]);
-                },1);
-                return false;
-            });
+                    $("#upLoad").click();
+                    setInterval(function(){
+                        var name = $('#upLoad').val();
+                        var fileName = name.split("\\");
+                        $('#fileName').text(fileName[2]);
+                    },1);
+                    return false;
+                });
+
+                function changeImage(e){
+                    var selectedFile = e.target.files[0];
+                    var reader = new FileReader();
+
+                    reader.onload = function(e){
+                        var span = document.createElement('span');
+                        span.innerHTML = ["<img src='"+e.target.result+"'>"].join('');
+                        $(".photoReload").addClass("display-none");
+                        document.getElementsByClassName("fotoSocioEdit")[0].insertBefore(span, null);
+                    }
+
+                    reader.readAsDataURL(selectedFile);
+                }
+                document.getElementById("upLoad").addEventListener("change", changeImage, false);
             },
         });
         $("#editSocio").show();

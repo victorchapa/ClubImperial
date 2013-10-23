@@ -220,7 +220,7 @@ input.btn[disabled] {
 }
 
 #editSocioForm .btnUpLoad {
-  margin-left: 20px;
+  margin-left: 75%;
 }
 
 #formSocio h1 {
@@ -258,12 +258,12 @@ input.datePicker {
   cursor: pointer;
 }
 
-#modalDisplayer img.fotoSocio, img.fotoSocioEdit {
+#modalDisplayer img.fotoSocio, .fotoSocioEdit, .fotoSocioEdit img {
   width: 150px;
   height: 150px;
 }
 
-img.fotoSocioEdit {
+.fotoSocioEdit {
   margin-left: 25%;
 }
 
