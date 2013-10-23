@@ -24,7 +24,7 @@
 	$sangre = $_POST['Sangre'];
 	$falta = $_POST['FAlta'];
 	$afiliacion = implode(', ', $_POST['Afiliacion']);
-	$conexion =  mysql_connect($serverAddress, $user, $passwd);
+  $conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
 	mysql_query ("SET NAMES 'utf8'");
 	mysql_query("UPDATE socios SET Nombre='$nombre', ApellidoP='$apellidop', ApellidoM='$apellidom', FNacimiento='$fnacimiento', Domicilio= '$domicilio', Manzana = '$manzana', Lote = '$lote', Coto = '$coto', Telefono = '$telefono', Celular = '$celular', Membresia= '$membresia', TipoMembresia= '$tipomembresia', Sangre ='$sangre', FAlta = '$falta', Afiliacion = '$afiliacion' WHERE IdSocio = '$id'");

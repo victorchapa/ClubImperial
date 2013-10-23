@@ -5,6 +5,7 @@ TEMPLATES.editSocio =
         "<div class='clear'>" +
         "<div class='data1'>" +
             "<input type='hidden' name='id' value='<% print(socio.IdSocio); %>'>" +
+            "<img class='fotoSocioEdit' src='api/<% print(socio.Foto); %>'>" +
             "<input id='upLoad' class='display-none' type='file' name='Foto'><input class='btn btnFunctions btnUpLoad' type='button' value='Editar Foto'>" +
             "<p><span class='display-none' id='fileName'></span></p>" +
             "<p>Nombres: <input type='text' name='Nombre' maxlength='30' value='<% print(socio.Nombre); %>'></p>" +
@@ -43,7 +44,7 @@ TEMPLATES.editSocio =
                 "</span>" +
             "</p>" +
             "<p>Tipo de membresia: <select name='TipoMembresia'>" +
-                  "<option value='0'>Elige una opción</option>" +
+                  "<option value='<% print(socio.TipoMembresia); %>'><% print(socio.TipoMembresia); %></option>" +
                   "<option value='Familiar'>Familiar</option>" +
                   "<option value='Individual'>Individual</option>" +
                   "<option value='Jr'>Jr</option>" +
@@ -51,12 +52,38 @@ TEMPLATES.editSocio =
             "</p>" +
             "<p>Fecha de Alta: <input class='datePicker' type='text' name='FAlta' placeholder='mm/dd/aaaa' readonly value='<% print(socio.FAlta); %>'></p>" +
             "<p>Afiliación: " + 
-                "<span><span><input type='checkbox' name='Afiliacion' value='Golf'> Golfista.</span>" +
-                "<span><input type='checkbox' name='Afiliacion' value='Futbol'> Futbolista.</span>" +
-                "<span><input type='checkbox' name='Afiliacion' value='Tenista'> Tenista.</span><br>" +
-                "<span><input type='checkbox' name='Afiliacion' value='Piscina'> Piscina.</span>" +
-                "<span><input type='checkbox' name='Afiliacion' value='Gym'> GYM.</span>" +
-                "<span><input type='checkbox' name='Afiliacion' value='SPA'> SPA.</span></span>" +
+                "<span>" +
+                "<% if(socio.Afiliacion.Golf == true) { %>" +
+                    "<span><input type='checkbox' name='Afiliacion[]' value='Golf' checked> Golfista.</span>" +
+                "<% }else{%>"+
+                    "<span><input type='checkbox' name='Afiliacion[]' value='Golf'> Golfista.</span>" +
+                "<% } %>" +
+                "<% if(socio.Afiliacion.Futbol == true) { %>" +
+                    "<span><input type='checkbox' name='Afiliacion[]' value='Futbol' checked> Futbolista.</span>" +
+                "<% }else{%>"+
+                    "<span><input type='checkbox' name='Afiliacion[]' value='Futbol'> Futbolista.</span>" +
+                "<% } %>" +
+                "<% if(socio.Afiliacion.Tenis == true) { %>" +
+                    "<span><input type='checkbox' name='Afiliacion[]' value='Tenis' checked> Tenista.</span><br>" +
+                "<% }else{%>"+
+                    "<span><input type='checkbox' name='Afiliacion[]' value='Tenis'> Tenista.</span><br>" +
+                "<% } %>" +
+                "<% if(socio.Afiliacion.Piscina == true) { %>" +
+                    "<span><input type='checkbox' name='Afiliacion[]' value='Piscina' checked> Piscina.</span>" +
+                "<% }else{%>"+
+                    "<span><input type='checkbox' name='Afiliacion[]' value='Piscina'> Piscina.</span>" +
+                "<% } %>" +
+                "<% if(socio.Afiliacion.Gym == true) { %>" +
+                    "<span><input type='checkbox' name='Afiliacion[]' value='Gym' checked> GYM.</span>" +
+                "<% }else{%>"+
+                    "<span><input type='checkbox' name='Afiliacion[]' value='Gym'> GYM.</span>" +
+                "<% } %>" +
+                "<% if(socio.Afiliacion.SPA == true) { %>" +
+                    "<span><input type='checkbox' name='Afiliacion[]' value='SPA' checked> SPA.</span>" +
+                "<% }else{%>"+
+                    "<span><input type='checkbox' name='Afiliacion[]' value='SPA'> SPA.</span>" +
+                "<% } %>" +
+                "</span>" +
             "</p>" +
         "</div>" +
         "<div class='btnGroup'>" +

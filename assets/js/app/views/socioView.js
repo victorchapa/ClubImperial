@@ -67,9 +67,14 @@ var SocioView = Backbone.View.extend({
         modelSocio.fetch({
             success: function(data){
                 var data = data.toJSON()[0];
+                var afiliaciones = data.Afiliacion.split(", ");
+                var objAfi = {Golf: null, Futbol: null, Tenis: null, Piscina: null, Gym: null, SPA: null};
+                _.each(afiliaciones, function(afiliacion){
+                    objAfi[afiliacion] = true;
+                }); 
+                data.Afiliacion = objAfi;
                 var socio = {socio: data};
                 $("#editSocio").html(compiledTemplate(socio));
-                console.log(socio);
                 $(".datePicker").datepicker();
                 $(".btnUpLoad").on("click", function(){
                 $("#upLoad").click();
@@ -83,8 +88,8 @@ var SocioView = Backbone.View.extend({
             },
         });
         $("#editSocio").show();
-        var alertSocio = document.getElementsByClassName("alertSocio");
-        alertSocio[0].remove();
+        //var alertSocio = document.getElementsByClassName("alertSocio");
+        //alertSocio[0].remove();
     },
 
     showEditarSocio: function(data){
