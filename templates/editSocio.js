@@ -5,8 +5,10 @@ TEMPLATES.editSocio =
         "<div class='clear'>" +
         "<div class='data1'>" +
             "<input type='hidden' name='id' value='<% print(socio.IdSocio); %>'>" +
-            "<img class='fotoSocioEdit' src='api/<% print(socio.Foto); %>'>" +
-            "<input id='upLoad' class='display-none' type='file' name='Foto'><input class='btn btnFunctions btnUpLoad' type='button' value='Editar Foto'>" +
+            "<div class='fotoSocioEdit'>" +
+                "<img class='photoReload' src='api/<% print(socio.Foto); %>'>" +
+            "</div>" +
+            "<p><input id='upLoad' class='display-none' type='file' name='Foto'><input class='btn btnFunctions btnUpLoad' type='button' value='Editar Foto'></p>" +
             "<p><span class='display-none' id='fileName'></span></p>" +
             "<p>Nombres: <input type='text' name='Nombre' maxlength='30' value='<% print(socio.Nombre); %>'></p>" +
             "<p>Apellido Paterno: <input type='text' name='ApellidoP' maxlength='30' value='<% print(socio.ApellidoP); %>'></p>" +
