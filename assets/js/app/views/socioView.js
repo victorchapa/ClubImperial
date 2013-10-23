@@ -88,7 +88,6 @@ var SocioView = Backbone.View.extend({
 
                 function changeImage(e){
                     var selectedFile = e.target.files[0];
-                    console.log(selectedFile);
                     var reader = new FileReader();
 
                     reader.onload = function(e){
