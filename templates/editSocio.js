@@ -4,14 +4,13 @@ TEMPLATES.editSocio =
         "<h1>Favor de ingresar los datos a Editar:</h1>" +
         "<div class='clear'>" +
         "<div class='data1'>" +
-            "<img class='fotoSocioEdit' src='api/<% print(socio.Foto); %>'>" +
             "<input type='hidden' name='id' value='<% print(socio.IdSocio); %>'>" +
             "<input id='upLoad' class='display-none' type='file' name='Foto'><input class='btn btnFunctions btnUpLoad' type='button' value='Editar Foto'>" +
             "<p><span class='display-none' id='fileName'></span></p>" +
             "<p>Nombres: <input type='text' name='Nombre' maxlength='30' value='<% print(socio.Nombre); %>'></p>" +
-            "<p>Apellido Paterno: <input type='text' name='ApellidoP' maxlength='30' value=''></p>" +
-            "<p>Apellido Materno: <input type='text' name='ApellidoM' maxlength='30' value=''></p>" +
-            "<p>Fecha de Nacimiento: <input class='datePicker' type='text' name='FNacimiento' placeholder='mm/dd/aaaa' readonly></p>" +
+            "<p>Apellido Paterno: <input type='text' name='ApellidoP' maxlength='30' value='<% print(socio.ApellidoP); %>'></p>" +
+            "<p>Apellido Materno: <input type='text' name='ApellidoM' maxlength='30' value='<% print(socio.ApellidoM); %>'></p>" +
+            "<p>Fecha de Nacimiento: <input class='datePicker' type='text' name='FNacimiento' placeholder='mm/dd/aaaa' value='<% print(socio.FNacimiento); %>' readonly></p>" +
             "<p>Domicilio: <input type='text' name='Domicilio' value='<% print(socio.Domicilio); %>'></p>" +
             "<p>Manzana: <input type='text' name='Manzana' value='<% print(socio.Manzana); %>'></p>" +
         "</div>" +
@@ -21,7 +20,7 @@ TEMPLATES.editSocio =
             "<p>Teléfono: <input type='text' name='Telefono' maxlength='10' value='<% print(socio.Telefono); %>'></p>" +
             "<p>Celular: <input type='text' name='Celular' maxlength='10' value='<% print(socio.Celular); %>'></p>" +
             "<p>Tipo de Sangre: <select name='Sangre'>" +
-                "<option value='0'><% print(socio.Sangre); %></option>" +
+                "<option value='<% print(socio.Sangre); %>'><% print(socio.Sangre); %></option>" +
                 "<option value='O-'>O-</option>" +
                 "<option value='O+'>O+</option>" +
                 "<option value='A-'>A-</option>" +
@@ -33,8 +32,15 @@ TEMPLATES.editSocio =
                 "</select>" +
             "</p>" +
             "<p>Membresia: " +
-            "<span><input type='radio' name='Membresia' value='Propietario'> Propietario." +
-            "<input type='radio' name='Membresia' value='Rentista'> Rentista.</span>" +
+                "<span>" +
+                    "<% if(socio.Membresia == 'Propietario') { %>" +
+                        "<input type='radio' name='Membresia' value='Propietario' checked='checked'> Propietario." +
+                        "<input type='radio' name='Membresia' value='Rentista'> Rentista." +
+                    "<% }else{ %>" +
+                        "<input type='radio' name='Membresia' value='Propietario'> Propietario." +
+                        "<input type='radio' name='Membresia' value='Rentista' checked='checked'> Rentista." +
+                    "<% } %>" +
+                "</span>" +
             "</p>" +
             "<p>Tipo de membresia: <select name='TipoMembresia'>" +
                   "<option value='0'>Elige una opción</option>" +

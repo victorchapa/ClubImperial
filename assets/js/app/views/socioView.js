@@ -45,6 +45,7 @@ var SocioView = Backbone.View.extend({
         $(".navSocio li:nth-child(1)").addClass("active");
         $(".navSocio li:nth-child(2)").removeClass("active");
         $("table", ".socioBody").show();                
+        $("#editSocio").hide();                
     },
     
     editSocioInitializer: function(){
@@ -81,7 +82,9 @@ var SocioView = Backbone.View.extend({
             });
             },
         });
-
+        $("#editSocio").show();
+        var alertSocio = document.getElementsByClassName("alertSocio");
+        alertSocio[0].remove();
     },
 
     showEditarSocio: function(data){
@@ -89,7 +92,16 @@ var SocioView = Backbone.View.extend({
 
         var editSocio = $("#editSocio");
         if(editSocio.length != 1){
-            console.log("Elija un Socio para editar.");    
+            if($(".alertSocio").length != 0){
+                var alertSocio = document.getElementsByClassName("alertSocio");
+                alertSocio.remove();
+            }else{
+                var div = document.createElement("div");
+                div.className = div.className + "alertSocio";
+                $(".socioBody").append(div);
+            }
+        }else{
+            $("#editSocio").show();
         }
     
     },
