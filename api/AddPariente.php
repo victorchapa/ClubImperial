@@ -36,6 +36,7 @@
 	$foto = $rutaServidor.'/'.$nombreImagen;
 	move_uploaded_file($rutaTemporal, $foto);
 	mysql_query("UPDATE socios SET Foto='$foto' WHERE IdSocio='$id'");
+  
 	echo "<script type=text/javascript>window.location.href=\"http://localhost/clubimperial/index.php\";</script>";
 ?>
 </html>

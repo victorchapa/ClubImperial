@@ -4,7 +4,7 @@ TEMPLATES.formParientes =
         "<h1>Favor de ingresar los datos correspondientes del Pariente:</h1>" +
         "<div class='clear'>" +
         "<div class='data1'>" +
-            "<input type='hidden' name='idSocio' value='<% print(idPariente); %>'>" +
+            "<input type='hidden' name='IdSocio' value='<% print(idPariente); %>'>" +
             "<p>Nombres: <input type='text' name='Nombre' maxlength='30'></p>" +
             "<p>Apellido Paterno: <input type='text' name='ApellidoP' maxlength='30'></p>" +
             "<p>Apellido Materno: <input type='text' name='ApellidoM' maxlength='30'></p>" +
