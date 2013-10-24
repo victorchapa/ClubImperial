@@ -2,23 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-<title>
-Bienvenido al sistema
-</title>
-<head>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
 <body>
-	<h1>Login</h1>
-<div>
-    <div class="bigContainer">
-      <div class="well logginContainer">
-        <legend>Entrar al sistema</legend>
-<form method="POST" action="api/login.php">
-            <input class="span3" placeholder="Usuario" type="text" name="usuario">
-            <input class="span3" placeholder="Contraseña" type="password" name="clave">
-            <button class="btn-success btn" type="submit">Entrar</button>
-</form>
-		</div>
-	</div>
-</div>	
-</body>
+	<div class="ALogo">
+    <img src="assets/img/logoValle.png" alt="Valle Imperial Logo.">
+  </div>
+  <div class="Login">
+    <div class="LoginDiv">
+      <h2>Entrar al sistema</h2>
+      <form method="POST" action="api/login.php">
+        <input class="span3" placeholder="Usuario" type="text" name="usuario">
+        <input class="span3" placeholder="Contraseña" type="password" name="clave">
+        <input type="submit" class="btn-success btn btn-Login" value="Entrar">
+      </form>
+    </div>
+  </div>
+  </body>
 <html>
