@@ -1,5 +1,6 @@
 <?php
   include ("api/seguridad.php");
+  @session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +30,7 @@
   <body>
     <header>
         <div class="loginAs">
-          <p>Loggeado cómo: (<a href="api/salir.php">Salir</a>)</p>
+          <p>Loggeado cómo: <?php echo $_SESSION["usuario"];?> (<a href="api/salir.php">Salir</a>)</p>
         </div>
         <div class="logoContainer">
           <div class="VLogo">
