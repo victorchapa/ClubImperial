@@ -7,6 +7,8 @@ var SocioView = Backbone.View.extend({
         "click .showS"                      : "showSociosTable",
         "click .showE"                      : "showEditarSocio",
         "click .trSocio"                    : "showWindowAction",
+        "click .btnAddPari"                 : "showFormAddPariente",
+        "click .btnDelPari"                 : "delPariente",
     },
 
     initialize: function(){},
@@ -137,6 +139,29 @@ var SocioView = Backbone.View.extend({
             $("#editSocio").show();
         }
     
+    },
+
+    showFormAddPariente: function(){
+        var template = TEMPLATES.formParientes;
+        var compiledTemplate = _.template($(template).html());
+        var idSocio = $("input[type='hidden']", "#editSocioForm").val(); 
+        var idPariente = {idPariente: idSocio};
+        $("#modalDisplayerParientes").html(compiledTemplate(idPariente));
+        $(".datePicker").datepicker();
+        $(".btnUpLoadPariente").on("click", function(){
+            $("#upLoadPariente").click();
+            setInterval(function(){
+                var name = $('#upLoadPariente').val();
+                var fileName = name.split("\\");
+                $('#fileNamePariente').text(fileName[2]);
+            },1);
+            return false;
+        });
+        $("#modalParientes").modal("show");
+    },
+
+    delPariente: function(){
+        console.log("Eliminar Pariente");
     },
 
 });

@@ -87,6 +87,13 @@ TEMPLATES.editSocio =
                 "<% } %>" +
                 "</span>" +
             "</p>" +
+            "<p>Parientes:</p>" +
+            "<div class='memoField'></div>" +
+                "<div class='btnGroupII'>" +
+                    "<input class='btn btnAddPari' type='button' value='+'>" +
+                    "<input class='btn btnDelPari' type='button' value='-'>" +
+                    "<input type='text' value='' placeholder='¿Algun pariente?' disabled>" +
+                "</div>" +
         "</div>" +
         "<div class='btnGroup'>" +
             "<p><input class='btn btnSuccess' type='submit' value='Editar Usuario'></p>" +

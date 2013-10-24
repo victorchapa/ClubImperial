@@ -244,6 +244,7 @@ input.btn[disabled] {
 .data1, .data2 {
   float: left;
   width: 400px;
+  margin-bottom: 10px;
 }
 
 .data1 p, .data2 p {
@@ -343,6 +344,56 @@ ul.navSocio li {
 .actionsSocio .idSocio p#sSocio {
   border-bottom: 1px solid #BDBDBD;
   padding-bottom: 5px;
+}
+
+.data2 p:nth-child(10) {
+  margin-bottom: 0px;
+}
+
+.memoField {
+  width: 90%;
+  height: 44px;
+  border: 1px solid silver;
+  background-color: white;
+  margin: 0px;
+}
+
+.btnAddPari, .btnDelPari {
+  width: 25px;
+  height: 30px;
+}
+
+.btnAddPari {
+  background-color: #FACC2E;
+  border-color: #FFBF00;
+}
+
+.btnDelPari {
+  background-color: #FE2E2E;
+  border-color: #FF0000;
+}
+
+.btnGroupII {
+  padding-right: 40px;
+}
+
+.btnGroupII input[type="text"] {
+  margin-left: 3px;
+  width: 307px;
+  height: 27px;
+  text-align: center;
+}
+
+#modalParientes .modal-dialog {
+  width: 865px;
+}
+
+#modalParientes .modal-header {
+  padding-bottom: 25px;
+}
+
+#formPariente h1{
+  margin-top: 3px;
 }
 
 @keyframes indexFadeInOut {
