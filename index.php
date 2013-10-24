@@ -79,6 +79,20 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
+    <div class="modal" id="modalParientes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"></h4>
+          </div>
+          <div id="modalDisplayerParientes" class="modal-body">
+            ...
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
 
   <!--Scrypting-->
   <script src="assets/js/main.js"></script>
@@ -88,6 +102,7 @@
   <!-- Templates -->
   <script src="templates/index.js"></script>
   <script src="templates/formSocios.js"></script>
+  <script src="templates/formParientes.js"></script>
   <script src="templates/editSocio.js"></script>
   <script src="templates/socioNav.js"></script>
   <script src="templates/allSocios.js"></script>
