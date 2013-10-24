@@ -366,3 +366,43 @@ ul.navSocio li {
   -webkit-animation-delay: 10s;
   animation-delay: 10s;
 }
+
+.ALogo {
+  background: white;
+  border-radius: 0 10px 10px 0;
+  margin:0 auto 0 auto;
+  text-align:center;
+}
+.ALogo img {
+  border-radius: 10px;
+}
+.Login {
+  width: 1000px;
+  height: 600px;
+  background: url("../img/casaclub3.jpg");
+  border: 10px solid #0B0B61;
+  border-radius: 10px;
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+
+.LoginDiv {
+  width: 500px;
+  height: 100px;
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid #0B0B61;
+  margin: 0 auto 0 auto;
+  margin-top: 250px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.LoginDiv h2{
+  color: #B18904;
+}
+
+.btn-Login{
+  margin-left: 5px;
+  width: 80px;
+}
