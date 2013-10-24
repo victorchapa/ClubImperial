@@ -6,9 +6,28 @@ var SocioView = Backbone.View.extend({
         "click .idSocio"                    : "renderOptions",
         "click .showS"                      : "showSociosTable",
         "click .showE"                      : "showEditarSocio",
+        "click .trSocio"                    : "showWindowAction",
     },
 
     initialize: function(){},
+
+    showWindowAction: function(e){
+        test = $(e.target);
+        var targetIdSocio =  $(e.target).parent().attr("idsocio");
+        var targetCoordenades = [(e.pageX - 215) + "px", (e.pageY - 155) + "px"];
+        $(".spanIdSocio").text(targetIdSocio);
+        $(".actionsSocio").css({
+            left: targetCoordenades[0],
+            top: targetCoordenades[1],
+        }).show();
+
+        $(".actionsSocio").on("mouseleave", function(){
+            setTimeout(function(){
+                $(".actionsSocio").hide();
+            }, 1500);
+        });
+        
+    },
 
     renderOptions: function(e){
         var self = this;
@@ -24,9 +43,12 @@ var SocioView = Backbone.View.extend({
             switch (clickOn){
                 case "sSocio":
                     self.showSocio(data);
+                    $(".actionsSocio").hide();
                     break;
                 case "eSocio":
                     self.editarSocio(id);
+                    $(".actionsSocio").hide();
+                    break;
             }
         });
     },
@@ -103,24 +125,15 @@ var SocioView = Backbone.View.extend({
             },
         });
         $("#editSocio").show();
-        //var alertSocio = document.getElementsByClassName("alertSocio");
-        //alertSocio[0].remove();
     },
 
     showEditarSocio: function(data){
-        this.editSocioInitializer();
 
         var editSocio = $("#editSocio");
         if(editSocio.length != 1){
-            if($(".alertSocio").length != 0){
-                var alertSocio = document.getElementsByClassName("alertSocio");
-                alertSocio[0].remove();
-            }else{
-                var div = document.createElement("div");
-                div.className = div.className + "alertSocio";
-                $(".socioBody").append(div);
-            }
+            //console.log("No se puede hasta escojer Socio");
         }else{
+            this.editSocioInitializer();
             $("#editSocio").show();
         }
     

@@ -174,6 +174,18 @@ input.btn[disabled] {
   border-radius: 10px;
 }
 
+.socioBody {
+  overflow: auto;
+}
+
+.socioBody table {
+  width: 150%;
+}
+
+.test, .test > td {
+  height: 25px;
+}
+
 .indexImages img {
   box-shadow: 5px 5px 5px #aaa;
   position: absolute;
@@ -253,10 +265,6 @@ input.datePicker {
   width: 143px;
 }
 
-.idSocio p {
-  color: #0101DF;
-  cursor: pointer;
-}
 
 #modalDisplayer img.fotoSocio, .fotoSocioEdit, .fotoSocioEdit img {
   width: 150px;
@@ -305,6 +313,34 @@ ul.navSocio > li > a {
 
 ul.navSocio li {
   display: inline-block;
+}
+
+.emergentWindow {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  box-shadow: 2px 2px 5px #aaa;
+  border: #BDBDBD solid 1px;
+  border-radius: 4px;
+}
+
+.actionsSocio {
+  background-color: #E6E6E6;
+}
+
+.idSocio {
+  margin: 0 3px 0 3px;
+}
+
+.idSocio p {
+  color: #0101DF;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.actionsSocio .idSocio p#sSocio {
+  border-bottom: 1px solid #BDBDBD;
+  padding-bottom: 5px;
 }
 
 @keyframes indexFadeInOut {
