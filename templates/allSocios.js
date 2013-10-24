@@ -1,6 +1,7 @@
 TEMPLATES.allSocios = 
         "<script type='text/template' id='thisTemplate'>" + 
-          "<table border='1'cellspacing='0' >" +
+          "<table class='allSociosTable' border='1' cellspacing='0' >" +
+          "<thead>" +
               "<tr>" +
                 "<th>Nombre</th>" +
                 "<th>Apellido P.</th>" +
@@ -18,6 +19,8 @@ TEMPLATES.allSocios =
                 "<th>Fecha de alta</th>" +
                 "<th>Afiliación</th>" +
             "</tr>" +
+          "</thead>" +
+          "<tbody>" +
                 "<% _.each(socios, function(socio) { %>" +
                 "<tr class='trSocio' idSocio='<% print(socio.IdSocio) %>'>" +
                     "<td><% print(socio.Nombre); %></td>" +
@@ -37,6 +40,7 @@ TEMPLATES.allSocios =
                     "<td><% print(socio.Afiliacion); %></td>" +
                 "</tr>" +
                 "<% }); %>" +
+            "</tbody>" +
             "</table>" +
             "<div class='emergentWindow actionsSocio'>" +
                 "<div class='idSocio'>" +

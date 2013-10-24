@@ -176,10 +176,12 @@ input.btn[disabled] {
 
 .socioBody {
   overflow: auto;
+  border-right: 1px solid #BDBDBD;
 }
 
 .socioBody table {
   width: 150%;
+  margin: 10px 0 0 10px;
 }
 
 .test, .test > td {
