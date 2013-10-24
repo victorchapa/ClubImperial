@@ -7,7 +7,7 @@
     <meta charset="utf-8">
   </head>
 <?php
-	$idsocio = $_POST['IdSocio']; 
+	$idsocio = $_POST['IdSocio'];
 	$nombre = $_POST['Nombre'];
 	$apellidop = $_POST['ApellidoP'];
 	$apellidom = $_POST['ApellidoM'];
@@ -26,16 +26,16 @@
 	$conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
 	mysql_query ("SET NAMES 'utf8'");
-	mysql_query("INSERT INTO parientes (IdSocio, Nombre, ApellidoP, ApellidoM, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion) 
+	mysql_query("INSERT INTO socios (IdPariente, Nombre, ApellidoP, ApellidoM, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion) 
 	VALUES ('$idsocio', '$nombre', '$apellidop', '$apellidom', '$fnacimiento', '$domicilio', '$manzana', '$lote', '$coto', '$telefono', '$celular', '$membresia', '$tipomembresia', '$sangre', '$falta', '$afiliacion')");
 	$id= mysql_insert_id();
-	mkdir ("parientes/".$id);
-	$rutaServidor = "parientes/".$id;
+	mkdir ("socios/".$id);
+	$rutaServidor = "socios/".$id;
 	$rutaTemporal = $_FILES["Foto"]["tmp_name"];
 	$nombreImagen = $_FILES["Foto"]["name"];
 	$foto = $rutaServidor.'/'.$nombreImagen;
 	move_uploaded_file($rutaTemporal, $foto);
-	mysql_query("UPDATE parientes SET Foto='$foto' WHERE IdPariente='$id'");
+	mysql_query("UPDATE socios SET Foto='$foto' WHERE IdSocio='$id'");
 	echo "<script type=text/javascript>window.location.href=\"http://localhost/clubimperial/index.php\";</script>";
 ?>
 </html>
