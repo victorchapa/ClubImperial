@@ -1,6 +1,6 @@
 TEMPLATES.allSocios = 
         "<script type='text/template' id='thisTemplate'>" + 
-          "<table border='1'>" +
+          "<table border='1'cellspacing='0' >" +
               "<tr>" +
                 "<th>Nombre</th>" +
                 "<th>Apellido P.</th>" +
@@ -17,10 +17,9 @@ TEMPLATES.allSocios =
                 "<th>Tipo de sangre</th>" +
                 "<th>Fecha de alta</th>" +
                 "<th>Afiliación</th>" +
-                "<th>Acciones</th>" +
             "</tr>" +
                 "<% _.each(socios, function(socio) { %>" +
-                "<tr>" +
+                "<tr class='trSocio' idSocio='<% print(socio.IdSocio) %>'>" +
                     "<td><% print(socio.Nombre); %></td>" +
                     "<td><% print(socio.ApellidoP); %></td>" +
                     "<td><% print(socio.ApellidoM); %></td>" +
@@ -36,8 +35,13 @@ TEMPLATES.allSocios =
                     "<td><% print(socio.Sangre); %></td>" +
                     "<td><% print(socio.FAlta); %></td>" +
                     "<td><% print(socio.Afiliacion); %></td>" +
-                    "<td><div class='idSocio'><span class='display-none'><% print(socio.IdSocio); %></span><p id='sSocio'>Ver perfil</p><p id='eSocio'>Editar</p></div></td>" +
                 "</tr>" +
                 "<% }); %>" +
             "</table>" +
+            "<div class='emergentWindow actionsSocio'>" +
+                "<div class='idSocio'>" +
+                    "<span class='display-none spanIdSocio'></span>" +
+                    "<p id='sSocio'>Ver perfil</p><p id='eSocio'>Editar</p>" +
+                "</div>" +
+            "</div>" +  
             "</script>";
