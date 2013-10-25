@@ -109,6 +109,7 @@
 
   <!-- Collections --!>
   <script src="assets/js/app/collections/socios.js"></script>
+  <script src="assets/js/app/collections/parientes.js"></script>
   <!-- Models --!>
   <script src="assets/js/app/models/socio.js"></script>
   <!-- Views --!>

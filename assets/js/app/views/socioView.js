@@ -124,6 +124,24 @@ var SocioView = Backbone.View.extend({
                     reader.readAsDataURL(selectedFile);
                 }
                 document.getElementById("upLoad").addEventListener("change", changeImage, false);
+
+                var id = data.IdSocio;
+                var collectionParientes = new CollectionParientes(id);
+                collectionParientes.fetch({
+                    success: function(data){
+                        var data = data.toJSON();
+                        console.log(data);
+                        _.each(data, function(pariente){
+                            var name = pariente.Nombre + " " + pariente.ApellidoP + " " + pariente.ApellidoM + " => " + pariente.Parentesco +".";
+                            console.log(name);
+                            $("<p>", {
+                                class: "nombrePariente",
+                                text: name,
+                                idPariente: pariente.IdPariente
+                            }).appendTo(".memoField");
+                        }); 
+                    }
+                });
             },
         });
         $("#editSocio").show();

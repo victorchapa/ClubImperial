@@ -8,6 +8,13 @@ TEMPLATES.formParientes =
             "<p>Nombres: <input type='text' name='Nombre' maxlength='30'></p>" +
             "<p>Apellido Paterno: <input type='text' name='ApellidoP' maxlength='30'></p>" +
             "<p>Apellido Materno: <input type='text' name='ApellidoM' maxlength='30'></p>" +
+            "<p>Parentesco: " +
+                "<span>"+
+                    "<input type='radio' name='Parentesco' value='Esposo'> Esposo." +
+                   "<input type='radio' name='Parentesco' value='Esposa'> Esposa." +
+                   "<input type='radio' name='Parentesco' value='Hijo'> Hijo." +
+                 "</span>" +
+            "</p>" +
             "<p>Fecha de Nacimiento: <input class='datePicker' type='text' name='FNacimiento' placeholder='mm/dd/aaaa' readonly></p>" +
             "<p>Domicilio: <input type='text' name='Domicilio'></p>" +
             "<p>Manzana: <input type='text' name='Manzana'></p>" +
