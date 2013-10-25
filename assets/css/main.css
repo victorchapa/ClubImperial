@@ -412,7 +412,14 @@ ul.navSocio li {
 
 .nombrePariente {
   margin: 0px;
+  cursor: pointer;
+  margin-left: 2px;
 }
+
+p.nombrePariente.selected {
+  background-color: #5882FA;
+}
+
 
 @keyframes indexFadeInOut {
   0% {

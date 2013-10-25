@@ -116,5 +116,6 @@
   <script src="assets/js/app/views/mainView.js"></script>
   <script src="assets/js/app/views/navMainView.js"></script>
   <script src="assets/js/app/views/socioView.js"></script>
+  <script src="assets/js/app/views/memoParientesView.js"></script>
   </body>
 </html>
