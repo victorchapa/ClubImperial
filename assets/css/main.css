@@ -359,6 +359,20 @@ ul.navSocio li {
   overflow: auto;
 }
 
+.tableKin {
+  height: 100px;
+  border: 1px solid silver;
+  background-color: white;
+  margin: 0px;
+  overflow: auto;
+}
+.tableKin table {
+  width: 200%;
+}
+.tableKin table, th, td{
+  border: 1px solid black;
+}
+
 .btnAddPari, .btnDelPari {
   width: 25px;
   height: 30px;
