@@ -27,7 +27,7 @@
     echo "<p>Afiliación: <label>".$socios["0"]["Afiliacion"]."</label></p>";
     echo "</div></div>";
     echo "<p>Parientes:</p>";
-    echo "<div class='memoField'>";
+    echo "<div class='tableKin'>";
     if($parientes){
     echo "<table>";
     echo "<thead>";
@@ -35,7 +35,7 @@
     echo "<th>Apellido P.</th>";
     echo "<th>Apellido M.</th>";
     echo "<th>Parentesco</th>";
-    echo "<th>Fecha de nacimiento</th>";
+    echo "<th>F. Nacimiento</th>";
     echo "<th>Teléfono</th>";
     echo "<th>Célular</th>";
     echo "<th>Email</th>";
@@ -61,7 +61,7 @@
         echo "<td>".$pariente["FAlta"]."</td>";
         echo "<td>".$pariente["Afiliacion"]."</td>";
       }
-    echo "</tbody>"
+    echo "</tbody>";
     }else{
       echo "<p>No tiene parientes registrados.</p>";
     }
