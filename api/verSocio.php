@@ -19,7 +19,7 @@
     echo "<div class='data2'>";
     echo "<p>Teléfono: <label>".$socios["0"]["Telefono"]."</label></p>";
     echo "<p>Célular: <label>".$socios["0"]["Celular"]."</label></p>";
-    echo "<p>Email: <label>".$socios["0"]["Email"]."</label></p>";
+    echo "<p>Email: <label>".$socios["0"]["Correo"]."</label></p>";
     echo "<p>Membresia: <label>".$socios["0"]["Membresia"]."</label></p>";
     echo "<p>Tipo de membresia: <label>".$socios["0"]["TipoMembresia"]."</label></p>";
     echo "<p>Sangre: <label>".$socios["0"]["Sangre"]."</label></p>";
