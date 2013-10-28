@@ -13,6 +13,7 @@ TEMPLATES.allSocios =
                 "<th>Coto</th>" +
                 "<th>Télefono</th>" +
                 "<th>Célular</th>" +
+                "<th>Email</th>" +
                 "<th>Membresia</th>" +
                 "<th>Tipo de membresia</th>" +
                 "<th>Tipo de sangre</th>" +
@@ -33,6 +34,7 @@ TEMPLATES.allSocios =
                     "<td><% print(socio.Coto); %></td>" +
                     "<td><% print(socio.Telefono); %></td>" +
                     "<td><% print(socio.Celular); %></td>" +
+                    "<td><% print(socio.Correo); %></td>" +
                     "<td><% print(socio.Membresia); %></td>" +
                     "<td><% print(socio.TipoMembresia); %></td>" +
                     "<td><% print(socio.Sangre); %></td>" +

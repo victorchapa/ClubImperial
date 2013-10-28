@@ -15,6 +15,7 @@ TEMPLATES.formSocio =
         "<div class='data2'>" +
             "<p>Teléfono: <input type='text' name='Telefono' maxlength='10'></p>" +
             "<p>Celular: <input type='text' name='Celular' maxlength='10'></p>" +
+            "<p>Email: <input type='text' name='Correo'></p>" +
             "<p>Tipo de Sangre: <select name='Sangre'>" +
                 "<option value='0'>Elige el tipo</option>" +
                 "<option value='O-'>O-</option>" +

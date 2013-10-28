@@ -1,4 +1,4 @@
-<?php 
+<?php
   include("api/consultas.php");
   $socios = consultar("SELECT * FROM historial ORDER BY FechaA DESC, HoraA DESC");
   if($socios){

@@ -19,15 +19,16 @@
 	$coto = $_POST['Coto'];
 	$telefono = $_POST['Telefono'];
 	$celular = $_POST['Celular'];
+	$correo = $_POST['Correo'];
 	$membresia = $_POST['Membresia'];
 	$tipomembresia = $_POST['TipoMembresia'];
 	$sangre = $_POST['Sangre'];
 	$falta = $_POST['FAlta'];
 	$afiliacion = implode(', ', $_POST['Afiliacion']);
-  $conexion =  mysql_connect($serverAddress, $user, $passwd);
+  	$conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
 	mysql_query ("SET NAMES 'utf8'");
-	mysql_query("UPDATE socios SET Nombre='$nombre', ApellidoP='$apellidop', ApellidoM='$apellidom', FNacimiento='$fnacimiento', Domicilio= '$domicilio', Manzana = '$manzana', Lote = '$lote', Coto = '$coto', Telefono = '$telefono', Celular = '$celular', Membresia= '$membresia', TipoMembresia= '$tipomembresia', Sangre ='$sangre', FAlta = '$falta', Afiliacion = '$afiliacion' WHERE IdSocio = '$id'");
+	mysql_query("UPDATE socios SET Nombre='$nombre', ApellidoP='$apellidop', ApellidoM='$apellidom', FNacimiento='$fnacimiento', Domicilio= '$domicilio', Manzana = '$manzana', Lote = '$lote', Coto = '$coto', Telefono = '$telefono', Celular = '$celular', Correo = '$correo', Membresia= '$membresia', TipoMembresia= '$tipomembresia', Sangre ='$sangre', FAlta = '$falta', Afiliacion = '$afiliacion' WHERE IdSocio = '$id'");
 	
 	$oldfoto=consultar("SELECT Foto FROM socios WHERE IdSocio='$id'");
 	$oldfoto=$oldfoto[0]["Foto"];
