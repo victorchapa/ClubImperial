@@ -18,19 +18,11 @@
     <script src="assets/js/libs/backbone.js"></script>
     <script src="assets/js/libs/IEChecker.js"></script>
     <script src="assets/js/libs/jquery-uiDatePicker.js"></script>
+    <script src="assets/js/libs/jQueryDataPickerEs.js"></script>
     <script src="assets/js/libs/bootstrapModal.js"></script>
     <script src="assets/js/libs/jQueryDnDAlerts.js"></script>
     <script src="assets/js/libs/jQueryAlerts.js"></script>
     <!-- <script src="assets/js/libs/jqueryFixedHeaderTable.js"></script> --!>
-    <!--<script type="text/javascript">
-      $(function() {
-        $( ".datePicker" ).datepicker({
-            changeMonth: true,
-            changeYear: true,
-            changeDay: true
-        });
-      });
-    </script> -->
   </head>
   <body>
     <header>

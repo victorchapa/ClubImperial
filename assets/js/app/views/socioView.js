@@ -99,7 +99,11 @@ var SocioView = Backbone.View.extend({
                 data.Afiliacion = objAfi;
                 var socio = {socio: data};
                 $("#editSocio").html(compiledTemplate(socio));
-                $(".datePicker").datepicker();
+                $(".datePicker").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    changeDay: true
+                });
                 $(".btnUpLoad").on("click", function(){
                     $("#upLoad").click();
                     setInterval(function(){
@@ -165,7 +169,11 @@ var SocioView = Backbone.View.extend({
         var idSocio = $("input[type='hidden']", "#editSocioForm").val(); 
         var idPariente = {idPariente: idSocio};
         $("#modalDisplayerParientes").html(compiledTemplate(idPariente));
-        $(".datePicker").datepicker();
+        $(".datePicker").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            changeDay: true
+        });
         $(".btnUpLoadPariente").on("click", function(){
             $("#upLoadPariente").click();
             setInterval(function(){
@@ -174,6 +182,10 @@ var SocioView = Backbone.View.extend({
                 $('#fileNamePariente').text(fileName[2]);
             },1);
             return false;
+        });
+        $("#modalParientes").modal({
+            backdrop: 'static',
+            keyboard: false
         });
         $("#modalParientes").modal("show");
     },
