@@ -136,7 +136,8 @@ var SocioView = Backbone.View.extend({
                             $("<p>", {
                                 class: "nombrePariente",
                                 text: name,
-                                idPariente: pariente.IdPariente
+                                idPariente: pariente.IdPariente,
+                                idSocio: pariente.IdSocio,
                             }).appendTo(".memoField");
                         }); 
                     }
@@ -180,7 +181,19 @@ var SocioView = Backbone.View.extend({
     delPariente: function(){
         console.log("Eliminar Pariente");
         var parient = $(".selected", ".memoField");
-        console.log(parient);
+        var id = $(parient).attr("idsocio");
+
+        jConfirm('¿Esta seguro de borrar el pariente?', 'Confirmación', function(r) {
+            if(r == true){
+                $.ajax({
+                    method: "POST",
+                    url: "api/RemovePariente.php?id=" + id,
+                }).done(function(){
+                    $(parient).remove();
+                }); 
+            }
+        });
+
     },
 
 });
