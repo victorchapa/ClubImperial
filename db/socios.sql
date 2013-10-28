@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 21-10-2013 a las 18:06:11
+-- Tiempo de generación: 28-10-2013 a las 18:37:38
 -- Versión del servidor: 5.6.12-log
 -- Versión de PHP: 5.4.12
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `socios` (
   `IdSocio` int(5) NOT NULL AUTO_INCREMENT,
+  `IdPariente` int(11) NOT NULL,
   `Nombre` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `ApellidoP` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `ApellidoM` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
@@ -38,21 +39,25 @@ CREATE TABLE IF NOT EXISTS `socios` (
   `Coto` int(10) NOT NULL,
   `Telefono` int(12) NOT NULL,
   `Celular` int(12) NOT NULL,
+  `Correo` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `Membresia` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `TipoMembresia` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `Sangre` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
   `FAlta` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
   `Foto` varchar(500) COLLATE utf8_spanish_ci NOT NULL,
   `Afiliacion` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `Cuota` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `Mayor` tinyint(1) NOT NULL,
   PRIMARY KEY (`IdSocio`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `socios`
 --
 
-INSERT INTO `socios` (`IdSocio`, `Nombre`, `ApellidoP`, `ApellidoM`, `FNacimiento`, `Domicilio`, `Manzana`, `Lote`, `Coto`, `Telefono`, `Celular`, `Membresia`, `TipoMembresia`, `Sangre`, `FAlta`, `Foto`, `Afiliacion`) VALUES
-(1, 'Osho2', '', '', '24/11/1990', 'domicilio 1', 'manzana 1', 0, 0, 123, 1234567890, 'Rentista', '', 'A', '14/10/2013', 'socios/1/perfil.jpg', 'Golf');
+INSERT INTO `socios` (`IdSocio`, `IdPariente`, `Nombre`, `ApellidoP`, `ApellidoM`, `FNacimiento`, `Domicilio`, `Manzana`, `Lote`, `Coto`, `Telefono`, `Celular`, `Correo`, `Membresia`, `TipoMembresia`, `Sangre`, `FAlta`, `Foto`, `Afiliacion`, `Cuota`, `Mayor`) VALUES
+(1, 0, 'Oscar', 'Vargas', 'Muñoz', '24/11/1990', 'domicilio 1', 'manzana 1', 0, 0, 123, 1234567890, '', 'Rentista', 'Individual', 'A', '14/10/2013', 'socios/1/perfil.jpg', 'Golf', '', 0),
+(3, 0, 'Israel', 'Alcantar', 'Cortés', '10/01/2013', 'Domicilio1', '1', 2, 3, 1234567, 2147483647, 'isracortes62@gmail.com', 'Propietario', 'Familiar', 'A+', '10/22/2013', 'socios/3/perfil.jpg', 'Piscina, Gym, SPA', '', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
