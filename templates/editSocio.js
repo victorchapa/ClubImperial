@@ -22,6 +22,7 @@ TEMPLATES.editSocio =
             "<p>Coto: <input type='text' name='Coto' value='<% print(socio.Coto); %>'></p>" +
             "<p>Teléfono: <input type='text' name='Telefono' maxlength='10' value='<% print(socio.Telefono); %>'></p>" +
             "<p>Celular: <input type='text' name='Celular' maxlength='10' value='<% print(socio.Celular); %>'></p>" +
+            "<p>Email: <input type='text' name='Correo' value='<% print(socio.Correo); %>'></p>" +
             "<p>Tipo de Sangre: <select name='Sangre'>" +
                 "<option value='<% print(socio.Sangre); %>'><% print(socio.Sangre); %></option>" +
                 "<option value='O-'>O-</option>" +

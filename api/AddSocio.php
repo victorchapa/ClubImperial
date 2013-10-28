@@ -17,6 +17,7 @@
 	$coto = $_POST['Coto'];
 	$telefono = $_POST['Telefono'];
 	$celular = $_POST['Celular'];
+	$correo = $_POST['Correo'];
 	$membresia = $_POST['Membresia'];
 	$tipomembresia = $_POST['TipoMembresia'];
 	$sangre = $_POST['Sangre'];
@@ -25,8 +26,8 @@
 	$conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
 	mysql_query ("SET NAMES 'utf8'");
-	mysql_query("INSERT INTO socios (Nombre, ApellidoP, ApellidoM, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion) 
-	VALUES ('$nombre', '$apellidop', '$apellidom', '$fnacimiento', '$domicilio', '$manzana', '$lote', '$coto', '$telefono', '$celular', '$membresia', '$tipomembresia', '$sangre', '$falta', '$afiliacion')");
+	mysql_query("INSERT INTO socios (Nombre, ApellidoP, ApellidoM, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Correo, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion) 
+	VALUES ('$nombre', '$apellidop', '$apellidom', '$correo', '$fnacimiento', '$domicilio', '$manzana', '$lote', '$coto', '$telefono', '$celular', '$correo', '$membresia', '$tipomembresia', '$sangre', '$falta', '$afiliacion')");
 	$id= mysql_insert_id();
 	mkdir ("socios/".$id);
 	$rutaServidor = "socios/".$id;

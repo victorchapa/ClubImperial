@@ -11,7 +11,7 @@
 	$nombre = $_POST['Nombre'];
 	$apellidop = $_POST['ApellidoP'];
 	$apellidom = $_POST['ApellidoM'];
-  $parentesco = $_POST['Parentesco'];
+  	$parentesco = $_POST['Parentesco'];
 	$fnacimiento = $_POST['FNacimiento'];
 	$domicilio = $_POST['Domicilio'];
 	$manzana = $_POST['Manzana'];
@@ -19,6 +19,7 @@
 	$coto = $_POST['Coto'];
 	$telefono = $_POST['Telefono'];
 	$celular = $_POST['Celular'];
+	$correo = $_POST['Correo'];
 	$membresia = $_POST['Membresia'];
 	$tipomembresia = $_POST['TipoMembresia'];
 	$sangre = $_POST['Sangre'];
@@ -27,8 +28,8 @@
 	$conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
 	mysql_query ("SET NAMES 'utf8'");
-	mysql_query("INSERT INTO socios (IdPariente, Nombre, ApellidoP, ApellidoM, Parentesco, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion) 
-	VALUES ('$idsocio', '$nombre', '$apellidop', '$apellidom', '$parentesco', '$fnacimiento', '$domicilio', '$manzana', '$lote', '$coto', '$telefono', '$celular', '$membresia', '$tipomembresia', '$sangre', '$falta', '$afiliacion')");
+	mysql_query("INSERT INTO socios (IdPariente, Nombre, ApellidoP, ApellidoM, Parentesco, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Correo, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion) 
+	VALUES ('$idsocio', '$nombre', '$apellidop', '$apellidom', '$parentesco', '$fnacimiento', '$domicilio', '$manzana', '$lote', '$coto', '$telefono', '$celular', '$correo', '$membresia', '$tipomembresia', '$sangre', '$falta', '$afiliacion')");
 	$id= mysql_insert_id();
 	mkdir ("socios/".$id);
 	$rutaServidor = "socios/".$id;
