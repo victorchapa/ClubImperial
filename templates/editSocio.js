@@ -92,7 +92,8 @@ TEMPLATES.editSocio =
             "<div class='memoField'></div>" +
                 "<div class='btnGroupII'>" +
                     "<input class='btn btnAddPari' type='button' value='+'>" +
-                    "<input class='btn btnDelPari' type='button' value='-'>" +
+                    "<input class='btn btnDelPari' type='button' value='-' disabled>" +
+                    "<input class='btn btnEditPari' type='button' value=' 'disabled>" +
                     "<input type='text' value='' placeholder='¿Algun pariente?' disabled>" +
                 "</div>" +
         "</div>" +

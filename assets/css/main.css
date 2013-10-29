@@ -269,7 +269,7 @@ input.datePicker {
 }
 
 
-#modalDisplayer img.fotoSocio, .fotoSocioEdit, .fotoSocioEdit img {
+#modalDisplayer img.fotoSocio, .fotoSocioEdit, .fotoSocioEdit img, .fotoParienteEdit img {
   width: 150px;
   height: 150px;
 }
@@ -388,13 +388,19 @@ ul.navSocio li {
   border-color: #FF0000;
 }
 
+.btnEditPari {
+  width: 32px;
+  background: url("../img/editIcon.png");
+  background-repeat: no-repeat;
+}
+
 .btnGroupII {
   padding-right: 40px;
 }
 
 .btnGroupII input[type="text"] {
   margin-left: 3px;
-  width: 307px;
+  width: 274px;
   height: 27px;
   text-align: center;
 }

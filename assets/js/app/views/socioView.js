@@ -9,6 +9,7 @@ var SocioView = Backbone.View.extend({
         "click .trSocio"                    : "showWindowAction",
         "click .btnAddPari"                 : "showFormAddPariente",
         "click .btnDelPari"                 : "delPariente",
+        "click .btnEditPari"                 : "editPariente",
     },
 
     initialize: function(){},
@@ -191,7 +192,6 @@ var SocioView = Backbone.View.extend({
     },
 
     delPariente: function(){
-        console.log("Eliminar Pariente");
         var parient = $(".selected", ".memoField");
         var id = $(parient).attr("idsocio");
 
@@ -205,7 +205,63 @@ var SocioView = Backbone.View.extend({
                 }); 
             }
         });
-
     },
+
+    editPariente: function(){
+        var parient = $(".selected", ".memoField");
+        var id = $(parient).attr("idsocio");
+
+        var template = TEMPLATES.editPariente;
+        var compiledTemplate = _.template($(template).html());
+
+        var modelSocio = new ModelSocio(id);
+        modelSocio.fetch({
+            success: function(data){
+                var data = data.toJSON()[0];
+                var afiliaciones = data.Afiliacion.split(", ");
+                var objAfi = {Golf: null, Futbol: null, Tenis: null, Piscina: null, Gym: null, SPA: null};
+                _.each(afiliaciones, function(afiliacion){
+                    objAfi[afiliacion] = true;
+                }); 
+                data.Afiliacion = objAfi;
+                var socio = {socio: data};
+                $("#modalDisplayerParientes").html(compiledTemplate(socio));
+                $(".datePicker").datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    changeDay: true
+                });
+                $(".btnUpLoadPari").on("click", function(){
+                    $("#upLoadPari").click();
+                    setInterval(function(){
+                        var name = $('#upLoadPari').val();
+                        var fileName = name.split("\\");
+                        $('#fileNamePari').text(fileName[2]);
+                    },1);
+                    return false;
+                });
+
+                function changeImage(e){
+                    var selectedFile = e.target.files[0];
+                    var reader = new FileReader();
+
+                    reader.onload = function(e){
+                        var span = document.createElement('span');
+                        span.innerHTML = ["<img src='"+e.target.result+"'>"].join('');
+                        $(".photoReloadII").addClass("display-none");
+                        console.log(span);
+                        document.getElementsByClassName("fotoParienteEdit")[0].insertBefore(span, null);
+                    }
+
+                    reader.readAsDataURL(selectedFile);
+                }
+                document.getElementById("upLoadPari").addEventListener("change", changeImage, false);
+                $("#modalParientes").modal("show");
+
+            }
+        });
+
+
+    }
 
 });

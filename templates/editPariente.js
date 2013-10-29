@@ -1,23 +1,36 @@
-TEMPLATES.editSocio =
+TEMPLATES.editPariente =
         "<script type='text/template'>" + 
-        "<form id='editSocioForm' method='post' action='api/EditPariente.php' enctype='multipart/form-data'>" +
+        "<form id='editParienteForm' method='post' action='api/EditPariente.php' enctype='multipart/form-data'>" +
         "<h1>Favor de ingresar los datos a Editar:</h1>" +
         "<div class='clear'>" +
         "<div class='data1'>" +
+            "<% console.log(socio); %>" +
             "<input type='hidden' name='id' value='<% print(socio.IdSocio); %>'>" +
-            "<div class='fotoSocioEdit'>" +
-                "<img class='photoReload' src='api/<% print(socio.Foto); %>'>" +
+            "<div class='fotoParienteEdit'>" +
+                "<img class='photoReloadII' src='api/<% print(socio.Foto); %>'>" +
             "</div>" +
-            "<p><input id='upLoad' class='display-none' type='file' name='Foto'><input class='btn btnFunctions btnUpLoad' type='button' value='Editar Foto'></p>" +
-            "<p><span class='display-none' id='fileName'></span></p>" +
+            "<p><input id='upLoadPari' class='display-none' type='file' name='Foto'><input class='btn btnFunctions btnUpLoadPari' type='button' value='Editar Foto'></p>" +
+            "<p><span class='display-none' id='fileNamePari'></span></p>" +
             "<p>Nombres: <input type='text' name='Nombre' maxlength='30' value='<% print(socio.Nombre); %>'></p>" +
             "<p>Apellido Paterno: <input type='text' name='ApellidoP' maxlength='30' value='<% print(socio.ApellidoP); %>'></p>" +
             "<p>Apellido Materno: <input type='text' name='ApellidoM' maxlength='30' value='<% print(socio.ApellidoM); %>'></p>" +
             "<p>Parentesco: " +
                 "<span>"+
-                    "<input type='radio' name='Parentesco' value='Esposo'> Esposo." +
-                   "<input type='radio' name='Parentesco' value='Esposa'> Esposa." +
-                   "<input type='radio' name='Parentesco' value='Hijo'> Hijo." +
+                    "<% if(socio.Parentesco == 'Esposo') { %>" +
+                        "<input type='radio' name='Parentesco' value='Esposo' checked='checked'> Esposo." +
+                    "<%} else { %>" +
+                        "<input type='radio' name='Parentesco' value='Esposo'> Esposo." +
+                    "<% } %>" +
+                    "<% if(socio.Parentesco == 'Esposa') { %>" +
+                        "<input type='radio' name='Parentesco' value='Esposa' checked='checked'> Esposa." +
+                    "<%} else { %>" +
+                        "<input type='radio' name='Parentesco' value='Esposa'> Esposa." +
+                    "<% } %>" +
+                    "<% if(socio.Parentesco == 'Hijo') { %>" +
+                        "<input type='radio' name='Parentesco' value='Hijo' checked='checked'> Hijo." +
+                    "<%} else { %>" +
+                        "<input type='radio' name='Parentesco' value='Hijo'> Hijo." +
+                    "<% } %>" +
                  "</span>" +
             "</p>" +
             "<p>Fecha de Nacimiento: <input class='datePicker' type='text' name='FNacimiento' placeholder='mm/dd/aaaa' value='<% print(socio.FNacimiento); %>' readonly></p>" +
@@ -95,16 +108,9 @@ TEMPLATES.editSocio =
                 "<% } %>" +
                 "</span>" +
             "</p>" +
-            "<p>Parientes:</p>" +
-            "<div class='memoField'></div>" +
-                "<div class='btnGroupII'>" +
-                    "<input class='btn btnAddPari' type='button' value='+'>" +
-                    "<input class='btn btnDelPari' type='button' value='-'>" +
-                    "<input type='text' value='' placeholder='¿Algun pariente?' disabled>" +
-                "</div>" +
         "</div>" +
         "<div class='btnGroup'>" +
-            "<p><input class='btn btnSuccess' type='submit' value='Editar Usuario'></p>" +
+            "<p><input class='btn btnSuccess' type='submit' value='Editar Pariente'></p>" +
         "</div>" +
         "</div>" +
         "</form>" +

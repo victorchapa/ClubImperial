@@ -99,6 +99,7 @@
   <script src="templates/formSocios.js"></script>
   <script src="templates/formParientes.js"></script>
   <script src="templates/editSocio.js"></script>
+  <script src="templates/editPariente.js"></script>
   <script src="templates/socioNav.js"></script>
   <script src="templates/allSocios.js"></script>
 

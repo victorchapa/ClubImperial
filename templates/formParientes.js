@@ -52,7 +52,7 @@ TEMPLATES.formParientes =
             "<p>Afiliación: " + 
                 "<span><span><input type='checkbox' name='Afiliacion[]' value='Golf'> Golfista.</span>" +
                 "<span><input type='checkbox' name='Afiliacion[]' value='Futbol'> Futbolista.</span>" +
-                "<span><input type='checkbox' name='Afiliacion[]' value='Tenista'> Tenista.</span><br>" +
+                "<span><input type='checkbox' name='Afiliacion[]' value='Tenis'> Tenista.</span><br>" +
                 "<span><input type='checkbox' name='Afiliacion[]' value='Piscina'> Piscina.</span>" +
                 "<span><input type='checkbox' name='Afiliacion[]' value='Gym'> GYM.</span>" +
                 "<span><input type='checkbox' name='Afiliacion[]' value='SPA'> SPA.</span></span>" +

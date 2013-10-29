@@ -12,5 +12,7 @@ var MemoParientesView = Backbone.View.extend({
     parientSelection: function(e){
         $(".nombrePariente").removeClass("selected");
         $(e.target).addClass("selected");
+        $(".btnDelPari").removeAttr("disabled");
+        $(".btnEditPari").removeAttr("disabled");
     },
 });
