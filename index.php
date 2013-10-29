@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/cupertino/jquery-uiCupertino.css">
     <link rel="stylesheet" href="assets/css/jQueryAlerts.css">
-    <!-- <link rel="stylesheet" href="assets/css/themeFixedHeaderTable.css"> --!>
+    <!-- <link rel="stylesheet" href="assets/css/themeFixedHeaderTable.css"> -->
     <script src="assets/js/libs/jquery.js"></script>
     <script src="assets/js/libs/underscore.js"></script>
     <script src="assets/js/libs/backbone.js"></script>
@@ -22,7 +22,7 @@
     <script src="assets/js/libs/bootstrapModal.js"></script>
     <script src="assets/js/libs/jQueryDnDAlerts.js"></script>
     <script src="assets/js/libs/jQueryAlerts.js"></script>
-    <!-- <script src="assets/js/libs/jqueryFixedHeaderTable.js"></script> --!>
+    <!-- <script src="assets/js/libs/jqueryFixedHeaderTable.js"></script> -->
   </head>
   <body>
     <header>
@@ -103,12 +103,12 @@
   <script src="templates/socioNav.js"></script>
   <script src="templates/allSocios.js"></script>
 
-  <!-- Collections --!>
+  <!-- Collections -->
   <script src="assets/js/app/collections/socios.js"></script>
   <script src="assets/js/app/collections/parientes.js"></script>
-  <!-- Models --!>
+  <!-- Models -->
   <script src="assets/js/app/models/socio.js"></script>
-  <!-- Views --!>
+  <!-- Views -->
   <script src="assets/js/app/views/mainView.js"></script>
   <script src="assets/js/app/views/navMainView.js"></script>
   <script src="assets/js/app/views/socioView.js"></script>
