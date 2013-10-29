@@ -4,7 +4,6 @@ TEMPLATES.editPariente =
         "<h1>Favor de ingresar los datos a Editar:</h1>" +
         "<div class='clear'>" +
         "<div class='data1'>" +
-            "<% console.log(socio); %>" +
             "<input type='hidden' name='id' value='<% print(socio.IdSocio); %>'>" +
             "<div class='fotoParienteEdit'>" +
                 "<img class='photoReloadII' src='api/<% print(socio.Foto); %>'>" +
