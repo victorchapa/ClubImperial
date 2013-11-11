@@ -1,6 +1,6 @@
 TEMPLATES.factura = 
         "<script type='text/template' id='thisTemplate'>" +
-        "<% var total = 0; var pago = 0; var deuda = 0; %>"
+        "<% var total = 0; var pago = 0; var deuda = 0; var tdeuda = deudas.Total - deudas.Abono; %>"
           "<h2>Deudas de <% print(deudas.nombre); %></h2>" +
           "<table border='1' cellspacing='0' >" +
           "<thead>" +
