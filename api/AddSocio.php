@@ -10,6 +10,7 @@
 	$nombre = $_POST['Nombre'];
 	$apellidop = $_POST['ApellidoP'];
 	$apellidom = $_POST['ApellidoM'];
+	$filtro = $_POST['Nombre']." ".$_POST['ApellidoP']." ".$_POST['ApellidoM'];
 	$fnacimiento = $_POST['FNacimiento'];
 	$domicilio = $_POST['Domicilio'];
 	$manzana = $_POST['Manzana'];
@@ -26,8 +27,8 @@
 	$conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
 	mysql_query ("SET NAMES 'utf8'");
-	mysql_query("INSERT INTO socios (Nombre, ApellidoP, ApellidoM, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Correo, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion) 
-	VALUES ('$nombre', '$apellidop', '$apellidom', '$correo', '$fnacimiento', '$domicilio', '$manzana', '$lote', '$coto', '$telefono', '$celular', '$correo', '$membresia', '$tipomembresia', '$sangre', '$falta', '$afiliacion')");
+	mysql_query("INSERT INTO socios (Nombre, ApellidoP, ApellidoM, Filtro, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Correo, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion) 
+	VALUES ('$nombre', '$apellidop', '$apellidom', '$filtro', '$fnacimiento', '$domicilio', '$manzana', '$lote', '$coto', '$telefono', '$celular', '$correo', '$membresia', '$tipomembresia', '$sangre', '$falta', '$afiliacion')");
 	$id= mysql_insert_id();
 	mkdir ("socios/".$id);
 	$rutaServidor = "socios/".$id;
@@ -36,6 +37,6 @@
 	$foto = $rutaServidor.'/'.$nombreImagen;
 	move_uploaded_file($rutaTemporal, $foto);
 	mysql_query("UPDATE socios SET Foto='$foto' WHERE IdSocio='$id'");
-	echo "<script type=text/javascript>window.location.href=\"http://localhost/clubimperial/index.php\";</script>";
+	echo "<script type=text/javascript>window.location.href=\"../index.php\";</script>";
 ?>
 </html>
