@@ -180,8 +180,36 @@ input.btn[disabled] {
 }
 
 .socioBody table {
-  width: 150%;
+  width: 200%;
   margin: 10px 0 0 10px;
+  border: 0;
+}
+
+.socioBody table thead {
+  text-align: left;
+}
+
+.socioBody table thead tr th {
+  background: #b9c9fe;
+  border-top: 4px solid #aabcfe;
+  border-bottom: 1px solid #fff;
+  color: #039;
+  border-right: 0;
+  border-left: 0;
+}
+
+.socioBody table tbody tr td{
+  background: #e8edff;
+  border-bottom: 1px solid #fff;
+  color: #669;
+  border-top: 1px solid transparent;
+  padding: 8px;
+  border-right: 0;
+  border-left: 0;
+}
+
+.socioBody table tbody tr:hover td {
+  background: #d0dafd;
 }
 
 .test, .test > td {
