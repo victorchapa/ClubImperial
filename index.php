@@ -39,7 +39,7 @@
           <ul>
             <li class="active"><a href="#">Inicio</a></li>
             <li><a href="#">Socios</a></li>
-            <li><a href="#">Bienvenido</a></li>
+            <li><a href="#ccuotas">Cuotas</a></li>
             <li><a href="#">Bienvenido</a></li>
             <li><a href="#">Bienvenido</a></li>
           </ul>
@@ -101,11 +101,13 @@
   <script src="templates/editSocio.js"></script>
   <script src="templates/editPariente.js"></script>
   <script src="templates/socioNav.js"></script>
+  <script src="templates/cuotasForm.js"></script>
   <script src="templates/allSocios.js"></script>
 
   <!-- Collections -->
   <script src="assets/js/app/collections/socios.js"></script>
   <script src="assets/js/app/collections/parientes.js"></script>
+  <script src="assets/js/app/collections/sociosfilters.js"></script>
   <!-- Models -->
   <script src="assets/js/app/models/socio.js"></script>
   <!-- Views -->
@@ -113,5 +115,6 @@
   <script src="assets/js/app/views/navMainView.js"></script>
   <script src="assets/js/app/views/socioView.js"></script>
   <script src="assets/js/app/views/memoParientesView.js"></script>
+  <script src="assets/js/app/views/cuotasView.js"></script>
   </body>
 </html>
