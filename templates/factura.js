@@ -5,21 +5,32 @@ TEMPLATES.factura =
           "<table border='1' cellspacing='0' >" +
           "<thead>" +
             "<tr>" +
-                "<th>Socios</th>" +
+                "<th>Servicio</th>" +
+                "<th>Fecha y hora</th>" +
                 "<th>Abono</th>" +
+                "<th>Deuda</th>" +
                 "<th>Total</th>" +
-                "<th>Factura</th>" +
             "</tr>" +
           "</thead>" +
           "<tbody>" +
-                "<% _.each(deudas, function(deuda) { %>" +
+                "<% _.each(facturas, function(factura) { %>" +
                 "<tr>" +
-                    "<td><% print(deuda.Nombre); %></td>" +
-                    "<td><% print(deuda.Abono); %></td>" +
-                    "<td><% print(socio.Total); %></td>" +
-                    "<td><a href='factura.php?id=<% print(socio.IdFactura); %>'>Ver</a></td>" +
+                    "<td><% print(factura.Servicio); %></td>" +
+                    "<td><% print(factura.Dia); %>/<% print(factura.Mes); %>/<% print(factura.Year); %></br>" +
+                    "<% print(factura.Hora); %></td>" +
+                    "<td>$<% print(factura.Abono); %></td>" +
+                    "<% deuda = factura.Total - factura.Abono; %>" +
+                    "<td>$<% print(deuda); %></td>" +
+                    "<td>$<% print(factura.Total); %></td>" +
                 "</tr>" +
                 "<% }); %>" +
+                "<tr>" +
+                  "<td>Total</td>" +
+                  "<td></td>" +
+                  "<td><% print(deuda.Abono); %></td>" +
+                  "<td><% print(tdeuda); %></td>" +
+                  "<td><% print(deuda.Total); %></td>" +
+                "</tr>" +
             "</tbody>" +
             "</table>" +
             "</script>";
