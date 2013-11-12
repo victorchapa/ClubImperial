@@ -27,7 +27,7 @@
     mysql_query("UPDATE deudas SET Abono = '$tabono', Total = '$ttotal' WHERE Nombre= '$nombre'");
     mysql_query("INSERT INTO facturas (IdSocio, Servicio, Abono, Total, Hora, Dia, Mes, Year) 
       VALUES ('$id', '$servicio', '$abono', '$total', '$hora', '$dia', '$mes', '$year')");
-    echo "<script type=text/javascript>window.location.href=\"../deudas.php\";</script>";
+    echo "<script type=text/javascript>window.location.href=\"../index.php#ccuotas\";</script>";
   } else {
     $conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
@@ -35,6 +35,6 @@
     mysql_query("INSERT INTO facturas (IdSocio, Servicio, Abono, Total, Hora, Dia, Mes, Year) 
       VALUES ('$id', '$servicio', '$abono', '$total', '$hora', '$dia', '$mes', '$year')");
     mysql_query("INSERT INTO deudas (IdSocio, Nombre, Abono, Total, Mes, Year) VALUES ('$id', '$nombre', '$abono', '$total', '$mes', '$year')");
-    echo "<script type=text/javascript>window.location.href=\"../deudas.php\";</script>";
+    echo "<script type=text/javascript>window.location.href=\"../index.php#ccuotas\";</script>";
   }
 ?>

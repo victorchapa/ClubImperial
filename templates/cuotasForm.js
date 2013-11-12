@@ -1,7 +1,16 @@
 TEMPLATES.cuotasForm = 
         "<script type='text/template'>" +
+        "<div class='cobrosContent'>" +
+            "<div class='backgroundNav'>" +
+                "<ul class='navSocio'>" +
+                    "<li class='active'><p>CUOTAS</p></li>" +
+                    "<li><p>DEUDAS</p></li>" +
+                    "<li><p>FACTURA</p></li>" +
+                    "</ul>" +
+            "</div>" +
+            "<div class='cuotaBody'>" +
             "<form method='post' action='api/cpago.php' enctype='multipart/form-data'>" +
-                "<h1>Generar Cobro:</h1>" + 
+                "<h2>Generar Cobro</h2>" + 
                 "<p>Nombre de Cliente: <input type='text' name='Nombre'></p>" +
                 "<p>Servicio: <select name='Servicio'>" +
                     "<option value='Mensualidad'>Mensualidad</option>" +
@@ -26,4 +35,5 @@ TEMPLATES.cuotasForm =
                 "<p>Total: <input type='text' name='Total'/></p>" +
                 "<input type='submit' name='Cobrar'/>"+
             "</form>" +
+            "</div>" +
         "</script>";

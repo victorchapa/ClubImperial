@@ -642,3 +642,7 @@ p.nombrePariente.selected {
   width: 90px;
   height: 40px;
 }
+
+.cuotaBody{
+  margin-left: 10px;
+}
