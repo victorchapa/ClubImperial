@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/cupertino/jquery-uiCupertino.css">
     <link rel="stylesheet" href="assets/css/jQueryAlerts.css">
+    <link rel="stylesheet" href="assets/css/jQueryAutocomplete.css">
     <!-- <link rel="stylesheet" href="assets/css/themeFixedHeaderTable.css"> -->
     <script src="assets/js/libs/jquery.js"></script>
     <script src="assets/js/libs/underscore.js"></script>
@@ -22,6 +23,7 @@
     <script src="assets/js/libs/bootstrapModal.js"></script>
     <script src="assets/js/libs/jQueryDnDAlerts.js"></script>
     <script src="assets/js/libs/jQueryAlerts.js"></script>
+    <script src="assets/js/libs/jQueryAutocomplete.js"></script>
     <!-- <script src="assets/js/libs/jqueryFixedHeaderTable.js"></script> -->
   </head>
   <body>
