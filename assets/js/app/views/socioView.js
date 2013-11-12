@@ -12,7 +12,33 @@ var SocioView = Backbone.View.extend({
         "click .btnEditPari"                 : "editPariente",
     },
 
-    initialize: function(){},
+    clearMainNav: function(){
+        var targets = $(".mainNav ul li");
+        _.each(targets, function(target){
+            $(target).removeClass("active");
+        });
+        $(".mainNav ul li:nth-child(2)").addClass("active");
+    },
+
+    initialize: function(){
+        this.clearMainNav();
+        this.render();
+    },
+
+    render: function(){
+        $("#mainDisplayer").html(TEMPLATES.socioNav);
+
+        var template = TEMPLATES.allSocios;
+        var compiledTemplate = _.template($(template).html());
+        var collectionSocios = new CollectionSocios(); 
+        collectionSocios.fetch({
+            success: function(){
+                var data = collectionSocios.toJSON();
+                var socios = {socios: data};
+                $(".socioBody").html(compiledTemplate(socios));
+            }
+        });
+    },
 
     showWindowAction: function(e){
         test = $(e.target);

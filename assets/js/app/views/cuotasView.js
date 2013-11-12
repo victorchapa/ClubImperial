@@ -4,7 +4,16 @@ var CuotasView = Backbone.View.extend({
 
     events:{},
 
+    clearMainNav: function(){
+        var targets = $(".mainNav ul li");
+        _.each(targets, function(target){
+            $(target).removeClass("active");
+        });
+        $(".mainNav ul li:nth-child(3)").addClass("active");
+    },
+
     initialize: function(){
+        this.clearMainNav();
         var sociosFilters = new SociosFilters(); 
         sociosFilters.fetch({
             success: function(data){
