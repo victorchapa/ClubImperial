@@ -12,7 +12,16 @@ var SocioView = Backbone.View.extend({
         "click .btnEditPari"                 : "editPariente",
     },
 
+    clearMainNav: function(){
+        var targets = $(".mainNav ul li");
+        _.each(targets, function(target){
+            $(target).removeClass("active");
+        });
+        $(".mainNav ul li:nth-child(2)").addClass("active");
+    },
+
     initialize: function(){
+        this.clearMainNav();
         this.render();
     },
 
