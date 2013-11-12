@@ -2,7 +2,7 @@ TEMPLATES.cuotasForm =
         "<script type='text/template'>" +
             "<form method='post' action='api/cpago.php' enctype='multipart/form-data'>" +
                 "<h1>Generar Cobro:</h1>" + 
-                "<p>Nombre de Cliente: <input type='text' name='Nombre'></p>" +
+                "<p>Nombre de Cliente: <input id='socioFinder' type='text' name='Nombre'></p>" +
                 "<p>Servicio: <select name='Servicio'>" +
                     "<option value='Mensualidad'>Mensualidad</option>" +
                     "<option value='Carro Bar'>Carro Bar</option>" +
