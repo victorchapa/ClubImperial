@@ -310,7 +310,7 @@ input.datePicker {
   width: 265px;
 }
 
-ul.navSocio {
+ul.navSocio, ul.navCuotas {
   margin: 3px 0 0 0;
   list-style: none;
   border-bottom: 3px solid #BDBDBD;
@@ -323,35 +323,35 @@ div.backgroundNav {
   border-radius: 3px 6px 6px 0;
 }
 
-ul.navSocio > li {
+ul.navSocio > li, ul.navCuotas > li {
   margin-bottom: -3px;
 }
 
-ul.navSocio li p {
+ul.navSocio li p, ul.navCuotas li p {
   text-decoration: none;
   margin: 0px;
   cursor: pointer;
   color: #2E2EFE;
 }
 
-ul.navSocio li p:hover {
+ul.navSocio li p:hover, ul.navCuotas li p:hover {
   color: #08088A;
 }
 
-ul.navSocio li.active p {
+ul.navSocio li.active p, ul.navCuotas li.active p {
   border: 3px solid #BDBDBD;
   background-color: white;
   border-bottom-color: white;
 }
 
-ul.navSocio > li > p {
+ul.navSocio > li > p, ul.navCuotas > li > p {
   padding: 10px 15px;
   display: block;
   border: 3px solid transparent;
   border-radius: 4px 4px 0 0;
 }
 
-ul.navSocio li {
+ul.navSocio li, ul.navCuotas li {
   display: inline-block;
 }
 
