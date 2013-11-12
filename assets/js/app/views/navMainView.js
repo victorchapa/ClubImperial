@@ -22,7 +22,7 @@ var NavMainView = Backbone.View.extend({
                 this.initialize()
                 break;
             case "Socios" :
-                this.renderSociosTemplate(e)
+                console.log("Go to Socios View!");
                 break;
             case "Cuotas" :
                 console.log("Go to Cuotas View!");
@@ -32,23 +32,5 @@ var NavMainView = Backbone.View.extend({
                 break;
         }
     },
-
-    renderSociosTemplate: function(e){
-
-        $("#mainDisplayer").html(TEMPLATES.socioNav);
-
-        var template = TEMPLATES.allSocios;
-        var compiledTemplate = _.template($(template).html());
-        var collectionSocios = new CollectionSocios(); 
-        collectionSocios.fetch({
-            success: function(){
-                var data = collectionSocios.toJSON();
-                var socios = {socios: data};
-                $(".socioBody").html(compiledTemplate(socios));
-            }
-        });
-
-    }
-    
     
 });

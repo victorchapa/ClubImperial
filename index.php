@@ -38,7 +38,7 @@
         <nav class="mainNav">
           <ul>
             <li class="active"><a href="#">Inicio</a></li>
-            <li><a href="#">Socios</a></li>
+            <li><a href="#allsocios">Socios</a></li>
             <li><a href="#ccuotas">Cuotas</a></li>
             <li><a href="#">Bienvenido</a></li>
             <li><a href="#">Bienvenido</a></li>
