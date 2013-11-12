@@ -355,6 +355,9 @@ ul.navSocio li, ul.navCuotas li {
   display: inline-block;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
 .emergentWindow {
   display: none;
   position: absolute;
