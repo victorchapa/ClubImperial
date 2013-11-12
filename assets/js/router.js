@@ -1,7 +1,8 @@
 ClubImperial.Router = Backbone.Router.extend({
     routes: {
-        ""             :   "index",
-        "ccuotas"      :   "cuotas",
+        ""                      :   "index",
+        "allsocios"             :   "allSocios",
+        "ccuotas"               :   "cuotas",
     },
 
     initialize: function(){
@@ -10,6 +11,9 @@ ClubImperial.Router = Backbone.Router.extend({
     index: function(){
         var mainView = new MainView();
         var navMainView = new NavMainView(); 
+    },
+
+    allSocios: function(){
         var socioView = new SocioView(); 
     },
 
