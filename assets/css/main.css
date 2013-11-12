@@ -645,4 +645,13 @@ p.nombrePariente.selected {
 
 .cuotaBody{
   margin-left: 10px;
+  width: 350px;
+  background: #fcfcfc repeat-x left bottom;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #bbb;
+  border-top: 1px solid #ddd;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }
