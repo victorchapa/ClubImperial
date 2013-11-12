@@ -105,6 +105,7 @@
   <script src="templates/socioNav.js"></script>
   <script src="templates/cuotasForm.js"></script>
   <script src="templates/allSocios.js"></script>
+  <script src="templates/cuotasNav.js"></script>
 
   <!-- Collections -->
   <script src="assets/js/app/collections/socios.js"></script>

@@ -26,17 +26,21 @@ var CuotasView = Backbone.View.extend({
                 self.collectionFetched = true;
             },
         });
+        
+        var template = TEMPLATES.cuotasNav;
+        var compiledTemplate = _.template($(template).html());
+        $("#mainDisplayer").html(compiledTemplate);
         this.render();
     },
 
     resettingAutoc: function(){
-        console.log("Haaaa");
+        console.log("Haaaa!!");
     },
 
     render: function(){
         var template = TEMPLATES.cuotasForm;
         var compiledTemplate = _.template($(template).html());
-        $("#mainDisplayer").html(compiledTemplate);
+        $("#cuotaBody").html(compiledTemplate);
     },
 
     getAutocomplete: function(){
