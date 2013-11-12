@@ -643,7 +643,7 @@ p.nombrePariente.selected {
   height: 40px;
 }
 
-.cuotaBody{
+.cuotaForm {
   margin-left: 10px;
   width: 350px;
   background: #fcfcfc repeat-x left bottom;
