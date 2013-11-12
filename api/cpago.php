@@ -24,7 +24,6 @@
     $conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
     mysql_query ("SET NAMES 'utf8'");
-    echo "si entra";
     mysql_query("UPDATE deudas SET Abono = '$tabono', Total = '$ttotal' WHERE Nombre= '$nombre'");
     mysql_query("INSERT INTO facturas (IdSocio, Servicio, Abono, Total, Hora, Dia, Mes, Year) 
       VALUES ('$id', '$servicio', '$abono', '$total', '$hora', '$dia', '$mes', '$year')");
@@ -39,4 +38,3 @@
     echo "<script type=text/javascript>window.location.href=\"../deudas.php\";</script>";
   }
 ?>
-</html>
