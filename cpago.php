@@ -2,7 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/jQueryAutocomplete.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <script src="assets/js/libs/jquery.js"></script>
+    <script src="assets/js/libs/jQueryAutocomplete.js"></script>
 </head>
 <form method="post" action="api/cpago.php" enctype="multipart/form-data">
   <h1>Generar cobro:</h1>
