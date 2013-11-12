@@ -24,6 +24,9 @@ var NavMainView = Backbone.View.extend({
             case "Socios" :
                 this.renderSociosTemplate(e)
                 break;
+            case "Cuotas" :
+                console.log("Go to Cuotas View!");
+                break;
             case "Bienvenido" :
                 alert("Bienvenido!! :D")
                 break;
