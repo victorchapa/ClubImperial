@@ -23,8 +23,7 @@ ClubImperial.Router = Backbone.Router.extend({
     },
 
     getFacture: function(id){
-        console.log("MAMES");
-        console.log(id);
+        var cuotasView = new CuotasView({socioId: id});
     },
 
 });

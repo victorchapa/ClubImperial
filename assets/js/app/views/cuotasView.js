@@ -27,7 +27,6 @@ var CuotasView = Backbone.View.extend({
     },
 
     showCuotaForm: function(e){
-        console.log("Show Cuota");
         var target = $(e.target).text();
         this.setFlange(target); 
     },
@@ -60,9 +59,13 @@ var CuotasView = Backbone.View.extend({
         }
     },
 
-    showSocioFactureTable: function(e){
+    showSocioFactureTable: function(e, id){
         var self = this;
-        var socioId = $(e.target).attr("idsocio");
+        if(id != undefined){
+            var socioId = id;
+        }else{
+            var socioId = $(e.target).attr("idsocio");
+        }
         var facturasSocio = new FacturasSocio(socioId);
         var deudaSocio = new DeudaSocio(socioId);
         facturasSocio.fetch({
@@ -86,7 +89,11 @@ var CuotasView = Backbone.View.extend({
             div.id = "factures";
             $("#cuotaBody").append(div);
         }
-        var target = $(e.target).text();
+        if(e != undefined){
+            var target = $(e.target).text();
+        }else{
+            var target = "FACTURA";
+        }
         this.setFlange(target); 
         var template = TEMPLATES.factura;
         var compiledTemplate = _.template($(template).html());
@@ -126,10 +133,14 @@ var CuotasView = Backbone.View.extend({
         console.log("Haaaa!!");
     },
 
-    render: function(){
+    render: function(e){
         var template = TEMPLATES.cuotasForm;
         var compiledTemplate = _.template($(template).html());
         $("#cuotaBody").html(compiledTemplate);
+        if(this.options.socioId != undefined){
+            var id = this.options.socioId;
+            this.showSocioFactureTable(e, id);
+        }
     },
 
     getAutocomplete: function(){
