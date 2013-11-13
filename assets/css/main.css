@@ -179,17 +179,16 @@ input.btn[disabled] {
   border-right: 1px solid #BDBDBD;
 }
 
-.socioBody table {
-  width: 200%;
+table.blue-table {
   margin: 10px 0 0 10px;
   border: 0;
 }
 
-.socioBody table thead {
+table.blue-table thead {
   text-align: left;
 }
 
-.socioBody table thead tr th {
+table.blue-table thead tr th {
   background: #b9c9fe;
   border-top: 4px solid #aabcfe;
   border-bottom: 1px solid #fff;
@@ -198,7 +197,7 @@ input.btn[disabled] {
   border-left: 0;
 }
 
-.socioBody table tbody tr td{
+table.blue-table tbody tr td{
   background: #e8edff;
   border-bottom: 1px solid #fff;
   color: #669;
@@ -208,9 +207,18 @@ input.btn[disabled] {
   border-left: 0;
 }
 
-.socioBody table tbody tr:hover td {
+table.blue-table tbody tr:hover td {
   background: #d0dafd;
 }
+
+.table-allSocios {
+  width: 200%;
+}
+
+.table-deudas, .table-factura {
+
+}
+
 
 .test, .test > td {
   height: 25px;
@@ -479,7 +487,6 @@ ul.navSocio li, ul.navCuotas li {
 p.nombrePariente.selected {
   background-color: #5882FA;
 }
-
 
 @keyframes indexFadeInOut {
   0% {

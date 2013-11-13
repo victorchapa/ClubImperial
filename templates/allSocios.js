@@ -1,6 +1,6 @@
 TEMPLATES.allSocios = 
         "<script type='text/template' id='thisTemplate'>" + 
-          "<table class='allSociosTable' border='1' cellspacing='0' >" +
+          "<table class='table-allSocios blue-table' border='1' cellspacing='0' >" +
           "<thead>" +
               "<tr>" +
                 "<th>Nombre</th>" +
