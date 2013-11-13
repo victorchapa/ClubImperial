@@ -2,7 +2,7 @@ TEMPLATES.factura =
         "<script type='text/template'>" +
         "<% var total = 0; var pago = 0; var deudas = 0; var tdeuda = deuda.Total - deuda.Abono; %>" +
           "<h2>Deudas de <span class='debtor'><% print(deuda.Nombre); %></span></h2>" +
-          "<table border='1' cellspacing='0' >" +
+          "<table class='blue-table table-factura' border='1' cellspacing='0' >" +
           "<thead>" +
             "<tr>" +
                 "<th>Servicio</th>" +
