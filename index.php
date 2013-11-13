@@ -106,13 +106,17 @@
   <script src="templates/cuotasForm.js"></script>
   <script src="templates/allSocios.js"></script>
   <script src="templates/cuotasNav.js"></script>
+  <script src="templates/deudas.js"></script>
 
   <!-- Collections -->
   <script src="assets/js/app/collections/socios.js"></script>
   <script src="assets/js/app/collections/parientes.js"></script>
   <script src="assets/js/app/collections/sociosfilters.js"></script>
+  <script src="assets/js/app/collections/deudas.js"></script>
+  <script src="assets/js/app/collections/facturasSocio.js"></script>
   <!-- Models -->
   <script src="assets/js/app/models/socio.js"></script>
+  <script src="assets/js/app/models/deudaSocio.js"></script>
   <!-- Views -->
   <script src="assets/js/app/views/mainView.js"></script>
   <script src="assets/js/app/views/navMainView.js"></script>
