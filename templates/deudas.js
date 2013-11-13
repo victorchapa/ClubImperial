@@ -16,7 +16,7 @@ TEMPLATES.deudas =
                     "<td><% print(socio.Nombre); %></td>" +
                     "<td><% print(socio.Abono); %></td>" +
                     "<td><% print(socio.Total); %></td>" +
-                    "<td><p class='watchFact' idsocio='<% print(socio.IdSocio); %>'>Ver</p></td>" +
+                    "<td><a class='watchFact' idsocio='<% print(socio.IdSocio); %>' href='#ccuotas/factura?id=<% print(socio.IdSocio); %>'>Ver</a></td>" +
                 "</tr>" +
                 "<% }); %>" +
             "</tbody>" +

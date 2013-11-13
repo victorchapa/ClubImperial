@@ -1,8 +1,9 @@
 ClubImperial.Router = Backbone.Router.extend({
     routes: {
-        ""                      :   "index",
-        "allsocios"             :   "allSocios",
-        "ccuotas"               :   "cuotas",
+        ""                              :   "index",
+        "allsocios"                     :   "allSocios",
+        "ccuotas"                       :   "cuotas",
+        "ccuotas/factura?id=:id"        :   "getFacture",
     },
 
     initialize: function(){
@@ -19,6 +20,11 @@ ClubImperial.Router = Backbone.Router.extend({
 
     cuotas: function(){
         var cuotasView = new CuotasView();
+    },
+
+    getFacture: function(id){
+        console.log("MAMES");
+        console.log(id);
     },
 
 });
