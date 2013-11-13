@@ -67,12 +67,12 @@ var CuotasView = Backbone.View.extend({
         var deudaSocio = new DeudaSocio(socioId);
         facturasSocio.fetch({
             success: function(data){
-                var charges = data.toJSON();
+                var facturas = data.toJSON();
                 deudaSocio.fetch({
                     success: function(data){
                         var data = data.toJSON();
-                        abono = data[0];
-                        self.openFactureFlange(e, charges, abono);
+                        deuda = data[0];
+                        self.openFactureFlange(e, facturas, deuda);
                     },
                 });
 
@@ -80,8 +80,7 @@ var CuotasView = Backbone.View.extend({
         });
     },
 
-    openFactureFlange: function(e, charges, abono){
-        console.log(charges, abono);
+    openFactureFlange: function(e, facturas, deuda){
         if($("#factures").length != 1){
             var div = document.createElement("div");
             div.id = "factures";
@@ -89,6 +88,10 @@ var CuotasView = Backbone.View.extend({
         }
         var target = $(e.target).text();
         this.setFlange(target); 
+        var template = TEMPLATES.factura;
+        var compiledTemplate = _.template($(template).html());
+        var socio = {facturas: facturas, deuda: deuda};
+        $("#factures").html(compiledTemplate(socio));
 
     },
 

@@ -1,7 +1,7 @@
 TEMPLATES.factura = 
-        "<script type='text/template' id='thisTemplate'>" +
-        "<% var total = 0; var pago = 0; var deuda = 0; var tdeuda = deudas.Total - deudas.Abono; %>"
-          "<h2>Deudas de <% print(deudas.nombre); %></h2>" +
+        "<script type='text/template'>" +
+        "<% var total = 0; var pago = 0; var deudas = 0; var tdeuda = deuda.Total - deuda.Abono; %>" +
+          "<h2>Deudas de <span class='debtor'><% print(deuda.Nombre); %></span></h2>" +
           "<table border='1' cellspacing='0' >" +
           "<thead>" +
             "<tr>" +
@@ -19,17 +19,17 @@ TEMPLATES.factura =
                     "<td><% print(factura.Dia); %>/<% print(factura.Mes); %>/<% print(factura.Year); %></br>" +
                     "<% print(factura.Hora); %></td>" +
                     "<td>$<% print(factura.Abono); %></td>" +
-                    "<% deuda = factura.Total - factura.Abono; %>" +
-                    "<td>$<% print(deuda); %></td>" +
+                    "<% deudas = factura.Total - factura.Abono; %>" +
+                    "<td>$<% print(deudas); %></td>" +
                     "<td>$<% print(factura.Total); %></td>" +
                 "</tr>" +
                 "<% }); %>" +
                 "<tr>" +
                   "<td>Total</td>" +
                   "<td></td>" +
-                  "<td><% print(deuda.Abono); %></td>" +
-                  "<td><% print(tdeuda); %></td>" +
-                  "<td><% print(deuda.Total); %></td>" +
+                  "<td>$<% print(deuda.Abono); %></td>" +
+                  "<td>$<% print(tdeuda); %></td>" +
+                  "<td>$<% print(deuda.Total); %></td>" +
                 "</tr>" +
             "</tbody>" +
             "</table>" +

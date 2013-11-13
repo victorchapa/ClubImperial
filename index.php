@@ -107,6 +107,7 @@
   <script src="templates/allSocios.js"></script>
   <script src="templates/cuotasNav.js"></script>
   <script src="templates/deudas.js"></script>
+  <script src="templates/factura.js"></script>
 
   <!-- Collections -->
   <script src="assets/js/app/collections/socios.js"></script>
