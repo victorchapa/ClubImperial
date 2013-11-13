@@ -11,6 +11,7 @@ var CuotasView = Backbone.View.extend({
     },
     
     setFlange: function(target){
+        if(target=="Ver"){target = "FACTURA";};
         var lis = $(".navCuotas li");
         _.each(lis, function(li){
             var textLi = $("p", li).text();
@@ -53,28 +54,42 @@ var CuotasView = Backbone.View.extend({
     },
 
     showFactForm: function(e){
-        if($("#facture").length != 0){
+        if($("#factures").length != 0){
             var target = $(e.target).text();
             this.setFlange(target); 
         }
     },
 
     showSocioFactureTable: function(e){
+        var self = this;
         var socioId = $(e.target).attr("idsocio");
         var facturasSocio = new FacturasSocio(socioId);
         var deudaSocio = new DeudaSocio(socioId);
         facturasSocio.fetch({
             success: function(data){
-                var data = data.toJSON();
-                console.log(data);
+                var charges = data.toJSON();
                 deudaSocio.fetch({
                     success: function(data){
-                        console.log(data);
+                        var data = data.toJSON();
+                        abono = data[0];
+                        self.openFactureFlange(e, charges, abono);
                     },
                 });
 
             },
         });
+    },
+
+    openFactureFlange: function(e, charges, abono){
+        console.log(charges, abono);
+        if($("#factures").length != 1){
+            var div = document.createElement("div");
+            div.id = "factures";
+            $("#cuotaBody").append(div);
+        }
+        var target = $(e.target).text();
+        this.setFlange(target); 
+
     },
 
     clearMainNav: function(){
