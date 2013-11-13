@@ -29,12 +29,12 @@
         <input type="text" style= "width:350px;" name="nombre" placeholder="Nombre">
         <input type="text" style= "width:350px;" name="apellidop" placeholder="Apellido Paterno">
         <input type="text" style= "width:350px;" name="apellidom" placeholder="Apellido Materno">
-        <p><input type="submit" class="btn-success btn" value="Buscar"></p>
+        <p><input type="submit" class="btn-success btn" id="buscar" value="Buscar"></p>
       </form>
     </div>
 
     <div class="divVerH">
-      <a href="historial.php">Ver historial</a>
+      <a href="historial.php"><input type="submit" class="btn btnNormal" value="Ver historial"/></a>
     </div>
   </div>
   </body>
