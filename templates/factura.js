@@ -15,13 +15,17 @@ TEMPLATES.factura =
           "<tbody>" +
                 "<% _.each(facturas, function(factura) { %>" +
                 "<tr>" +
+                "<form method='post' action='api/pagarf.php'>" +
                     "<td><% print(factura.Servicio); %></td>" +
+                    "<input type='hidden' name='ids' value='<% print(factura.IdSocio); %>'>" +
+                    "<input type='hidden' name='idf' value='<% print(factura.IdFactura); %>'>" +
                     "<td><% print(factura.Dia); %>/<% print(factura.Mes); %>/<% print(factura.Year); %></br>" +
                     "<% print(factura.Hora); %></td>" +
-                    "<td>$<% print(factura.Abono); %></td>" +
+                    "<td>$ <input type='text' name='abono' onkeydown='if(event.keyCode == 13){this.form.submit();}' value=' <% print(factura.Abono); %>'></td>" +
                     "<% deudas = factura.Total - factura.Abono; %>" +
                     "<td>$<% print(deudas); %></td>" +
                     "<td>$<% print(factura.Total); %></td>" +
+                "</form>" +
                 "</tr>" +
                 "<% }); %>" +
                 "<tr>" +
