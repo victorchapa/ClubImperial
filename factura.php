@@ -32,12 +32,16 @@
   <tbody>
 <?php
     foreach($facturas as $factura){
+      echo "<form method= 'post' action='api/prueba.php'>";
+      echo "<input type='hidden' name='ids' value='".$factura['IdSocio']."'>";
+      echo "<input type='hidden' name='idf' value='".$factura['IdFactura']."'>";
       echo "<tr><td>".$factura['Servicio']."</td>";
       echo "<td>".$factura['Dia']."/".$factura['Mes']."/".$año."</br>".$factura['Hora']."</td>";
-      echo "<td>$".$factura['Abono']."</td>";
+      echo "<td>$<input type='text' name='abono' onkeydown='if (event.keyCode == 13) { this.form.submit();}' value='".$factura['Abono']."'/></td>";
       $deuda = ($factura['Total']) - ($factura['Abono']);
       echo "<td>$".$deuda."</td>";
       echo "<td>$".$factura['Total']."</td></tr>";
+      echo "</form>";
     }
 ?>
   <tr><td><b>Total: <b></td>
