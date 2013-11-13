@@ -579,8 +579,8 @@ p.nombrePariente.selected {
 }
 
 .Acceso {
-  width: 1000px;
-  height: 600px;
+  width: 900px;
+  height: 530px;
   background: white;
   border: 10px solid #0B0B61;
   border-radius: 10px;
@@ -619,11 +619,13 @@ p.nombrePariente.selected {
 }
 
 .divVerH {
-  width: 500px;
   margin: 0 auto 0 auto;
-  margin-top: 50px;
   text-align: center;
   padding-top: 15px;
+}
+
+.divVerH a {
+  text-decoration: none;
 }
 
 .findSocio {
@@ -666,4 +668,10 @@ p.nombrePariente.selected {
 
 .cuotaForm select {
   width: 156px;
+}
+
+#buscar {
+  margin-top: -10px;
+  margin-left: -30px;
+  position: absolute
 }
