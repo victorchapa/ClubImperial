@@ -11,12 +11,12 @@ TEMPLATES.deudas =
             "</tr>" +
           "</thead>" +
           "<tbody>" +
-                "<% _.each(deudas, function(deuda) { %>" +
+                "<% _.each(socios, function(socio) { %>" +
                 "<tr>" +
-                    "<td><% print(deuda.Nombre); %></td>" +
-                    "<td><% print(deuda.Abono); %></td>" +
+                    "<td><% print(socio.Nombre); %></td>" +
+                    "<td><% print(socio.Abono); %></td>" +
                     "<td><% print(socio.Total); %></td>" +
-                    "<td><a href='factura.php?id=<% print(socio.IdFactura); %>'>Ver</a></td>" +
+                    "<td><p class='watchFact' idsocio='<% print(socio.IdSocio); %>'>Ver</p></td>" +
                 "</tr>" +
                 "<% }); %>" +
             "</tbody>" +

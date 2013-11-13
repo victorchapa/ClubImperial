@@ -2,9 +2,9 @@ TEMPLATES.cuotasNav =
     "<div class='cobrosContent'>" +
         "<div class='backgroundNav'>" +
             "<ul class='navCuotas'>" +
-                "<li class='active'><p class='uppercase'>cuotas</p></li>" +
-                "<li><p class='uppercase'>deudas</p></li>" +
-                "<li><p class='uppercase'>factura</p></li>" +
+                "<li class='showCuota active'><p class='uppercase'>CUOTAS</p><input type='hidden' value='charges'/></li>" +
+                "<li class='showDebt'><p class='uppercase'>DEUDAS</p><input type='hidden' value='allDebts'/></li>" +
+                "<li class='showFact'><p class='uppertcase'>FACTURA</p><input type='hidden' value='factures'/></li>" +
             "</ul>" +
         "</div>" +
     	"<div id='cuotaBody'>" +

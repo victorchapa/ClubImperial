@@ -4,6 +4,95 @@ var CuotasView = Backbone.View.extend({
 
     events:{
         "keydown #socioFinder"  :   "refetchCollection",
+        "click .showCuota"      :   "showCuotaForm",
+        "click .showDebt"       :   "showDebtForm",
+        "click .showFact"       :   "showFactForm",
+        "click .watchFact"      :   "showSocioFactureTable",
+    },
+    
+    setFlange: function(target){
+        if(target=="Ver"){target = "FACTURA";};
+        var lis = $(".navCuotas li");
+        _.each(lis, function(li){
+            var textLi = $("p", li).text();
+            var typeFlange = $("input[type='hidden']", li).val();
+            if(target == textLi){
+                $(li).addClass("active");
+                $("#"+typeFlange).show();;
+            }else{
+                $(li).removeClass("active");
+                $("#"+typeFlange).hide();;
+            }
+        });
+    },
+
+    showCuotaForm: function(e){
+        console.log("Show Cuota");
+        var target = $(e.target).text();
+        this.setFlange(target); 
+    },
+
+    showDebtForm: function(e){
+        if($("#allDebts").length != 1){
+            var div = document.createElement("div");
+            div.id = "allDebts";
+            $("#cuotaBody").append(div);
+        }
+        var target = $(e.target).text();
+        this.setFlange(target); 
+        var template = TEMPLATES.deudas;
+        var compiledTemplate = _.template($(template).html());
+        var deudasCollection = new DeudasCollection();
+        deudasCollection.fetch({
+            success: function(data){
+                var data = data.toJSON();
+                var socios = {socios: data};
+                $("#allDebts").html(compiledTemplate(socios));
+            },
+        });
+        $("#allDebts").show();
+    },
+
+    showFactForm: function(e){
+        if($("#factures").length != 0){
+            var target = $(e.target).text();
+            this.setFlange(target); 
+        }
+    },
+
+    showSocioFactureTable: function(e){
+        var self = this;
+        var socioId = $(e.target).attr("idsocio");
+        var facturasSocio = new FacturasSocio(socioId);
+        var deudaSocio = new DeudaSocio(socioId);
+        facturasSocio.fetch({
+            success: function(data){
+                var facturas = data.toJSON();
+                deudaSocio.fetch({
+                    success: function(data){
+                        var data = data.toJSON();
+                        deuda = data[0];
+                        self.openFactureFlange(e, facturas, deuda);
+                    },
+                });
+
+            },
+        });
+    },
+
+    openFactureFlange: function(e, facturas, deuda){
+        if($("#factures").length != 1){
+            var div = document.createElement("div");
+            div.id = "factures";
+            $("#cuotaBody").append(div);
+        }
+        var target = $(e.target).text();
+        this.setFlange(target); 
+        var template = TEMPLATES.factura;
+        var compiledTemplate = _.template($(template).html());
+        var socio = {facturas: facturas, deuda: deuda};
+        $("#factures").html(compiledTemplate(socio));
+
     },
 
     clearMainNav: function(){
