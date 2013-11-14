@@ -27,14 +27,9 @@
         <input type="submit" class="btn-success btn" value="Buscar">
       </form>
     </div>
-
     <div class="BuscaSocio">
-      <form method="post" action="api/FindSocio.php">
-        <input type="hidden" name="type" value="2">
-        <input type="hidden" name="campo" value="">
         <input id="socioFinder" type="text"  name="nombre" placeholder="Nombre del Socio">
-        <input type="submit" class="btn-success btn" id="buscar" value="Buscar">
-      </form>
+        <input type="button" class="btn-success btn" id="findByName" value="Buscar">
     </div>
     <div class="divVerH">
       <a href="historial.php"><input type="submit" class="btn btnNormal" value="Ver historial"/></a>
@@ -48,7 +43,8 @@
   <!-- Collections -->
   <script src="assets/js/app/collections/sociosfilters.js"></script>
   <!-- Models -->
+  <script src="assets/js/app/models/accesscontrol/findSocio.js"></script>
   <!-- Views -->
-  <script src="assets/js/app/views/accessControlView.js"></script>
+  <script src="assets/js/app/views/accesscontrol/accessControlView.js"></script>
   </body>
 </html>

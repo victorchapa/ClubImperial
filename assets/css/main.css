@@ -618,7 +618,7 @@ p.nombrePariente.selected {
   margin-bottom: 50px;
 }
 
-.BuscaSocio form input[type="text"], .BuscaIdSocio form input[type="text"] {
+.BuscaSocio input[type="text"], .BuscaIdSocio input[type="text"] {
   width:350px;
   text-align: center;
 }
