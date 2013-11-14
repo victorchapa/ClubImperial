@@ -10,18 +10,16 @@
   $type= $_POST["type"];
   $campo = $_POST["campo"];
   $nombre= $_POST["nombre"];
-  $apellidop= $_POST["apellidop"];
-  $apellidom= $_POST["apellidom"];
     if ($type == "1"){
-        $socios = consultar("SELECT * FROM socios WHERE IdSocio='$campo'");
+        $socio = consultar("SELECT * FROM socios WHERE IdSocio='$campo'");
     } elseif ($type == "2")  {
-        $socios = consultar("SELECT * FROM socios WHERE Nombre='$nombre' AND ApellidoP='$apellidop' AND ApellidoM='$apellidom'");
+        $socio = consultar("SELECT * FROM socios WHERE Nombre='$nombre'");
     }
   ?>
   <div class="findSocio">
   <?php
   if($socios){
-    $idsocio = $socios["0"]["IdSocio"];
+    $idsocio = $socio["0"]["IdSocio"];
     $acceso = consultar("SELECT * FROM historial WHERE IdSocio = '$idsocio' ORDER BY IdHistorial DESC");
     echo "<img class='fotoSocio' src='".$socios["0"]["Foto"]."'>";
     echo "<div class='clear'>";
