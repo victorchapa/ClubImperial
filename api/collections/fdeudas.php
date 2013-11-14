@@ -5,6 +5,6 @@
   $mes = strftime("%b");
   $mes= ucfirst($mes);
   $año = strftime("%Y");
-  $deudas = consultar("SELECT * FROM deudas WHERE IdSocio = '$id' AND Mes='$mes' AND Year='$año'");
-  echo json_encode($deudas);
+  $balance = consultar("SELECT * FROM balance WHERE IdSocio = '$id' AND Mes='$mes' AND Year='$año'");
+  echo json_encode($balance);
 ?>
