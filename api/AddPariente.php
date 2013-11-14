@@ -1,12 +1,5 @@
 <?php
 	require("dbConfig.php");
-?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-  </head>
-<?php
 	$idsocio = $_POST['IdSocio'];
 	$nombre = $_POST['Nombre'];
 	$apellidop = $_POST['ApellidoP'];
@@ -26,15 +19,8 @@
 	$sangre = $_POST['Sangre'];
 	$falta = $_POST['FAlta'];
 	$afiliacion = implode(', ', $_POST['Afiliacion']);
-	if($parentesco == "Hijo"){
-		$mayor = "No";
-	} else {
-		$mayor = "Si";
-	}
-	$conexion =  mysql_connect($serverAddress, $user, $passwd);
-    mysql_select_db($dbName);
-	mysql_query ("SET NAMES 'utf8'");
-	mysql_query("INSERT INTO socios (IdPariente, Nombre, ApellidoP, ApellidoM, Filtro, Parentesco, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Correo, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion, Mayor) 
+	$mayor = ($parentesco == "Hijo") ? "No" : "Si";
+	$add = add("INSERT INTO socios (IdPariente, Nombre, ApellidoP, ApellidoM, Filtro, Parentesco, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Correo, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion, Mayor) 
 	VALUES ('$idsocio', '$nombre', '$apellidop', '$apellidom', '$filtro', '$parentesco', '$fnacimiento', '$domicilio', '$manzana', '$lote', '$coto', '$telefono', '$celular', '$correo', '$membresia', '$tipomembresia', '$sangre', '$falta', '$afiliacion', '$mayor')");
 	$id= mysql_insert_id();
 	mkdir ("socios/".$id);
@@ -43,8 +29,6 @@
 	$nombreImagen = $_FILES["Foto"]["name"];
 	$foto = $rutaServidor.'/'.$nombreImagen;
 	move_uploaded_file($rutaTemporal, $foto);
-	mysql_query("UPDATE socios SET Foto='$foto' WHERE IdSocio='$id'");
-  
+	$add = add("UPDATE socios SET Foto='$foto' WHERE IdSocio='$id'");
 	echo "<script type=text/javascript>window.location.href=\"../index.php\";</script>";
 ?>
-</html>

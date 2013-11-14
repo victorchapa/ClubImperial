@@ -1,14 +1,6 @@
 <?php 
     session_start(); 
     require("dbConfig.php");
-?>
-<!DOCTYPE html>
-<html>
-      <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
-<?php
 	$conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
     mysql_query ("SET NAMES 'utf8'");
@@ -23,15 +15,13 @@
 			$_SESSION["permiso"] = $row['Permiso'];
 			$_SESSION["club"] = "SI";
 			$_SESSION["ultimoAcceso"]= date("Y-n-j H:i:s");
-            echo "<script type=text/javascript>window.location.href=\"http://localhost/clubimperial/index.php\";</script>";
+            echo "<script type=text/javascript>window.location.href=\"../index.php\";</script>";
         }else{
             echo "<script> alert(\"La contraseña no es correcta\"); </script>";
-			echo "<script type=text/javascript>window.location.href=\"http://localhost/clubimperial/autenticar.php\";</script>";
+			echo "<script type=text/javascript>window.location.href=\"../autenticar.php\";</script>";
         }
     }else{
         echo "<script> alert(\"El nombre de usuario no es correcto\"); </script>";
-		echo "<script type=text/javascript>window.location.href=\"http://localhost/clubimperial/autenticar.php\";</script>";
+		echo "<script type=text/javascript>window.location.href=\"../autenticar.php\";</script>";
     }
 ?>
-    </body>
-</html>

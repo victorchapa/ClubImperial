@@ -19,4 +19,13 @@
 		}
 	}
 
+	function add($addquery){
+		require('dbConfig.php');
+		$conexion =  mysql_connect($serverAddress, $user, $passwd);
+		mysql_select_db($dbName);
+		mysql_query ("SET NAMES 'utf8'");
+		$regresar= mysql_query($addquery,$conexion);
+		mysql_close($conexion);
+		return $regresar;
+	}
 ?>
