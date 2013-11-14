@@ -1,12 +1,5 @@
 <?php
 	require("dbConfig.php");
-?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-  </head>
-<?php
 	$nombre = $_POST['Nombre'];
 	$apellidop = $_POST['ApellidoP'];
 	$apellidom = $_POST['ApellidoM'];
@@ -24,10 +17,7 @@
 	$sangre = $_POST['Sangre'];
 	$falta = $_POST['FAlta'];
 	$afiliacion = implode(', ', $_POST['Afiliacion']);
-	$conexion =  mysql_connect($serverAddress, $user, $passwd);
-    mysql_select_db($dbName);
-	mysql_query ("SET NAMES 'utf8'");
-	mysql_query("INSERT INTO socios (Nombre, ApellidoP, ApellidoM, Filtro, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Correo, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion) 
+	$add = add("INSERT INTO socios (Nombre, ApellidoP, ApellidoM, Filtro, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Correo, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion) 
 	VALUES ('$nombre', '$apellidop', '$apellidom', '$filtro', '$fnacimiento', '$domicilio', '$manzana', '$lote', '$coto', '$telefono', '$celular', '$correo', '$membresia', '$tipomembresia', '$sangre', '$falta', '$afiliacion')");
 	$id= mysql_insert_id();
 	mkdir ("socios/".$id);
@@ -36,7 +26,6 @@
 	$nombreImagen = $_FILES["Foto"]["name"];
 	$foto = $rutaServidor.'/'.$nombreImagen;
 	move_uploaded_file($rutaTemporal, $foto);
-	mysql_query("UPDATE socios SET Foto='$foto' WHERE IdSocio='$id'");
+	$add = ("UPDATE socios SET Foto='$foto' WHERE IdSocio='$id'");
 	echo "<script type=text/javascript>window.location.href=\"../index.php\";</script>";
 ?>
-</html>

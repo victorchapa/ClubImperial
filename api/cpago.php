@@ -1,6 +1,5 @@
 <?php
   setlocale(LC_ALL,"spanish");
-  require("dbConfig.php");
   include("consultas.php");
   $nombre = $_POST["Nombre"]." ".$_POST["ApellidoP"]." ".$_POST["ApellidoM"];
   $names = explode(" ", $nombre);
@@ -21,20 +20,14 @@
   if($deudas){
     $tabono = ($deudas[0]["Abono"]) + $abono;
     $ttotal = ($deudas[0]["Total"]) + $total;
-    $conexion =  mysql_connect($serverAddress, $user, $passwd);
-    mysql_select_db($dbName);
-    mysql_query ("SET NAMES 'utf8'");
-    mysql_query("UPDATE deudas SET Abono = '$tabono', Total = '$ttotal' WHERE Nombre= '$nombre'");
-    mysql_query("INSERT INTO facturas (IdSocio, Servicio, Abono, Total, Hora, Dia, Mes, Year) 
+    $add = add("UPDATE deudas SET Abono = '$tabono', Total = '$ttotal' WHERE Nombre= '$nombre'");
+    $add = add("INSERT INTO facturas (IdSocio, Servicio, Abono, Total, Hora, Dia, Mes, Year) 
       VALUES ('$id', '$servicio', '$abono', '$total', '$hora', '$dia', '$mes', '$year')");
     echo "<script type=text/javascript>window.location.href=\"../index.php#ccuotas\";</script>";
   } else {
-    $conexion =  mysql_connect($serverAddress, $user, $passwd);
-    mysql_select_db($dbName);
-    mysql_query ("SET NAMES 'utf8'");
-    mysql_query("INSERT INTO facturas (IdSocio, Servicio, Abono, Total, Hora, Dia, Mes, Year) 
+    $add = add("INSERT INTO facturas (IdSocio, Servicio, Abono, Total, Hora, Dia, Mes, Year) 
       VALUES ('$id', '$servicio', '$abono', '$total', '$hora', '$dia', '$mes', '$year')");
-    mysql_query("INSERT INTO deudas (IdSocio, Nombre, Abono, Total, Mes, Year) VALUES ('$id', '$nombre', '$abono', '$total', '$mes', '$year')");
+    $add = add("INSERT INTO deudas (IdSocio, Nombre, Abono, Total, Mes, Year) VALUES ('$id', '$nombre', '$abono', '$total', '$mes', '$year')");
     echo "<script type=text/javascript>window.location.href=\"../index.php#ccuotas\";</script>";
   }
 ?>
