@@ -1,13 +1,13 @@
 TEMPLATES.deudas = 
         "<script type='text/template' id='thisTemplate'>" + 
-          "<h2>Lista de pagos</h2>" +
+          "<h2>Balance total</h2>" +
           "<table class='blue-table table-deudas' border='1' cellspacing='0' >" +
           "<thead>" +
             "<tr>" +
                 "<th>Socios</th>" +
                 "<th>Abono</th>" +
                 "<th>Cargo</th>" +
-                "<th>Factura</th>" +
+                "<th>Lista</th>" +
             "</tr>" +
           "</thead>" +
           "<tbody>" +
