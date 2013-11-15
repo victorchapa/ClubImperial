@@ -34,7 +34,7 @@
         <input type="button" class="btn-success btn" id="findByName" value="Buscar" disabled='true'>
     </div>
     <div class="divVerH">
-      <a href="historial.php"><input type="submit" class="btn btnNormal" value="Ver historial"/></a>
+      <input id="history" type="button" class="btn btnNormal" value="Ver historial"/>
     </div>
   </div>
     <div class="modal" id="ModalAccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -55,8 +55,10 @@
   <script src="templates/templates.js"></script>
   <!-- Templates -->
   <script src="templates/accesscontrol/socio.js"></script>
+  <script src="templates/accesscontrol/history.js"></script>
   <!-- Collections -->
   <script src="assets/js/app/collections/sociosfilters.js"></script>
+  <script src="assets/js/app/collections/accesscontrol/history.js"></script>
   <!-- Models -->
   <script src="assets/js/app/models/accesscontrol/findSocio.js"></script>
   <!-- Views -->

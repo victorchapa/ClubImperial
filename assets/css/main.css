@@ -219,6 +219,10 @@ table.blue-table tbody tr:hover td {
 
 }
 
+table.blue-table.table-history {
+  width: 100%;
+  margin: 0px;
+}
 
 .test, .test > td {
   height: 25px;

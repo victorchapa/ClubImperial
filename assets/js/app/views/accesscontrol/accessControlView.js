@@ -6,6 +6,7 @@ var AccessControlView = Backbone.View.extend({
         "keydown #socioFinder"      :   "refetchCollection",
         "mouseover #findByName"     :   "blockButton",
         "click #findByName"         :   "getSocio",
+        "click #history"            :   "getHistoryAccess",
     },
 
     initialize: function(){
@@ -63,6 +64,7 @@ var AccessControlView = Backbone.View.extend({
                 var data = data.toJSON();
                 var socioData = {socioData: data};
                 $("#modalDisplayer").html(compiledTemplate(socioData));
+                $(".modal-title").text("Ficha del Socio");
                 $("#ModalAccess").modal("show");
             },
         });
@@ -77,6 +79,21 @@ var AccessControlView = Backbone.View.extend({
         if(socioName == ""){
             $("#findByName").attr({disabled: true});
         }
+    },
+
+    getHistoryAccess: function(){
+        var template = TEMPLATES.historial;
+        var compiledTemplate = _.template($(template).html());
+        var historyAccessCollection = new HistoryAccessCollection();
+        historyAccessCollection.fetch({
+            success: function(data){
+                var data = data.toJSON();
+                var historial = {historial: data};
+                $("#modalDisplayer").html(compiledTemplate(historial));
+                $(".modal-title").text("Historial de Acceso");
+                $("#ModalAccess").modal("show");
+            },
+        });
     },
 
 });
