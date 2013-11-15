@@ -27,11 +27,6 @@
     echo "<p>Afiliación: <label>".$socios["0"]["Afiliacion"]."</label></p>";
     echo "</div></div>";
     echo "<p>Parientes:</p>";
-    echo "<div class='memoField'>";
-    if($parientes){
-      foreach($parientes as $pariente){
-        echo "<p class='nombrePariente'>".$pariente["Nombre"]." ".$pariente["ApellidoP"]." ".$pariente["ApellidoM"]." => ".$pariente["Parentesco"].".</p>";
-      }
     echo "<div class='tableKin'>";
     if($parientes){
     echo "<table>";
