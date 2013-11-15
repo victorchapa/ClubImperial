@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 11-11-2013 a las 23:32:10
+-- Tiempo de generación: 15-11-2013 a las 22:56:50
 -- Versión del servidor: 5.6.12-log
 -- Versión de PHP: 5.4.12
 
@@ -25,57 +25,57 @@ USE `clubimperial`;
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `deudas`
+-- Estructura de tabla para la tabla `balance`
 --
 
-CREATE TABLE IF NOT EXISTS `deudas` (
-  `IdDeuda` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `balance` (
+  `IdBalance` int(11) NOT NULL AUTO_INCREMENT,
   `IdSocio` int(11) NOT NULL,
   `Nombre` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `Abono` int(11) NOT NULL DEFAULT '0',
-  `Total` int(11) NOT NULL,
+  `Cargo` int(11) NOT NULL,
   `Mes` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `Year` int(11) NOT NULL,
-  PRIMARY KEY (`IdDeuda`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=3 ;
+  PRIMARY KEY (`IdBalance`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=6 ;
 
 --
--- Volcado de datos para la tabla `deudas`
+-- Volcado de datos para la tabla `balance`
 --
 
-INSERT INTO `deudas` (`IdDeuda`, `IdSocio`, `Nombre`, `Abono`, `Total`, `Mes`, `Year`) VALUES
-(1, 1, 'Oscar Vargas Muñoz', 300, 3550, 'Nov', 2013),
-(2, 4, 'Victor Chapa Clavillo  ', 1650, 3150, 'Nov', 2013);
+INSERT INTO `balance` (`IdBalance`, `IdSocio`, `Nombre`, `Abono`, `Cargo`, `Mes`, `Year`) VALUES
+(2, 4, 'Victor Chapa Clavillo  ', 2350, 3150, 'Nov', 2013),
+(4, 3, 'Israel Alcantar Cortés  ', 1500, 3000, 'Nov', 2013),
+(5, 1, 'Oscar Vargas Muñoz  ', 2100, 3500, 'Nov', 2013);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `facturas`
+-- Estructura de tabla para la tabla `cargos`
 --
 
-CREATE TABLE IF NOT EXISTS `facturas` (
-  `IdFactura` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `cargos` (
+  `IdCargo` int(11) NOT NULL AUTO_INCREMENT,
   `IdSocio` int(11) NOT NULL,
   `Servicio` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `Abono` int(11) NOT NULL DEFAULT '0',
-  `Total` int(11) NOT NULL,
+  `Cargo` int(11) NOT NULL,
   `Hora` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
   `Dia` varchar(2) COLLATE utf8_spanish_ci NOT NULL,
   `Mes` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
   `Year` int(11) NOT NULL,
-  PRIMARY KEY (`IdFactura`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=6 ;
+  PRIMARY KEY (`IdCargo`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=9 ;
 
 --
--- Volcado de datos para la tabla `facturas`
+-- Volcado de datos para la tabla `cargos`
 --
 
-INSERT INTO `facturas` (`IdFactura`, `IdSocio`, `Servicio`, `Abono`, `Total`, `Hora`, `Dia`, `Mes`, `Year`) VALUES
-(1, 1, 'Mensualidad', 150, 3000, '11:37 am', '01', 'Nov', 2013),
-(2, 1, 'Bar', 0, 600, '01:45 pm', '03', 'Nov', 2013),
-(3, 1, 'Invitados', 150, 150, '9:51 pm', '11', 'Nov', 2013),
-(4, 4, 'Mensualidad', 1500, 3000, '9:51 pm', '11', 'Nov', 2013),
-(5, 4, 'Carros', 150, 150, '9:52 pm', '11', 'Nov', 2013);
+INSERT INTO `cargos` (`IdCargo`, `IdSocio`, `Servicio`, `Abono`, `Cargo`, `Hora`, `Dia`, `Mes`, `Year`) VALUES
+(4, 4, 'Mensualidad', 2200, 3000, '9:51 pm', '11', 'Nov', 2013),
+(5, 4, 'Carros', 150, 150, '9:52 pm', '11', 'Nov', 2013),
+(7, 3, 'Mensualidad', 1500, 3000, '7:09 pm', '12', 'Nov', 2013),
+(8, 1, 'Carro Bar', 2100, 3500, '7:53 pm', '13', 'Nov', 2013);
 
 -- --------------------------------------------------------
 
@@ -90,7 +90,14 @@ CREATE TABLE IF NOT EXISTS `historial` (
   `FechaA` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
   `HoraA` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`IdHistorial`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `historial`
+--
+
+INSERT INTO `historial` (`IdHistorial`, `IdSocio`, `Nombre`, `FechaA`, `HoraA`) VALUES
+(1, 3, 'Israel Alcantar Cortés', '13/11/2013', '11:31 am');
 
 -- --------------------------------------------------------
 
@@ -123,16 +130,16 @@ CREATE TABLE IF NOT EXISTS `socios` (
   `Cuota` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `Mayor` varchar(2) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`IdSocio`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=15 ;
 
 --
 -- Volcado de datos para la tabla `socios`
 --
 
 INSERT INTO `socios` (`IdSocio`, `IdPariente`, `Nombre`, `ApellidoP`, `ApellidoM`, `Filtro`, `Parentesco`, `FNacimiento`, `Domicilio`, `Manzana`, `Lote`, `Coto`, `Telefono`, `Celular`, `Correo`, `Membresia`, `TipoMembresia`, `Sangre`, `FAlta`, `Foto`, `Afiliacion`, `Cuota`, `Mayor`) VALUES
-(1, 0, 'Oscar', 'Vargas', 'Muñoz', 'Oscar Vargas Muñoz', '', '24/11/1990', 'domicilio 1', 'manzana 1', 0, 0, 123, 1234567890, '', 'Rentista', 'Individual', 'A', '14/10/2013', 'socios/1/perfil.jpg', 'Golf', '', '0'),
+(1, 0, 'Oscar', 'Vargas', 'Muñoz', 'Oscar Vargas Muñoz', '', '24/11/1990', 'domicilio 1', 'manzana 1', 1, 1, 123, 1234567890, 'darckoso@hotmail.com', 'Propietario', 'Individual', 'AB-', '14/10/2013', 'socios/1/perfil.jpg', 'Golf', '', '0'),
 (3, 0, 'Israel', 'Alcantar', 'Cortés', 'Israel Alcantar Cortés', '', '10/01/2013', 'Domicilio1', '1', 2, 3, 1234567, 2147483647, 'isracortes62@gmail.com', 'Propietario', 'Familiar', 'A+', '10/22/2013', 'socios/3/perfil.jpg', 'Piscina, Gym, SPA', '', '0'),
-(4, 1, 'Victor', 'Chapa', 'Clavillo', 'Victor Chapa Clavillo', 'Esposo', '26/06/1990', 'En la misma casa', '1', 1, 1, 1234567, 1234567890, 'victor_260690@hotmail.com', 'Propietario', 'Familiar', 'O+', '28/10/2013', 'socios/4/perfil.jpg', 'Gym', '', 'Si');
+(4, 1, 'Victor', 'Chapa', 'Clavillo', 'Victor Chapa Clavillo', 'Esposo', '26/06/1990', 'Casa 1', '1', 1, 1, 1234567, 1234567890, 'victor_260690@hotmail.com', 'Propietario', 'Jr', 'O+', '28/10/2013', 'socios/4/perfil.jpg', 'Gym', '', 'Si');
 
 -- --------------------------------------------------------
 
