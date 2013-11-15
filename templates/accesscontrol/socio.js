@@ -5,11 +5,11 @@ TEMPLATES.socio =
                 "<img class='fotoSocio' src='api/<% print(socioData.socio[0].Foto); %>'>" +
             "</div>" +
             "<div class='dataAccess'>" +
-                "<p>Nombre: <% print(socioData.socio[0].Filtro); %></p>" +
+                "<p><span class='bold'>Nombre:</span> <% print(socioData.socio[0].Filtro); %></p>" +
                 "<% if(socioData.acceso != false) { %>" +
-                    "<p>Ultimo acceso: <% print(socioData.acceso[0].FechaA); %> a las <% print(socioData.acceso[0].HoraA); %>.</p>" +
+                    "<p><span class='bold'>Ultimo acceso:</span> <% print(socioData.acceso[0].FechaA); %> a las <% print(socioData.acceso[0].HoraA); %>.</p>" +
                 "<% } else { %>" +
-                    "<p>Ultimo acceso: No ha tenido Acceso.</p>" +
+                    "<p><span class='bold'>Ultimo acceso:</span> No ha tenido Acceso.</p>" +
                 "<% } %>" +
             "</div>" +
             "<p>" +

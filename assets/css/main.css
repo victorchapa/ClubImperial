@@ -687,3 +687,6 @@ p.nombrePariente.selected {
   text-align: right;
 }
 
+span.bold {
+  font-weight: bold;
+}
