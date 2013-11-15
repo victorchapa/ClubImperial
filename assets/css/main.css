@@ -219,6 +219,10 @@ table.blue-table tbody tr:hover td {
 
 }
 
+table.blue-table.table-history {
+  width: 100%;
+  margin: 0px;
+}
 
 .test, .test > td {
   height: 25px;
@@ -605,7 +609,7 @@ p.nombrePariente.selected {
 
 .BuscaIdSocio, .BuscaSocio {
   width: 500px;
-  height: 50px;
+  height: 70px;
   background-color: #BDBDBD;
   border-radius: 10px;
   border: 5px solid #0B0B61;
@@ -618,7 +622,7 @@ p.nombrePariente.selected {
   margin-bottom: 50px;
 }
 
-.BuscaSocio form input[type="text"], .BuscaIdSocio form input[type="text"] {
+.BuscaSocio input[type="text"], .BuscaIdSocio input[type="text"] {
   width:350px;
   text-align: center;
 }
@@ -675,3 +679,18 @@ p.nombrePariente.selected {
   width: 156px;
 }
 
+#ModalAccess .modal-dialog{
+  width: 600px;
+}
+
+.socioAccess .imgContainer, .socioAccess .dataAccess {
+  text-align: center;
+} 
+
+.socioAccess p:nth-child(3) { 
+  text-align: right;
+}
+
+span.bold {
+  font-weight: bold;
+}

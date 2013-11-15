@@ -1,7 +1,6 @@
 TEMPLATES.historial = 
         "<script type='text/template'>" +
-          "<h2>Historial de acceso</h2>" +
-          "<table class='blue-table table-factura' border='1' cellspacing='0' >" +
+          "<table class='blue-table table-history' border='1' cellspacing='0' >" +
           "<thead>" +
             "<tr>" +
                 "<th>Nombre</th>" +
@@ -14,7 +13,7 @@ TEMPLATES.historial =
                 "<tr>" +
                     "<td><% print(hist.Nombre); %></td>" +
                     "<td><% print(hist.FechaA); %></td>" +
-                    "<td>$<% print(hist.HoraA); %></td>" +
+                    "<td><% print(hist.HoraA); %></td>" +
                 "</tr>" +
                 "<% }); %>" +
             "</tbody>" +
