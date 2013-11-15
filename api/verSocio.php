@@ -32,6 +32,41 @@
       foreach($parientes as $pariente){
         echo "<p class='nombrePariente'>".$pariente["Nombre"]." ".$pariente["ApellidoP"]." ".$pariente["ApellidoM"]." => ".$pariente["Parentesco"].".</p>";
       }
+    echo "<div class='tableKin'>";
+    if($parientes){
+    echo "<table>";
+    echo "<thead>";
+    echo "<th>Nombre</th>";
+    echo "<th>Apellido P.</th>";
+    echo "<th>Apellido M.</th>";
+    echo "<th>Parentesco</th>";
+    echo "<th>F. Nacimiento</th>";
+    echo "<th>Teléfono</th>";
+    echo "<th>Célular</th>";
+    echo "<th>Email</th>";
+    echo "<th>Membresia</th>";
+    echo "<th>Tipo de membresia</th>";
+    echo "<th>Sangre</th>";
+    echo "<th>Fecha de alta</th>";
+    echo "<th>Afiliación</th>";
+    echo "</thead>";
+    echo "<tbody>";
+      foreach($parientes as $pariente){
+        echo "<tr><td>".$pariente["Nombre"]."</td>";
+        echo "<td>".$pariente["ApellidoP"]."</td>";
+        echo "<td>".$pariente["ApellidoM"]."</td>";
+        echo "<td>".$pariente["Parentesco"]."</td>";
+        echo "<td>".$pariente["FNacimiento"]."</td>";
+        echo "<td>".$pariente["Telefono"]."</td>";
+        echo "<td>".$pariente["Celular"]."</td>";
+        echo "<td>".$pariente["Correo"]."</td>";
+        echo "<td>".$pariente["Membresia"]."</td>";
+        echo "<td>".$pariente["TipoMembresia"]."</td>";
+        echo "<td>".$pariente["Sangre"]."</td>";
+        echo "<td>".$pariente["FAlta"]."</td>";
+        echo "<td>".$pariente["Afiliacion"]."</td>";
+      }
+    echo "</tbody>";
     }else{
       echo "<p>No tiene parientes registrados.</p>";
     }
