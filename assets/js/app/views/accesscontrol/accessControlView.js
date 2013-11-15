@@ -52,11 +52,15 @@ var AccessControlView = Backbone.View.extend({
 
     getSocio: function(data){
         var id = this.getSocioName.item.id;
+        var template = TEMPLATES.socio;
+        var compiledTemplate = _.template($(template).html());
         var findSocioModel = new FindSocioModel(id);
         findSocioModel.fetch({
             success: function(data){
                 var data = data.toJSON();
-                console.log(data);
+                var socioData = {socioData: data};
+                $("#modalDisplayer").html(compiledTemplate(socioData));
+                $("#ModalAccess").modal("show");
             },
         });
     },
