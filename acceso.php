@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/bootstrapModal.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/jQueryAutocomplete.css">
@@ -9,6 +10,7 @@
     <script src="assets/js/libs/underscore.js"></script>
     <script src="assets/js/libs/backbone.js"></script>
     <script src="assets/js/libs/jQueryAutocomplete.js"></script>
+    <script src="assets/js/libs/bootstrapModal.js"></script>
 </head>
 <body>
 	<div class="ALogo">
@@ -35,11 +37,24 @@
       <a href="historial.php"><input type="submit" class="btn btnNormal" value="Ver historial"/></a>
     </div>
   </div>
+    <div class="modal" id="ModalAccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h2 class="modal-title">Ficha del Socio</h2>
+          </div>
+          <div id="modalDisplayer" class="modal-body">
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
   <!--Scrypting-->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/routerAcceso.js"></script>
   <script src="templates/templates.js"></script>
   <!-- Templates -->
+  <script src="templates/accesscontrol/socio.js"></script>
   <!-- Collections -->
   <script src="assets/js/app/collections/sociosfilters.js"></script>
   <!-- Models -->

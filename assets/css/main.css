@@ -605,7 +605,7 @@ p.nombrePariente.selected {
 
 .BuscaIdSocio, .BuscaSocio {
   width: 500px;
-  height: 50px;
+  height: 70px;
   background-color: #BDBDBD;
   border-radius: 10px;
   border: 5px solid #0B0B61;
@@ -673,5 +673,17 @@ p.nombrePariente.selected {
 
 .cuotaForm select {
   width: 156px;
+}
+
+#ModalAccess .modal-dialog{
+  width: 600px;
+}
+
+.socioAccess .imgContainer, .socioAccess .dataAccess {
+  text-align: center;
+} 
+
+.socioAccess p:nth-child(3) { 
+  text-align: right;
 }
 
