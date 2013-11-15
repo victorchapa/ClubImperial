@@ -3,8 +3,9 @@ var AccessControlView = Backbone.View.extend({
     el:"body",
 
     events: {
-        "keydown #socioFinder"  :   "refetchCollection",
-        "click #findByName"     :   "getSocio",
+        "keydown #socioFinder"      :   "refetchCollection",
+        "mouseover #findByName"     :   "blockButton",
+        "click #findByName"         :   "getSocio",
     },
 
     initialize: function(){
@@ -45,7 +46,9 @@ var AccessControlView = Backbone.View.extend({
             minLength: 1,
             source: dataSourcing,
             select: function(e, data, formatted){
+                console.log(data);
                 self.getSocioName = data;
+                self.disableButton();
             },
         });
     },
@@ -63,6 +66,17 @@ var AccessControlView = Backbone.View.extend({
                 $("#ModalAccess").modal("show");
             },
         });
+    },
+
+    disableButton: function(){
+        $("#findByName").removeAttr("disabled");
+    },
+
+    blockButton: function(){
+        var socioName = $("#socioFinder").val();
+        if(socioName == ""){
+            $("#findByName").attr({disabled: true});
+        }
     },
 
 });

@@ -31,7 +31,7 @@
     </div>
     <div class="BuscaSocio">
         <input id="socioFinder" type="text"  name="nombre" placeholder="Nombre del Socio">
-        <input type="button" class="btn-success btn" id="findByName" value="Buscar">
+        <input type="button" class="btn-success btn" id="findByName" value="Buscar" disabled='true'>
     </div>
     <div class="divVerH">
       <a href="historial.php"><input type="submit" class="btn btnNormal" value="Ver historial"/></a>
