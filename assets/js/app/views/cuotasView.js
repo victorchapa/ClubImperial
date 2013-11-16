@@ -11,7 +11,7 @@ var CuotasView = Backbone.View.extend({
     },
     
     setFlange: function(target){
-        if(target=="Ver"){target = "FACTURA";};
+        if(target=="Ver"){target = "CARGOS";};
         var lis = $(".navCuotas li");
         _.each(lis, function(li){
             var textLi = $("p", li).text();
@@ -92,10 +92,10 @@ var CuotasView = Backbone.View.extend({
         if(e != undefined){
             var target = $(e.target).text();
         }else{
-            var target = "FACTURA";
+            var target = "CARGOS";
         }
         this.setFlange(target); 
-        var template = TEMPLATES.factura;
+        var template = TEMPLATES.cargos;
         var compiledTemplate = _.template($(template).html());
         var socio = {facturas: facturas, deuda: deuda};
         $("#factures").html(compiledTemplate(socio));
