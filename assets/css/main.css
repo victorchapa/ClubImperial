@@ -694,3 +694,26 @@ p.nombrePariente.selected {
 span.bold {
   font-weight: bold;
 }
+
+#allDebts h2, #factures h2 {
+  margin-left: 10px;
+}
+
+span.debtor {
+  border-bottom: 2px solid #B18904;
+}
+
+#factures input[type='text'] {
+  width: 60px;
+  background: #e8edff;
+  border-color: white;
+  float: right;
+}
+
+#factures input[type='text']:focus {
+  background: white;
+}
+
+#factures .Addabono {
+  width: 150px;
+}
