@@ -211,12 +211,22 @@ table.blue-table tbody tr:hover td {
   background: #d0dafd;
 }
 
+table.blue-table tbody tr.tfooter td {
+  background: #b9c9fe;
+  color: #039;
+  border-bottom: 4px solid #aabcfe;
+}
+
+table.blue-table tbody tr.tfooter td:nth-child(1) {
+  font-weight: bold;
+}
+
 .table-allSocios {
   width: 200%;
 }
 
 .table-deudas, .table-factura {
-
+  width: 500px;
 }
 
 table.blue-table.table-history {

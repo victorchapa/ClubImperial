@@ -28,7 +28,7 @@ TEMPLATES.cargos =
                 "</form>" +
                 "</tr>" +
                 "<% }); %>" +
-                "<tr>" +
+                "<tr class='tfooter'>" +
                   "<td>Cargo Total</td>" +
                   "<td></td>" +
                   "<td>$<% print(deuda.Abono); %></td>" +
