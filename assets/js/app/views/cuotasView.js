@@ -41,8 +41,8 @@ var CuotasView = Backbone.View.extend({
         this.setFlange(target); 
         var template = TEMPLATES.balance;
         var compiledTemplate = _.template($(template).html());
-        var deudasCollection = new DeudasCollection();
-        deudasCollection.fetch({
+        var balanceCollection = new BalanceCollection();
+        balanceCollection.fetch({
             success: function(data){
                 var data = data.toJSON();
                 var socios = {socios: data};

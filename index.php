@@ -113,7 +113,7 @@
   <script src="assets/js/app/collections/socios.js"></script>
   <script src="assets/js/app/collections/parientes.js"></script>
   <script src="assets/js/app/collections/sociosfilters.js"></script>
-  <script src="assets/js/app/collections/deudas.js"></script>
+  <script src="assets/js/app/collections/balance.js"></script>
   <script src="assets/js/app/collections/facturasSocio.js"></script>
   <!-- Models -->
   <script src="assets/js/app/models/socio.js"></script>
