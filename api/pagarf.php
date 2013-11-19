@@ -9,9 +9,9 @@
     $fabono = $ffactura[0]["Abono"];
 	$dabono = consultar("SELECT Abono FROM balance WHERE IdSocio= '$ids' AND Mes='$mes' AND Year='$year'");
 	$dabono = $dabono[0]["Abono"];
-	$abonado = $abono - $fabono;
-	$dabono+= $abonado;
-    $add = add("UPDATE cargos SET Abono = '$abono' WHERE IdCargo = '$idf'");
+	$fabono += $abono;
+	$dabono += $abono;
+    $add = add("UPDATE cargos SET Abono = '$fabono' WHERE IdCargo = '$idf'");
     $add = add("UPDATE balance SET Abono = '$dabono' WHERE IdSocio = '$ids' AND Mes='$mes' AND Year='$year'");
     echo "<script type=text/javascript>window.location.href=\"../index.php#ccuotas/factura?id=$ids\";</script>";
 ?>
