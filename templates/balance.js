@@ -1,4 +1,4 @@
-TEMPLATES.deudas = 
+TEMPLATES.balance = 
         "<script type='text/template' id='thisTemplate'>" + 
           "<h2>Balance total</h2>" +
           "<table class='blue-table table-deudas' border='1' cellspacing='0' >" +
