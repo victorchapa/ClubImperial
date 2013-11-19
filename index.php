@@ -106,7 +106,7 @@
   <script src="templates/cuotasForm.js"></script>
   <script src="templates/allSocios.js"></script>
   <script src="templates/cuotasNav.js"></script>
-  <script src="templates/deudas.js"></script>
+  <script src="templates/balance.js"></script>
   <script src="templates/cargos.js"></script>
 
   <!-- Collections -->
