@@ -1,6 +1,6 @@
 TEMPLATES.cargos = 
         "<script type='text/template'>" +
-        "<% var total = 0; var pago = 0; var deudas = 0; var tdeuda = deuda.Cargo - deuda.Abono; %>" +
+        "<% var total = 0; var pago = 0; var tcargo = 0; var tdeuda = deuda.Cargo - deuda.Abono; %>" +
           "<h2>Cargos de <span class='debtor'><% print(deuda.Nombre); %></span></h2>" +
           "<table class='blue-table table-factura' border='1' cellspacing='0' >" +
           "<thead>" +
@@ -21,9 +21,9 @@ TEMPLATES.cargos =
                     "<input type='hidden' name='idf' value='<% print(factura.IdCargo); %>'>" +
                     "<td><% print(factura.Dia); %>/<% print(factura.Mes); %>/<% print(factura.Year); %></br>" +
                     "<% print(factura.Hora); %></td>" +
-                    "<td class='Addabono'>$<% print(factura.Abono); %> + <input type='text' name='abono' onkeydown='if(event.keyCode == 13){this.form.submit();}' value=''/></td>" +
-                    "<% deudas = factura.Cargo - factura.Abono; %>" +
-                    "<td>$<% print(deudas); %></td>" +
+                    "<td class='Addabono'>$<input type='text' name='abono' onkeydown='if(event.keyCode == 13){this.form.submit();}' value=''/></td>" +
+                    "<% tcargo  = tcargo + parseFloat(factura.Cargo); %>" +
+                    "<td>$<% print(factura.Deuda); %></td>" +
                     "<td>$<% print(factura.Cargo); %></td>" +
                 "</form>" +
                 "</tr>" +
@@ -31,9 +31,9 @@ TEMPLATES.cargos =
                 "<tr class='tfooter'>" +
                   "<td>Cargo Total</td>" +
                   "<td></td>" +
-                  "<td>$<% print(deuda.Abono); %></td>" +
-                  "<td>$<% print(tdeuda); %></td>" +
+                  "<td></td>" +
                   "<td>$<% print(deuda.Cargo); %></td>" +
+                  "<td>$<% print(tcargo); %></td>" +
                 "</tr>" +
             "</tbody>" +
             "</table>" +
