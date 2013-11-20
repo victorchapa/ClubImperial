@@ -1,6 +1,9 @@
 TEMPLATES.balance = 
-        "<script type='text/template' id='thisTemplate'>" + 
-          "<h2>Balance total</h2>" +
+        "<script type='text/template'>" + 
+          "<div class='balanceHeader'>" +
+            "<h2>Balance total</h2>" +
+            "<input class='findSocioBal' type='text' placeholder='Buscar...'/>" +
+          "</div>" +
           "<table class='blue-table table-deudas' border='1' cellspacing='0' >" +
           "<thead>" +
             "<tr>" +
