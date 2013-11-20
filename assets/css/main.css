@@ -709,6 +709,21 @@ span.bold {
   margin-left: 10px;
 }
 
+#allDebts .balanceHeader {
+  width: 500px;
+}
+
+#allDebts .balanceHeader h2 {
+  width: 200px;
+  margin-bottom: 0px;
+}
+
+#allDebts .balanceHeader .findSocioBal {
+  float: right;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
 span.debtor {
   border-bottom: 2px solid #B18904;
 }
