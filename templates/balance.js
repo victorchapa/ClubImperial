@@ -9,7 +9,7 @@ TEMPLATES.balance =
             "<tr>" +
                 "<th>Socios</th>" +
                 "<th>Abono</th>" +
-                "<th>Cargo</th>" +
+                "<th>Deuda</th>" +
                 "<th>Lista</th>" +
             "</tr>" +
           "</thead>" +
