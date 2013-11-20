@@ -1,8 +1,8 @@
 TEMPLATES.balance = 
         "<script type='text/template'>" + 
           "<div class='balanceHeader'>" +
-            "<h2>Balance total</h2>" +
-            "<input class='findSocioBal' type='text' placeholder='Buscar...'/>" +
+            "<h2>Balance TOTAL</h2>" +
+            "<input class='findSocioBal' type='text' placeholder=' <~ Buscar'/>" +
           "</div>" +
           "<table class='blue-table table-deudas' border='1' cellspacing='0' >" +
           "<thead>" +
@@ -15,7 +15,7 @@ TEMPLATES.balance =
           "</thead>" +
           "<tbody>" +
                 "<% _.each(socios, function(socio) { %>" +
-                "<tr>" +
+                "<tr id='watchSocio<% print(socio.IdSocio) %>'>" +
                     "<td><% print(socio.Nombre); %></td>" +
                     "<td>$<% print(socio.Abono); %></td>" +
                     "<td>$<% print(socio.Cargo); %></td>" +
