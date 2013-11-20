@@ -730,17 +730,13 @@ span.debtor {
 
 #factures table input[type='text'] {
   width: 60px;
+  margin-left: 2px;
   background: #e8edff;
   border-color: white;
-  float: right;
 }
 
 #factures input[type='text']:focus {
   background: white;
-}
-
-#factures .Addabono {
-  width: 150px;
 }
 
 .finders {
