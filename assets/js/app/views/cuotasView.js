@@ -3,11 +3,13 @@ var CuotasView = Backbone.View.extend({
     el: "#mainDisplayer",
 
     events:{
-        "keydown #socioFinder"  :   "refetchCollection",
-        "click .showCuota"      :   "showCuotaForm",
-        "click .showDebt"       :   "showDebtForm",
-        "click .showFact"       :   "showFactForm",
-        "click .watchFact"      :   "showSocioFactureTable",
+        "keydown #socioFinder"      :   "refetchCollection",
+        "keydown .findSocioBal"     :   "refetchCollectioninBalance",
+        "click .findSocioBal"       :   "clearInput",
+        "click .showCuota"          :   "showCuotaForm",
+        "click .showDebt"           :   "showDebtForm",
+        "click .showFact"           :   "showFactForm",
+        "click .watchFact"          :   "showSocioFactureTable",
     },
     
     setFlange: function(target){
@@ -49,7 +51,68 @@ var CuotasView = Backbone.View.extend({
                 $("#allDebts").html(compiledTemplate(socios));
             },
         });
+        this.autocompleteInitialize();
         $("#allDebts").show();
+    },
+
+    autocompleteInitialize: function(){
+        var self = this;
+        this.collectionFetched = false;
+        this.sociosFiltersCollection = new SociosFilters();
+        this.sociosFiltersCollection.fetch({
+            success: function(data){
+                self.getAutocompleteBalance();
+                self.collectionFetchedII = true;
+            },
+        });
+    },
+
+    refetchCollectioninBalance: function(){
+        var self = this;
+        if(this.collectionFetched){
+            console.log("No need refetching!");
+            return;
+        }
+        this.sociosFiltersCollection.fetch({
+            success: function(){
+                self.getAutocompleteBalance();
+                self.collectionFetchedII = true;
+            },
+        });
+    },
+
+    getAutocompleteBalance: function(){
+        var self = this;
+        var dataSourcing = [];
+        var datas = this.sociosFiltersCollection.toJSON();
+        _.each(datas, function(data){
+            var newData = {value: data.Filtro, label:data.Filtro, id: data.IdSocio};
+            dataSourcing.push(newData);
+        });
+        $(".findSocioBal").autocomplete({
+            minLength: 1,
+            source: dataSourcing,
+            select: function(e, data, formatted){
+                self.goToName(data);
+            },
+        });
+    },
+
+    goToName: function(data){
+        window.location.href = "#watchSocio" + data.item.id;
+        $(".findSocioBal").blur();
+        $("#watchSocio"+data.item.id).css({border:"2px solid red"});
+        $("#watchSocio"+data.item.id).on("mouseleave", function(){
+            $("#watchSocio"+data.item.id).css({border:"none"});
+        });
+
+        window.setTimeout(function(){
+            window.history.pushState("", "", "#ccuotas");
+        },2000);
+    },
+
+    clearInput: function(){
+        $(".findSocioBal").val("");
     },
 
     showFactForm: function(e){
@@ -175,21 +238,5 @@ var CuotasView = Backbone.View.extend({
             },
         });
     },
-
-
-    kill: function() {
-    
-        // same as this.$el.remove();
-        this.remove();
-
-        // unbind events that are
-        // set on this view
-        this.off();
-
-        // remove all models bindings
-        // made by this view
-        //this.model.off( null, null, this );
-
-    }
 
 });
