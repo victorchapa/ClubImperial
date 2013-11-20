@@ -681,7 +681,7 @@ p.nombrePariente.selected {
   padding-bottom: 40px;
 }
 
-.cuotaForm input, select {
+.cuotaForm input, .cuotaForm select {
   float: right;
 }
 
@@ -713,7 +713,7 @@ span.debtor {
   border-bottom: 2px solid #B18904;
 }
 
-#factures input[type='text'] {
+#factures table input[type='text'] {
   width: 60px;
   background: #e8edff;
   border-color: white;
@@ -726,4 +726,25 @@ span.debtor {
 
 #factures .Addabono {
   width: 150px;
+}
+
+.finders {
+  width: 450px;
+  margin-left: 20px;
+  border: #BDBDBD solid 1px;
+  background-color: #E6E6E6;
+}
+
+.finders p {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.finders input.filterBy {
+  margin-left: 20px;
+}
+
+.finders p .fYear {
+  width: 40px;
+  text-align: center;
 }

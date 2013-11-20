@@ -100,6 +100,15 @@ var CuotasView = Backbone.View.extend({
         var socio = {facturas: facturas, deuda: deuda};
         $("#factures").html(compiledTemplate(socio));
 
+        if (facturas[0] != undefined){
+            var socioId = facturas[0].IdSocio;
+        }else{
+            var spliteId = this.options.socioId;
+            var id = spliteId.split("&")[0];
+            var socioId = id;
+        }
+
+        var flangeCargosView = new FlangeCargosView({idSocio: socioId});
     },
 
     clearMainNav: function(){
@@ -112,6 +121,7 @@ var CuotasView = Backbone.View.extend({
 
     initialize: function(){
         var self = this;
+        this.flangeCharges = [];
         this.clearMainNav();
         this.collectionFetched = false;
         this.sociosFiltersCollection = new SociosFilters(); 
@@ -165,5 +175,21 @@ var CuotasView = Backbone.View.extend({
             },
         });
     },
+
+
+    kill: function() {
+    
+        // same as this.$el.remove();
+        this.remove();
+
+        // unbind events that are
+        // set on this view
+        this.off();
+
+        // remove all models bindings
+        // made by this view
+        //this.model.off( null, null, this );
+
+    }
 
 });
