@@ -13,6 +13,7 @@
 	$meses = array("","Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic");
 	$mes = $meses[$mes];
 	$estemes = $meses[$estemes];
+	$servicio = "Deuda mes pasado";
 	$socios = consultar("SELECT * FROM socios");
 	foreach($socios as $socio){
 		$id = $socio["IdSocio"];
@@ -20,6 +21,7 @@
 		$balance = consultar("SELECT * FROM balance WHERE IdSocio = '$id' AND Mes = '$mes' AND Year = '$año'");
 		if ($balance[0]["Abono"] < $balance[0]["Cargo"]){
 			$cargo = $balance[0]["Cargo"] - $balance[0]["Abono"];
+			$cargomespasado = add("INSERT INTO cargos (IdSocio, Nombre, Servicio, Deuda, Cargo, Mes, Year) VALUES ('$id', '$nombre', '$servicio', '$cargo', '$cargo', '$estemes', '$esteaño')");
 		} else {
 			if ($balance[0]["Abono"] > $balance[0]["Cargo"]){
 			$abono = $balance[0]["Abono"] - $balance[0]["Cargo"];
