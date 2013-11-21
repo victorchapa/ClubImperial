@@ -8,8 +8,8 @@ TEMPLATES.balance =
           "<thead>" +
             "<tr>" +
                 "<th>Socios</th>" +
+                "<th>Cargo</th>" +
                 "<th>Abono</th>" +
-                "<th>Deuda</th>" +
                 "<th>Lista</th>" +
             "</tr>" +
           "</thead>" +
@@ -17,8 +17,8 @@ TEMPLATES.balance =
                 "<% _.each(socios, function(socio) { %>" +
                 "<tr id='watchSocio<% print(socio.IdSocio) %>'>" +
                     "<td><% print(socio.Nombre); %></td>" +
-                    "<td>$<% print(socio.Abono); %></td>" +
                     "<td>$<% print(socio.Cargo); %></td>" +
+                    "<td>$<% print(socio.Abono); %></td>" +
                     "<td><a class='watchFact' idsocio='<% print(socio.IdSocio); %>' href='#ccuotas/factura?id=<% print(socio.IdSocio); %>'>Ver</a></td>" +
                 "</tr>" +
                 "<% }); %>" +

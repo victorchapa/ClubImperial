@@ -26,9 +26,9 @@ TEMPLATES.cargos =
             "<tr>" +
                 "<th>Servicio</th>" +
                 "<th>Fecha y hora</th>" +
-                "<th>Abono</th>" +
-                "<th>Deuda</th>" +
                 "<th>Cargo</th>" +
+                "<th>Saldo</th>" +
+                "<th>Abono</th>" +
             "</tr>" +
           "</thead>" +
           "<tbody>" +
@@ -40,19 +40,19 @@ TEMPLATES.cargos =
                     "<input type='hidden' name='idf' value='<% print(factura.IdCargo); %>'>" +
                     "<td><% print(factura.Dia); %>/<% print(factura.Mes); %>/<% print(factura.Year); %></br>" +
                     "<% print(factura.Hora); %></td>" +
-                    "<td class='Addabono'>$<input type='text' name='abono' onkeydown='if(event.keyCode == 13){this.form.submit();}' value=''/></td>" +
                     "<% tcargo  = tcargo + parseFloat(factura.Cargo); %>" +
-                    "<td>$<% print(factura.Deuda); %></td>" +
                     "<td>$<% print(factura.Cargo); %></td>" +
+                    "<td>$<% print(factura.Deuda); %></td>" +
+                    "<td class='Addabono'>$<input type='text' name='abono' onkeydown='if(event.keyCode == 13){this.form.submit();}' value=''/></td>" +
                 "</form>" +
                 "</tr>" +
                 "<% }); %>" +
                 "<tr class='tfooter'>" +
                   "<td>Cargo Total</td>" +
                   "<td></td>" +
-                  "<td></td>" +
-                  "<td>$<% print(deuda.Cargo); %></td>" +
                   "<td>$<% print(tcargo); %></td>" +
+                  "<td>$<% print(deuda.Cargo); %></td>" +
+                  "<td></td>" +
                 "</tr>" +
             "</tbody>" +
             "</table>" +
