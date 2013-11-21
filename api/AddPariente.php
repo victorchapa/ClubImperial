@@ -20,7 +20,10 @@
 	$falta = $_POST['FAlta'];
 	$afiliacion = implode(', ', $_POST['Afiliacion']);
 	$mayor = ($parentesco == "Hijo") ? "No" : "Si";
-	$add = add("INSERT INTO socios (IdPariente, Nombre, ApellidoP, ApellidoM, Filtro, Parentesco, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Correo, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion, Mayor) 
+	$conexion =  mysql_connect($serverAddress, $user, $passwd);
+    mysql_select_db($dbName);
+    mysql_query ("SET NAMES 'utf8'");
+	mysql_query("INSERT INTO socios (IdPariente, Nombre, ApellidoP, ApellidoM, Filtro, Parentesco, FNacimiento, Domicilio, Manzana, Lote, Coto, Telefono, Celular, Correo, Membresia, TipoMembresia, Sangre, FAlta, Afiliacion, Mayor) 
 	VALUES ('$idsocio', '$nombre', '$apellidop', '$apellidom', '$filtro', '$parentesco', '$fnacimiento', '$domicilio', '$manzana', '$lote', '$coto', '$telefono', '$celular', '$correo', '$membresia', '$tipomembresia', '$sangre', '$falta', '$afiliacion', '$mayor')");
 	$id= mysql_insert_id();
 	mkdir ("socios/".$id);
