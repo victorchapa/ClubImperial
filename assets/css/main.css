@@ -759,3 +759,23 @@ span.debtor {
   width: 40px;
   text-align: center;
 }
+
+.factures-window {
+  width: 290px;
+  height: 70px;
+  position: absolute;
+  top: 80px;
+  left: 380px;
+  border: 1px solid silver;
+  text-align: center;
+  background-color: #E6E6E6;
+}
+  
+.factures-window p {
+  margin: 5px 0 0 0;
+}
+
+.factures-window input[type='button'] {
+  margin-top: 3px;
+  margin-right: 10px;
+}
