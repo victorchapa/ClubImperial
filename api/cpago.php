@@ -1,5 +1,6 @@
 <?php
   setlocale(LC_ALL,"spanish");
+  require("dbConfig.php");
   include("consultas.php");
   $nombre = $_POST["Nombre"]." ".$_POST["ApellidoP"]." ".$_POST["ApellidoM"];
   $names = explode(" ", $nombre);
@@ -21,13 +22,21 @@
     $diferencia = $total - $abono;
     $balance = ($deudas[0]["Cargo"]) + $diferencia;
     $add = add("UPDATE balance SET Cargo = '$balance' WHERE Nombre= '$nombre'");
-    $add = add("INSERT INTO cargos (IdSocio, Servicio, Deuda, Cargo, Hora, Dia, Mes, Year) 
+    $conexion =  mysql_connect($serverAddress, $user, $passwd);
+    mysql_select_db($dbName);
+    mysql_query ("SET NAMES 'utf8'");
+    mysql_query("INSERT INTO cargos (IdSocio, Servicio, Deuda, Cargo, Hora, Dia, Mes, Year) 
       VALUES ('$id', '$servicio', '$diferencia', '$total', '$hora', '$dia', '$mes', '$year')");
-    echo "<script type=text/javascript>window.location.href=\"../index.php#ccuotas\";</script>";
+    $idf= mysql_insert_id();
+    echo "<script type=text/javascript>window.location.href=\"../index.php#ccuotas?fid=$idf\";</script>";
   } else {
-    $add = add("INSERT INTO cargos (IdSocio, Servicio, Deuda, Cargo, Hora, Dia, Mes, Year) 
+    $conexion =  mysql_connect($serverAddress, $user, $passwd);
+    mysql_select_db($dbName);
+    mysql_query ("SET NAMES 'utf8'");
+    mysql_query("INSERT INTO cargos (IdSocio, Servicio, Deuda, Cargo, Hora, Dia, Mes, Year) 
       VALUES ('$id', '$servicio', '$diferencia', '$total', '$hora', '$dia', '$mes', '$year')");
+    $idf= mysql_insert_id();
     $add = add("INSERT INTO balance (IdSocio, Nombre, Cargo, Mes, Year) VALUES ('$id', '$nombre', '$balance', '$mes', '$year')");
-    echo "<script type=text/javascript>window.location.href=\"../index.php#ccuotas\";</script>";
+    echo "<script type=text/javascript>window.location.href=\"../index.php#ccuotas?fid=$idf\";</script>";
   }
 ?>
