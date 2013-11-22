@@ -51,9 +51,7 @@
       <section class="leftPanel">
         <div class="navLeft">
           <input class="btn btnNormal addSocios" type="button" value="Agregar socios">
-        </div>
-        <div class="lotLeafs">
-          <img src="assets/img/lotLeafs.gif">
+          <input class="btn btnNormal addCuota" type="button" value="Generar Cuota"/>
         </div>
       </section>
       <div id="mainDisplayer">
@@ -122,6 +120,7 @@
   <!-- Views -->
   <script src="assets/js/app/views/mainView.js"></script>
   <script src="assets/js/app/views/navMainView.js"></script>
+  <script src="assets/js/app/views/addSocioView.js"></script>
   <script src="assets/js/app/views/socioView.js"></script>
   <script src="assets/js/app/views/memoParientesView.js"></script>
   <script src="assets/js/app/views/cuotasView.js"></script>
