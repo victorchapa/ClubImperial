@@ -761,7 +761,7 @@ span.debtor {
 }
 
 .factures-window {
-  width: 290px;
+  width: 320px;
   height: 70px;
   position: absolute;
   top: 80px;
@@ -775,7 +775,13 @@ span.debtor {
   margin: 5px 0 0 0;
 }
 
-.factures-window input[type='button'] {
+.factures-window .btnFacture {
   margin-top: 3px;
   margin-right: 10px;
+}
+
+.factures-window .close {
+  margin: 0px;
+  float: right;
+  border: none;
 }
