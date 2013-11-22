@@ -1,5 +1,6 @@
 <?php
 	require("dbConfig.php");
+	include("consultas.php");
 	$idsocio = $_POST['IdSocio'];
 	$nombre = $_POST['Nombre'];
 	$apellidop = $_POST['ApellidoP'];

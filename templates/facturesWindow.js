@@ -4,7 +4,7 @@ TEMPLATES.facturesWindow =
             "<a href='api/pdf.php?id=<% print(factureId) %>' target='_blank'>" +
                 "<input class='btn btnFunctions' type='button' value='PDF'/>"+
             "</a>" +
-            "<a href='api/ecxel.php?id=<% print(factureId) %>'>" +
-                "<input class='btn btnFunctions' type='button' value='ECXEL'/>"+
+            "<a href='api/excel.php?id=<% print(factureId) %>'>" +
+                "<input class='btn btnFunctions' type='button' value='EXCEL'/>"+
             "</a>" +
         "</script>";
