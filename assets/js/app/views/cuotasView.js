@@ -214,6 +214,18 @@ var CuotasView = Backbone.View.extend({
             var id = this.options.socioId;
             this.showSocioFactureTable(e, id);
         }
+        if(this.options.factureId != undefined){
+            var factureId = this.options.factureId;
+            this.disableFactureButton(factureId);
+        }
+    },
+
+    disableFactureButton: function(factureId){
+        var template = TEMPLATES.facturesWindow;
+        var compiledTemplate = _.template($(template).html());
+        var facId = {factureId: factureId};
+        $(".factures-window").html(compiledTemplate(facId));
+        $(".factures-window").show("slow");
     },
 
     getAutocomplete: function(){

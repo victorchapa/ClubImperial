@@ -108,6 +108,7 @@
   <script src="templates/cuotasNav.js"></script>
   <script src="templates/balance.js"></script>
   <script src="templates/cargos.js"></script>
+  <script src="templates/facturesWindow.js"></script>
 
   <!-- Collections -->
   <script src="assets/js/app/collections/socios.js"></script>
