@@ -10,6 +10,8 @@ var CuotasView = Backbone.View.extend({
         "click .showDebt"           :   "showDebtForm",
         "click .showFact"           :   "showFactForm",
         "click .watchFact"          :   "showSocioFactureTable",
+        "click .trSocio"            :   "showWindowAction",
+        "click .showDetails"        :   "showDetails",
     },
     
     setFlange: function(target){
@@ -53,6 +55,27 @@ var CuotasView = Backbone.View.extend({
         });
         this.autocompleteInitialize();
         $("#allDebts").show();
+    },
+
+    showWindowAction: function(e){
+        var targetIdSocio =  $(e.target).parent().attr("idsocio");
+        var targetCoordenades = [(e.pageX - 215) + "px", (e.pageY - 155) + "px"];
+        $(".spanIdSocio").text(targetIdSocio);
+        $(".actionsSocio").css({
+            left: targetCoordenades[0],
+            top: targetCoordenades[1],
+        }).show();
+
+        $(".actionsSocio").on("mouseleave", function(){
+            setTimeout(function(){
+                $(".actionsSocio").hide();
+            }, 1500);
+        });
+    },
+
+    showDetails: function(e){
+        var idSocio = $(".spanIdSocio").text();
+        window.location.href = "#ccuotas/factura?id=" + idSocio;
     },
 
     autocompleteInitialize: function(){

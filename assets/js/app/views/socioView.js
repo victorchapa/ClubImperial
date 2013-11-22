@@ -41,7 +41,6 @@ var SocioView = Backbone.View.extend({
     },
 
     showWindowAction: function(e){
-        test = $(e.target);
         var targetIdSocio =  $(e.target).parent().attr("idsocio");
         var targetCoordenades = [(e.pageX - 215) + "px", (e.pageY - 155) + "px"];
         $(".spanIdSocio").text(targetIdSocio);

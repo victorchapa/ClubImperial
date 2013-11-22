@@ -785,3 +785,11 @@ span.debtor {
   float: right;
   border: none;
 }
+
+#allDebts .emergentWindow {
+  height: 40px;
+}
+
+#allDebts .emergentWindow .idSocio {
+  margin-top: 9px;
+}
