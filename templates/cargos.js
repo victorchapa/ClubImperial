@@ -20,6 +20,7 @@ TEMPLATES.cargos =
             "</select></p>" +
             "<p>Año: <input class='fYear' type='text' placeholder='2013' maxlength='4'/></p>"+
             "<input class='filterBy' type='button' value='Filtrar'>" +
+            "<p><a href='api/cargospdf.php?id=<%print(deuda.IdSocio);%>&m=<%print(deuda.Mes);%>&y=<%print(deuda.Year);%>' target='_blank'><input type='button' class='btn btnSuccess' value='Exportar Pdf'></a> <a href='api/cargosexcel.php?id=<%print(deuda.IdSocio);%>&m=<%print(deuda.Mes);%>&y=<%print(deuda.Year);%>'><input type='button' class='btn btnSuccess' value='Exportar Excel'></a></p>" +
           "</div>" +
           "<table class='blue-table table-factura' border='1' cellspacing='0' >" +
           "<thead>" +
