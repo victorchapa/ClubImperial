@@ -124,6 +124,7 @@
   <script src="assets/js/app/views/socioView.js"></script>
   <script src="assets/js/app/views/memoParientesView.js"></script>
   <script src="assets/js/app/views/cuotasView.js"></script>
+  <script src="assets/js/app/views/socioCargosView.js"></script>
   <script src="assets/js/app/views/flangeCargosView.js"></script>
   </body>
 </html>
