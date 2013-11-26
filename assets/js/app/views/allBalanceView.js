@@ -14,6 +14,7 @@ var AllBalanceView = Backbone.View.extend({
     initialize: function(){
         var self = this;
         this.router = new ClubImperial.Router();
+        this.clearMainNav();
 
         this.collectionFetched = false;
         this.sociosFiltersCollection = new SociosFilters();
@@ -52,6 +53,13 @@ var AllBalanceView = Backbone.View.extend({
         });
     },
 
+    clearMainNav: function(){
+        var targets = $(".mainNav ul li");
+        _.each(targets, function(target){
+            $(target).removeClass("active");
+        });
+        $(".mainNav ul li:nth-child(3)").addClass("active");
+    },
 
     getSocioCargosView: function(){
         if(ClubImperial.views.socioCargosView != undefined){
