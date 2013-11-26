@@ -27,7 +27,7 @@ ClubImperial.Router = Backbone.Router.extend({
     },
 
     cuotas: function(){
-        var cuotasView = new CuotasView();
+        ClubImperial.views.cuotasView = new CuotasView();
     },
 
     getCargos: function(id){
@@ -38,10 +38,6 @@ ClubImperial.Router = Backbone.Router.extend({
         ClubImperial.views.allBalanceView = new AllBalanceView();
     },
 
-    getFacture: function(id){
-        var cuotasView = new CuotasView({socioId: id});
-    },
-    
     generateResivos: function(id){
         var cuotasView = new CuotasView({factureId: id});
     },
