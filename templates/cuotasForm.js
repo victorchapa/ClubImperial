@@ -27,8 +27,5 @@ TEMPLATES.cuotasForm =
                 "<input class='btn btnSuccess' type='submit' name='Cobrar'/>"+
             "</form>" +
             "<div class='factures-window' style='display:none;'>" +
-                "<p>¿Desea generar factura del cobro anterior?</p>" +
-                "<input class='btn btnFunctions' type='button' value='PDF'/>"+
-                "<input class='btn btnFunctions' type='button' value='EXEL'/>"+
             "</div>" +
         "</script>";
