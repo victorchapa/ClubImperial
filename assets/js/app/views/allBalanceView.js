@@ -3,7 +3,6 @@ var AllBalanceView = Backbone.View.extend({
     el: "#mainDisplayer",
 
     events: {
-        "click .showCuota"          :   "getCuotasView",
         "keydown .findSocioBal"     :   "refetchCollection",
         "click .findSocioBal"       :   "clearInput",
         "click .trSocio"            :   "showWindowAction",
@@ -53,9 +52,6 @@ var AllBalanceView = Backbone.View.extend({
         });
     },
 
-    getCuotasView: function(){
-        this.router.navigate("ccuotas", {trigger: true, replace: true});
-    },
 
     getSocioCargosView: function(){
         if(ClubImperial.views.socioCargosView != undefined){
@@ -66,7 +62,7 @@ var AllBalanceView = Backbone.View.extend({
     },
 
     showCuotaFlangeView: function(){
-        console.log("GO TO PARTY!");
+        this.router.navigate("ccuotas", {trigger: true, replace: true});
     },
 
     refetchCollection: function(){
