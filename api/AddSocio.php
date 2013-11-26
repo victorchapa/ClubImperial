@@ -30,6 +30,6 @@
 	$nombreImagen = $_FILES["Foto"]["name"];
 	$foto = $rutaServidor.'/'.$nombreImagen;
 	move_uploaded_file($rutaTemporal, $foto);
-	$add = ("UPDATE socios SET Foto='$foto' WHERE IdSocio='$id'");
-	echo "<script type=text/javascript>window.location.href=\"../index.php\";</script>";
+	$add = add("UPDATE socios SET Foto='$foto' WHERE IdSocio='$id'");
+	echo "<script type=text/javascript>window.location.href=\"../index.php#allsocios\";</script>";
 ?>

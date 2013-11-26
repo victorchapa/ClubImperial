@@ -3,7 +3,7 @@ require_once('tcpdf/tcpdf.php');
 include("consultas.php");
 $id = $_GET["id"];
 $recibo = consultar("SELECT * FROM Cargos WHERE IdCargo='$id'");
-//$servicio = $recibo[0]["Servicio"];
+$servicio = $recibo[0]["Servicio"];
 $cargo = $recibo[0]["Cargo"];
 $deuda = $recibo[0]["Deuda"];
 $hora = $recibo[0]["Hora"];
@@ -44,10 +44,10 @@ $tbl = <<<EOD
 <h2 style= "text-align:center">Recibo de compra</h2>
 <table cellspacing="0" cellpadding="1" border="1">
     <tr>
-        <th>Servicio</th>
-        <th>Cargo</th>
-        <th>Deuda</th>
-        <th>Fecha/hora</th>
+        <th><b>Servicio</b></th>
+        <th><b>Cargo</b></th>
+        <th><b>Deuda</b></th>
+        <th><b>Fecha/hora</b></th>
     </tr>
     <tr>
         <td>$servicio</td>
