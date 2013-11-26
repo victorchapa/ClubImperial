@@ -3,11 +3,14 @@ var SocioCargosView = Backbone.View.extend({
     el: "#mainDisplayer",
 
     events: {
-        "click .filterBy"   : "filterByMY",
+        "click .filterBy"   :   "filterByMY",
+        "click .showDebt"   :   "showBalanceFlange",
+        "click .showCuota"  :   "showCuotasFlange",
     },
 
     initialize: function(){
         this.socioId = this.options.socioId; 
+        this.router = new ClubImperial.Router();
 
         var template = TEMPLATES.cuotasNav;
         var compiledTemplate = _.template($(template).html());
@@ -62,17 +65,30 @@ var SocioCargosView = Backbone.View.extend({
         }
     },
 
+    showBalanceFlange: function(){
+        this.kill();
+        this.router.navigate("ccuotas/balance", {trigger: true, replace: true});
+    },
+
+    showCuotasFlange: function(){
+        console.log("CUOTAS VIEW");
+    },
+
     kill: function(){
         // same as this.$el.remove();
         this.remove();
 
         // unbind events that are
         // set on this view
-        this.off();
+        //this.off();
 
         // remove all models bindings
         // made by this view
-        this.model.off( null, null, this );
+        //this.model.off( null, null, this );
+
+        var div = document.createElement("div");
+        div.id = "mainDisplayer";
+        $(".rigthPanel").append(div);
     },
 
 });
