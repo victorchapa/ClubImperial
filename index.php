@@ -54,8 +54,9 @@
           <input class="btn btnNormal addCuota" type="button" value="Generar Cuota"/>
         </div>
       </section>
-      <div id="mainDisplayer">
-      </div>
+      <section class='rigthPanel'>
+        <div id="mainDisplayer"></div>
+      </section>
     </div>
     <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -124,6 +125,8 @@
   <script src="assets/js/app/views/socioView.js"></script>
   <script src="assets/js/app/views/memoParientesView.js"></script>
   <script src="assets/js/app/views/cuotasView.js"></script>
+  <script src="assets/js/app/views/socioCargosView.js"></script>
+  <script src="assets/js/app/views/allBalanceView.js"></script>
   <script src="assets/js/app/views/flangeCargosView.js"></script>
   </body>
 </html>

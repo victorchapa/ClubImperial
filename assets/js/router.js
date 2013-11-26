@@ -1,11 +1,13 @@
 ClubImperial.Router = Backbone.Router.extend({
+
     routes: {
         ""                              :   "index",
         "allsocios"                     :   "allSocios",
         "addsocio"                      :   "addSocio",
         "ccuotas"                       :   "cuotas",
+        "ccuotas/balance"               :   "getAllBalance",
+        "ccuotas/factura?id=:id"        :   "getCargos",
         "ccuotas?fid=:id"               :   "generateResivos",
-        "ccuotas/factura?id=:id"        :   "getFacture",
     },
 
     initialize: function(){
@@ -25,15 +27,19 @@ ClubImperial.Router = Backbone.Router.extend({
     },
 
     cuotas: function(){
-        var cuotasView = new CuotasView();
+        ClubImperial.views.cuotasView = new CuotasView();
     },
 
-    getFacture: function(id){
-        var cuotasView = new CuotasView({socioId: id});
+    getCargos: function(id){
+        ClubImperial.views.socioCargosView = new SocioCargosView({socioId: id});
     },
-    
+
+    getAllBalance: function(){
+        ClubImperial.views.allBalanceView = new AllBalanceView();
+    },
+
     generateResivos: function(id){
-        var cuotasView = new CuotasView({factureId: id});
+        ClubImperial.views.cuotasView = new CuotasView({factureId: id});
     },
 
 });
