@@ -5,6 +5,7 @@ var AllBalanceView = Backbone.View.extend({
     events: {
         "click .showCuota"          :   "getCuotasView",
         "keydown .findSocioBal"     :   "refetchCollection",
+        "click .findSocioBal"       :   "clearInput",
         "click .trSocio"            :   "showWindowAction",
         "click .showFact"           :   "getSocioCargosView",
         "click .showCuota"          :   "showCuotaFlangeView",
@@ -12,7 +13,18 @@ var AllBalanceView = Backbone.View.extend({
     },
 
     initialize: function(){
+        var self = this;
         this.router = new ClubImperial.Router();
+
+        this.collectionFetched = false;
+        this.sociosFiltersCollection = new SociosFilters();
+        this.sociosFiltersCollection.fetch({
+            success: function(data){
+                self.getAutocomplete();
+                self.collectionFetched = true;
+            },
+        });
+
         var template = TEMPLATES.cuotasNav;
         var compiledTemplate = _.template($(template).html());
         var target = {target: "balance"};
@@ -21,6 +33,7 @@ var AllBalanceView = Backbone.View.extend({
     },
 
     render: function(){
+        var self = this;
         if($("#allDebts").length != 1){
             var div = document.createElement("div");
             div.id = "allDebts";
@@ -34,6 +47,7 @@ var AllBalanceView = Backbone.View.extend({
                 var data = data.toJSON();
                 var socios = {socios: data};
                 $("#allDebts").html(compiledTemplate(socios));
+                self.getAutocomplete();
 
             },
         });
@@ -46,7 +60,6 @@ var AllBalanceView = Backbone.View.extend({
     getSocioCargosView: function(){
         if(ClubImperial.views.socioCargosView != undefined){
             var socioId = ClubImperial.views.socioCargosView.socioId;
-            console.log(socioId);
             this.kill();
             this.router.navigate("ccuotas/factura?id="+socioId, {trigger: true, replace: true});
         }
@@ -57,7 +70,51 @@ var AllBalanceView = Backbone.View.extend({
     },
 
     refetchCollection: function(){
-        console.log("Writting...");
+        var self = this;
+        if(this.collectionFetched){
+            console.log("No need refetching!");
+            return;
+        }
+        this.sociosFiltersCollection.fetch({
+            success: function(){
+                self.getAutocomplete();
+                self.collectionFetched = true;
+            },
+        });
+    },
+
+    getAutocomplete: function(){
+        var self = this;
+        var dataSourcing = [];
+        var datas = this.sociosFiltersCollection.toJSON();
+        _.each(datas, function(data){
+            var newData = {value: data.Filtro, label: data.Filtro, id: data.IdSocio};
+            dataSourcing.push(newData);
+        });
+        $(".findSocioBal").autocomplete({
+            minLength: 1,
+            source: dataSourcing,
+            select: function(e, data, formatted){
+               self.goToHim(data);
+            },
+        });
+    },
+
+    goToHim: function(data){
+        window.location.href = "#watchSocio" + data.item.id;
+        $(".findSocioBal").blur();
+        $("#watchSocio"+data.item.id).css({border:"2px solid red"});
+        $("#watchSocio"+data.item.id).on("mouseleave", function(){
+            $("#watchSocio"+data.item.id).css({border:"none"});
+        });
+        
+        window.setTimeout(function(){
+            window.history.pushState("","","#ccuotas/balance");
+        }, 2000);
+    },
+
+    clearInput: function(){
+        $(".findSocioBal").val("");
     },
 
     showWindowAction: function(e){
