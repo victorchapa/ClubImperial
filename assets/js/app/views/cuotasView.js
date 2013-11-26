@@ -22,6 +22,7 @@ var CuotasView = Backbone.View.extend({
                 self.collectionFetched = true;
             },
         });
+
         
         var template = TEMPLATES.cuotasNav;
         var compiledTemplate = _.template($(template).html());
@@ -34,6 +35,15 @@ var CuotasView = Backbone.View.extend({
         var template = TEMPLATES.cuotasForm;
         var compiledTemplate = _.template($(template).html());
         $("#cuotaBody").html(compiledTemplate);
+
+        if(this.options.factureId != undefined){
+            this.factureId = this.options.factureId;
+            var template = TEMPLATES.facturesWindow;
+            var compiledTemplate = _.template($(template).html());
+            var id = {factureId: this.factureId};
+            $(".factures-window").html(compiledTemplate(id));
+            $(".factures-window").show("slow");
+        }
     },
 
     clearMainNav: function(){
@@ -77,7 +87,7 @@ var CuotasView = Backbone.View.extend({
         this.router.navigate("ccuotas/balance",{trigger: true, replace: true});
     },
 
-    showCargosSocioView: function(){
+    showSocioCargosView: function(){
         if(ClubImperial.views.socioCargosView != undefined){
             var socioId = ClubImperial.views.socioCargosView.socioId;
             this.kill();
