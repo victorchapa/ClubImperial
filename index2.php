@@ -103,55 +103,19 @@
 		<div class="navbar main hidden-print">
 		
 			<!-- Brand -->
-			<a href="index.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark" class="appbrand pull-left"><span>AdminKIT <span>v2.0</span></span></a>
-			
-						<!-- Menu Toggle Button -->
-			<button type="button" class="btn btn-navbar">
-				<span class="glyphicons show_lines"><i></i></span>
-			</button>
-			<!-- // Menu Toggle Button END -->
-						
+			<a href="index2.php" class="appbrand pull-left"><span>Club Valle Imperial <span>v1.0</span></span></a>
 						<!-- Top Menu -->
 			<ul class="topnav pull-left tn1">
-			
-								<!-- Themer -->
-				<li class="hidden-sm">
-					<a href="#" data-target="#themer" data-toggle="collapse" class="glyphicons eyedropper"><i></i><span>Themer</span></a>
-				</li>
-				<!-- // Themer END -->
-								
-								<li class="hidden-sm">
-										
-										<a class="glyphicons brightness_increase" href="?page=index&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-light"><i></i>Go Light</a>
-									</li>
-								
 			</ul>
 			<!-- // Top Menu END -->
-						
-						
 			<!-- Top Menu Right -->
 			<ul class="topnav pull-right">
-			
-				<!-- Language menu -->
-				<li class="hidden-sm" id="lang_nav">
-					<a href="#" data-toggle="dropdown"><img src="assets/common/theme/images/lang/en.png" alt="en" /></a>
-			    	<ul class="dropdown-menu pull-left">
-			      		<li class="active"><a href="?page=index&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark&amp;lang=en" title="English"><img src="assets/common/theme/images/lang/en.png" alt="English"> English</a></li>
-			      		<li><a href="?page=index&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark&amp;lang=ro" title="Romanian"><img src="assets/common/theme/images/lang/ro.png" alt="Romanian"> Romanian</a></li>
-			      		<li><a href="?page=index&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark&amp;lang=it" title="Italian"><img src="assets/common/theme/images/lang/it.png" alt="Italian"> Italian</a></li>
-			      		<li><a href="?page=index&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark&amp;lang=fr" title="French"><img src="assets/common/theme/images/lang/fr.png" alt="French"> French</a></li>
-			      		<li><a href="?page=index&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark&amp;lang=pl" title="Polish"><img src="assets/common/theme/images/lang/pl.png" alt="Polish"> Polish</a></li>
-			    	</ul>
-				</li>
-				<!-- // Language menu END -->
-			
 				<!-- Dropdown -->
 				<li class="dropdown visible-abc">
 					<a href="" data-toggle="dropdown" class="glyphicons cogwheel"><i></i>Dropdown <span class="caret"></span></a>
 					<ul class="dropdown-menu pull-right">
-						
 						<li class="dropdown submenu">
-                    		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Level 2</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Level 2</a>
 							<ul class="dropdown-menu submenu-show submenu-hide pull-left">
 		                        <li class="dropdown submenu">
 		                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Level 2.1</a>
@@ -501,40 +465,17 @@
 <div class="innerT">
 	<form class="row margin-none">
 		
-		<!-- Search -->
-		<div class="col-md-2">
-			<div class="input-group input-group-sm">
-				<input type="text" name="from" class="form-control" placeholder="Quick search .." />
-				<span class="input-group-btn">
-					<button type="submit" class="btn btn-default"><i class="icon-search"></i></button>
-				</span>
-			</div>
-		</div>
-		<!-- // Search END -->
-		
 		<!-- Filters Visible on Desktop only -->
-		<div class="visible-desktop col-md-5 col-md-offset-5">
+		<div class="visible-desktop col-md-5 col-md-offset-5 systemTime">
 			<div class="row">
-			
 				<!-- From Filter -->
-				<div class="col-md-6">
+				<div class="">
 					<div class="input-group input-group-sm">
-						<label class="input-group-addon">From:</label>
-						<input type="text" name="from" id="dateRangeFrom" class="form-control" value="08/05/13" />
-						<span class="input-group-addon"><i class="icon-calendar"></i></span>
+						<label class="input-group-addon">Hora del Sistema:</label>
+						<label class="form-control"></label>
 					</div>
 				</div>
 				<!-- // From Filter END -->
-				
-				<!-- To Filter -->
-				<div class="col-md-6">
-					<div class="input-group input-group-sm">
-						<label class="input-group-addon">To:</label>
-						<input type="text" name="to" id="dateRangeTo" class="form-control" value="08/18/13" />
-						<span class="input-group-addon"><i class="icon-calendar"></i></span>
-					</div>
-				</div>
-				<!-- // To Filter END -->
 				
 			</div>
 			<div class="clearfix"></div>

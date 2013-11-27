@@ -13,30 +13,11 @@ $(function()
 	/* Notification */
 	$('#content div:first').after('<div class="innerT"><div id="content-notification"></div></div>');
 	$('#content-notification').notyfy({
-		text: '<h4>Welcome back Mr.Awesome!</h4><p>You have <strong>3,450</strong> unread messages. Click here to close the notification and see a dark color variation.</p>',
+		text: '<h5>¡BIENVENIDO!</h5><p>El sistema esta listo para realizar sus operaciones.</p>',
 		type: 'default',
 		layout: 'top',
-		closeWith: ['click'],
-		events: {
-			hidden: function(){
-				$('#content-notification').notyfy({
-					text: '<h4>Welcome back Mr.Awesome!</h4><p>You have <strong>3,450</strong> unread messages. Click here to close the notification and see a primary color variation.</p>',
-					type: 'dark',
-					layout: 'top',
-					closeWith: ['click'],
-					events: {
-						hidden: function(){
-							$('#content-notification').notyfy({
-								text: '<h4>Welcome back Mr.Awesome!</h4><p>You have <strong>3,450</strong> unread messages. You can click here to close me.</p>',
-								type: 'primary',
-								layout: 'top',
-								closeWith: ['click']
-							});
-						}
-					}
-				});
-			}
-		}
+        timeout: 10000,
+        closeWith: ['hover'],
 	});
 	
 	// initialize charts
