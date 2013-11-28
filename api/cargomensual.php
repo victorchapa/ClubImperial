@@ -1,6 +1,7 @@
 <?php
 	include("consultas.php");
 	$mes = date("n");
+	$estedia = date("d");
 	$estemes = date("n");
 	$esteaño = date("Y");
 	$año = date("Y");
@@ -32,5 +33,20 @@
 			}
 		}
 		$newbalance = add("INSERT INTO balance (IdSocio, Nombre, Abono, Cargo, Mes, Year) VALUES ('$id', '$nombre', '$abono', '$cargo', '$estemes', '$esteaño')");
+	}
+
+	foreach($socios as $socio){
+		$id = $socio["IdSocio"];
+		$servicios = consultar("SELECT * FROM cargosf WHERE IdSocio = '$id' AND Frecuencia = 'Mensual'");
+		if($servicios){
+			foreach($servicios as $servicio){
+				$balance = consultar("SELECT * FROM balance WHERE IdSocio = '$id' AND Mes = '$estemes' AND Year = '$esteaño'");
+				$serv = $servicio["Servicio"];
+				$cargo = $servicio["Cargo"];
+				$balance = $balance[0]["Cargo"] + $cargo;
+				$newcargo = add("INSERT INTO cargos (IdSocio, Servicio, Cargo, Dia, Mes, Year) VALUES ('$id', '$serv', '$cargo', '$estedia', '$estemes', '$esteaño')");
+				$newbalance = add("UPDATE balance SET Cargo = '$balance' WHERE IdSocio = '$id' AND Mes = '$estemes' AND Year = '$esteaño'");
+			}
+		}
 	}
 ?>
