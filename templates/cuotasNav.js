@@ -1,7 +1,7 @@
 TEMPLATES.cuotasNav = 
-"<script type='text/template'>" + 
-    "<div class='cobrosContent'>" +
-        "<div class='backgroundNav'>" +
+"<script type='text/template'>" +
+    "<div class='widget widget-2 widget-tabs'>" +
+        "<div class='widget-head'>" +
             "<ul class='navCuotas'>" +
                 "<% if(target == 'cuotas') { %>" +
                     "<li class='showCuota active'><p class='uppercase'>CUOTAS</p><input type='hidden' value='charges'/></li>" +
@@ -18,7 +18,9 @@ TEMPLATES.cuotasNav =
                 "<% } %>" +
             "</ul>" +
         "</div>" +
-    	"<div id='cuotaBody'>" +
+        "<div id='cuotaBody'>" +
+            "<div id='widget-body'>" +
+            "</div>" +
     	"</div>" +
     "</div>" +
 "</script>";
