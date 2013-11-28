@@ -2,6 +2,7 @@
   include("consultas.php");
   $id = $_GET["id"];
   $socios = consultar("SELECT * FROM socios WHERE IdSocio='$id'");
+  $servicios = consultar("SELECT * FROM cargosf WHERE IdSocio='$id'");
   $parientes = consultar("SELECT * FROM socios WHERE IdPariente='$id'");
   if($socios){
     echo "<div class='clear'>";
@@ -62,9 +63,33 @@
         echo "<td>".$pariente["Afiliacion"]."</td>";
       }
     echo "</tbody>";
+    echo "</table>";
     }else{
       echo "<p>No tiene parientes registrados.</p>";
     }
     echo "</div>";
-  } 
+  }
+  echo "<div>";
+  echo "<p>Servicios recurrentes: </p>";
+  if($servicios){
+        echo "<table>";
+        echo "<thead>";
+        echo "<tr>";
+        echo "<th>Servicio</th>";
+        echo "<th>Frecuencia</th>";
+        echo "<th>Cargo</th>";
+        echo "</tr>";
+        echo "</thead>";
+        echo "<tbody>";
+    foreach($servicios as $servicio){
+        echo "<tr><td>".$servicio["Servicio"]."</td>";
+        echo "<td>".$servicio["Frecuencia"]."</td>";
+        echo "<td>".$servicio["Cargo"]."</td></tr>";
+    }
+    echo "</tbody>";
+    echo "</table>";
+  } else {
+    echo "No tiene servicios recurrentes";
+  }
+  echo "</div>";
 ?>

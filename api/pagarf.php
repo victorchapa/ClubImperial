@@ -6,13 +6,11 @@
 	$cargos = consultar("SELECT * FROM cargos WHERE IdCargo= '$idf'");
     $mes = $cargos[0]["Mes"];
     $year = $cargos[0]["Year"];
-    $fabono = $cargos[0]["Abono"];
-    $deuda = $cargos[0]["Deuda"];
+    $tabono = $cargos[0]["Abono"] + $abono;
+    $saldo = $cargos[0]["Saldo"] - $abono;
 	$balance = consultar("SELECT Cargo FROM balance WHERE IdSocio= '$ids' AND Mes='$mes' AND Year='$year'");
-	$cargototal = $balance[0]["Cargo"];
-	$deudaactual = $deuda - $abono;
-	$balancetotal = $cargototal - $abono;
-    $add = add("UPDATE cargos SET Deuda = '$deudaactual' WHERE IdCargo = '$idf'");
-    $add = add("UPDATE balance SET Cargo = '$balancetotal' WHERE IdSocio = '$ids' AND Mes='$mes' AND Year='$year'");
+	$abonototal = $balance[0]["Cargo"] + $abono;
+    $add = add("UPDATE cargos SET Saldo = '$saldo', Abono = '$tabono' WHERE IdCargo = '$idf'");
+    $add = add("UPDATE balance SET Abono = '$abonototal' WHERE IdSocio = '$ids' AND Mes='$mes' AND Year='$year'");
     echo "<script type=text/javascript>window.location.href=\"../index.php#ccuotas/factura?id=$ids\";</script>";
 ?>

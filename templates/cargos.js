@@ -1,6 +1,6 @@
 TEMPLATES.cargos = 
         "<script type='text/template'>" +
-        "<% var total = 0; var pago = 0; var tcargo = 0; var tdeuda = deuda.Cargo - deuda.Abono; %>" +
+        "<% var total = 0; var pago = 0; var tcargo = 0; var tsaldo = 0; var tabono = 0; %>" +
           "<h2>Cargos de <span class='debtor'><% print(deuda.Nombre); %></span></h2>" +
           "<div class='finders'>" +
           "<p>Mes: <select class='fMonth'>" +
@@ -28,8 +28,8 @@ TEMPLATES.cargos =
                 "<th>Servicio</th>" +
                 "<th>Fecha y hora</th>" +
                 "<th>Cargo</th>" +
-                "<th>Saldo</th>" +
                 "<th>Abono</th>" +
+                "<th>Saldo</th>" +
             "</tr>" +
           "</thead>" +
           "<tbody>" +
@@ -42,9 +42,11 @@ TEMPLATES.cargos =
                     "<td><% print(factura.Dia); %>/<% print(factura.Mes); %>/<% print(factura.Year); %></br>" +
                     "<% print(factura.Hora); %></td>" +
                     "<% tcargo  = tcargo + parseFloat(factura.Cargo); %>" +
+                    "<% tabono  = tabono + parseFloat(factura.Abono); %>" +
+                    "<% tsaldo  = tsaldo + parseFloat(factura.Saldo); %>" +
                     "<td>$<% print(factura.Cargo); %></td>" +
-                    "<td>$<% print(factura.Deuda); %></td>" +
-                    "<td class='Addabono'>$<input type='text' name='abono' onkeydown='if(event.keyCode == 13){this.form.submit();}' value=''/></td>" +
+                    "<td class='Addabono'>$<% print(factura.Abono); %> + $<input type='text' name='abono' onkeydown='if(event.keyCode == 13){this.form.submit();}' value=''/></td>" +
+                    "<td>$<% print(factura.Saldo); %></td>" +
                 "</form>" +
                 "</tr>" +
                 "<% }); %>" +
@@ -52,8 +54,8 @@ TEMPLATES.cargos =
                   "<td>Cargo Total</td>" +
                   "<td></td>" +
                   "<td>$<% print(tcargo); %></td>" +
-                  "<td>$<% print(deuda.Cargo); %></td>" +
-                  "<td></td>" +
+                  "<td>$<% print(tabono); %></td>" +
+                  "<td>$<% print(tsaldo); %></td>" +
                 "</tr>" +
             "</tbody>" +
             "</table>" +
