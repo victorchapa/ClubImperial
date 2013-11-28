@@ -20,23 +20,24 @@
   $id = $id[0]["IdSocio"];
   if($deudas){
     $diferencia = $total - $abono;
-    $balance = ($deudas[0]["Cargo"]) + $diferencia;
-    $add = add("UPDATE balance SET Cargo = '$balance' WHERE Nombre= '$nombre'");
+    $balance = ($deudas[0]["Cargo"]) + $total;
+    $tabono = ($deudas[0]["Abono"]) + $abono;
+    $add = add("UPDATE balance SET Abono = '$tabono', Cargo = '$balance' WHERE Nombre= '$nombre' AND Mes = '$mes' AND Year = '$year'");
     $conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
     mysql_query ("SET NAMES 'utf8'");
-    mysql_query("INSERT INTO cargos (IdSocio, Servicio, Deuda, Cargo, Hora, Dia, Mes, Year) 
-      VALUES ('$id', '$servicio', '$diferencia', '$total', '$hora', '$dia', '$mes', '$year')");
+    mysql_query("INSERT INTO cargos (IdSocio, Servicio, Cargo, Abono, Saldo, Hora, Dia, Mes, Year) 
+      VALUES ('$id', '$servicio', '$total', $abono, $diferencia, '$hora', '$dia', '$mes', '$year')");
     $idf= mysql_insert_id();
     echo "<script type=text/javascript>window.location.href=\"../index.php#ccuotas?fid=$idf\";</script>";
   } else {
     $conexion =  mysql_connect($serverAddress, $user, $passwd);
     mysql_select_db($dbName);
     mysql_query ("SET NAMES 'utf8'");
-    mysql_query("INSERT INTO cargos (IdSocio, Servicio, Deuda, Cargo, Hora, Dia, Mes, Year) 
-      VALUES ('$id', '$servicio', '$diferencia', '$total', '$hora', '$dia', '$mes', '$year')");
+    mysql_query("INSERT INTO cargos (IdSocio, Servicio, Cargo, Abono, Saldo, Hora, Dia, Mes, Year) 
+      VALUES ('$id', '$servicio', '$total', $abono, $diferencia, '$hora', '$dia', '$mes', '$year')");
     $idf= mysql_insert_id();
-    $add = add("INSERT INTO balance (IdSocio, Nombre, Cargo, Mes, Year) VALUES ('$id', '$nombre', '$balance', '$mes', '$year')");
+    $add = add("INSERT INTO balance (IdSocio, Nombre, Abono, Cargo, Mes, Year) VALUES ('$id', '$nombre', '$tabono', '$balance', '$mes', '$year')");
     echo "<script type=text/javascript>window.location.href=\"../index.php#ccuotas?fid=$idf\";</script>";
   }
 ?>
