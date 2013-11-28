@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    console.log("CACA!");
+
     /* Notification */
     $('#content div:first').after('<div class="innerT"><div id="content-notification"></div></div>');
     $('#content-notification').notyfy({
@@ -11,6 +11,5 @@ $(document).ready(function(){
     });
 
     $("#activityR").removeClass("in").addClass("collapse");
-
 
 });
