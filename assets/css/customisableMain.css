@@ -17,3 +17,74 @@
 .to-right {
   float: right;
 }
+
+#mainDisplayer {
+  margin: 0 12px 0 12px;
+}
+
+.emergentWindow {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  box-shadow: 2px 2px 5px #aaa;
+  border: #BDBDBD solid 1px;
+  border-radius: 4px;
+}
+
+#allDebts .emergentWindow {
+  height: 40px;
+}
+
+#allDebts .emergentWindow .idSocio {
+  margin-top: 9px;
+}
+
+.memoField {
+  width: 90%;
+  height: 44px;
+  border: 1px solid silver;
+  background-color: white;
+  margin: 0px;
+  overflow: auto;
+}
+
+#Modal .memoField {
+  width: 40%;
+  height: 75px;
+}
+
+.nombrePariente {
+  margin: 0px;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+p.nombrePariente.selected {
+  background-color: #5882FA;
+}
+
+.tableKin {
+  height: 100px;
+  border: 1px solid silver;
+  background-color: white;
+  margin: 0px;
+  overflow: auto;
+}
+.tableKin table {
+  width: 200%;
+}
+.tableKin table, th, td{
+  border: 1px solid black;
+}
+
+#Modal .modal-dialog {
+  width: 770px;
+}
+
+#modalParientes .modal-dialog {
+  width: 865px;
+}
+
+#modalParientes .modal-header {
+  padding-bottom: 25px;
+}

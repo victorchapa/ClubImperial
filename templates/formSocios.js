@@ -1,4 +1,6 @@
 TEMPLATES.formSocio =
+        "<div class='well margin-none'>" +
+            "<address class='margin-none'>" +
         "<form id='formSocio' method='post' action='api/AddSocio.php' enctype='multipart/form-data'>" +
         "<h1>Favor de ingresar los datos correspondientes:</h1>" +
         "<div class='clear'>" +
@@ -55,4 +57,6 @@ TEMPLATES.formSocio =
             "<input class='btn btnSuccess' type='submit' value='Agregar Usuario'></p>" +
             "<p><span id='fileName'></span></p>" +
         "</div>" +
-        "</form>";
+        "</form>"+
+        "</address>" +
+        "</div>";
