@@ -658,21 +658,6 @@
 	<!-- Cookie Plugin -->
 	<script src="assets/common/theme/scripts/plugins/system/jquery.cookie.js"></script>
 	
-	<!-- Colors -->
-	<script>
-	var primaryColor = '#e25f39',
-		dangerColor = '#bd362f',
-		successColor = '#609450',
-		warningColor = '#ab7a4b',
-		inverseColor = '#45484d';
-	</script>
-	
-	<!-- Themer -->
-	<script>
-	var themerPrimaryColor = primaryColor;
-	</script>
-	<script src="assets/common/theme/scripts/demo/themer.js"></script>
-	
 	<!-- Twitter Feed -->
 	<script src="assets/common/theme/scripts/demo/twitter.js"></script>
 	
@@ -704,9 +689,6 @@
 	<!-- Charts Helper Demo Script -->
 	<script src="assets/common/theme/scripts/demo/charts.helper.js?1381491376"></script>
 	
-	
-	<!-- Optional Resizable Sidebars -->
-	<!--[if gt IE 8]><!--><script src="assets/common/theme/scripts/demo/resizable.js?1381491376"></script><!--<![endif]-->
 	
 	<!-- Bootstrap Image Gallery -->
 	<script src="http://blueimp.github.io/Bootstrap-Image-Gallery/js/load-image.js"></script>
