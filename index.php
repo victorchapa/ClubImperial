@@ -223,8 +223,8 @@
 				<li class="large hasSubmenu glyphicons notes">
 					<a data-toggle="collapse" href="#menu_cuotas"><i></i><span>Cuotas</span></a>
 					<ul class="collapse" id="menu_cuotas">
-						<li><a href="#" class="glyphicons money"><i></i><span>Generar Cobro</span></a></li>
-						<li><a href="#" class="glyphicons stats"><i></i><span>Balance TOTAL</span></a></li>
+						<li><a href="#ccuotas" class="glyphicons money"><i></i><span>Generar Cobro</span></a></li>
+						<li><a href="#ccuotas/balance" class="glyphicons stats"><i></i><span>Balance TOTAL</span></a></li>
 					</ul>
 					<span class="count">2</span>
 				</li>
@@ -309,6 +309,7 @@
 
 <h3 class="heading-mosaic">Inicio</h3>
 <div id="APPContainer">
+<section class="rigthPanel">
 <div id="mainDisplayer">
 <div class="innerLR">
 
@@ -498,6 +499,7 @@
 		
 		</div>
 		</div>
+		</section>
 		</div>
 		<!-- // Content END -->
 			
