@@ -1,0 +1,19 @@
+#content {
+  min-height: 600px;
+}
+
+.systemTime {
+  margin: 0px;
+  float: right;
+  width: 20%;
+}
+
+#menu .slim-scroll > ul ul li a.glyphicons i:before,
+#menu > ul ul li a.glyphicons i:before {
+  font-size: 20px;
+  color: white;
+}
+
+.to-right {
+  float: right;
+}
