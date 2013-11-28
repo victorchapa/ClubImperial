@@ -613,9 +613,6 @@
 	<!-- SlimScroll Plugin -->
 	<script src="assets/common/theme/scripts/plugins/other/jquery-slimScroll/jquery.slimscroll.min.js"></script>
 	
-	<!-- Common Demo Script -->
-	<script src="assets/common/theme/scripts/demo/common.js?1381491376"></script>
-	
 	<!-- Holder Plugin -->
 	<script src="assets/common/theme/scripts/plugins/other/holder/holder.js"></script>
 	
@@ -658,9 +655,6 @@
 	<!-- Cookie Plugin -->
 	<script src="assets/common/theme/scripts/plugins/system/jquery.cookie.js"></script>
 	
-	<!-- Twitter Feed -->
-	<script src="assets/common/theme/scripts/demo/twitter.js"></script>
-	
 	<!-- Easy-pie Plugin -->
 	<!-- <script src="assets/common/theme/scripts/plugins/charts/easy-pie/jquery.easy-pie-chart.js"></script> -->
 	<script src="assets/common/theme/scripts/plugins/charts/easy-pie/jquery.easypiechart.js"></script>
@@ -670,10 +664,6 @@
 	
 	<!-- Ba-Resize Plugin -->
 	<script src="assets/common/theme/scripts/plugins/other/jquery.ba-resize.js"></script>
-	
-	<!-- Dashboard Demo Script -->
-	<script src="assets/common/theme/scripts/demo/index.js?1381491376"></script>
-	
 	
 	<!-- Google JSAPI -->
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -686,21 +676,15 @@
 	<script src="assets/common/theme/scripts/plugins/charts/flot/jquery.flot.resize.js"></script>
 	<script src="assets/common/theme/scripts/plugins/charts/flot/jquery.flot.orderBars.js"></script>
 	
-	<!-- Charts Helper Demo Script -->
-	<script src="assets/common/theme/scripts/demo/charts.helper.js?1381491376"></script>
 	
 	
 	<!-- Bootstrap Image Gallery -->
-	<script src="http://blueimp.github.io/Bootstrap-Image-Gallery/js/load-image.js"></script>
+	<!-- script src="http://blueimp.github.io/Bootstrap-Image-Gallery/js/load-image.js"></script -->
 	<script src="assets/common/bootstrap/extend/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js" type="text/javascript"></script>
 
-	<script>
-	//Load the Visualization API and the table/core chart package.
-	google.load('visualization', '1.0', {'packages':['table', 'corechart']});
-	
-	// Set a callback to run when the Google Visualization API is loaded.
-	google.setOnLoadCallback(charts.traffic_sources_dataTables.init);
-	</script>
+
+  <script src="assets/common/theme/scripts/demo/common.js" type="text/javascript"></script>
+  <script src="assets/js/start.js" type="text/javascript"></script>
 
 </body>
 </html>
