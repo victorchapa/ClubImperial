@@ -5,10 +5,6 @@ var AddSocioView = Backbone.View.extend({
     events:{},
 
     initialize: function(){
-        var lastActive = $(".active", ".mainNav");
-        $(lastActive).removeClass("active");
-        var addSocio = $("ul", ".mainNav");
-        $("li:nth-child(2)", addSocio).addClass("active");
         this.render();
     },
 

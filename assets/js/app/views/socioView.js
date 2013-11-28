@@ -42,18 +42,18 @@ var SocioView = Backbone.View.extend({
 
     showWindowAction: function(e){
         var targetIdSocio =  $(e.target).parent().attr("idsocio");
-        var targetCoordenades = [(e.pageX - 215) + "px", (e.pageY - 155) + "px"];
+        var targetCoordenades = [(e.pageX - 215) + "px", (e.pageY - 55) + "px"];
         $(".spanIdSocio").text(targetIdSocio);
         $(".actionsSocio").css({
             left: targetCoordenades[0],
             top: targetCoordenades[1],
         }).show();
 
-        $(".actionsSocio").on("mouseleave", function(){
-            setTimeout(function(){
-                $(".actionsSocio").hide();
-            }, 1500);
-        });
+        //$(".actionsSocio").on("mouseleave", function(){
+            //setTimeout(function(){
+                //$(".actionsSocio").hide();
+            //}, 1500);
+        //});
         
     },
 
