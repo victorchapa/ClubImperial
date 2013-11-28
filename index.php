@@ -49,7 +49,6 @@
 	
 	<!-- JQueryUI -->
 	<link href="assets/common/theme/scripts/plugins/system/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" />
-
 	<!-- JQueryDataTables -->
 	<link href="assets/common/theme/scripts/plugins/tables/DataTables/css/jquery.dataTables.css" rel="stylesheet" />
 	<link href="assets/common/theme/scripts/plugins/tables/DataTables/css/DT_bootstrap.css" rel="stylesheet" />
@@ -724,6 +723,7 @@
   <script src="assets/js/start.js" type="text/javascript"></script>
   <script src="assets/js/libs/jquery-uiDatePicker.js"></script>
   <script src="assets/js/libs/jQueryDataPickerEs.js"></script>
+  <script src="assets/js/libs/jQueryAutocomplete.js"></script>
 
   <!--Scrypting-->
   <script src="assets/js/main.js"></script>
