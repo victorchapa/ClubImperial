@@ -14,3 +14,4 @@ TEMPLATES.socioNav =
 			"</div>" +
 		"</div>" +
     "</div>";
+"</script>";
