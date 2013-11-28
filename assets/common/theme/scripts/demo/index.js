@@ -19,6 +19,8 @@ $(function()
         timeout: 10000,
         closeWith: ['hover'],
 	});
+
+    $("#activityR").removeClass("in").addClass("collapse");
 	
 	// initialize charts
 	if (typeof charts != 'undefined') 

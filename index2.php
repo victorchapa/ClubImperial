@@ -5,7 +5,7 @@
 <!--[if gt IE 8]> <html class="ie gt-ie8"> <![endif]-->
 <!--[if !IE]><!--><html><!-- <![endif]-->
 <head>
-	<title>AdminKIT - Premium Admin Template (v2.0)</title>
+	<title>Club Valle Imperial (v1.0)</title>
 	
 	<!-- Meta -->
 	<meta charset="UTF-8" />
@@ -101,7 +101,6 @@
 		
 		<!-- Top navbar -->
 		<div class="navbar main hidden-print">
-		
 			<!-- Brand -->
 			<a href="index2.php" class="appbrand pull-left"><span>Club Valle Imperial <span>v1.0</span></span></a>
 						<!-- Top Menu -->
@@ -188,270 +187,56 @@
 			
 			<!-- Sidebar Profile -->
 			<span class="profile">
-				<a class="img" href="my_account.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><img src="assets/common/theme/images/mrawesome.jpg" alt="Mr. Awesome" /></a>
+				<a class="img" href="#"><img src="assets/common/theme/images/mrawesome.jpg" alt="Mr. Awesome" /></a>
 				<span>
-					<strong>Welcome</strong>
-					<a href="my_account.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark" class="glyphicons right_arrow">mosaicpro <i></i></a>
+					<strong>Usuario:</strong>
+					<a href="#" class="glyphicons right_arrow">User<i></i></a>
 				</span>
 			</span>
 			<!-- // Sidebar Profile END -->
 			
 			<!-- Sidebar Mini Stats -->
-			<div id="notif">
+			<!--div id="notif">
 				<ul>
 					<li><a href="" class="glyphicons envelope"><i></i> 5</a></li>
 					<li><a href="" class="glyphicons shopping_cart"><i></i> 1</a></li>
 					<li><a href="" class="glyphicons log_book"><i></i> 3</a></li>
 					<li><a href="" class="glyphicons user_add"><i></i> 14</a></li>
 				</ul>
-			</div>
+			</div -->
 			<!-- // Sidebar Mini Stats END -->
 			
 			<!-- Regular Size Menu -->
 			<ul>
-			
-								
-								<!-- Menu Regular Item -->
-				<li class="glyphicons display active"><a href="index.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i><span>Dashboard</span></a></li>
-				
-				<!-- Components Submenu Level 1 -->
-				<li class="hasSubmenu">
-					<a class="glyphicons cogwheels" data-toggle="collapse" href="#menu_components"><i></i><span>Components</span></a>
-					<ul class="collapse" id="menu_components">
-						
-						<!-- Components Submenu Level 2 -->
-						<li class="hasSubmenu">
-							<a data-toggle="collapse" href="#menu_forms"><span>Forms</span></a>
-							<ul class="collapse" id="menu_forms">
-								<li class=""><a href="form_wizards.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Form Wizards</span></a></li>
-								<li class=""><a href="form_elements.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Form Elements</span></a></li>
-								<li class=""><a href="form_validator.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Form Validator</span></a></li>
-								<li class=""><a href="file_managers.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>File Managers</span></a></li>
-							</ul>
-							<span class="count">4</span>
-						</li>
-						<!-- // Components Submenu Level 2 END -->
-						
-						<!-- Components Submenu Regular Items -->
-						<li class=""><a href="ui.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>UI Elements</span></a></li>
-						<li class=""><a href="icons.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Icons</span></a></li>
-						<li class=""><a href="widgets.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Widgets</span></a></li>
-						<li class=""><a href="tabs.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Tabs</span></a></li>
-						<li class=""><a href="sliders.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Sliders</span></a></li>
-						<li class=""><a href="charts.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Charts</span></a></li>
-						<!-- // Components Submenu Regular Items END -->
-						
-						<!-- Components Submenu Level 2 -->
-						<li class="hasSubmenu">
-							<a data-toggle="collapse" href="#menu_tables"><span>Tables</span></a>
-							<ul class="collapse" id="menu_tables">
-								<li class=""><a href="tables.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Tables</span></a></li>
-								<li class=""><a href="pricing_tables.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Pricing tables</span></a></li>
-							</ul>
-							<span class="count">2</span>
-						</li>
-						<!-- // Components Submenu Level 2 -->
-						
-						<!-- Components Submenu Regular Items -->
-						<li class=""><a href="grid.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Grid system</span></a></li>
-						<li class=""><a href="notifications.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Notifications</span></a></li>
-						<li class=""><a href="modals.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Modals</span></a></li>
-						<li class=""><a href="thumbnails.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Thumbnails</span></a></li>
-						<li class=""><a href="carousels.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Carousels</span></a></li>
-						<li class=""><a href="tour.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Page Tour</span></a></li>
-						<!-- // Components Submenu Regular Items END -->
-						
-					</ul>
-					<span class="count">18</span>
-				</li>
-				<!-- Components Submenu Level 1 END -->
-
-				<li class="glyphicons-social facebook"><a href="social.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i><span>Social</span></a></li>
-				<li class="glyphicons star"><a href="ratings.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i><span>Ratings</span></a></li>
-				
-				<!-- Landing Submenu Level 1 -->
-				<li class="hasSubmenu">
-					<a data-toggle="collapse" class="glyphicons notes" href="#menu_landing"><i></i><span>Landing pages</span></a>
-					<ul class="collapse" id="menu_landing">
-						<li class=""><a href="landing_page_1.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Landing #1</span></a></li>
-						<li class=""><a href="landing_page_2.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Landing #2</span></a></li>
-					</ul>
-					<span class="count">2</span>
-				</li>
-				<!-- // Gallery Submenu Level 1 END -->
-				
-				<!-- Extra Submenu Level 1 -->
-				<li class="hasSubmenu glyphicons gift">
-					<a data-toggle="collapse" href="#menu_extra"><i></i><span>Extra</span></a>
-					<ul class="collapse" id="menu_extra">
-						<li class=""><a href="my_account_advanced.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Advanced profile</span></a></li>
-						<li class=""><a href="my_account.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>My Account</span></a></li>
-						<li class=""><a href="bookings.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Bookings</span></a></li>
-						<li class=""><a href="finances.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Finances</span></a></li>
-						<li class=""><a href="pages.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Site Pages</span></a></li>
-						<li><a href="error.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Error page</span></a></li>
-						<li><a href="blank.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Blank page</span></a></li>
-					</ul>
-					<span class="count">7</span>
-				</li>
-				<!-- // Extra Submenu Level 1 END -->
-				
-				<!-- Gallery Submenu Level 1 -->
-				<li class="hasSubmenu">
-					<a data-toggle="collapse" class="glyphicons picture" href="#menu_gallery"><i></i><span>Photo Gallery</span></a>
-					<ul class="collapse" id="menu_gallery">
-						<li class=""><a href="gallery_1.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Gallery #1</span></a></li>
-						<li class=""><a href="gallery_2.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Gallery #2</span></a></li>
-						<li class=""><a href="videos.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Videos</span></a></li>
-					</ul>
-					<span class="count">2</span>
-				</li>
-				<!-- // Gallery Submenu Level 1 END -->
-				
-				<!-- Shop Submenu Level 1 -->
-				<li class="hasSubmenu">
-					<a data-toggle="collapse" class="glyphicons shopping_cart" href="#menu_ecommerce"><i></i><span>Online Shop</span></a>
-					<ul class="collapse" id="menu_ecommerce">
-						<li class="hasSubmenu">
-							<a data-toggle="collapse" href="#menu_ecommerce_client"><i></i><span>Client interface</span></a>
-							<ul class="collapse" id="menu_ecommerce_client">
-								<li class=""><a href="shop_client_products.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Products</span></a></li>
-								<li class=""><a href="shop_client_product.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Product details</span></a></li>
-								<li class=""><a href="shop_client_cart.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Shopping cart</span></a></li>
-							</ul>
-							<span class="count">3</span>
-						</li>
-						<li class="hasSubmenu">
-							<a data-toggle="collapse" href="#menu_ecommerce_admin"><i></i><span>Management</span></a>
-							<ul class="collapse" id="menu_ecommerce_admin">
-								<li class=""><a href="shop_admin_products.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Products</span></a></li>
-								<li class=""><a href="shop_admin_product.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Add product</span></a></li>
-							</ul>
-							<span class="count">2</span>
-						</li>
-					</ul>
-					<span class="count">5</span>
-				</li>
-				<!-- // Shop Submenu Level 1 END -->
-				
-				<!-- Menu Regular Items -->
-				<li class="glyphicons tags"><a href="faq.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i><span>FAQ</span></a></li>
-				<li class="glyphicons calendar"><a href="calendar.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i><span>Calendar</span></a></li>
-				<li class="glyphicons lock"><a href="login.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i><span>Login</span></a></li>
-				<li class="glyphicons user_add"><a href="signup.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i><span>Register</span></a></li>
-				<li class="glyphicons credit_card"><a href="invoice.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i><span>Invoice</span></a></li>
-				<!-- // Menu Regular Items END -->
-				
-				<!-- Maps Submenu Level 1 -->
-				<li class="hasSubmenu glyphicons google_maps">
-					<a data-toggle="collapse" href="#menu_maps"><i></i><span>Maps</span></a>
-					<ul class="collapse" id="menu_maps">
-						<li class=""><a href="maps_vector.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Vector maps</span></a></li>
-						<li class=""><a href="maps_google.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Google maps</span></a></li>
-					</ul>
-					<span class="count">2</span>
-				</li>
-				<!-- // Maps Submenu Level 1 END -->
-								
+        <!-- Menu Regular Item -->
+				<li class="glyphicons display active"><a href="#"><i></i><span>Inicio</span></a></li>
+				<li class="glyphicons group"><a href="#"><i></i><span>Socios</span></a></li>
+				<li class="glyphicons user_add"><a href="#"><i></i><span>Agregar Socio</span></a></li>
 			</ul>
 			<div class="clearfix"></div>
 			<div class="separator bottom"></div>
 			<!-- // Regular Size Menu END -->
-			
-						<!-- Sidebar Stats Widgets -->
-			<div class="widget-sidebar-stats">
-				<strong>3,540</strong>
-				<span>Messages</span>
-				<span class="pull-right sparkline"></span>
-				<div class="clearfix"></div>
-			</div>
-			<div class="widget-sidebar-stats">
-				<strong>2,510,402</strong>
-				<span>Photos</span>
-				<span class="pull-right sparkline"></span>
-				<div class="clearfix"></div>
-			</div>
-			<div class="separator bottom"></div>
-			<!-- // Sidebar Stats Widgets END -->
-			
-			<!-- Stats Widget -->
-			<a href="" class="widget-stats widget-stats-2 widget-stats-easy-pie widget-sidebar-stats txt-single">
-				<div data-percent="90" class="easy-pie primary easyPieChart" style="width: 50px; height: 50px; line-height: 50px; "><span class="value">90</span>%<canvas width="50" height="50"></canvas></div>
-				<span class="txt">Completed tasks</span>
-				<div class="clearfix"></div>
-			</a>
-			<!-- // Stats Widget END -->
-			
-			<!-- Stats Widget -->
-			<a href="" class="widget-stats widget-stats-2 widget-stats-3 widget-sidebar-stats black margin-bottom-none">
-				<span class="sparkline success"></span>
-				<span class="txt"><span class="count">12,566</span> Photos</span>
-				<div class="clearfix"></div>
-			</a>
-			<div class="separator bottom"></div>
-			<!-- // Stats Widget END -->
-			
 			<!-- Larger Menu Style -->
 			<ul>
-				<li class="heading"><span>Larger menu</span></li>
-				<li class="large glyphicons group"><a href="error.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i><span>Clients</span></a></li>
-				<li class="large hasSubmenu glyphicons log_book">
-					<a data-toggle="collapse" href="#menu_tasks"><i></i><span>Task Management</span></a>
-					<ul class="collapse" id="menu_tasks">
-						<li class=""><a href="tasks.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Tasks Overview</span></a></li>
-						<li class=""><a href="error.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Manage Projects</span></a></li>
-						<li class=""><a href="error.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><span>Manage Team</span></a></li>
+				<li class="large hasSubmenu glyphicons notes">
+					<a data-toggle="collapse" href="#menu_cuotas"><i></i><span>Cuotas</span></a>
+					<ul class="collapse" id="menu_cuotas">
+						<li><a href="#" class="glyphicons money"><i></i><span>Generar Cobro</span></a></li>
+						<li><a href="#" class="glyphicons stats"><i></i><span>Balance TOTAL</span></a></li>
 					</ul>
-					<span class="count">3</span>
+					<span class="count">2</span>
 				</li>
 			</ul>
 			<div class="clearfix"></div>
 			<!-- // Larger Menu Style END -->
-			
 			<!-- Sidebar Stats Widgets -->
 			<div class="separator bottom"></div>
 			<div class="widget-sidebar-stats">
-				<span>HDD <strong class="pull-right">80% used</strong></span>
-				<div class="progress">
-					<div class="progress-bar progress-bar-danger" style="width: 80%;"></div>
-				</div>
-				<div class="clearfix"></div>
-			
-			</div>
-			<div class="widget-sidebar-stats">
-				<span>Mail <strong class="pull-right">65% used</strong></span>
-				<div class="progress">
-					<div class="progress-bar progress-bar-success" style="width: 65%;"></div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="widget-sidebar-stats">
-				<h5>Generic widget</h5>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				<h5>Valle Imperial</h5>
+				<p>Golf & Club Residencial.</p>
 			</div>
 			<!-- // Sidebar Stats Widgets END -->
 						
-						<!-- Menu Position Change -->
-			<div class="separator top uniformjs menu_js hidden-sm">
-				<div class="innerLR">
-					<label for="toggle-menu-position" class="checkbox">
-						<input type="checkbox" class="checkbox" id="toggle-menu-position" /> 
-						right menu
-					</label>
-				</div>
-			</div>
-			<!-- // Menu Position Change END -->
-						
-						<!-- Layout Type Change -->
-			<div class="uniformjs layout_js hidden-sm">
-				<div class="innerLR">
-					<label for="toggle-layout" class="checkbox">
-						<input type="checkbox" class="checkbox" id="toggle-layout" /> 
-						fixed layout
-					</label>
-				</div>
-			</div>
-			<!-- // Layout Type Change END -->
 						
 			</div>
 			<!-- // Scrollable Menu wrapper with Maximum Height END -->
@@ -487,8 +272,40 @@
 	</form>
 </div>
 <!-- // Filters END -->
+	  <div class="separator bottom"></div>
+	  <div class="row">
+		  <div class="col-md-6 to-right">
+			  <!-- Activity/List Widget -->
+			  <div class="widget" data-toggle="collapse-widget">
+			
+				  <!-- Widget Heading -->
+				  <div class="widget-head">
+					  <h4 class="heading glyphicons history"><i></i>Activitidad Reciente</h4>
+				  </div>
+				  <!-- // Widget Heading END -->
+				
+				  <div id="activityR" class="widget-body list">
+					  <ul>
+						  <!-- List item -->
+						  <li>
+							  <span>Pago</span>
+							  <span class="count">&dollar;5,900</span>
+						  </li>
+						  <!-- // List item END -->
+						  <!-- List item -->
+						  <li>
+							  <span>Otro pago</span>
+							  <span class="count">&dollar;36,900</span>
+						  </li>
+						  <!-- // List item END -->
+					  </ul>
+				  </div>
+			  </div>
+			  <!-- // Activity/List Widget END -->
+		  </div>
+	  </div>
 
-<h3 class="heading-mosaic">Overview</h3>
+<h3 class="heading-mosaic">Inicio</h3>
 <div class="innerLR">
 
 	<!-- Quick Tabs Widget -->
@@ -656,880 +473,6 @@
 		</div>
 	</div>
 	<!-- // Quick Tabs Widget END -->
-	
-</div>
-
-<!-- Row -->
-<div class="row row-merge border-top">
-	
-	<!-- Column -->
-	<div class="col-md-7">
-	
-		<!-- Spacing -->
-		<div class="innerAll">
-	
-			<!-- Recent Activity -->
-			<div class="widget widget-4 widget-tabs-icons-only widget-timeline margin-bottom-none">
-			
-				<!-- Widget Heading -->
-				<div class="widget-head">
-					<h4 class="heading">Recent Activity <span>timeline</span></h4>
-					
-					<!-- Filters Tabs -->
-					<ul class="pull-right">
-						<li>Filter by</li>
-						<li class="glyphicons user_add"><span data-toggle="tab" data-target="#filterUsersTab"><i></i></span></li>
-						<li class="glyphicons shopping_cart active"><span data-toggle="tab" data-target="#filterOrdersTab"><i></i></span></li>
-						<li class="glyphicons envelope"><span data-toggle="tab" data-target="#filterMessagesTab"><i></i></span></li>
-						<li class="glyphicons link"><span data-toggle="tab" data-target="#filterLinksTab"><i></i></span></li>
-						<li class="glyphicons camera"><span data-toggle="tab" data-target="#filterPhotosTab"><i></i></span></li>
-					</ul>
-					<div class="clearfix"></div>
-					<!-- // Filters Tabs END -->
-					
-				</div>
-				<!-- Widget Heading END -->
-				
-				<div class="widget-body">
-					<div class="tab-content">
-					
-												
-						<!-- Filter Users Tab -->
-						<div class="tab-pane" id="filterUsersTab">
-							<ul class="list-timeline">
-							
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon user_add"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> registered at <a href="">Darius Jackson's</a> suggestion.</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon user_add"><i></i></span>
-									<span class="ellipsis"><a href="">Melisa Ragae</a> registered at <a href="">Martin Glades's</a> suggestion.</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon user_add"><i></i></span>
-									<span class="ellipsis"><a href="">Jane Doe</a> registered at <a href="">Jane Doe's</a> suggestion.</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon user_add"><i></i></span>
-									<span class="ellipsis"><a href="">Jane Doe</a> registered at <a href="">Melisa Ragae's</a> suggestion.</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon user_add"><i></i></span>
-									<span class="ellipsis"><a href="">Jane Doe</a> registered at <a href="">Jane Doe's</a> suggestion.</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon user_add"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> registered at <a href="">John Doe's</a> suggestion.</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon user_add"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> registered at <a href="">Darius Jackson's</a> suggestion.</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																
-							</ul>
-							<a href="" class="btn btn-primary view-all">View all</a>
-						</div>
-						<!-- // Filter Users Tab END -->
-						
-						<!-- Filter Orders Tab -->
-						<div class="tab-pane active" id="filterOrdersTab">
-							<ul class="list-timeline">
-							
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon shopping_cart"><i></i></span>
-									<span class="ellipsis"><a href="">Melisa Ragae</a> bought 10 items worth of &euro;50 (<a href="">order #2301</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon shopping_cart"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2302</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon shopping_cart"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2303</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon shopping_cart"><i></i></span>
-									<span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2304</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon shopping_cart"><i></i></span>
-									<span class="ellipsis"><a href="">John Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2305</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon shopping_cart"><i></i></span>
-									<span class="ellipsis"><a href="">Jane Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2306</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon shopping_cart"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2307</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																
-							</ul>
-							<a href="" class="btn btn-primary view-all">View all</a>
-						</div>
-						<!-- // Filter Orders Tab END -->
-						
-						<!-- Filter Messages Tab -->
-						<div class="tab-pane" id="filterMessagesTab">
-							<ul class="list-timeline">
-							
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon envelope"><i></i></span>
-									<span class="ellipsis"><a href="">John Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2301</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon envelope"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2302</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon envelope"><i></i></span>
-									<span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2303</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon envelope"><i></i></span>
-									<span class="ellipsis"><a href="">John Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2304</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon envelope"><i></i></span>
-									<span class="ellipsis"><a href="">Jane Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2305</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon envelope"><i></i></span>
-									<span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2306</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon envelope"><i></i></span>
-									<span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2307</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																
-							</ul>
-							<a href="" class="btn btn-primary view-all">View all</a>
-						</div>
-						<!-- // Filter Messages Tab END -->
-						
-						<!-- Filter Links Tab -->
-						<div class="tab-pane" id="filterLinksTab">
-							<ul class="list-timeline">
-							
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon link"><i></i></span>
-									<span class="ellipsis"><a href="">John Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2301</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon link"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2302</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon link"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2303</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon link"><i></i></span>
-									<span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2304</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon link"><i></i></span>
-									<span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2305</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon link"><i></i></span>
-									<span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2306</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon link"><i></i></span>
-									<span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2307</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																
-							</ul>
-							<a href="" class="btn btn-primary view-all">View all</a>
-						</div>
-						<!-- // Filter Links Tab END -->
-						
-						<!-- Filter Photos Tab -->
-						<div class="tab-pane" id="filterPhotosTab">
-							<ul class="list-timeline">
-							
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon camera"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2301</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon camera"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2302</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon camera"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2303</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon camera"><i></i></span>
-									<span class="ellipsis"><a href="">Jane Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2304</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon camera"><i></i></span>
-									<span class="ellipsis"><a href="">Melisa Ragae</a> bought 10 items worth of &euro;50 (<a href="">order #2305</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon camera"><i></i></span>
-									<span class="ellipsis"><a href="">John Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2306</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																<!-- Activity item -->
-								<li>
-									<span class="date">21/03</span>
-									<span class="glyphicons activity-icon camera"><i></i></span>
-									<span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2307</a>)</span>
-									<div class="clearfix"></div>
-								</li>
-								<!-- // Activity item END -->
-																
-							</ul>
-							<a href="" class="btn btn-primary view-all">View all</a>
-						</div>
-						<!-- // Filter Photos Tab END -->
-					
-					</div>
-				</div>
-			</div>
-			<!-- // Recent Activity END -->
-		
-		</div>
-		<!-- // spacing END -->
-		
-	</div>
-	<!-- // Column END -->
-	
-	<!-- Column -->
-	<div class="col-md-5">
-	
-		<!-- Tabs -->
-		<div class="innerLR">
-			<div class="separator bottom"></div>
-			<div class="tabsbar tabsbar-2 margin-none">
-				<ul class="row row-merge">
-					<li class="col-md-6 glyphicons chat active"><a href="#tab-chat" data-toggle="tab"><i></i> Live Chat</a></li>
-					<li class="col-md-6 glyphicons envelope"><a href="#tab-messages" data-toggle="tab"><i></i> <span>Messages</span></a></li>
-				</ul>
-			</div>
-		</div>
-		<!-- // Tabs END -->
-	
-		<!-- Tabs content -->
-		<div class="tab-content">
-	
-		<!-- Chat -->
-		<div class="tab-pane innerAll active" id="tab-chat">
-			<div class="box-generic widget-chat">
-				
-				<!-- Slim Scroll -->
-				<div class="slim-scroll chat-items" data-scroll-height="240px">
-					
-					<!-- Media item -->
-					<div class="media">
-						<div class="media-object pull-left thumb"><img src="assets/common/theme/images/mrawesome.jpg" alt=""></div>
-						<div class="media-body">
-							<blockquote>
-								<small><a href="#" title="" class="strong">Martin</a> <cite>just now</cite></small>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae accumsan mauris. Donec vitae nibh felis, facilisis bibendum sapien.</p>
-							</blockquote>
-						</div>
-					</div>
-					<!-- // Media item END -->
-					
-					<!-- Media item -->
-					<div class="media">
-						<div class="media-object pull-right thumb"><img src="assets/common/theme/images/mrawesome.jpg" alt=""></div>
-						<div class="media-body right">
-							<blockquote class="pull-right">
-								<small><a href="#" title="" class="strong">John Doe</a><cite> 15 seconds ago</cite></small>
-								<p>In ultricies ante eget tortor euismod vitae molestie eros hendrerit. Cras tristique, orci ac lacinia aliquet, velit risus laoreet lectus, eget sollicitudin metus orci non nulla.</p>
-							</blockquote>
-						</div>
-					</div>
-					<!-- // Media item END -->
-					
-					<!-- Media item -->
-					<div class="media">
-						<div class="media-object pull-left thumb"><img src="assets/common/theme/images/mrawesome.jpg" alt=""></div>
-						<div class="media-body">
-							<blockquote>
-								<small><a href="#" title="" class="strong">Ricky</a> <cite>5 minutes ago</cite></small>
-								<p>Pellentesque ac turpis turpis. Aliquam erat volutpat. Proin semper auctor mauris vel tempor. Ut eget turpis neque. Nam ultricies tortor eu odio ultricies euismod.</p>
-							</blockquote>
-						</div>
-					</div>
-					<!-- // Media item END -->
-					
-				</div>
-				<!-- // Slim Scroll END -->
-				
-				<div class="chat-controls">
-					<div class="innerLR">
-						<form class="margin-none">
-							<div class="row">
-								<div class="col-md-10">
-									<input type="text" name="message" class="input-block-level input-sm form-control margin-none" placeholder="Type your message .." />
-								</div>
-								<div class="col-md-2">
-									<button type="submit" class="btn btn-block btn-inverse">Send</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-		<!-- // Chat END -->
-	
-		<!-- Messages -->
-		<div class="widget widget-4 widget-messages margin-bottom-none tab-pane widget-scroll" data-scroll-height="272px" id="tab-messages">
-		
-			<!-- Widget Heading -->
-			<div class="widget-head">
-				<h4 class="heading">Your Messages</h4>
-				<span class="pull-right"><a href="" class="btn btn-small btn-primary btn-icon glyphicons envelope"><i></i>View all</a></span>
-				<div class="clearfix"></div>
-			</div>
-			<!-- // Widget Heading END -->
-			
-			<div class="widget-body">
-				<div>
-					<ul>
-						<!-- Message -->
-						<li>
-							<span class="meta glyphicons user single"><i></i> Adrian <span>1 hour ago</span></span>
-							<p>Are you available for freelance?</p>
-							<div>
-								<a href="" class="btn btn-xs btn-inverse">reply</a>
-								<a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-								<div class="clearfix"></div>
-							</div>
-						</li>
-						<!-- // Message END -->
-						
-						<!-- Message -->
-						<li>
-							<span class="meta glyphicons user single"><i></i> MosaicPro <span>10 seconds ago</span></span>
-							<p>Your question has been answered.</p>
-							<div>
-								<a href="" class="btn btn-xs btn-inverse">reply</a>
-								<a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-								<div class="clearfix"></div>
-							</div>
-							<div class="ribbon-wrapper small"><div class="ribbon primary">Staff</div></div>
-						</li>
-						<!-- // Message END -->
-						
-												<!-- Message -->
-						<li>
-							<span class="meta glyphicons user single"><i></i> Adrian <span>1 hour ago</span></span>
-							<p>Are you available for freelance?</p>
-							<div>
-								<a href="" class="btn btn-xs btn-inverse">reply</a>
-								<a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-								<div class="clearfix"></div>
-							</div>
-						</li>
-						<!-- // Message END -->
-												<!-- Message -->
-						<li>
-							<span class="meta glyphicons user single"><i></i> Adrian <span>1 hour ago</span></span>
-							<p>Are you available for freelance?</p>
-							<div>
-								<a href="" class="btn btn-xs btn-inverse">reply</a>
-								<a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-								<div class="clearfix"></div>
-							</div>
-						</li>
-						<!-- // Message END -->
-												<!-- Message -->
-						<li>
-							<span class="meta glyphicons user single"><i></i> Adrian <span>1 hour ago</span></span>
-							<p>Are you available for freelance?</p>
-							<div>
-								<a href="" class="btn btn-xs btn-inverse">reply</a>
-								<a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-								<div class="clearfix"></div>
-							</div>
-						</li>
-						<!-- // Message END -->
-												<!-- Message -->
-						<li>
-							<span class="meta glyphicons user single"><i></i> Adrian <span>1 hour ago</span></span>
-							<p>Are you available for freelance?</p>
-							<div>
-								<a href="" class="btn btn-xs btn-inverse">reply</a>
-								<a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-								<div class="clearfix"></div>
-							</div>
-						</li>
-						<!-- // Message END -->
-												<!-- Message -->
-						<li>
-							<span class="meta glyphicons user single"><i></i> Adrian <span>1 hour ago</span></span>
-							<p>Are you available for freelance?</p>
-							<div>
-								<a href="" class="btn btn-xs btn-inverse">reply</a>
-								<a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-								<div class="clearfix"></div>
-							</div>
-						</li>
-						<!-- // Message END -->
-												
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- // Messages END -->
-		
-		</div>
-		<!-- // Tabs content END -->
-		
-	</div>
-	<!-- // Column END -->
-	
-</div>
-<!-- // Row END -->
-
-<div class="row row-merge">
-	<div class="col-md-6">
-	
-	<!-- Inner -->
-	<div class="innerAll">
-	
-		<!-- Row -->
-		<div class="row">
-			<div class="col-md-4">
-			
-				<!-- Stats Widget -->
-				<a href="" class="widget-stats widget-stats-2">
-					<span class="sparkline"></span>
-					<span class="txt"><span class="count">2,566</span> Sales</span>
-					<div class="clearfix"></div>
-				</a>
-				<!-- // Stats Widget END -->
-				
-			</div>
-			<div class="col-md-4">
-			
-				<!-- Stats Widget -->
-				<a href="" class="widget-stats widget-stats-2 widget-stats-3">
-					<span class="sparkline success"></span>
-					<span class="txt"><span class="count">12,566</span> Photos</span>
-					<div class="clearfix"></div>
-				</a>
-				<!-- // Stats Widget END -->
-				
-			</div>
-			<div class="col-md-4">
-			
-				<!-- Stats Widget -->
-				<a href="" class="widget-stats widget-stats-2 widget-stats-3">
-					<span class="sparkline danger"></span>
-					<span class="txt"><span class="count">12,566</span> Photos</span>
-					<div class="clearfix"></div>
-				</a>
-				<!-- // Stats Widget END -->
-				
-			</div>
-		</div>
-		<!-- // Row END -->
-	
-	</div>
-	<!-- // Inner END -->
-	
-	</div>
-	<div class="col-md-6">
-	
-	<!-- Inner -->
-	<div class="innerAll">
-		
-		<!-- Row -->
-		<div class="row">
-			<div class="col-md-3">
-			
-				<!-- Stats Widget -->
-				<a href="" class="widget-stats widget-stats-2 widget-stats-easy-pie">
-					<div data-percent="75" class="easy-pie easyPieChart" style="width: 50px; height: 50px; line-height: 50px; "><span class="value">75</span>%<canvas width="50" height="50"></canvas></div>
-					<span class="txt"><span class="count">2,566</span> Sales</span>
-					<div class="clearfix"></div>
-				</a>
-				<!-- // Stats Widget END -->
-				
-			</div>
-			<div class="col-md-3">
-			
-				<!-- Stats Widget -->
-				<a href="" class="widget-stats widget-stats-2 widget-stats-easy-pie txt-single">
-					<div data-percent="85" class="easy-pie danger easyPieChart" style="width: 50px; height: 50px; line-height: 50px; "><span class="value">85</span>%<canvas width="50" height="50"></canvas></div>
-					<span class="txt">Server workload</span>
-					<div class="clearfix"></div>
-				</a>
-				<!-- // Stats Widget END -->
-				
-			</div>
-			<div class="col-md-3">
-			
-				<!-- Stats Widget -->
-				<a href="" class="widget-stats widget-stats-2 widget-stats-easy-pie txt-single">
-					<div data-percent="90" class="easy-pie success easyPieChart" style="width: 50px; height: 50px; line-height: 50px; "><span class="value">90</span>%<canvas width="50" height="50"></canvas></div>
-					<span class="txt">Completed tasks</span>
-					<div class="clearfix"></div>
-				</a>
-				<!-- // Stats Widget END -->
-				
-			</div>
-			<div class="col-md-3">
-			
-				<!-- Stats Widget -->
-				<a href="" class="widget-stats widget-stats-2 widget-stats-easy-pie">
-					<div data-percent="23" class="easy-pie inverse easyPieChart" style="width: 50px; height: 50px; line-height: 50px; "><span class="value">23</span>%<canvas width="50" height="50"></canvas></div>
-					<span class="txt"><span class="count">1,244</span> Emails</span>
-					<div class="clearfix"></div>
-				</a>
-				<!-- // Stats Widget END -->
-				
-			</div>
-		</div>
-		<!-- // Row END -->
-	
-	</div>
-	<!-- // Inner END -->
-	
-	</div>
-</div>
-<div class="row row-merge">
-
-	<!-- 6/12 Column -->
-	<div class="col-md-6">
-	
-		<!-- Upcoming Events Widget -->
-		<div class="widget widget-4 margin-bottom-none">
-		
-			<!-- Widget Heading -->
-			<div class="widget-head">
-				<h4 class="heading">Upcoming Events</h4>
-				<span class="pull-right"><a href="calendar.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark" class="btn btn-small btn-default">Full Calendar</a></span>
-				<div class="clearfix"></div>
-			</div>
-			<!-- // Widget Heading END -->
-			
-			<div class="widget-body">
-				
-				<!-- Datepicker Inline -->
-				<div class="datepicker-inline" id="datepicker-inline"></div>
-				
-				<!-- Buttons -->
-				<div class="row">
-					<div class="col-md-6">
-						<a href="calendar.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark" class="btn btn-block btn-small btn-inverse btn-icon glyphicons circle_plus"><i></i> Add event</a>
-					</div>
-					<div class="col-md-6">
-						<a href="calendar.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark" class="btn btn-block btn-small btn-primary btn-icon glyphicons right_arrow"><i></i> Next</a>
-					</div>
-				</div>
-				<!-- // Buttons END -->
-				
-			</div>
-		</div>
-		<!-- // Upcoming Events Widget END -->
-		
-	</div>
-	<!-- // 6/12 Column END -->
-	
-	<!-- 6/12 Column -->
-	<div class="col-md-6">
-	
-		<!-- Stats Widgets -->
-		<div class="widget widget-4 margin-bottom-none">
-			<div class="widget-head"><h4 class="heading">Stats widgets <span>with over 400+ icons</span></h4></div>
-			<div class="widget-body">
-			
-				<!-- Row -->
-				<div class="row">
-					<div class="col-md-3">
-					
-						<!-- Stats Widget -->
-						<a href="" class="widget-stats small">
-							<span class="glyphicons shopping_cart"><i></i></span>
-							<span class="count label label-primary">20</span>
-						</a>
-						<!-- // Stats Widget END -->
-						
-					</div>
-					<div class="col-md-3">
-					
-						<!-- Stats Widget -->
-						<a href="" class="widget-stats small gray">
-							<span class="glyphicons fishes"><i></i></span>
-							<span class="count label label-primary">250</span>
-						</a>
-						<!-- // Stats Widget END -->
-						
-					</div>
-					<div class="col-md-3">
-						
-						<!-- Stats Widget -->
-						<a href="" class="widget-stats small dark">
-							<span class="glyphicons umbrella"><i></i></span>
-							<span class="count label label-primary">238</span>
-						</a>
-						<!-- // Stats Widget END -->
-						
-					</div>
-					<div class="col-md-3">
-						
-						<!-- Stats Widget -->
-						<a href="" class="widget-stats small primary">
-							<span class="glyphicons user_add"><i></i></span>
-							<span class="count label label-primary">134</span>
-						</a>
-						<!-- // Stats Widget END -->
-						
-					</div>
-				</div>
-				<!-- // Row END -->
-				
-				<div class="separator bottom"></div>
-				
-				<!-- Row -->
-				<div class="row">
-					<div class="col-md-3">
-					
-						<!-- Stats Widget -->
-						<a href="" class="widget-stats small">
-							<span class="glyphicons coins"><i></i></span>
-							<span class="count label label-primary">20</span>
-						</a>
-						<!-- // Stats Widget END -->
-						
-					</div>
-					<div class="col-md-3">
-						
-						<!-- Stats Widget -->
-						<a href="" class="widget-stats small">
-							<span class="glyphicons note"><i></i></span>
-							<span class="count label label-primary">250</span>
-						</a>
-						<!-- // Stats Widget END -->
-						
-					</div>
-					<div class="col-md-3">
-					
-						<!-- Stats Widget -->
-						<a href="" class="widget-stats small">
-							<span class="glyphicons camera"><i></i></span>
-							<span class="count label label-primary">238</span>
-						</a>
-						<!-- // Stats Widget END -->
-						
-					</div>
-					<div class="col-md-3">
-					
-						<!-- Stats Widget -->
-						<a href="" class="widget-stats small">
-							<span class="glyphicons notes"><i></i></span>
-							<span class="count label label-primary">134</span>
-						</a>
-						<!-- // Stats Widget END -->
-						
-					</div>
-				</div>
-				<!-- // Row END -->
-				
-				<div class="separator bottom"></div>
-				
-				<!-- Row -->
-				<div class="row">
-					<div class="col-md-3">
-					
-						<!-- Stats Widget -->
-						<a href="" class="widget-stats small margin-bottom-none">
-							<span class="glyphicons alarm"><i></i></span>
-							<span class="count label label-primary">20</span>
-						</a>
-						<!-- // Stats Widget END -->
-						
-					</div>
-					<div class="col-md-3">
-					
-						<!-- Stats Widget -->
-						<a href="" class="widget-stats small margin-bottom-none">
-							<span class="glyphicons tags"><i></i></span>
-							<span class="count label label-primary">250</span>
-						</a>
-						<!-- // Stats Widget END -->
-						
-					</div>
-					<div class="col-md-3">
-					
-						<!-- Stats Widget -->
-						<a href="" class="widget-stats small margin-bottom-none">
-							<span class="glyphicons gift"><i></i></span>
-							<span class="count label label-primary">238</span>
-						</a>
-						<!-- // Stats Widget END -->
-						
-					</div>
-					<div class="col-md-3">
-					
-						<!-- Stats Widget -->
-						<a href="" class="widget-stats small margin-bottom-none">
-							<span class="glyphicons car"><i></i></span>
-							<span class="count label label-primary">134</span>
-						</a>
-						<!-- // Stats Widget END -->
-						
-					</div>
-				</div>
-				<!-- // Row END -->
-				
-			</div>
-		</div>
-		<!-- // Stats Widgets END -->
-		
-	</div>
-	<!-- // 6/12 Column END -->
-	
-</div>
-
 <!-- Button Widget -->
 <div class="menubar">
 	<ul>
@@ -1545,343 +488,8 @@
 <!-- // Button Widget END -->
 
 <div class="innerLR">
-	
-	<!-- Stats Widgets -->
-	<div class="row">
-		<div class="col-md-2">
-		
-			<!-- Stats Widget -->
-			<a href="" class="widget-stats margin-bottom-none">
-				<span class="glyphicons shopping_cart"><i></i></span>
-				<span class="txt">Sales</span>
-				<div class="clearfix"></div>
-				<span class="count label label-important">20</span>
-			</a>
-			<!-- // Stats Widget END -->
-			
-		</div>
-		<div class="col-md-2">
-		
-			<!-- Stats Widget -->
-			<a href="" class="widget-stats margin-bottom-none">
-				<span class="glyphicons shield"><i></i></span>
-				<span class="txt">Alerts</span>
-				<div class="clearfix"></div>
-				<span class="count label">25</span>
-			</a>
-			<!-- // Stats Widget END -->
-			
-		</div>
-		<div class="col-md-2">
-		
-			<!-- Stats Widget -->
-			<a href="" class="widget-stats margin-bottom-none">
-				<span class="glyphicons user_add"><i></i></span>
-				<span class="txt">Clients</span>
-				<div class="clearfix"></div>
-				<span class="count label label-warning">33</span>
-			</a>
-			<!-- // Stats Widget END -->
-			
-		</div>
-		<div class="col-md-2">
-		
-			<!-- Stats Widget -->
-			<a href="" class="widget-stats margin-bottom-none">
-				<span class="glyphicons envelope"><i></i></span>
-				<span class="txt">Messages</span>
-				<div class="clearfix"></div>
-				<span class="count label label-primary">265</span>
-			</a>
-			<!-- // Stats Widget END -->
-			
-		</div>
-		<div class="col-md-2">
-		
-			<!-- Stats Widget -->
-			<a href="" class="widget-stats margin-bottom-none">
-				<span class="glyphicons fishes"><i></i></span>
-				<span class="txt">Fishes</span>
-				<div class="clearfix"></div>
-				<span class="count label label-important">13</span>
-			</a>
-			<!-- // Stats Widget END -->
-			
-		</div>
-		<div class="col-md-2">
-		
-			<!-- Stats Widget -->
-			<a href="" class="widget-stats margin-bottom-none">
-				<span class="glyphicons coins"><i></i></span>
-				<span class="txt">Earnings</span>
-				<div class="clearfix"></div>
-				<span class="count label label-success">&euro;292,039.02</span>
-			</a>
-			<!-- // Stats Widget END -->
-			
-		</div>
-	</div>
 	<div class="separator bottom"></div>
-	<!-- // Stats Widgets END -->
-
-	<div class="row">
-		<div class="col-md-6">
-		
-			<!-- Activity/List Widget -->
-			<div class="widget" data-toggle="collapse-widget">
-			
-				<!-- Widget Heading -->
-				<div class="widget-head">
-					<h4 class="heading glyphicons history"><i></i>Activity</h4>
-					<a href="" class="details pull-right">view all</a>
-				</div>
-				<!-- // Widget Heading END -->
-				
-				<div class="widget-body list">
-					<ul>
-					
-						<!-- List item -->
-						<li>
-							<span>Sales today</span>
-							<span class="count">&euro;5,900</span>
-						</li>
-						<!-- // List item END -->
-						
-						<!-- List item -->
-						<li>
-							<span>Some other stats</span>
-							<span class="count">36,900</span>
-						</li>
-						<!-- // List item END -->
-						
-					</ul>
-				</div>
-			</div>
-			<!-- // Activity/List Widget END -->
-			
-			<!-- Latest Orders/List Widget -->
-			<div class="widget margin-bottom-none" data-toggle="collapse-widget">
-			
-				<!-- Widget Heading -->
-				<div class="widget-head">
-					<h4 class="heading">Last orders</h4>
-					<a href="" class="details pull-right">view all</a>
-				</div>
-				<!-- // Widget Heading -->
-				
-				<div class="widget-body list products">
-					<ul>
-						
-						<!-- List item -->
-						<li>
-							<span class="img">photo</span>
-							<span class="title">10 items<br/><strong>&euro;5,900.00</strong></span>
-							<span class="count"></span>
-						</li>
-						<!-- // List item END -->
-						
-						<!-- List item -->
-						<li>
-							<span class="img">photo</span>
-							<span class="title">Product name<br/><strong>&euro;2,900</strong></span>
-							<span class="count"></span>
-						</li>
-						<!-- // List item END -->
-						
-					</ul>
-				</div>
-			</div>
-			<!-- // Latest Orders/List Widget END -->
-			
-		</div>
-		<div class="col-md-6">
-		
-			<!-- Comments Widget -->
-			<div class="widget widget-scroll margin-bottom-none" data-scroll-height="223px" data-toggle="collapse-widget">
-			
-				<!-- Widget Heading -->
-				<div class="widget-head">
-					<h4 class="heading glyphicons conversation"><i></i>Comments</h4>
-				</div>
-				<!-- // Widget Heading END -->
-				
-				<div class="widget-body">
-					<div>
-					
-						<!-- Media item -->
-						<div class="media">
-							<img class="media-object pull-left thumb" src="assets/common/theme/images/mrawesome.jpg" alt="">
-							<div class="media-body">
-								<blockquote>
-									  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae accumsan mauris. Donec vitae nibh felis, facilisis bibendum sapien. Duis a odio id erat scelerisque fermentum in ut leo. Suspendisse potenti. Nunc semper cursus dui luctus porttitor. Donec facilisis semper magna sit amet ullamcorper. Cras rutrum magna eget risus vulputate congue. Sed sem libero, dignissim sit amet viverra vitae, suscipit sit amet elit. Integer tincidunt risus in metus rhoncus molestie.</p>
-									  <small><a href="#" title="">John Doe</a><cite> | client @ Famous Company</cite></small>
-								</blockquote>
-							</div>
-						</div>
-						<!-- // Media item END -->
-						
-						<!-- Media item -->
-						<div class="media">
-							<img class="media-object pull-right thumb" src="assets/common/theme/images/mrawesome.jpg" alt="">
-							<div class="media-body">
-								<blockquote class="pull-right">
-									  <p>In ultricies ante eget tortor euismod vitae molestie eros hendrerit. Cras tristique, orci ac lacinia aliquet, velit risus laoreet lectus, eget sollicitudin metus orci non nulla. Pellentesque ac turpis turpis. Aliquam erat volutpat. Proin semper auctor mauris vel tempor. Ut eget turpis neque. Nam ultricies tortor eu odio ultricies euismod. Nulla rhoncus iaculis felis vulputate euismod. Maecenas sapien arcu, gravida eu tincidunt vel, ultricies ullamcorper neque.</p>
-									  <small><a href="#" title="">John Doe</a><cite> | client @ Famous Company</cite></small>
-								</blockquote>
-							</div>
-						</div>
-						<!-- // Media item END -->
-						
-					</div>
-				</div>
-			</div>
-			<!-- // Comments Widget END -->
-			
-		</div>
-	</div>
 	<div class="separator bottom"></div>
-	
-	<!-- Website Traffic Chart -->
-	<div class="widget" data-toggle="collapse-widget">
-		<div class="widget-head">
-			<h4 class="heading glyphicons cardio"><i></i>Website Traffic</h4>
-		</div>
-		<div class="widget-body">
-			<div id="chart_ordered_bars" style="height: 250px;"></div>
-		</div>
-	</div>
-	<!-- // Website Traffic Chart END -->
-	
-	<!-- Button Widget -->
-	<div class="menubar">
-		<ul>
-			<li>Button widget:</li>
-			<li><a href="">Button 1</a></li>
-			<li class="divider"></li>
-			<li><a href="">Button 2</a></li>
-			<li class="divider"></li>
-			<li><a href="">Export</a></li>
-		</ul>
-	</div>
-	<div class="separator bottom"></div>
-	<!-- // Button Widget END -->
-	
-	<div class="row">
-		<div class="col-md-6">
-		
-			<!-- Stats/List/Sparklines Widget -->
-			<div class="widget" data-toggle="collapse-widget">
-			
-				<!-- Widget Heading -->
-				<div class="widget-head">
-					<h4 class="heading glyphicons stats"><i></i>Overview</h4>
-				</div>
-				<!-- // Widget Heading END -->
-				
-				<div class="widget-body list">
-					<ul>
-					
-						<!-- List item -->
-						<li>
-							<span class="count">350,254 <span class="sparkline"></span></span> 
-							Visits						</li>
-						<!-- // List item END -->
-						
-						<!-- List item -->
-						<li>
-							<span class="count">120,103 <span class="sparkline"></span></span> 
-							Visitors						</li>
-						<!-- // List item END -->
-						
-						<!-- List item -->
-						<li>
-							<span class="count">5,156,392 <span class="sparkline"></span></span> 
-							Pageviews						</li>
-						<!-- // List item END -->
-						
-					</ul>
-				</div>
-			</div>
-			<!-- Stats/List/Sparklines Widget END -->
-			
-			<!-- Stats/List/Sparklines Widget -->
-			<div class="widget" data-toggle="collapse-widget">
-			
-				<!-- Widget Heading -->
-				<div class="widget-head">
-					<h4 class="heading glyphicons heart"><i></i>Interest</h4>
-				</div>
-				<!-- // Widget Heading END -->
-				
-				<div class="widget-body list">
-					<ul>
-					
-						<!-- List item -->
-						<li>
-							<span class="count">00:01:59 <span class="sparkline"></span></span> 
-							avg.time						</li>
-						<!-- // List item END -->
-						
-						<!-- List item -->
-						<li>
-							<span class="count">48% <span class="sparkline"></span></span> 
-							returning						</li>
-						<!-- // List item END -->
-						
-					</ul>
-				</div>
-			</div>
-			<!-- // Stats/List/Sparklines Widget END -->
-			
-		</div>
-		<div class="col-md-6">
-		
-			<!-- Traffic Sources Pie Chart -->
-			<div class="widget" data-toggle="collapse-widget">
-				<div class="widget-head">
-					<h4 class="heading glyphicons pie_chart"><i></i>Traffic sources</h4>
-				</div>
-				<div class="widget-body">
-					<div id="pie" style="height: 221px;"></div>
-				</div>
-			</div>
-			<!-- // Traffic Sources Pie Chart END -->
-			
-		</div>
-	</div>
-
-	<!-- Google Vizualization DataTable Widget -->
-	<div class="widget widget-tabs">
-	
-		<!-- Widget Heading -->
-		<div class="widget-head">
-			<ul>
-				<li class="active"><a class="glyphicons coffe_cup" href="#dataTableSourcesTab" data-toggle="tab"><i></i>Traffic sources</a></li>
-				<li><a class="glyphicons share_alt" href="#dataTableRefferingTab" data-toggle="tab"><i></i>Referrals</a></li>
-			</ul>
-		</div>
-		<!-- // Widget Heading END -->
-		
-		<div class="widget-body">
-			<div class="tab-content">
-			
-				<!-- Sources Tab -->
-				<div class="tab-pane active" id="dataTableSourcesTab">
-					<div id="dataTableSources"></div>
-				</div>
-				<!-- // Sources Tab END -->
-				
-				<!-- Reffering Tab -->
-				<div class="tab-pane" id="dataTableRefferingTab">
-					<div id="dataTableReffering"></div>
-				</div>
-				<!-- // Reffering Tab END -->
-				
-			</div>
-		</div>
-	</div>
-	<!-- // Google Vizualization DataTable Widget END -->
-	
 </div>	
 		
 		</div>
@@ -1898,65 +506,48 @@
 					<div class="row row-menu">
 						<div class="col-md-3">
 							<ul class="unstyled">
-								<li><h4>Get Help</h4>
+								<li><h4>Ayuda</h4>
 									<ul class="unstyled">
-										<li><a href="documentation.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark">Documentation</a></li>
-										<li><a href="">Aenean augue risus</a></li>
-										<li><a href="">Maecenas erat dui</a></li>
+										<li><a href="#">Documentación</a></li>
 									</ul>
 								</li>
 							</ul>
 						</div>
 						<div class="col-md-3">
 							<ul class="unstyled">
-								<li><h4>My account</h4>
+								<li><h4>Mi cuenta Acceso</h4>
 									<ul class="unstyled">
-										<li><a href="my_account.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark">Edit account</a></li>
-										<li><a href="my_account.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark">Change password</a></li>
-										<li><a href="login.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark">Logout</a></li>
+										<li><a href="#">Editar cuenta</a></li>
+										<li><a href="#">Cambiar contraña</a></li>
+										<li><a href="#">Salir</a></li>
 									</ul>
 								</li>
 							</ul>
 						</div>
 						<div class="col-md-3">
 							<ul class="unstyled">
-								<li><h4>Other Settings</h4>
+								<li><h4>Otros Servicios</h4>
 									<ul class="unstyled">
-										<li><a href="">Etiam viverra pharetra</a></li>
-										<li><a href="">Lorem ipsum dolor</a></li>
-										<li><a href="">Consecteur adipiscing</a></li>
+										<li><a href="#">EJEMPLO</a></li>
+                    <li><a href="#">EJEMPLO</a></li>
+                    <li><span class="label label-inverse">01/11/2012</span></li>
 									</ul>
 								</li>
 							</ul>
-						</div>
-						<div class="col-md-3">
-						
-														<!-- Twitter Section -->
-							<h5 class="glyphicons single twitter"><i></i> Latest from Twitter</h5>
-							<section class="twitter-feed">
-								<div class="row">
-									<div class="col-md-12">
-										<div class="tweet">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc lorem, rutrum non porta. <span class="label label-inverse">01/11/2012</span></div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</section>
-							<!-- Twitter Section END -->
-														
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="right innerAll">
-						<p>If you have any problems using <strong>AdminKIT</strong> v2.0 or you have any suggestions or requests, please contact us. We appreciate all your feedback.</p>
-						<a class="btn btn-primary btn-icon glyphicons envelope" href="http://www.mosaicpro.biz"><i></i> Contact Support</a>
+						<p>Para cualquier probleme tecnigo con el <strong>Sistema</strong>(v1.0), favor de contactarse con nosotros. </p>
+						<a class="btn btn-primary btn-icon glyphicons envelope" href="#"><i></i> Contactar Suporte</a>
 					</div>
 				</div>
 			</div>
 			<div class="separator bottom"></div>
 			
 			<!--  Copyright Line -->
-			<div class="copy">&copy; 2012 - 2013 - <a href="http://www.mosaicpro.biz">MosaicPro</a> - All Rights Reserved. <a href="http://themeforest.net/item/adminkit-premium-admin-template/4437902?ref=mosaicpro" target="_blank">Purchase this template on ThemeForest</a> - Current version: v2.0 / <a target="_blank" href="http://demo.mosaicpro.biz/adminkit/CHANGELOG">changelog</a></div>
+			<div class="copy">&copy; 2012 - 2013 - <a href="http://www.mapavende.com" target="_blank">MAPA solciones tecnologicas</a> - Todos los Derechos Reservados.</div>
 			<!--  End Copyright Line -->
 	
 		</div>
