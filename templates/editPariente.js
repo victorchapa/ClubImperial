@@ -1,6 +1,9 @@
 TEMPLATES.editPariente =
 "<script type='text/template'>" +
+<<<<<<< HEAD
     "<div class='editParienteForm'>" +
+=======
+>>>>>>> Added styling to all the forms
     "<div class='row'>" +
         "<div class='col-md-12'>" +
             "<h1>Favor de ingresar los datos a Editar:</h1>" +
@@ -76,7 +79,11 @@ TEMPLATES.editPariente =
                 "</select>" +
             "</p>" +
             "<p>Fecha de Alta: <input class='datePicker input-sm form-control' type='text' name='FAlta' placeholder='mm/dd/aaaa' readonly value='<% print(socio.FAlta); %>'></p>" +
+<<<<<<< HEAD
             "<p>Afiliación: " +
+=======
+            "<p>Afiliación: </p>" + 
+>>>>>>> Added styling to all the forms
                 "<span>" +
                 "<% if(socio.Afiliacion.Golf == true) { %>" +
                     "<span><input type='checkbox' name='Afiliacion[]' value='Golf' checked> Golfista. </span>" +
@@ -109,10 +116,16 @@ TEMPLATES.editPariente =
                     "<span><input type='checkbox' name='Afiliacion[]' value='SPA'> SPA. </span>" +
                 "<% } %>" +
                 "</span>" +
+<<<<<<< HEAD
                 "</p>" +
+=======
+>>>>>>> Added styling to all the forms
             "<p><input class='btn btn-success' type='submit' value='Editar Pariente'></p>" +
         "</div>" +
         "</form>" +
     "</div>" +
+<<<<<<< HEAD
     "</div>" +
+=======
+>>>>>>> Added styling to all the forms
 "</script>";
