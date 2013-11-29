@@ -1,9 +1,10 @@
 TEMPLATES.formSocio =
     "<div class='row'>" +
+        "<div class='editSocioForm'>" +
         "<div class='col-md-12'>" +
             "<h1>Favor de ingresar los datos correspondientes:</h1>" +
         "</div>" +
-        "<div class='col-md-6'>" +
+        "<div class='col-md-5'>" +
         "<form id='formSocio' method='post' action='api/AddSocio.php' enctype='multipart/form-data'>" +
             "<p>Nombres: <input type='text' class='input-sm form-control' name='Nombre' maxlength='30'></p>" +
             "<p>Apellido Paterno: <input type='text' class='input-sm form-control' name='ApellidoP' maxlength='30'></p>" +
@@ -14,7 +15,7 @@ TEMPLATES.formSocio =
             "<p>Lote: <input type='text' class='input-sm form-control' name='Lote'></p>" +
             "<p>Coto: <input type='text' class='input-sm form-control' name='Coto'></p>" +
         "</div>" +
-        "<div class='col-md-6'>" +
+        "<div class='col-md-5'>" +
             "<p>Teléfono: <input type='text' class='input-sm form-control' name='Telefono' maxlength='10'></p>" +
             "<p>Celular: <input type='text' class='input-sm form-control' name='Celular' maxlength='10'></p>" +
             "<p>Email: <input type='text' class='input-sm form-control' name='Correo'></p>" +
@@ -50,8 +51,9 @@ TEMPLATES.formSocio =
                 "<input type='checkbox' name='Afiliacion[]' value='Gym'> GYM. " +
                 "<input type='checkbox' name='Afiliacion[]' value='SPA'> SPA. </span></p>" +
         "</div>" +
-        "<div class='col-md-12'>" +
+        "<div class='col-md-8'>" +
             "<p><input id='upLoad' class='display-none' type='file' name='Foto' accept='image/jpeg, image/bmp'><input class='btn btnFunctions btnUpLoad' type='button' value='Subir Foto'>" +
             "<input class='btn btn-success' type='submit' value='Agregar Usuario'></p>" +
             "<p><span id='fileName'></span></p>" +
+        "</div>" +
         "</div>";

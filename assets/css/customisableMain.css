@@ -132,6 +132,8 @@ margin-left: 5px;
   margin-top: 10px;
 }
 
-.editParienteForm p{
-  float: left;
+.editSocioForm input[type="text"], .editSocioForm select{
+  display: inline;
+  margin-left: 5px;
+  width: 250px;
 }

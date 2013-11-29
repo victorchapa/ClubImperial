@@ -1,5 +1,6 @@
 TEMPLATES.editSocio =
 "<script type='text/template'>" +
+    "<div class='editSocioForm'>" +
     "<div class='row'>" +
         "<div class='col-md-12'>" +
             "<h1>Favor de ingresar los datos a Editar:</h1>" +
@@ -90,7 +91,7 @@ TEMPLATES.editSocio =
                 "<% } %>" +
                 "</span>" +
         "</div>" +
-        "<div class='col-md-12'>" +
+        "<div class='col-md-8'>" +
             "<div class='memoField'>Parientes: </div>" +
                 "<div class='btnGroupII'>" +
                     "<input class='btn btnAddPari' type='button' value='+'>" +
@@ -103,5 +104,6 @@ TEMPLATES.editSocio =
             "</div>" +
         "</div>" +
         "</form>" +
+    "</div>" +
     "</div>" +
 "</script>";
