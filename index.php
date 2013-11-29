@@ -49,6 +49,10 @@
 	
 	<!-- JQueryUI -->
 	<link href="assets/common/theme/scripts/plugins/system/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> Hotfixes
 	<!-- JQueryDataTables -->
 	<link href="assets/common/theme/scripts/plugins/tables/DataTables/css/jquery.dataTables.css" rel="stylesheet" />
 	<link href="assets/common/theme/scripts/plugins/tables/DataTables/css/DT_bootstrap.css" rel="stylesheet" />
