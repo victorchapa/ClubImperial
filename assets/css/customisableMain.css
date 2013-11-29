@@ -121,3 +121,17 @@ color: #fff;
 input[type="file"].display-none {
   display: none;
 }
+
+.editParienteForm input[type="text"], .editParienteForm select{
+width: 250px;
+display: inline;
+margin-left: 5px;
+}
+
+.editParienteForm input[type="submit"]{
+  margin-top: 10px;
+}
+
+.editParienteForm p{
+  float: left;
+}
