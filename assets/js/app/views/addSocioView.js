@@ -6,6 +6,7 @@ var AddSocioView = Backbone.View.extend({
 
     initialize: function(){
         this.render();
+        this.clearMainNav();
     },
 
     render: function(){
@@ -27,6 +28,16 @@ var AddSocioView = Backbone.View.extend({
                 return false;
             });
         }
+    },
+
+    clearMainNav: function(){
+        var targets = $("#miniMenu li");
+        _.each(targets, function(target){
+            $(target).removeClass("active");
+        });
+        $("#bigMenu li:nth-child(1)").removeClass("active");
+        $("#miniMenu li:nth-child(3)").addClass("active");
+        $("#activityR").removeClass("in").addClass("collapse");
     },
 
 });

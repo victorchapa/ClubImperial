@@ -13,11 +13,12 @@ var SocioView = Backbone.View.extend({
     },
 
     clearMainNav: function(){
-        var targets = $(".mainNav ul li");
+        var targets = $("#miniMenu li");
         _.each(targets, function(target){
             $(target).removeClass("active");
         });
-        $(".mainNav ul li:nth-child(2)").addClass("active");
+        $("#bigMenu li:nth-child(1)").removeClass("active");
+        $("#miniMenu li:nth-child(2)").addClass("active");
     },
 
     initialize: function(){

@@ -47,11 +47,12 @@ var CuotasView = Backbone.View.extend({
     },
 
     clearMainNav: function(){
-        var targets = $(".mainNav ul li");
+        var targets = $("#miniMenu li");
         _.each(targets, function(target){
             $(target).removeClass("active");
         });
-        $(".mainNav ul li:nth-child(3)").addClass("active");
+        $("#bigMenu #menu_cuotas li:nth-child(1)").addClass("active");
+        $("#activityR").removeClass("in").addClass("collapse");
     },
 
     refetchCollection: function(){

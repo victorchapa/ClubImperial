@@ -14,8 +14,7 @@ ClubImperial.Router = Backbone.Router.extend({
     },
 
     index: function(){
-        var mainView = new MainView();
-        var navMainView = new NavMainView(); 
+        ClubImperial.views.indexView = new IndexView(); 
     },
 
     allSocios: function(){

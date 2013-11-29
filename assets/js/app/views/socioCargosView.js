@@ -12,7 +12,6 @@ var SocioCargosView = Backbone.View.extend({
         this.socioId = this.options.socioId; 
         this.router = new ClubImperial.Router();
 
-        this.clearMainNav();
         var template = TEMPLATES.cuotasNav;
         var compiledTemplate = _.template($(template).html());
         var target = {target: "cargos"};
@@ -47,14 +46,6 @@ var SocioCargosView = Backbone.View.extend({
 
             },
         });
-    },
-
-    clearMainNav: function(){
-        var targets = $(".mainNav ul li");
-        _.each(targets, function(target){
-            $(target).removeClass("active");
-        });
-        $(".mainNav ul li:nth-child(3)").addClass("active");
     },
 
     filterByMY: function(e){
