@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-11-2013 a las 22:41:32
+-- Tiempo de generación: 29-11-2013 a las 23:05:50
 -- Versión del servidor: 5.6.12-log
 -- Versión de PHP: 5.4.12
 
@@ -37,17 +37,16 @@ CREATE TABLE IF NOT EXISTS `balance` (
   `Mes` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `Year` int(11) NOT NULL,
   PRIMARY KEY (`IdBalance`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=11 ;
 
 --
 -- Volcado de datos para la tabla `balance`
 --
 
 INSERT INTO `balance` (`IdBalance`, `IdSocio`, `Nombre`, `Abono`, `Cargo`, `Mes`, `Year`) VALUES
-(2, 4, 'Victor Chapa Clavillo  ', 0, 2400, 'Nov', 2013),
-(4, 3, 'Israel Alcantar Cortés  ', 0, 3000, 'Nov', 2013),
-(5, 1, 'Oscar Vargas Muñoz  ', 0, 3500, 'Nov', 2013),
-(6, 1, 'Oscar Vargas Muñoz  ', 0, 3500, 'Dic', 2013);
+(8, 1, 'Oscar Vargas Muñoz', 0, 3000, 'Nov', 2013),
+(9, 3, 'Israel Alcantar Cortés', 500, 500, 'Nov', 2013),
+(10, 4, 'Victor Chapa Clavillo', 3400, 2800, 'Nov', 2013);
 
 -- --------------------------------------------------------
 
@@ -59,26 +58,26 @@ CREATE TABLE IF NOT EXISTS `cargos` (
   `IdCargo` int(11) NOT NULL AUTO_INCREMENT,
   `IdSocio` int(11) NOT NULL,
   `Servicio` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
-  `Deuda` int(11) NOT NULL DEFAULT '0',
   `Cargo` int(11) NOT NULL,
+  `Abono` int(11) NOT NULL,
+  `Saldo` int(11) NOT NULL DEFAULT '0',
   `Hora` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
   `Dia` varchar(2) COLLATE utf8_spanish_ci NOT NULL,
   `Mes` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
   `Year` int(11) NOT NULL,
   PRIMARY KEY (`IdCargo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=24 ;
 
 --
 -- Volcado de datos para la tabla `cargos`
 --
 
-INSERT INTO `cargos` (`IdCargo`, `IdSocio`, `Servicio`, `Deuda`, `Cargo`, `Hora`, `Dia`, `Mes`, `Year`) VALUES
-(4, 4, 'Mensualidad', 1500, 3000, '9:51 pm', '11', 'Nov', 2013),
-(5, 4, 'Carros', 0, 150, '9:52 pm', '11', 'Nov', 2013),
-(7, 3, 'Mensualidad', 0, 3000, '7:09 pm', '12', 'Nov', 2013),
-(8, 1, 'Carro Bar', 0, 3500, '7:53 pm', '13', 'Nov', 2013),
-(9, 1, 'Prueba', 0, 3500, '7:53 pm', '13', 'Dic', 2013),
-(10, 4, 'Mantenimiento', 900, 1000, '10:34 pm', '20', 'Nov', 2013);
+INSERT INTO `cargos` (`IdCargo`, `IdSocio`, `Servicio`, `Cargo`, `Abono`, `Saldo`, `Hora`, `Dia`, `Mes`, `Year`) VALUES
+(17, 1, 'Carro Bar', 0, 0, 0, '12:24 am', '28', 'Nov', 2013),
+(20, 3, 'Mensualidad', 0, 0, 0, '12:49 am', '28', 'Nov', 2013),
+(21, 4, 'Hoyo 6', 2000, 2000, 0, '4:11 pm', '28', 'Nov', 2013),
+(22, 4, 'Velaria', 1000, 1000, 0, '4:19 pm', '28', 'Nov', 2013),
+(23, 3, 'Caros', 500, 500, 0, '12:26 am', '29', 'Nov', 2013);
 
 -- --------------------------------------------------------
 
@@ -91,6 +90,7 @@ CREATE TABLE IF NOT EXISTS `cargosf` (
   `IdSocio` int(11) NOT NULL,
   `Frecuencia` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `Servicio` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
+  `Cargo` int(11) NOT NULL,
   PRIMARY KEY (`IdCargoF`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=2 ;
 
@@ -98,8 +98,8 @@ CREATE TABLE IF NOT EXISTS `cargosf` (
 -- Volcado de datos para la tabla `cargosf`
 --
 
-INSERT INTO `cargosf` (`IdCargoF`, `IdSocio`, `Frecuencia`, `Servicio`) VALUES
-(1, 1, 'Mensual', 'Mensualidad');
+INSERT INTO `cargosf` (`IdCargoF`, `IdSocio`, `Frecuencia`, `Servicio`, `Cargo`) VALUES
+(1, 1, 'Mensual', 'Mensualidad', 1500);
 
 -- --------------------------------------------------------
 
@@ -130,10 +130,33 @@ INSERT INTO `historial` (`IdHistorial`, `IdSocio`, `Nombre`, `FechaA`, `HoraA`) 
 --
 
 CREATE TABLE IF NOT EXISTS `servicios` (
-  `IdServicio` int(11) NOT NULL,
+  `IdServicio` int(11) NOT NULL AUTO_INCREMENT,
   `Servicio` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `Cargo` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `Cargo` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`IdServicio`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=17 ;
+
+--
+-- Volcado de datos para la tabla `servicios`
+--
+
+INSERT INTO `servicios` (`IdServicio`, `Servicio`, `Cargo`) VALUES
+(1, 'Mensualidad', 1450),
+(2, 'Carro Bar', 0),
+(3, 'Velaria', 0),
+(4, 'Invitados', 0),
+(5, 'Mantenimiento', 0),
+(6, 'Carros', 0),
+(7, 'Canastas', 0),
+(8, '1H Plataforma', 0),
+(9, 'Hoyo 6', 0),
+(10, 'Futbol', 0),
+(11, 'Eventos', 0),
+(12, 'Clases de Golf', 0),
+(13, 'Pelotas de Golf', 0),
+(14, 'Renta de equipos', 0),
+(15, 'Torneo', 0),
+(16, 'Varios', 0);
 
 -- --------------------------------------------------------
 
