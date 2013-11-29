@@ -1,7 +1,7 @@
 TEMPLATES.balance = 
         "<script type='text/template'>" +
           "<div class='balanceHeader'>" +
-            "<h2>Balance TOTAL</h2>" +
+            "<h2 class='heading-arrow'>Balance TOTAL</h2>" +
           "</div>" +
             "<div class='tableContent'>" +
             "<table id='balanceTable' class='dynamicTable colVis table table-striped table-bordered table-condensed table-white dataTable'></table>" +

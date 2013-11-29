@@ -213,7 +213,7 @@
 			<!-- // Sidebar Mini Stats END -->
 			
 			<!-- Regular Size Menu -->
-			<ul>
+			<ul id="miniMenu">
         <!-- Menu Regular Item -->
 				<li class="glyphicons display active"><a href="#"><i></i><span>Inicio</span></a></li>
 				<li class="glyphicons group"><a href="#allsocios"><i></i><span>Socios</span></a></li>
@@ -223,7 +223,7 @@
 			<div class="separator bottom"></div>
 			<!-- // Regular Size Menu END -->
 			<!-- Larger Menu Style -->
-			<ul>
+			<ul id="bigMenu">
 				<li class="large hasSubmenu glyphicons notes">
 					<a data-toggle="collapse" href="#menu_cuotas"><i></i><span>Cuotas</span></a>
 					<ul class="collapse" id="menu_cuotas">
@@ -315,193 +315,6 @@
 <div id="APPContainer">
 <section class="rigthPanel">
 <div id="mainDisplayer">
-<div class="innerLR">
-
-	<!-- Quick Tabs Widget -->
-	<div class="widget widget-tabs widget-quick hidden-print">
-	
-		<!-- Tabs Widget Heading -->
-		<div class="widget-head">
-			<ul>
-				<li class="active"><a href="#quickIndexTab" data-toggle="tab" class="glyphicons user"><i></i>Profile</a></li>
-				<li><a href="#quickPhotosTab" data-toggle="tab" class="glyphicons camera"><i></i>Photos</a></li>
-				<li><a href="#quickFriendsTab" data-toggle="tab" class="glyphicons parents"><i></i>Friends</a></li>
-				<li><a href="#quickLocationTab" data-toggle="tab" class="glyphicons google_maps"><i></i>Location</a></li>
-				<li><a href="#quickOtherTab" data-toggle="tab" class="glyphicons retweet"><i></i>Other</a></li>
-			</ul>
-		</div>
-		<!-- // Tabs Widget Heading END -->
-		
-		<div class="widget-body">
-			<div class="tab-content">
-			
-				<!-- Quick Index Tab -->
-				<div class="tab-pane active" id="quickIndexTab">
-					<div class="row">
-						<div class="col-md-2 center">
-						
-							<!-- Profile Photo -->
-							<a href="" class="thumb no-max"><img src="assets/common/theme/images/mrawesome_large.jpg" alt="Profile" /></a>
-							<div class="separator bottom"></div>
-							<!-- // Profile Photo END -->
-							
-							<!-- Social Icons -->
-							<a href="" class="glyphicons-social standard primary facebook"><i></i></a>
-							<a href="" class="glyphicons-social standard twitter"><i></i></a>
-							<a href="" class="glyphicons-social standard linked_in"><i></i></a>
-							<!-- // Social Icons END -->
-							
-						</div>
-						<div class="col-md-6">
-						
-							<!-- About -->
-							<h5>Mr.Awesome</h5>
-							<div class="menubar links primary">
-								<ul>
-									<li>Link widget:</li>
-									<li><a href="">Button 1</a></li>
-									<li class="divider"></li>
-									<li><a href="">Button 2</a></li>
-									<li class="divider"></li>
-									<li><a href="">Button 3</a></li>
-								</ul>
-							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis porta purus, pulvinar mattis nulla tempus ut. Curabitur quis dui orci. Ut nisi dolor, dignissim a aliquet quis, vulputate id dui. Proin ultrices ultrices ligula, dictum varius turpis faucibus non. Curabitur faucibus ultrices nunc, nec aliquet leo tempor cursus.</p>
-							<!-- // About END -->
-							
-							<!-- Twitter Section -->
-							<h5 class="glyphicons-social single twitter"><i></i> Latest from Twitter</h5>
-							<section class="twitter-feed">
-								<div class="row">
-									<div class="col-md-12">
-										<div class="tweet">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc lorem, rutrum non porta. <span class="label label-inverse">01/11/2012</span></div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</section>
-							<!-- Twitter Section END -->
-							
-						</div>
-						<div class="col-md-4">
-						
-							<!-- Bio -->
-							<h5>Bio <span>Personal information</span></h5>
-							<div class="separator bottom"></div>
-							<ul class="unstyled icons">
-								<li class="glyphicons birthday_cake"><i></i> <span class="label label-default">10</span> <span class="label label-default">July</span> <span class="label label-default">1986</span></li>
-								<li class="glyphicons tie"><i></i> Working at <a href="http://www.mosaicpro.biz">MosaicPro</a></li>
-								<li class="glyphicons certificate"><i></i> Adobe Photoshop Certification</li>
-								<li class="glyphicons microphone"><i></i> English :: French :: Italian :: Romanian :: Polish</li>
-							</ul>
-							<!-- // Bio END -->
-							
-						</div>
-					</div>
-				</div>
-				<!-- // Quick Index Tab END -->
-				
-				<!-- Quick Photos Tab -->
-				<div class="tab-pane" id="quickPhotosTab">
-				
-					<!-- Tabs -->
-					<div class="tabsbar tabsbar-2">
-						<ul class="row row-merge">
-							<li class="glyphicons camera active col-md-3"><a href="gallery_1.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i> View all photos <strong>(43)</strong></a></li>
-							<li class="glyphicons folder_open col-md-3"><a href="gallery_1.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i> Albums <strong>(3)</strong></a></li>
-							<li class="glyphicons circle_plus col-md-3"><a href="gallery_1.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i> <span>Add Photos</span></a></li>
-							<li class="glyphicons folder_plus col-md-3"><a href="gallery_1.html?lang=en&amp;layout_type=fluid&amp;menu_position=menu-left&amp;style=style-dark"><i></i> <span>Create Album</span></a></li>
-						</ul>
-					</div>
-					<!-- // Tabs END -->
-					
-					<!-- Gallery Layout -->
-					<div class="gallery gallery-2">
-						<ul class="row" id="gallery-4">
-														<li class="col-md-2">
-								<a data-toggle="prettyPhoto" class="thumb" rel="prettyPhoto[gallery]" href="assets/common/theme/images/gallery-2/1.jpg" data-gallery="gallery">
-									<img src="assets/common/theme/images/gallery-2/1.jpg" alt="photo" /></a>
-								</li>
-														<li class="col-md-2">
-								<a data-toggle="prettyPhoto" class="thumb" rel="prettyPhoto[gallery]" href="assets/common/theme/images/gallery-2/2.jpg" data-gallery="gallery">
-									<img src="assets/common/theme/images/gallery-2/2.jpg" alt="photo" /></a>
-								</li>
-														<li class="col-md-2">
-								<a data-toggle="prettyPhoto" class="thumb" rel="prettyPhoto[gallery]" href="assets/common/theme/images/gallery-2/3.jpg" data-gallery="gallery">
-									<img src="assets/common/theme/images/gallery-2/3.jpg" alt="photo" /></a>
-								</li>
-														<li class="col-md-2 hidden-phone">
-								<a data-toggle="prettyPhoto" class="thumb" rel="prettyPhoto[gallery]" href="assets/common/theme/images/gallery-2/4.jpg" data-gallery="gallery">
-									<img src="assets/common/theme/images/gallery-2/4.jpg" alt="photo" /></a>
-								</li>
-														<li class="col-md-2 hidden-phone">
-								<a data-toggle="prettyPhoto" class="thumb" rel="prettyPhoto[gallery]" href="assets/common/theme/images/gallery-2/5.jpg" data-gallery="gallery">
-									<img src="assets/common/theme/images/gallery-2/5.jpg" alt="photo" /></a>
-								</li>
-														<li class="col-md-2 hidden-phone">
-								<a data-toggle="prettyPhoto" class="thumb" rel="prettyPhoto[gallery]" href="assets/common/theme/images/gallery-2/6.jpg" data-gallery="gallery">
-									<img src="assets/common/theme/images/gallery-2/6.jpg" alt="photo" /></a>
-								</li>
-													</ul>
-					</div>
-					<!-- // Gallery Layout END -->
-					
-					<!-- Pagination -->
-					<div class="btn-group">
-						<a class="btn disabled btn-small btn-default glyphicons standard chevron-left"><i></i></a>
-						<a class="btn btn-small btn-default glyphicons standard chevron-right"><i></i></a>
-					</div>
-					<span class="innerLR">1-6 out of 43</span>
-					<!-- // Pagination END -->
-					
-				</div>
-				<!-- // Quick Photos Tab END -->
-				
-				<!-- Quick Friends Tab -->
-				<div class="tab-pane" id="quickFriendsTab">
-					<h5 class="margin-none">Just a tab</h5>
-					<p class="margin-bottom-none">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-				</div>
-				<!-- // Quick Friends Tab END -->
-				
-				<!-- Quick Location Tab -->
-				<div class="tab-pane" id="quickLocationTab">
-					<h5 class="margin-none">Just a tab</h5>
-					<p class="margin-bottom-none">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-				</div>
-				<!-- // Quick Location Tab END -->
-				
-				<!-- Quick Other Tab -->
-				<div class="tab-pane" id="quickOtherTab">
-					<h5 class="margin-none">Just a tab</h5>
-					<p class="margin-bottom-none">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-				</div>
-				<!-- // Quick Other Tab END -->
-				
-			</div>
-			<div class="ribbon-wrapper"><div class="ribbon primary">profile</div></div>
-		</div>
-	</div>
-	<!-- // Quick Tabs Widget END -->
-<!-- Button Widget -->
-<div class="menubar">
-	<ul>
-		<li>Button widget:</li>
-		<li><a href="">Button 1</a></li>
-		<li class="divider"></li>
-		<li><a href="">Button 2</a></li>
-		<li class="divider"></li>
-		<li><a href="">Export</a></li>
-	</ul>
-</div>
-<div class="separator"></div>
-<!-- // Button Widget END -->
-
-<div class="innerLR">
-	<div class="separator bottom"></div>
-	<div class="separator bottom"></div>
-</div>	
-		
-		</div>
 		</div>
 		</section>
 		</div>
@@ -721,7 +534,6 @@
 
 
 	<!-- My OWN scripting -->
-  <script src="assets/js/start.js" type="text/javascript"></script>
   <script src="assets/js/libs/jquery-uiDatePicker.js"></script>
   <script src="assets/js/libs/jQueryDataPickerEs.js"></script>
   <script src="assets/js/libs/jQueryAutocomplete.js"></script>
@@ -755,15 +567,13 @@
   <script src="assets/js/app/models/socio.js"></script>
   <script src="assets/js/app/models/deudaSocio.js"></script>
   <!-- Views -->
-  <script src="assets/js/app/views/mainView.js"></script>
-  <script src="assets/js/app/views/navMainView.js"></script>
+  <script src="assets/js/app/views/indexView.js"></script>
   <script src="assets/js/app/views/addSocioView.js"></script>
   <script src="assets/js/app/views/socioView.js"></script>
   <script src="assets/js/app/views/memoParientesView.js"></script>
   <script src="assets/js/app/views/cuotasView.js"></script>
   <script src="assets/js/app/views/socioCargosView.js"></script>
   <script src="assets/js/app/views/allBalanceView.js"></script>
-  <script src="assets/js/app/views/flangeCargosView.js"></script>
 
 </body>
 </html>

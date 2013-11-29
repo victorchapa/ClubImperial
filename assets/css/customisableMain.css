@@ -1,3 +1,7 @@
+.display-none {
+  display: none;
+}
+
 #content {
   min-height: 600px;
 }
@@ -12,6 +16,10 @@
 #menu > ul ul li a.glyphicons i:before {
   font-size: 20px;
   color: white;
+}
+
+ul#bigMenu li:hover {
+  background: rgba(0, 0, 0, 0.4) url("../images/pattern1.png") repeat;
 }
 
 .to-right {
@@ -32,11 +40,20 @@
 }
 
 #allDebts .emergentWindow {
-  height: 40px;
+  height: 50px;
+  background: #4e72c2 url("../images/mosaic-pattern.png") repeat;
+  width: 100px;
+  color: white;
 }
 
 #allDebts .emergentWindow .idSocio {
   margin-top: 9px;
+  text-align: center;
+}
+
+#allDebts .emergentWindow .idSocio p:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .memoField {
@@ -144,6 +161,10 @@ margin-left: 5px;
 
 .tableContent {
   margin: 20px;
+}
+
+.balanceHeader {
+  margin-right: 20px;
 }
 
 .table-finder {

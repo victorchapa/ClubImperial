@@ -54,6 +54,7 @@ var AllBalanceView = Backbone.View.extend({
     },
 
     setDataTable: function(socios){
+        var self = this;
         var dataSourcing = _.map(socios.socios, function(socio){
             var data = [];
             data.push(socio.IdSocio);
@@ -74,18 +75,22 @@ var AllBalanceView = Backbone.View.extend({
             "sDom": "<'row'<'col-md-6'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
         });
         $("#balanceTable thead tr th:nth-child(1)").css({width: "70px"});
+        $("#balanceTable_filter").css({marginBottom: "10px"});
         $("input", "#balanceTable_filter").addClass("table-finder");
-        $("#balanceTable").on("click", function(e){
-            console.log(e.target);
+        $("select", "#balanceTable_length").addClass("table-pager");
+
+        $("#balanceTable tbody").on("click", function(e){
+            self.showWindowAction(e);
         });
     },
 
     clearMainNav: function(){
-        var targets = $(".mainNav ul li");
+        var targets = $("#miniMenu li");
         _.each(targets, function(target){
             $(target).removeClass("active");
         });
-        $(".mainNav ul li:nth-child(3)").addClass("active");
+        $("#bigMenu #menu_cuotas li:nth-child(2)").addClass("active");
+        $("#activityR").removeClass("in").addClass("collapse");
     },
 
     getSocioCargosView: function(){
@@ -150,8 +155,9 @@ var AllBalanceView = Backbone.View.extend({
 
     showWindowAction: function(e){
         var self = this;
-        var targetIdSocio =  $(e.target).parent().attr("idsocio");
-        var targetCoordenades = [(e.pageX - 215) + "px", (e.pageY - 155) + "px"];
+        var father =  $(e.target).parent();
+        var targetIdSocio = $("td:nth-child(1)", father).text();
+        var targetCoordenades = [(e.pageX - 220) + "px", (e.pageY - 200) + "px"];
         $(".spanIdSocio").text(targetIdSocio);
         $(".actionsSocio").css({
             left: targetCoordenades[0],
@@ -161,7 +167,7 @@ var AllBalanceView = Backbone.View.extend({
         $(".actionsSocio").on("mouseleave", function(){
             setTimeout(function(){
                 $(".actionsSocio").hide();
-            }, 1500);
+            }, 500);
         });
 
         $(".showDetails").on("click", function(){
