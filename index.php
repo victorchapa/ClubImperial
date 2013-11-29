@@ -49,6 +49,13 @@
 	
 	<!-- JQueryUI -->
 	<link href="assets/common/theme/scripts/plugins/system/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" />
+<<<<<<< HEAD
+=======
+
+	<!-- JQueryDataTables -->
+	<link href="assets/common/theme/scripts/plugins/tables/DataTables/css/jquery.dataTables.css" rel="stylesheet" />
+	<link href="assets/common/theme/scripts/plugins/tables/DataTables/css/DT_bootstrap.css" rel="stylesheet" />
+>>>>>>> 4470635d9acd84cac7114eef2a3dd266439a64c2
 	
 	<!-- MiniColors ColorPicker Plugin -->
 	<link href="assets/common/theme/scripts/plugins/color/jquery-miniColors/jquery.miniColors.css" rel="stylesheet" />
@@ -631,6 +638,14 @@
 	<!-- small hack that enables the use of touch events on sites using the jQuery UI user interface library -->
 	<script src="assets/common/theme/scripts/plugins/system/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 
+<<<<<<< HEAD
+=======
+	<!-- JQueryDataTables -->
+	<script src="assets/common/theme/scripts/plugins/tables/DataTables/js/jquery.dataTables.min.js"></script>
+	<script src="assets/common/theme/scripts/plugins/tables/DataTables/js/DT_bootstrap.js"></script>
+	<script src="assets/common/theme/scripts/plugins/tables/DataTables/js/datatables.init.js"></script>
+
+>>>>>>> 4470635d9acd84cac7114eef2a3dd266439a64c2
 	<!-- Modernizr -->
 	<script src="assets/common/theme/scripts/plugins/system/modernizr.js"></script>
 	
@@ -715,7 +730,10 @@
   <script src="assets/js/start.js" type="text/javascript"></script>
   <script src="assets/js/libs/jquery-uiDatePicker.js"></script>
   <script src="assets/js/libs/jQueryDataPickerEs.js"></script>
+<<<<<<< HEAD
   <script src="assets/js/libs/jQueryAutocomplete.js"></script>
+=======
+>>>>>>> 4470635d9acd84cac7114eef2a3dd266439a64c2
 
   <!--Scrypting-->
   <script src="assets/js/main.js"></script>

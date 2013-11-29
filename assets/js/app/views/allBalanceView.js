@@ -48,8 +48,35 @@ var AllBalanceView = Backbone.View.extend({
                 var socios = {socios: data};
                 $("#allDebts").html(compiledTemplate(socios));
                 self.getAutocomplete();
-
+                self.setDataTable(socios);
             },
+        });
+    },
+
+    setDataTable: function(socios){
+        var dataSourcing = _.map(socios.socios, function(socio){
+            var data = [];
+            data.push(socio.IdSocio);
+            data.push(socio.Nombre);
+            data.push(socio.Cargo);
+            data.push(socio.Abono);
+            return(data);
+        });
+        $("#balanceTable").dataTable({
+            "aaData": dataSourcing,
+            "aoColumns": [
+                {"sTitle":  "ID Socio", "sClass": "center"},
+                {"sTitle":  "Socio"},
+                {"sTitle":  "Cargo", "sClass": "center"},
+                {"sTitle":  "Abono", "sClass": "center"},
+            ],
+            "sPaginationType": "bootstrap",
+            "sDom": "<'row'<'col-md-6'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
+        });
+        $("#balanceTable thead tr th:nth-child(1)").css({width: "70px"});
+        $("input", "#balanceTable_filter").addClass("table-finder");
+        $("#balanceTable").on("click", function(e){
+            console.log(e.target);
         });
     },
 

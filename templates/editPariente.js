@@ -77,6 +77,7 @@ TEMPLATES.editPariente =
             "</p>" +
             "<p>Fecha de Alta: <input class='datePicker input-sm form-control' type='text' name='FAlta' placeholder='mm/dd/aaaa' readonly value='<% print(socio.FAlta); %>'></p>" +
             "<p>Afiliación: </p>" +
+                "<span>" +
                 "<% if(socio.Afiliacion.Golf == true) { %>" +
                     "<span><input type='checkbox' name='Afiliacion[]' value='Golf' checked> Golfista. </span>" +
                 "<% }else{%>"+
@@ -107,6 +108,7 @@ TEMPLATES.editPariente =
                 "<% }else{%>"+
                     "<span><input type='checkbox' name='Afiliacion[]' value='SPA'> SPA. </span>" +
                 "<% } %>" +
+                "</span>" +
             "<p><input class='btn btn-success' type='submit' value='Editar Pariente'></p>" +
         "</div>" +
         "</form>" +
