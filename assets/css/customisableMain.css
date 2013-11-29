@@ -88,3 +88,36 @@ p.nombrePariente.selected {
 #modalParientes .modal-header {
   padding-bottom: 25px;
 }
+
+ul.navSocio li p, ul.navCuotas li p {
+  text-decoration: none;
+  margin: 0px;
+  cursor: pointer;
+  color: #2E2EFE;
+}
+
+ul.navSocio li p:hover, ul.navCuotas li p:hover {
+  color: #08088A;
+}
+
+ul.navSocio li.active p, ul.navCuotas li.active p {
+  background-color: #64625f;
+}
+
+.widget.widget-tabs > .widget-head ul li p {
+width: auto;
+height: auto;
+display: block;
+padding: 0 15px;
+color: #555;
+text-decoration: none;
+line-height: 30px;
+}
+
+.widget.widget-tabs > .widget-head ul li.active p {
+color: #fff;
+}
+
+input[type="file"].display-none {
+  display: none;
+}
