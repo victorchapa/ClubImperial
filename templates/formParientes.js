@@ -1,5 +1,6 @@
 TEMPLATES.formParientes =
 "<script type='text/template'>" +
+    "<div class='editSocioForm'>" +
     "<div class='row'>" +
     "<form id='formPariente' method='post' action='api/AddPariente.php' enctype='multipart/form-data'>" +
         "<div class='col-md-12'>" +
@@ -61,5 +62,6 @@ TEMPLATES.formParientes =
             "<p><span id='fileNamePariente'></span></p>" +
         "</div>" +
         "</form>" +
+    "</div>" +
     "</div>"
 "</script>";
