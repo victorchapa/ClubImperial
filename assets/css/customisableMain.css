@@ -132,13 +132,12 @@ margin-left: 5px;
   margin-top: 10px;
 }
 
-<<<<<<< HEAD
 .editSocioForm input[type="text"], .editSocioForm select{
   display: inline;
   margin-left: 5px;
   width: 250px;
 }
-=======
+
 .editParienteForm p{
   float: left;
 }
@@ -162,4 +161,3 @@ margin-left: 5px;
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
->>>>>>> 4470635d9acd84cac7114eef2a3dd266439a64c2
