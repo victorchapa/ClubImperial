@@ -36,7 +36,7 @@ $(function()
 					"sPaginationType": "bootstrap",
 					"sDom": "<'row'<'col-md-5'T><'col-md-3'l><'col-md-4'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
 					"oLanguage": {
-						"sLengthMenu": "_MENU_ per page"
+						"sLengthMenu": "_MENU_ registros por página"
 					},
 					"oTableTools": {
 						"sSwfPath": "../extras/TableTools/media/swf/copy_csv_xls_pdf.swf"
@@ -53,7 +53,7 @@ $(function()
 					"sPaginationType": "bootstrap",
 					"sDom": "<'row'<'col-md-3'f><'col-md-3'l><'col-md-6'C>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
 					"oLanguage": {
-						"sLengthMenu": "_MENU_ per page"
+						"sLengthMenu": "_MENU_ registros por página"
 					},
 					"fnInitComplete": function () {
 				    	fnInitCompleteCallback(this);
@@ -67,7 +67,7 @@ $(function()
 					"sPaginationType": "bootstrap",
 					"sDom": "<'row'<'col-md-5'T><'col-md-3'l><'col-md-4'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
 					"oLanguage": {
-						"sLengthMenu": "_MENU_ per page"
+						"sLengthMenu": "_MENU_ registros por página"
 					},
 					"fnInitComplete": function () {
 				    	fnInitCompleteCallback(this);
