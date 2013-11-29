@@ -15,3 +15,4 @@ TEMPLATES.socioNav =
 		"</div>" +
     "</div>";
 "</script>";
+    "</div>";
