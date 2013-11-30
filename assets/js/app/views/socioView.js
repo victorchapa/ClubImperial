@@ -19,6 +19,7 @@ var SocioView = Backbone.View.extend({
         });
         $("#bigMenu li:nth-child(1)").removeClass("active");
         $("#miniMenu li:nth-child(2)").addClass("active");
+        $("#activityR").removeClass("in").addClass("collapse");
     },
 
     initialize: function(){
@@ -27,6 +28,7 @@ var SocioView = Backbone.View.extend({
     },
 
     render: function(){
+        var self = this;
         $("#mainDisplayer").html(TEMPLATES.socioNav);
 
         var template = TEMPLATES.allSocios;
@@ -37,13 +39,71 @@ var SocioView = Backbone.View.extend({
                 var data = collectionSocios.toJSON();
                 var socios = {socios: data};
                 $(".socioBody").html(compiledTemplate(socios));
+                self.setDataTable(socios);
             }
         });
     },
 
+    setDataTable: function(socios){
+        var self = this;
+        var dataSourcing = _.map(socios.socios, function(socio){
+            var data = [];
+            data.push(socio.IdSocio);
+            data.push(socio.Nombre);
+            data.push(socio.ApellidoP);
+            data.push(socio.ApellidoM);
+            data.push(socio.FNacimiento);
+            data.push(socio.Domicilio);
+            data.push(socio.Manzana);
+            data.push(socio.Lote);
+            data.push(socio.Coto);
+            data.push(socio.Telefono);
+            data.push(socio.Celular);
+            data.push(socio.Correo);
+            data.push(socio.Membresia);
+            data.push(socio.Sangre);
+            data.push(socio.FAlta);
+            data.push(socio.Afiliacion);
+            return(data);
+        });
+        $("#sociosTable").dataTable({
+            "aaData": dataSourcing,
+            "aoColumns": [
+                {"sTitle":  "ID Socio", "sClass": "center"},
+                {"sTitle":  "Nombre"},
+                {"sTitle":  "Apellido Paterno"},
+                {"sTitle":  "Apellido Materno"},
+                {"sTitle":  "Fecha de Nacimiento", "sClass": "center"},
+                {"sTitle":  "Domicilio"},
+                {"sTitle":  "Manzana"},
+                {"sTitle":  "Coto", "sClass": "center"},
+                {"sTitle":  "Telefono", "sClass": "center"},
+                {"sTitle":  "Celular", "sClass": "center"},
+                {"sTitle":  "Email"},
+                {"sTitle":  "Membresia"},
+                {"sTitle":  "Tipo de Membresia"},
+                {"sTitle":  "Tipo de Sangre", "sClass": "center"},
+                {"sTitle":  "Fecha de Alta", "sClass": "center"},
+                {"sTitle":  "Afiliacion"},
+            ],
+            "sPaginationType": "bootstrap",
+            "sDom": "<'row'<'col-md-6'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
+        });
+        $("#sociosTable thead tr th:nth-child(1)").css({width: "70px"});
+        $("#sociosTable_filter").css({marginBottom: "10px"});
+        $("input", "#sociosTable_filter").addClass("table-finder");
+        $("select", "#sociosTable_length").addClass("table-pager");
+
+        $("#sociosTable tbody").on("click", function(e){
+            self.showWindowAction(e);
+        });
+    },
+
     showWindowAction: function(e){
-        var targetIdSocio =  $(e.target).parent().attr("idsocio");
-        var targetCoordenades = [(e.pageX - 215) + "px", (e.pageY - 55) + "px"];
+        var self = this;
+        var father =  $(e.target).parent();
+        var targetIdSocio = $("td:nth-child(1)", father).text();
+        var targetCoordenades = [(e.pageX - 230) + "px", (e.pageY - 200) + "px"];
         $(".spanIdSocio").text(targetIdSocio);
         $(".actionsSocio").css({
             left: targetCoordenades[0],
@@ -89,13 +149,13 @@ var SocioView = Backbone.View.extend({
     },
     
     hideSociosTable: function(){
-        $("table", ".socioBody").hide();                
+        $(".tableContainer").hide();                
     },
 
     showSociosTable: function(e){
         $(".navSocio li:nth-child(1)").addClass("active");
         $(".navSocio li:nth-child(2)").removeClass("active");
-        $("table", ".socioBody").show();                
+        $(".tableContainer").show();                
         $("#editSocio").hide();                
     },
     
