@@ -6,7 +6,7 @@ TEMPLATES.cuotasForm =
             "<div class='well margin-none'>" +
                 "<address class='margin-none'>" +
                     "<form id='charges' class='cuotaForm' method='post' action='api/cpago.php' enctype='multipart/form-data'>" +
-                        "<h2>Generar Cobro:</h2>" +
+                        "<h2 class='heading-arrow'>Generar Cobro:</h2>" +
                         "<p>Nombre de Cliente: <input class='input-sm form-control' id='socioFinder' type='text' name='Nombre'></p>" +
                         "<p>Servicio: <select class='input-sm form-control' name='Servicio'>" +
                             "<option value='Mensualidad'>Mensualidad</option>" +
