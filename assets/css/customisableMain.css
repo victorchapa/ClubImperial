@@ -182,6 +182,16 @@ margin-left: 5px;
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
+
 .cuotasForm{
   margin: 5px 0 10px 10px;
+}
+
+.cargosFinder {
+  width: 500px;
+}
+
+.cargosFinder input[type="text"], .cargosFinder select{
+  display: inline;
+  width: 160px;
 }
