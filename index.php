@@ -536,7 +536,6 @@
 	<!-- My OWN scripting -->
   <script src="assets/js/libs/jquery-uiDatePicker.js"></script>
   <script src="assets/js/libs/jQueryDataPickerEs.js"></script>
-  <script src="assets/js/libs/jQueryAutocomplete.js"></script>
 
   <!--Scrypting-->
   <script src="assets/js/main.js"></script>
