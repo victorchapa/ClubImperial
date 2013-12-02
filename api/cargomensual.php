@@ -45,7 +45,7 @@
 				$serv = $servicio["Servicio"];
 				$cargo = $servicio["Cargo"];
 				$balance = $balance[0]["Cargo"] + $cargo;
-				$newcargo = add("INSERT INTO cargos (IdSocio, Servicio, Cargo, Dia, Mes, Year) VALUES ('$id', '$serv', '$cargo', '$estedia', '$estemes', '$esteaño')");
+				$newcargo = add("INSERT INTO cargos (IdSocio, Servicio, Cargo, Saldo, Dia, Mes, Year) VALUES ('$id', '$serv', '$cargo', '$cargo', '$estedia', '$estemes', '$esteaño')");
 				$newbalance = add("UPDATE balance SET Cargo = '$balance' WHERE IdSocio = '$id' AND Mes = '$estemes' AND Year = '$esteaño'");
 			}
 		}
