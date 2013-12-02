@@ -214,3 +214,23 @@ margin-left: 5px;
 .tableContainer {
   overflow: auto;
 }
+
+.blue-table.table-factura {
+  margin: 10px 0 10px 10px;
+  width: 90%;
+}
+
+.blue-table.table-factura .Addabono {
+  width: 230px;
+}
+
+.blue-table.table-factura .Addabono input[type="text"] {
+  width: 160px;
+  display: inline;
+}
+
+.blue-table.table-factura .Addabono .glyphicons.icon-edit {
+  position: absolute;
+  padding-left: 5px;
+  margin-top: 3px;
+}

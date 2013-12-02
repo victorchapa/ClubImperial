@@ -3,9 +3,11 @@ var SocioCargosView = Backbone.View.extend({
     el: "#mainDisplayer",
 
     events: {
-        "click .filterBy"   :   "filterByMY",
-        "click .showDebt"   :   "showBalanceFlange",
-        "click .showCuota"  :   "showCuotasFlange",
+        "click .filterBy"       :   "filterByMY",
+        "click .showDebt"       :   "showBalanceFlange",
+        "click .showCuota"      :   "showCuotasFlange",
+        "click .Addabono"       :   "showAbonoInput",
+        "mouseleave .Addabono"  :   "hideAbonoInput",
     },
 
     initialize: function(){
@@ -73,6 +75,14 @@ var SocioCargosView = Backbone.View.extend({
     showCuotasFlange: function(){
         this.kill();
         this.router.navigate("ccuotas", {trigger: true, replace: true});
+    },
+
+    showAbonoInput: function(){
+        $(".plusAbono").show();
+    },
+
+    hideAbonoInput: function(){
+        $(".plusAbono").hide("slow");
     },
 
     kill: function(){
