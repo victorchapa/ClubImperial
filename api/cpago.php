@@ -14,6 +14,9 @@
   $hora = date("g:i a");
   $servicio = $_POST["Servicio"];
   $abono = $_POST["Abono"];
+  if ($abono == ""){
+    $abono = 0;
+  }
   $total = $_POST["Total"];
   $deudas = consultar("SELECT * FROM balance WHERE Nombre = '$nombre' AND Mes = '$mes' AND Year = '$year'");
   $id = consultar("SELECT IdSocio FROM socios WHERE Nombre= '$name' AND ApellidoP = '$ap' AND ApellidoM = '$am'");
