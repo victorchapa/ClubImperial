@@ -39,7 +39,8 @@ ul#bigMenu li:hover {
   border-radius: 4px;
 }
 
-#allDebts .emergentWindow {
+
+#allDebts .emergentWindow, .emergentWindow.windowOptionsSocio {
   height: 50px;
   background: #4e72c2 url("../images/mosaic-pattern.png") repeat;
   width: 100px;
@@ -51,7 +52,21 @@ ul#bigMenu li:hover {
   text-align: center;
 }
 
+.emergentWindow.windowOptionsSocio {
+  height: 70px;
+}
+
+.emergentWindow.windowOptionsSocio .idSocio {
+  text-align: center;
+  margin-top: 10px;
+}
+
 #allDebts .emergentWindow .idSocio p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.emergentWindow.windowOptionsSocio .idSocio p:hover {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -194,4 +209,8 @@ margin-left: 5px;
 .cargosFinder input[type="text"], .cargosFinder select{
   display: inline;
   width: 160px;
+}
+
+.tableContainer {
+  overflow: auto;
 }

@@ -22,6 +22,7 @@
 		$balance = consultar("SELECT * FROM balance WHERE IdSocio = '$id' AND Mes = '$mes' AND Year = '$año'");
 		if ($balance[0]["Abono"] < $balance[0]["Cargo"]){
 			$cargo = $balance[0]["Cargo"] - $balance[0]["Abono"];
+			$abono = 0;
 			$cargomespasado = add("INSERT INTO cargos (IdSocio, Nombre, Servicio, Deuda, Cargo, Mes, Year) VALUES ('$id', '$nombre', '$servicio', '$cargo', '$cargo', '$estemes', '$esteaño')");
 		} else {
 			if ($balance[0]["Abono"] > $balance[0]["Cargo"]){
