@@ -26,7 +26,7 @@ TEMPLATES.cargos =
       "</address>" +
     "</div>" +
   "</div>" +
-          "<table class='blue-table table-factura' border='1' cellspacing='0'>" +
+          "<table class='blue-table table-factura table table-primary table-bordered' border='1' cellspacing='0'>" +
           "<thead>" +
             "<tr>" +
                 "<th>Servicio</th>" +
@@ -49,7 +49,7 @@ TEMPLATES.cargos =
                     "<% tabono  = tabono + parseFloat(factura.Abono); %>" +
                     "<% tsaldo  = tsaldo + parseFloat(factura.Saldo); %>" +
                     "<td>$<% print(factura.Cargo); %></td>" +
-                    "<td class='Addabono'>$<% print(factura.Abono); %> + $<input type='text' name='abono' onkeydown='if(event.keyCode == 13){this.form.submit();}' value=''/></td>" +
+                    "<td class='Addabono'><span>$<% print(factura.Abono); %></span><span class='plusAbono' style='display:none;'> + $<input class='input-sm form-control' type='text' name='abono' onkeydown='if(event.keyCode == 13){this.form.submit();}' value=''/></span><i class='glyphicons icon-edit'></i></td>" +
                     "<td>$<% print(factura.Saldo); %></td>" +
                 "</form>" +
                 "</tr>" +
