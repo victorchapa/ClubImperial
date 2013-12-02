@@ -6,6 +6,8 @@ $y = $_GET["y"];
 $recibo = consultar("SELECT * FROM Cargos WHERE IdSocio='$id' AND Mes='$m' AND Year='$y'");
 $balance = consultar("SELECT * FROM Balance WHERE IdSocio='$id' AND Mes='$m' AND Year='$y'");
 $tcargo = 0;
+$tabono = 0;
+$tsaldo= 0;
 
 	if($recibo){
 	$hora = $recibo[0]["Hora"];
@@ -24,18 +26,23 @@ $tcargo = 0;
 	echo "<tr><td><b>Servicio</b></td>";
 	echo "<td><b>Fecha/hora</b></td>";
 	echo "<td><b>Cargo</b></td>";
+	echo "<td><b>Abono</b></td>";
 	echo "<td><b>Saldo</b></td></tr>";
 	foreach($recibo as $r){
 		echo "<tr><td>".$r["Servicio"]."</td>";
 		echo "<td>".$r["Dia"]."/".$r["Mes"]."/".$r["Year"]." ".$r["Hora"]."</td>";
 		echo "<td>$".$r["Cargo"]."</td>";
-		echo "<td>$".$r["Deuda"]."</td></tr>";
 		$tcargo += $r["Cargo"];
+		echo "<td>$".$r["Abono"]."</td>";
+		$tabono += $r["Abono"];
+		echo "<td>$".$r["Saldo"]."</td></tr>";
+		$tsaldo += $r["Saldo"];
 	}
 		echo "<tr><td>Cargo Total</td>";
         echo "<td> </td>";
         echo "<td>$".$tcargo."</td>";
-        echo "<td>$".$balance[0]["Cargo"]."</td></tr>";
+        echo "<td>$".$tabono."</td>";
+        echo "<td>$".$tsaldo."</td></tr>";
 		echo "</table></html>";
 }
  ?>
