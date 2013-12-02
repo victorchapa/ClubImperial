@@ -21,7 +21,6 @@ var IndexView = Backbone.View.extend({
         _.each(targets, function(target){
             $(target).removeClass("active");
         });
-        $("#bigMenu li:nth-child(1)").removeClass("active");
         $("#miniMenu li:nth-child(1)").addClass("active");
     },
 

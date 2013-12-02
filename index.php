@@ -216,13 +216,19 @@
 			<ul id="miniMenu">
         <!-- Menu Regular Item -->
 				<li class="glyphicons display active"><a href="#"><i></i><span>Inicio</span></a></li>
-				<li class="glyphicons group"><a href="#allsocios"><i></i><span>Socios</span></a></li>
-				<li class="glyphicons user_add"><a href="#addsocio"><i></i><span>Agregar Socio</span></a></li>
+        <li class="hasSubmenu">
+          <a class="glyphicons parents" href="#menu_socios" data-toggle="collapse"><i></i><span>Socios</span></a>
+          <ul class="collapse" id="menu_socios">
+				    <li><a href="#allsocios" class="glyphicons group"><i></i><span>Todos los Socios</span></a></li>
+				    <li><a href="#addsocio" class="glyphicons user_add"><i></i><span>Agregar Socio</span></a></li>
+          </ul>
+          <span class="count">2</span>
+        </li>
         <li class="hasSubmenu">
           <a class="glyphicons notes" href="#menu_cuotas" data-toggle="collapse"><i></i><span>Cuotas</span></a>
           <ul class="collapse" id="menu_cuotas">
             <li><a href="#ccuotas" class="glyphicons money"><i></i><span>Generar Cobro</span></a></li>
-            <li><a href="#ccuotas" class="glyphicons stats"><i></i><span>Balance TOTAL</span></a></li>
+            <li><a href="#ccuotas/balance" class="glyphicons stats"><i></i><span>Balance TOTAL</span></a></li>
           </ul>
           <span class="count">2</span>
         </li>

@@ -234,3 +234,7 @@ margin-left: 5px;
   padding-left: 5px;
   margin-top: 3px;
 }
+
+#miniMenu .hasSubmenu ul i {
+  margin-right: 5px;
+}
