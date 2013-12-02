@@ -112,11 +112,11 @@ var SocioView = Backbone.View.extend({
             top: targetCoordenades[1],
         }).show();
 
-        //$(".actionsSocio").on("mouseleave", function(){
-            //setTimeout(function(){
-                //$(".actionsSocio").hide();
-            //}, 1500);
-        //});
+        $(".actionsSocio").on("mouseleave", function(){
+            setTimeout(function(){
+                $(".actionsSocio").hide();
+            }, 500);
+        });
         
     },
 

@@ -274,7 +274,7 @@
 	  <div class="row">
 		  <div class="col-md-6 to-right">
 			  <!-- Activity/List Widget -->
-			  <div class="widget" data-toggle="collapse-widget">
+			  <div class="widget RecentlyActivity" data-toggle="collapse-widget">
 			
 				  <!-- Widget Heading -->
 				  <div class="widget-head">
@@ -532,6 +532,7 @@
   <!--Scrypting-->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/router.js"></script>
+  <script src="assets/js/scripting.js"></script>
   <script src="templates/templates.js"></script>
 
   <!-- Templates -->
