@@ -154,24 +154,81 @@ input[type="file"].display-none {
   display: none;
 }
 
-.editParienteForm input[type="text"], .editParienteForm select{
-width: 250px;
-display: inline;
-margin-left: 5px;
-}
-
-.editParienteForm input[type="submit"]{
-  margin-top: 10px;
-}
-
-.editSocioForm input[type="text"], .editSocioForm select{
+.SocioForm input[type="text"], .SocioForm select{
   display: inline;
   margin-left: 5px;
   width: 250px;
 }
 
-.editParienteForm p{
+.SocioForm span {
+  display: inline-block;
+  width: 135px;
+}
+
+.SocioForm input[type="button"], .SocioForm input[type="submit"] {
+  float: right;
+  margin: 20px 10px 0 0;
+}
+
+.EditSocioForm input[type="text"], .EditSocioForm select{
+  display: inline;
+  margin-left: 5px;
+  width: 250px;
+}
+
+.EditSocioForm span {
+  display: inline-block;
+  width: 135px;
+}
+
+.EditSocioForm #edit {
   float: left;
+  margin-top: 172px;
+  margin-bottom: 10px;
+  margin-left: -195px;
+}
+
+.EditSocioForm input[type="submit"]{
+  margin-top: 10px;
+}
+
+.photoReload {
+  float: left;
+  width: 280px;
+}
+
+.photoReloadII {
+  width: 280px;
+}
+
+.ParienteForm input[type="text"], .ParienteForm select{
+  display: inline;
+  margin-left: 5px;
+  width: 240px;
+}
+
+.ParienteForm span {
+  display: inline-block;
+  width: 135px;
+}
+
+.EditParienteForm input[type="text"], .EditParienteForm select{
+  display: inline;
+  margin-left: 5px;
+  width: 240px;
+}
+
+.EditParienteForm span {
+  display: inline-block;
+  width: 135px;
+}
+
+.EditParienteForm input[type="submit"]{
+  float: right;
+}
+
+.EditParienteForm input[type="button"]{
+  margin-top: 10px;
 }
 
 .tableContent {
