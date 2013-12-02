@@ -10,7 +10,7 @@ TEMPLATES.editSocio =
                 "<input type='hidden' name='id' value='<% print(socio.IdSocio); %>'>" +
                 "<div class='fotoSocioEdit'>" +
                     "<img class='photoReload' src='api/<% print(socio.Foto); %>'>" +
-                    "<input id='upLoad' class='display-none' type='file' name='Foto'><input class='btn btn-primary' id='edit' type='button' value='Editar Foto'>" +
+                    "<input id='upLoad' class='display-none' type='file' name='Foto'><input class='btnUpLoad btn btn-primary' id='edit' type='button' value='Editar Foto'>" +
                     "<p><span class='display-none' id='fileName'></span></p>" +
                 "</div>" +
             "</div>" +

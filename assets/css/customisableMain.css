@@ -191,9 +191,44 @@ input[type="file"].display-none {
 .EditSocioForm input[type="submit"]{
   margin-top: 10px;
 }
+
 .photoReload {
   float: left;
   width: 280px;
+}
+
+.photoReloadII {
+  width: 280px;
+}
+
+.ParienteForm input[type="text"], .ParienteForm select{
+  display: inline;
+  margin-left: 5px;
+  width: 240px;
+}
+
+.ParienteForm span {
+  display: inline-block;
+  width: 135px;
+}
+
+.EditParienteForm input[type="text"], .EditParienteForm select{
+  display: inline;
+  margin-left: 5px;
+  width: 240px;
+}
+
+.EditParienteForm span {
+  display: inline-block;
+  width: 135px;
+}
+
+.EditParienteForm input[type="submit"]{
+  float: right;
+}
+
+.EditParienteForm input[type="button"]{
+  margin-top: 10px;
 }
 
 .tableContent {
