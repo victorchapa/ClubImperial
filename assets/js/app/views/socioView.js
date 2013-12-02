@@ -17,9 +17,9 @@ var SocioView = Backbone.View.extend({
         _.each(targets, function(target){
             $(target).removeClass("active");
         });
-        $("#bigMenu li:nth-child(1)").removeClass("active");
         $("#miniMenu li:nth-child(2)").addClass("active");
         $("#activityR").removeClass("in").addClass("collapse");
+        $(".heading-mosaic").text("TODOS los Socios");
     },
 
     initialize: function(){
@@ -112,11 +112,11 @@ var SocioView = Backbone.View.extend({
             top: targetCoordenades[1],
         }).show();
 
-        //$(".actionsSocio").on("mouseleave", function(){
-            //setTimeout(function(){
-                //$(".actionsSocio").hide();
-            //}, 1500);
-        //});
+        $(".actionsSocio").on("mouseleave", function(){
+            setTimeout(function(){
+                $(".actionsSocio").hide();
+            }, 500);
+        });
         
     },
 

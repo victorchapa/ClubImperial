@@ -13,12 +13,23 @@ var SocioCargosView = Backbone.View.extend({
     initialize: function(){
         this.socioId = this.options.socioId; 
         this.router = new ClubImperial.Router();
+        this.clearMainNav();
 
         var template = TEMPLATES.cuotasNav;
         var compiledTemplate = _.template($(template).html());
         var target = {target: "cargos"};
         $("#mainDisplayer").html(compiledTemplate(target));
         this.render();
+    },
+
+    clearMainNav: function(){
+        var targets = $("#miniMenu li");
+        _.each(targets, function(target){
+            $(target).removeClass("active");
+        });
+        $("#miniMenu li:nth-child(3)").addClass("active");
+        $("#activityR").removeClass("in").addClass("collapse");
+        $(".heading-mosaic").text("Cargo Individual");
     },
 
     render: function(){

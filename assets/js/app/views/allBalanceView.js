@@ -89,8 +89,9 @@ var AllBalanceView = Backbone.View.extend({
         _.each(targets, function(target){
             $(target).removeClass("active");
         });
-        $("#bigMenu #menu_cuotas li:nth-child(2)").addClass("active");
+        $("#miniMenu li:nth-child(3)").addClass("active");
         $("#activityR").removeClass("in").addClass("collapse");
+        $(".heading-mosaic").text("Balance Total");
     },
 
     getSocioCargosView: function(){

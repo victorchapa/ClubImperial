@@ -216,34 +216,26 @@
 			<ul id="miniMenu">
         <!-- Menu Regular Item -->
 				<li class="glyphicons display active"><a href="#"><i></i><span>Inicio</span></a></li>
-				<li class="glyphicons group"><a href="#allsocios"><i></i><span>Socios</span></a></li>
-				<li class="glyphicons user_add"><a href="#addsocio"><i></i><span>Agregar Socio</span></a></li>
+        <li class="hasSubmenu">
+          <a class="glyphicons parents" href="#menu_socios" data-toggle="collapse"><i></i><span>Socios</span></a>
+          <ul class="collapse" id="menu_socios">
+				    <li><a href="#allsocios" class="glyphicons group"><i></i><span>Todos los Socios</span></a></li>
+				    <li><a href="#addsocio" class="glyphicons user_add"><i></i><span>Agregar Socio</span></a></li>
+          </ul>
+          <span class="count">2</span>
+        </li>
+        <li class="hasSubmenu">
+          <a class="glyphicons notes" href="#menu_cuotas" data-toggle="collapse"><i></i><span>Cuotas</span></a>
+          <ul class="collapse" id="menu_cuotas">
+            <li><a href="#ccuotas" class="glyphicons money"><i></i><span>Generar Cobro</span></a></li>
+            <li><a href="#ccuotas/balance" class="glyphicons stats"><i></i><span>Balance TOTAL</span></a></li>
+          </ul>
+          <span class="count">2</span>
+        </li>
 			</ul>
 			<div class="clearfix"></div>
 			<div class="separator bottom"></div>
 			<!-- // Regular Size Menu END -->
-			<!-- Larger Menu Style -->
-			<ul id="bigMenu">
-				<li class="large hasSubmenu glyphicons notes">
-					<a data-toggle="collapse" href="#menu_cuotas"><i></i><span>Cuotas</span></a>
-					<ul class="collapse" id="menu_cuotas">
-						<li><a href="#ccuotas" class="glyphicons money"><i></i><span>Generar Cobro</span></a></li>
-						<li><a href="#ccuotas/balance" class="glyphicons stats"><i></i><span>Balance TOTAL</span></a></li>
-					</ul>
-					<span class="count">2</span>
-				</li>
-			</ul>
-			<div class="clearfix"></div>
-			<!-- // Larger Menu Style END -->
-			<!-- Sidebar Stats Widgets -->
-			<div class="separator bottom"></div>
-			<div class="widget-sidebar-stats">
-				<h5>Valle Imperial</h5>
-				<p>Golf & Club Residencial.</p>
-			</div>
-			<!-- // Sidebar Stats Widgets END -->
-						
-						
 			</div>
 			<!-- // Scrollable Menu wrapper with Maximum Height END -->
 			
@@ -282,7 +274,7 @@
 	  <div class="row">
 		  <div class="col-md-6 to-right">
 			  <!-- Activity/List Widget -->
-			  <div class="widget" data-toggle="collapse-widget">
+			  <div class="widget RecentlyActivity" data-toggle="collapse-widget">
 			
 				  <!-- Widget Heading -->
 				  <div class="widget-head">
@@ -540,6 +532,7 @@
   <!--Scrypting-->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/router.js"></script>
+  <script src="assets/js/scripting.js"></script>
   <script src="templates/templates.js"></script>
 
   <!-- Templates -->
