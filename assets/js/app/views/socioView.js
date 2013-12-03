@@ -255,7 +255,7 @@ var SocioView = Backbone.View.extend({
     showFormAddPariente: function(){
         var template = TEMPLATES.formParientes;
         var compiledTemplate = _.template($(template).html());
-        var idSocio = $("input[type='hidden']", "#editSocioForm").val(); 
+        var idSocio = $("input[type='hidden']", ".EditSocioForm").val(); 
         var idPariente = {idPariente: idSocio};
         $("#modalDisplayerParientes").html(compiledTemplate(idPariente));
         $(".datePicker").datepicker({
@@ -283,16 +283,55 @@ var SocioView = Backbone.View.extend({
         var parient = $(".selected", ".memoField");
         var id = $(parient).attr("idsocio");
 
-        jConfirm('¿Esta seguro de borrar el pariente?', 'Confirmación', function(r) {
-            if(r == true){
-                $.ajax({
-                    method: "POST",
-                    url: "api/RemovePariente.php?id=" + id,
-                }).done(function(){
-                    $(parient).remove();
-                }); 
-            }
+        $("#notyfy_container_top").notyfy({
+            text: "<h3>¿Esta seguro de eliminar al pariente?</h3>",
+            type: "confirm",
+            dismissQueue: true,
+            layout: "top",
+            buttons: [{
+                        addClass: "btn btn-success btn-small",
+                        text: "<i></i> Sí",
+                        onClick: function($notyfy){
+                            $notyfy.close();
+                            $.ajax({
+                                method: "POST",
+                                url: "api/RemovePariente.php?id=" + id,
+                            }).done(function(){
+                                $(parient).remove();
+                            }); 
+                            notyfy({
+                                force: true,
+                                text: "<h4 style='color: white'>El pariente ha sido eliminado Exitosamente</h4>",
+                                type: "success",
+                                layout: "top",
+                            });
+                        },
+                    },
+                    {
+                        addClass: "btn btn-danger btn-small",
+                        text: "Cancelar",
+                        onClick: function($notyfy){
+                            $notyfy.close();
+                            notyfy({
+                                force: true,
+                                text: "<h4 style='color: white'>Se ha cancelado la eliminación del Pariente</h4>",
+                                type: "error",
+                                layout: "top",
+                            })
+                        },
+                    }]
         });
+
+        //jConfirm('¿Esta seguro de borrar el pariente?', 'Confirmación', function(r) {
+            //if(r == true){
+                //$.ajax({
+                    //method: "POST",
+                    //url: "api/RemovePariente.php?id=" + id,
+                //}).done(function(){
+                    //$(parient).remove();
+                //});    
+            //}
+        //});
     },
 
     editPariente: function(){
