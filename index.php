@@ -357,7 +357,7 @@
 				<div class="col-md-4">
 					<div class="right innerAll">
 						<p>Para cualquier probleme tecnigo con el <strong>Sistema</strong>(v1.0), favor de contactarse con nosotros. </p>
-						<a class="btn btn-primary btn-icon glyphicons envelope" href="#"><i></i> Contactar Suporte</a>
+						<a class="btn btn-primary btn-icon glyphicons envelope" href="#"><i></i> Contactar Soporte</a>
 					</div>
 				</div>
 			</div>

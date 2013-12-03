@@ -2,9 +2,10 @@ TEMPLATES.cargos =
 "<script type='text/template'>" +
   "<div class='cargosFinder'>" +
     "<div class='well margin-none'>" +
+    "<% if(deuda != undefined) { %>" +
       "<address class='margin-none'>" +
         "<% var total = 0; var pago = 0; var tcargo = 0; var tsaldo = 0; var tabono = 0; %>" +
-          "<h2 class='heading-arrow'>Cargos de <strong><% print(deuda.Nombre); %></strong></h2>" +
+          "<h2 class='heading-arrow'>Resumen General de <strong><% print(deuda.Nombre); %></strong></h2>" +
           "Mes: <select class='fMonth input-sm form-control'>" +
                 "<option value='0'>Selecciona un mes</option>" +
                 "<option value='ene'>Enero</option>" +
@@ -21,7 +22,7 @@ TEMPLATES.cargos =
                 "<option value='dic'>Diciembre</option>" +
             "</select>" +
             " Año: <input class='fYear input-sm form-control' type='text' placeholder='2013' maxlength='4'/>"+
-            " <input class='btn btn-primary' type='button' value='Filtrar'>" +
+            " <input class='btn btn-primary filterBy' type='button' value='Filtrar'>" +
             "<p><a href='api/cargospdf.php?id=<%print(deuda.IdSocio);%>&m=<%print(deuda.Mes);%>&y=<%print(deuda.Year);%>' target='_blank'><input type='button' class='btn btn-inverse' value='Exportar Pdf'></a> <a href='api/cargosexcel.php?id=<%print(deuda.IdSocio);%>&m=<%print(deuda.Mes);%>&y=<%print(deuda.Year);%>'><input type='button' class='btn btn-inverse' value='Exportar Excel'></a></p>" +
       "</address>" +
     "</div>" +
@@ -79,4 +80,7 @@ TEMPLATES.cargos =
                 "</tr>" +
             "</tbody>" +
             "</table>" +
+            "<% }else{ %>" +
+                "<h3 class='heading-arrow'>No existen registros con ese filtro</h3>" +
+            "<% } %>" +
             "</script>";
