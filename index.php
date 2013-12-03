@@ -232,6 +232,14 @@
           </ul>
           <span class="count">2</span>
         </li>
+        <li class="hasSubmenu">
+          <a class="glyphicons wallet" href="#menu_servicios" data-toggle="collapse"><i></i><span>Servicios</span></a>
+          <ul class="collapse" id="menu_servicios">
+            <li><a href="#servicios/create" class="glyphicons plus"><i></i><span>Crear Servicio</span></a></li>
+            <li><a href="#servicios/watch" class="glyphicons table"><i></i><span>Ver Servicios</span></a></li>
+          </ul>
+          <span class="count">2</span>
+        </li>
 			</ul>
 			<div class="clearfix"></div>
 			<div class="separator bottom"></div>
