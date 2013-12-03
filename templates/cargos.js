@@ -26,6 +26,22 @@ TEMPLATES.cargos =
       "</address>" +
     "</div>" +
   "</div>" +
+          "<table class='blue-table table-resumen table table-primary table-bordered' border='1' cellspacing='0'>" +
+          "<thead>" +
+            "<tr>" +
+                "<th>Socio</th>" +
+                "<th>Saldo anterior</th>" +
+                "<th>Saldo actual</th>" +
+            "</tr>" +
+          "</thead>" +
+          "<tbody>" +
+            "<tr>" +
+              "<td>$<% print(resumen.Nombre); %></td>" +
+              "<td>$<% print(resumen.SaldoAnt); %></td>" +
+              "<td>$<% print(resumen.SaldoAct); %></td>" +
+            "</tr>" +
+          "</tbody>" +
+          "</table>" +
           "<table class='blue-table table-factura table table-primary table-bordered' border='1' cellspacing='0'>" +
           "<thead>" +
             "<tr>" +
