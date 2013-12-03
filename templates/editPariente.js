@@ -103,7 +103,7 @@ TEMPLATES.editPariente =
                 "<% }else{%>"+
                     "<input type='checkbox' name='Afiliacion[]' value='SPA'> SPA. " +
                 "<% } %>" +
-            "<p><input class='btn btn-success' type='submit' value='Editar Pariente'></p>" +
+            "<p><input class='btn btn-success' type='submit' value='Guardar'></p>" +
         "</div>" +
         "</form>" +
     "</div>" +

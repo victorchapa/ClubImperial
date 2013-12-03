@@ -29,10 +29,10 @@ TEMPLATES.cargos =
           "<table class='blue-table table-factura table table-primary table-bordered' border='1' cellspacing='0'>" +
           "<thead>" +
             "<tr>" +
-                "<th>Servicio</th>" +
                 "<th>Fecha y hora</th>" +
+                "<th>Concepto</th>" +
                 "<th>Cargo</th>" +
-                "<th>Abono</th>" +
+                "<th>Deposito</th>" +
                 "<th>Saldo</th>" +
             "</tr>" +
           "</thead>" +
@@ -40,11 +40,11 @@ TEMPLATES.cargos =
                 "<% _.each(facturas, function(factura) { %>" +
                 "<tr>" +
                 "<form method='post' action='api/pagarf.php'>" +
+                    "<td><% print(factura.Dia); %>/<% print(factura.Mes); %>/<% print(factura.Year); %></br>" +
+                    "<% print(factura.Hora); %></td>" +
                     "<td><% print(factura.Servicio); %></td>" +
                     "<input type='hidden' name='ids' value='<% print(factura.IdSocio); %>'>" +
                     "<input type='hidden' name='idf' value='<% print(factura.IdCargo); %>'>" +
-                    "<td><% print(factura.Dia); %>/<% print(factura.Mes); %>/<% print(factura.Year); %></br>" +
-                    "<% print(factura.Hora); %></td>" +
                     "<% tcargo  = tcargo + parseFloat(factura.Cargo); %>" +
                     "<% tabono  = tabono + parseFloat(factura.Abono); %>" +
                     "<% tsaldo  = tsaldo + parseFloat(factura.Saldo); %>" +

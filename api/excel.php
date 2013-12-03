@@ -17,15 +17,17 @@
 	echo "<meta http-equiv='Content-Type' content='text/html'/>";
 	echo "<meta charset='utf-8'>";
 	echo "<table cellspacing='0' cellpadding='1' border='1'>";
-	echo "<tr><td><b>Servicio</b></td>";
+	echo "<tr><td><b>Fecha/hora</b></td>";
+	echo "<td><b>Concepto</b></td>";
+	echo "<td><b>Deposito</b></td>";
 	echo "<td><b>Cargo</b></td>";
-	echo "<td><b>Deuda</b></td>";
-	echo "<td><b>Fecha/hora</b></td></tr>";
+	echo "<td><b>Deuda</b></td></tr>";
 
-	  echo "<tr><td>".$recibo[0]['Servicio']."</td>";
-	  echo "<td>".$recibo[0]['Cargo']."</td>";
-	  echo "<td>".$recibo[0]['Deuda']."</td>";
-	  echo "<td>".$name."</td></tr>";
+	  echo "<tr><td>".$name."</td>";
+	  echo "<td>".$recibo[0]['Servicio']."</td>";
+	  echo "<td>$".$recibo[0]['Cargo']."</td>";
+	  echo "<td>$".$recibo[0]['Abono']."</td>";
+	  echo "<td>$".$recibo[0]['Saldo']."</td></tr>";
 	echo "</table></html>";
 	} else {
 	echo "<script> alert(\"No hay datos\"); </script>";

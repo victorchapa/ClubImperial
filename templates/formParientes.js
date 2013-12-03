@@ -58,7 +58,7 @@ TEMPLATES.formParientes =
                             "<input type='checkbox' name='Afiliacion[]' value='Gym'> GYM. " +
                             "<input type='checkbox' name='Afiliacion[]' value='SPA'> SPA. </p>" +
                         "<p><input id='upLoadPariente' class='display-none' type='file' name='Foto' accept='image/jpeg, image/bmp'> <input class='btnUpLoadPariente btn btn-primary' type='button' value='Subir Foto'>" +
-                        " <input class='btn btn-success' type='submit' value='Agregar Pariente'></p>" +
+                        " <input class='btn btn-success' type='submit' value='Guardar'></p>" +
                         "<p><span id='fileNamePariente'></span></p>" +
                     "</div>" +
                 "</form>" +

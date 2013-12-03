@@ -100,7 +100,7 @@ TEMPLATES.editSocio =
                         "<input type='text' class='input-sm form-control' value='' placeholder='¿Algun pariente?' disabled>" +
                     "</div>" +
                 "<div class='btnGroup'>" +
-                    "<p><input class='btn btn-success' type='submit' value='Editar Usuario'></p>" +
+                    "<p><input class='btn btn-success' type='submit' value='Guardar'></p>" +
                 "</div>" +
             "</div>" +
             "</form>" +

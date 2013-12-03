@@ -7,14 +7,12 @@ TEMPLATES.cuotasForm =
                 "<address class='margin-none'>" +
                     "<form id='charges' class='cuotaForm' method='post' action='api/cpago.php' enctype='multipart/form-data'>" +
                         "<h2 class='heading-arrow'>Generar Cobro:</h2>" +
-                        "<p>Nombre de Cliente: <input class='input-sm form-control' id='socioFinder' type='text' name='Nombre'></p>" +
-                        "<p>Servicio: <select class='input-sm form-control' name='Servicio'>" +
-                            "<option value='Mensualidad'>Mensualidad</option>" +
+                        "<p>Nombre del Socio: <input class='input-sm form-control' id='socioFinder' type='text' name='Nombre'></p>" +
+                        "<p>Concepto: <select class='input-sm form-control' name='Servicio'>" +
                             "<option value='Carro Bar'>Carro Bar</option>" +
                             "<option value='Green Fee'>Green Fee</option>" +
                             "<option value='Velaria'>Velaria</option>" +
                             "<option value='Invitados'>Invitados</option>" +
-                            "<option value='Mantenimiento'>Mantenimiento</option>" +
                             "<option value='Caros'>Carros</option>" +
                             "<option value='Canastas'>Canastas</option>" +
                             "<option value='1H Plataforma'>1H Plataforma</option>" +
@@ -27,7 +25,7 @@ TEMPLATES.cuotasForm =
                             "<option value='Torneo'>Torneo</option>" +
                             "<option value='Varios'>Varios</option>" +
                         "</select></p>" +
-                        "<p>Abono: <input type='text' class='input-sm form-control' name='Abono'/></p>" +
+                        "<p>Deposito: <input type='text' class='input-sm form-control' name='Abono'/></p>" +
                         "<p>Total: <input type='text' class='input-sm form-control' name='Total'/></p>" +
                         "<input class='btn btn-success' type='submit' name='Cobrar'/>"+
                     "</form>" +
