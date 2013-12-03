@@ -73,7 +73,7 @@ ul#bigMenu li:hover {
 
 .memoField {
   width: 90%;
-  height: 44px;
+  height: 100px;
   border: 1px solid silver;
   background-color: white;
   margin: 0px;
@@ -96,14 +96,14 @@ p.nombrePariente.selected {
 }
 
 .tableKin {
-  height: 100px;
+  height: 200px;
   border: 1px solid silver;
   background-color: white;
   margin: 0px;
   overflow: auto;
 }
 .tableKin table {
-  width: 200%;
+  width: 300%;
 }
 .tableKin table, th, td{
   border: 1px solid black;
@@ -294,4 +294,8 @@ input[type="file"].display-none {
 
 #miniMenu .hasSubmenu ul i {
   margin-right: 5px;
+}
+
+.btnGroupII a {
+  margin: 10px 10px 0 10px;
 }

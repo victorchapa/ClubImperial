@@ -426,6 +426,8 @@
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<ul id="notyfy_container_top" class="notyfy_container"><!-- Notyfier -->
+
 	<!-- JQuery -->
 	<script src="assets/common/theme/scripts/plugins/system/jquery.min.js"></script>
   

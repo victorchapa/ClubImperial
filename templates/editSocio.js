@@ -94,10 +94,9 @@ TEMPLATES.editSocio =
             "<div class='col-md-10'>" +
                 "<div class='memoField'>Parientes: </div>" +
                     "<div class='btnGroupII'>" +
-                        "<input class='btn btnAddPari' type='button' value='+'>" +
-                        "<input class='btn btnDelPari' type='button' value='-' disabled>" +
-                        "<input class='btn btnEditPari' type='button' value=' 'disabled>" +
-                        "<input type='text' class='input-sm form-control' value='' placeholder='¿Algun pariente?' disabled>" +
+                        "<a class='btn btnAddPari btn-default glyphicons btn-icon user_add'><i></i>Agregar Pariente</a>" + 
+                        "<a class='btn btnDelPari btn-default glyphicons btn-icon user_remove' disabled><i></i>Eliminar Pariente</a>" + 
+                        "<a class='btn btnEditPari btn-default glyphicons btn-icon edit' disabled><i></i>Editar Pariente</a>" + 
                     "</div>" +
                 "<div class='btnGroup'>" +
                     "<p><input class='btn btn-success' type='submit' value='Editar Usuario'></p>" +

@@ -33,7 +33,7 @@
             echo "<p>Parientes:</p>";
             echo "<div class='tableKin'>";
             if($parientes){
-            echo "<table>";
+            echo "<table class='blue-table table table-primary table-bordered'>";
             echo "<thead>";
             echo "<th>Nombre</th>";
             echo "<th>Apellido P.</th>";
@@ -75,7 +75,7 @@
           echo "<div>";
           echo "<p>Servicios recurrentes: </p>";
           if($servicios){
-                echo "<table>";
+                echo "<table class='blue-table table-factura table table-primary table-bordered'>";
                 echo "<thead>";
                 echo "<tr>";
                 echo "<th>Servicio</th>";
