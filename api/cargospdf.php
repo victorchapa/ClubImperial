@@ -44,10 +44,10 @@ $tbl = <<<EOD
 <h2 style= "text-align:center">Cargos de $socio $m-$y</h2>
 <table cellspacing="0" cellpadding="1" border="1">
     <tr>
-        <th><b>Servicio</b></th>
         <th><b>Fecha/hora</b></th>
+        <th><b>Concepto</b></th>
         <th><b>Cargo</b></th>
-        <th><b>Abono</b></th>
+        <th><b>Deposito</b></th>
         <th><b>Saldo</b></th>
     </tr>
 EOD;
@@ -62,8 +62,8 @@ foreach($recibo as $r){
     $ts += $sa;
     $tbl .= <<<EOD
         <tr>
-            <td>$s</td>
             <td>$f</td>
+            <td>$s</td>
             <td>$$c</td>
             <td>$$a</td>
             <td>$$sa</td>
