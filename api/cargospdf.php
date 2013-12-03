@@ -6,6 +6,7 @@ $m = ucfirst($_GET["m"]);
 $y = $_GET["y"];
 $recibo = consultar("SELECT * FROM Cargos WHERE IdSocio='$id' AND Mes='$m' AND Year='$y'");
 $balance = consultar("SELECT * FROM Balance WHERE IdSocio='$id' AND Mes='$m' AND Year='$y'");
+$saldos = consultar("SELECT * FROM Saldos WHERE IdSocio='$id'");
 $name = $balance[0]["Nombre"]." ".$balance[0]["Mes"]." ".$balance[0]["Year"];
 $socio = $balance[0]["Nombre"];
 $tc = 0;
@@ -44,6 +45,32 @@ $tbl = <<<EOD
 <h2 style= "text-align:center">Cargos de $socio $m-$y</h2>
 <table cellspacing="0" cellpadding="1" border="1">
     <tr>
+        <th><b>Socio</b></th>
+        <th><b>Saldo anterior</b></th>
+        <th><b>Saldo actual</b></th>
+    </tr>
+EOD;
+
+foreach($saldos as $saldo){
+    $nombre = $saldo["Nombre"];
+    $sant = $saldo["SaldoAnt"];
+    $sact = $saldo["SaldoAct"];
+    $tbl .= <<<EOD
+        <tr>
+            <td>$nombre</td>
+            <td>$$sant</td>
+            <td>$$sact</td>
+        </tr>
+EOD;
+}
+$tbl .= <<<EOD
+</table>
+<p></p>
+EOD;
+
+$tbl .= <<<EOD
+<table cellspacing="0" cellpadding="1" border="1">
+    <tr>
         <th><b>Fecha/hora</b></th>
         <th><b>Concepto</b></th>
         <th><b>Cargo</b></th>
@@ -72,11 +99,11 @@ EOD;
 }
 $tbl .= <<<EOD
     <tr>
-        <td>Cargo Total</td>
+        <td><b>Cargo Total</b></td>
         <td></td>
-        <td>$$tc</td>
-        <td>$$ta</td>
-        <td>$$sa</td>
+        <td><b>$$tc</b></td>
+        <td><b>$$ta</b></td>
+        <td><b>$$ts</b></td>
     </tr>
 </table>
 EOD;
