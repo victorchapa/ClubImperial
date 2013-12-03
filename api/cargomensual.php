@@ -14,7 +14,7 @@
 	$meses = array("","Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic");
 	$mes = $meses[$mes];
 	$estemes = $meses[$estemes];
-	$servicio = "Deuda mes pasado";
+	$servicio = "Saldo anterior";
 	$socios = consultar("SELECT * FROM socios");
 	foreach($socios as $socio){
 		$id = $socio["IdSocio"];

@@ -69,7 +69,7 @@ var AllBalanceView = Backbone.View.extend({
                 {"sTitle":  "ID Socio", "sClass": "center"},
                 {"sTitle":  "Socio"},
                 {"sTitle":  "Cargo", "sClass": "center"},
-                {"sTitle":  "Abono", "sClass": "center"},
+                {"sTitle":  "Deposito", "sClass": "center"},
             ],
             "sPaginationType": "bootstrap",
             "sDom": "<'row'<'col-md-6'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",

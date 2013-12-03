@@ -4,8 +4,9 @@ include("consultas.php");
 $id = $_GET["id"];
 $recibo = consultar("SELECT * FROM Cargos WHERE IdCargo='$id'");
 $servicio = $recibo[0]["Servicio"];
+$abono = $recibo[0]["Abono"];
 $cargo = $recibo[0]["Cargo"];
-$deuda = $recibo[0]["Deuda"];
+$deuda = $recibo[0]["Saldo"];
 $hora = $recibo[0]["Hora"];
 $d = $recibo[0]["Dia"];
 $m = $recibo[0]["Mes"];
@@ -44,16 +45,18 @@ $tbl = <<<EOD
 <h2 style= "text-align:center">Recibo de compra</h2>
 <table cellspacing="0" cellpadding="1" border="1">
     <tr>
-        <th><b>Servicio</b></th>
-        <th><b>Cargo</b></th>
-        <th><b>Deuda</b></th>
         <th><b>Fecha/hora</b></th>
+        <th><b>Concepto</b></th>
+        <th><b>Cargo</b></th>
+        <th><b>Deposito</b></th>
+        <th><b>Saldo</b></th>
     </tr>
     <tr>
+        <td>$name</td> 
         <td>$servicio</td>
         <td>$$cargo</td>
+        <td>$$abono</td>
         <td>$$deuda</td>
-        <td>$name</td>
     </tr>
 </table>
 EOD;

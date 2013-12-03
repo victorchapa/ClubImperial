@@ -53,7 +53,7 @@ TEMPLATES.formSocio =
                     "<input type='checkbox' name='Afiliacion[]' value='SPA'> SPA. " +
             "</div>" +
             "<div class='col-md-10'>" +
-                " <input class='btn btn-success' type='submit' value='Agregar Usuario'>" +
+                " <input class='btn btn-success' type='submit' value='Guardar'>" +
                 "<input id='upLoad' class='display-none' type='file' name='Foto' accept='image/jpeg, image/bmp'><input class='btnUpLoad btn btn-primary' type='button' value='Subir Foto'>" +
                 "<p><span id='fileName'></span></p>" +
                 "</form>" +
