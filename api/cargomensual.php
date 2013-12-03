@@ -34,6 +34,13 @@
 			}
 		}
 		$newbalance = add("INSERT INTO balance (IdSocio, Nombre, Abono, Cargo, Mes, Year) VALUES ('$id', '$nombre', '$abono', '$cargo', '$estemes', '$esteaño')");
+		$saldos = consultar("SELECT * FROM saldos WHERE IdSocio = '$id'");
+			if($saldos){
+				$anterior = $saldos[0]["SaldoAct"];
+				$update = add("UPDATE saldos SET SaldoAnt = '$anterior', SaldoAct ='$cargo' WHERE IdSocio = '$id'");
+			} else {
+				$add = add("INSERT INTO saldos (IdSocio, Nombre, SaldoAnt, SaldoAct) VALUES('$id', '$nombre', '0', '$cargo')");
+			}
 	}
 
 	foreach($socios as $socio){
@@ -47,6 +54,9 @@
 				$balance = $balance[0]["Cargo"] + $cargo;
 				$newcargo = add("INSERT INTO cargos (IdSocio, Servicio, Cargo, Saldo, Dia, Mes, Year) VALUES ('$id', '$serv', '$cargo', '$cargo', '$estedia', '$estemes', '$esteaño')");
 				$newbalance = add("UPDATE balance SET Cargo = '$balance' WHERE IdSocio = '$id' AND Mes = '$estemes' AND Year = '$esteaño'");
+				$saldos = consultar("SELECT * FROM saldos WHERE IdSocio = '$id'");
+				$anterior = $saldos[0]["SaldoAct"];
+				$update = add("UPDATE saldos SET SaldoAnt = '$anterior', SaldoAct ='$balance' WHERE IdSocio = '$id'");
 			}
 		}
 	}
