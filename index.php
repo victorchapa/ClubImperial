@@ -557,6 +557,7 @@
   <script src="assets/js/app/collections/sociosfilters.js"></script>
   <script src="assets/js/app/collections/balance.js"></script>
   <script src="assets/js/app/collections/facturasSocio.js"></script>
+  <script src="assets/js/app/collections/servicios.js"></script>
   <!-- Models -->
   <script src="assets/js/app/models/socio.js"></script>
   <script src="assets/js/app/models/deudaSocio.js"></script>

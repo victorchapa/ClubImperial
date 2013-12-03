@@ -6,6 +6,7 @@ var CuotasView = Backbone.View.extend({
         "keydown #socioFinder"      :   "refetchCollection",
         "click .showDebt"           :   "showBalanceView",
         "click .showFact"           :   "showSocioCargosView",
+        "change .getServices"       :   "getServicePrice",
     },
 
     initialize: function(){
@@ -14,16 +15,7 @@ var CuotasView = Backbone.View.extend({
 
         this.clearMainNav();
         this.collectionFetched = false;
-        this.sociosFiltersCollection = new SociosFilters(); 
-        this.sociosFiltersCollection.on("change", this.resettingAutoc, this);
-        this.sociosFiltersCollection.fetch({
-            success: function(data){
-                self.getAutocomplete();
-                self.collectionFetched = true;
-            },
-        });
 
-        
         var template = TEMPLATES.cuotasNav;
         var compiledTemplate = _.template($(template).html());
         var target = {target: "cuotas"};
@@ -32,9 +24,28 @@ var CuotasView = Backbone.View.extend({
     },
 
     render: function(e){
+        var self = this;
         var template = TEMPLATES.cuotasForm;
         var compiledTemplate = _.template($(template).html());
-        $("#cuotaBody").html(compiledTemplate);
+
+        var serviciosCollection = new ServiciosCollection();
+        serviciosCollection.fetch({
+            success: function(data){
+                var data = data.toJSON();
+                var services = {services: data};
+                $("#cuotaBody").html(compiledTemplate(services));
+
+                this.sociosFiltersCollection = new SociosFilters(); 
+                this.sociosFiltersCollection.on("change", this.resettingAutoc, this);
+                this.sociosFiltersCollection.fetch({
+                    success: function(data){
+                        var data = this.sociosFiltersCollection.pluck("Filtro");
+                        self.getAutocomplete(data);
+                        self.collectionFetched = true;
+                    },
+                });
+            },
+        });
 
         if(this.options.factureId != undefined){
             this.factureId = this.options.factureId;
@@ -65,14 +76,14 @@ var CuotasView = Backbone.View.extend({
         console.log("REFETCHING!");
         this.sociosFiltersCollection.fetch({
             success: function(){
-                self.getAutocomplete();
+                var data = this.sociosFiltersCollection.pluck("Filtro");
+                self.getAutocomplete(data);
                 self.collectionFetched = true;
             },
         });
     },
 
-    getAutocomplete: function(){
-        var data = this.sociosFiltersCollection.pluck("Filtro");
+    getAutocomplete: function(data){
         $("#socioFinder").autocomplete({
             minLength: 1,
             source: data, 
@@ -103,6 +114,11 @@ var CuotasView = Backbone.View.extend({
         var facId = {factureId: factureId};
         $(".factures-window").html(compiledTemplate(facId));
         $(".factures-window").show("slow");
+    },
+
+    getServicePrice: function(){
+        var cargo = $(".getServices option:selected").attr("cargo");
+        $("input[name='Total']").val(cargo);
     },
 
     kill: function() {
