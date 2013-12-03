@@ -155,6 +155,7 @@ var SocioView = Backbone.View.extend({
     },
 
     showSociosTable: function(e){
+        $("ul.navSocio li a").css({display:"none"});
         $(".navSocio li:nth-child(1)").addClass("active");
         $(".navSocio li:nth-child(2)").removeClass("active");
         $(".tableContainer").show();                
@@ -162,6 +163,7 @@ var SocioView = Backbone.View.extend({
     },
     
     editSocioInitializer: function(){
+        $("ul.navSocio li a").css({display:"block"});
         $(".navSocio li:nth-child(1)").removeClass("active");
         $(".navSocio li:nth-child(2)").addClass("active");
         this.hideSociosTable();

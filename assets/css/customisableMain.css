@@ -299,3 +299,7 @@ input[type="file"].display-none {
 .btnGroupII a {
   margin: 10px 10px 0 10px;
 }
+
+#mainDisplayer .widget .widget-head {
+  background: #f8f8f8 url(../images/mosaic-pattern.png) repeat;
+}

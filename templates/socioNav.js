@@ -3,8 +3,7 @@ TEMPLATES.socioNav =
     	"<div class='widget widget-2 widget-tabs'>" +
 	        "<div class='widget-head'>" +
 	            "<ul class='navSocio'>" +
-	                "<li class='active showS'><p>Socios</p></li>" +
-	                "<li class='showE'><p>Editar Socio</p></li>" +
+                    "<li><a href='#allsocios' class='showS glyphicons circle_arrow_left' style='display:none;'><i></i>Atras</a></li>" +
 	            "</ul>" +
 	        "</div>" +
         "<div class='widget-body large'>" +
