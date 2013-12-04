@@ -1,6 +1,6 @@
 var AddSocioView = Backbone.View.extend({
 
-    el:"#APPContainer",
+    el:"#mainDisplayer",
 
     events:{},
 
@@ -38,6 +38,16 @@ var AddSocioView = Backbone.View.extend({
         $("#miniMenu li:nth-child(2)").addClass("active");
         $("#activityR").removeClass("in").addClass("collapse");
         $(".heading-mosaic").text("Agregar Socio");
+    },
+
+    kill: function(){
+        this.remove();
+        //this.off();
+        //this.model.off(null, null, this);
+
+        var div = document.createElement("div");
+        div.id = "mainDisplayer";
+        $(".rigthPanel").append(div);
     },
 
 });
