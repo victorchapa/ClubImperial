@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 04-12-2013 a las 00:22:41
+-- Tiempo de generación: 04-12-2013 a las 00:39:16
 -- Versión del servidor: 5.6.12-log
 -- Versión de PHP: 5.4.12
 
@@ -186,20 +186,20 @@ CREATE TABLE IF NOT EXISTS `servicios` (
 --
 
 INSERT INTO `servicios` (`IdServicio`, `Servicio`, `Cargo`) VALUES
-(2, 'Carro Bar', 0),
-(3, 'Velaria', 0),
-(4, 'Invitados', 0),
-(6, 'Carros', 0),
-(7, 'Canastas', 0),
-(8, '1H Plataforma', 0),
-(9, 'Hoyo 6', 0),
-(10, 'Futbol', 0),
-(11, 'Eventos', 0),
-(12, 'Clases de Golf', 0),
-(13, 'Pelotas de Golf', 0),
-(14, 'Renta de equipos', 0),
-(15, 'Torneo', 0),
-(16, 'Varios', 0);
+(2, 'Carro Bar', 50),
+(3, 'Velaria', 100),
+(4, 'Invitados', 250),
+(6, 'Carros', 300),
+(7, 'Canastas', 80),
+(8, '1H Plataforma', 110),
+(9, 'Hoyo 6', 60),
+(10, 'Futbol', 70),
+(11, 'Eventos', 600),
+(12, 'Clases de Golf', 500),
+(13, 'Pelotas de Golf', 30),
+(14, 'Renta de equipos', 130),
+(15, 'Torneo', 400),
+(16, 'Varios', 20);
 
 -- --------------------------------------------------------
 
