@@ -36,11 +36,9 @@ var WatchServicesView = Backbone.View.extend({
     },
 
     render: function(allServices){
-        console.log(allServices);
         var template = TEMPLATES.allServicesTable;
         var compiledTemplate = _.template($(template).html());
         $("#mainDisplayer").html(compiledTemplate(allServices));
-
     },
 
     kill: function(){

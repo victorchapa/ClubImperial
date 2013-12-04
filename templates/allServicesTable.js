@@ -14,7 +14,6 @@ TEMPLATES.allServicesTable =
                         "</thead>" +
                         "<tbody>" +
                             "<% _.each(recurrentes, function(recurrente) { %>" +
-                                "<% console.log(recurrente); %>" +
                                 "<tr>" +
                                     "<td>Recurrente</td>" +
                                     "<td><% print(recurrente.Servicio); %></td>" +
@@ -22,7 +21,6 @@ TEMPLATES.allServicesTable =
                                 "</tr>" +
                             "<% }); %>" +
                             "<% _.each(normales, function(normal) { %>" +
-                                "<% console.log(normal); %>" +
                                 "<tr>" +
                                     "<td>Normal</td>" +
                                     "<td><% print(normal.Servicio); %></td>" +
