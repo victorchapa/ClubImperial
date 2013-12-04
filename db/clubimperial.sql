@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 03-12-2013 a las 21:27:12
+-- Tiempo de generación: 04-12-2013 a las 00:22:41
 -- Versión del servidor: 5.6.12-log
 -- Versión de PHP: 5.4.12
 
@@ -186,11 +186,9 @@ CREATE TABLE IF NOT EXISTS `servicios` (
 --
 
 INSERT INTO `servicios` (`IdServicio`, `Servicio`, `Cargo`) VALUES
-(1, 'Mensualidad', 1450),
 (2, 'Carro Bar', 0),
 (3, 'Velaria', 0),
 (4, 'Invitados', 0),
-(5, 'Mantenimiento', 0),
 (6, 'Carros', 0),
 (7, 'Canastas', 0),
 (8, '1H Plataforma', 0),
@@ -241,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `socios` (
 --
 
 INSERT INTO `socios` (`IdSocio`, `IdPariente`, `Nombre`, `ApellidoP`, `ApellidoM`, `Filtro`, `Parentesco`, `FNacimiento`, `Domicilio`, `Manzana`, `Lote`, `Coto`, `Telefono`, `Celular`, `Correo`, `Membresia`, `TipoMembresia`, `Sangre`, `FAlta`, `Foto`, `Afiliacion`, `Cuota`, `Mayor`) VALUES
-(1, 0, 'Oscar', 'Vargas', 'Muñoz', 'Oscar Vargas Muñoz', '', '24/11/1990', 'domicilio 1', 'manzana 1', 1, 1, 123, 1234567890, 'darckoso@hotmail.com', 'Propietario', 'Individual', 'AB-', '14/10/2013', 'socios/1/1679014-hachiko200505_2.jpg', 'Golf', '', '0'),
+(1, 0, 'Oscar', 'Vargas', 'Muñoz', 'Oscar Vargas Muñoz', '', '24/11/1990', 'domicilio 1', 'manzana 1', 1, 1, 123, 1234567890, 'darckoso@hotmail.com', 'Propietario', 'Individual', 'AB-', '14/10/2013', 'socios/1/perfil.jpg', 'Golf', '', '0'),
 (3, 0, 'Israel', 'Alcantar', 'Cortés', 'Israel Alcantar Cortés', '', '10/01/2013', 'Domicilio1', '1', 2, 3, 1234567, 2147483647, 'isracortes62@gmail.com', 'Propietario', 'Familiar', 'A+', '10/22/2013', 'socios/3/perfil.jpg', 'Piscina, Gym, SPA', '', '0'),
 (4, 1, 'Victor', 'Chapa', 'Clavillo', 'Victor Chapa Clavillo', 'Esposo', '26/06/1990', 'Casa 1', '1', 1, 1, 1234567, 1234567890, 'victor_260690@hotmail.com', 'Propietario', 'Jr', 'O+', '28/10/2013', 'socios/4/perfil.jpg', 'Gym', '', 'Si');
 
