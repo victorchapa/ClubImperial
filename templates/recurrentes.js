@@ -4,10 +4,10 @@ TEMPLATES.recurrentes =
         "<address class='margin-none'>" +
             "<form method='post' action='api/Servicio.php'>" +
                 "<input type='hidden' name='idsocio'>" +
-                "<p>Socio: <input type='text' name= 'socio'>" +
                 "<input type='hidden' name ='frecuencia' value='Mensual'>" +
                 "<p>Servicio: <select name='servicio'>" +
                     "<option value='1'>Mensualidad</option>" +
+                    "<option value='2'>Mantenimiento</option>" +
                 "</select></p>" +
                 "<p><input class='btn btnSuccess' type='submit' value='Guardar'></p>" +
             "</form>" +
