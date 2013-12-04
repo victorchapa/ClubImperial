@@ -247,7 +247,6 @@ var SocioView = Backbone.View.extend({
                 collectionServices.fetch({
                     success: function(data){
                         var data = data.toJSON();
-                        console.log(data);
                         _.each(data, function(service){
                             var name = service.Servicio + " => " + service.Cargo + ".";
                             $("<p>", {
@@ -416,7 +415,18 @@ var SocioView = Backbone.View.extend({
     },
 
     addServiceRecurrent: function(){
-        console.log("ADD SR");
+        var template = TEMPLATES.recurrentes;
+        var compiledTemplate = _.template($(template).html());
+        var idSocio = $("input[type='hidden']", ".EditSocioForm").val(); 
+        var serviciosR = new ServiciosRCollection();
+        serviciosR.fetch({
+            success: function(data){
+                var recurrentServices = data.toJSON();
+                var data = {idSocio: idSocio, recurrentes: recurrentServices};
+                $("#modalDisplayerServicios").html(compiledTemplate(data));
+                $("#modalAddServices").modal("show");
+            },
+        });
     },
 
     removeServiceRecurrent: function(){

@@ -434,6 +434,22 @@
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<div class="modal fade" id="modalAddServices">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title">Favor de agregar el Servicio Recurrente al Socio</h4>
+			</div>
+			<div  id="modalDisplayerServicios" class="modal-body">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <ul id="notyfy_container_top" class="notyfy_container"><!-- Notyfier -->
 
 	<!-- JQuery -->
@@ -560,6 +576,7 @@
   <script src="templates/facturesWindow.js"></script>
   <script src="templates/formServicios.js"></script>
   <script src="templates/allServicesTable.js"></script>
+  <script src="templates/recurrentes.js"></script>
 
   <!-- Collections -->
   <script src="assets/js/app/collections/socios.js"></script>

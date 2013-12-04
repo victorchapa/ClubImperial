@@ -7,5 +7,5 @@
 	$ser = $consultaservicio[0]["Servicio"];
 	$cargo = $consultaservicio[0]["Cargo"];
 	$add = add("INSERT INTO cargosf (IdSocio, Frecuencia, Servicio, Cargo)	VALUES ('$idsocio', '$frecuencia', '$ser', '$cargo')");
-	echo "<script type=text/javascript>window.location.href=\"../index.php\";</script>";
+	echo "<script type=text/javascript>window.location.href=\"../index.php#allsocios\";</script>";
 ?>
