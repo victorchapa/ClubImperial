@@ -9,7 +9,9 @@ var SocioView = Backbone.View.extend({
         "click .trSocio"                    : "showWindowAction",
         "click .btnAddPari"                 : "showFormAddPariente",
         "click .btnDelPari"                 : "delPariente",
-        "click .btnEditPari"                 : "editPariente",
+        "click .btnEditPari"                : "editPariente",
+        "click .btnAddSR"                   : "addServiceRecurrent",
+        "click .btnDelSR"                   : "removeServiceRecurrent",
     },
 
     clearMainNav: function(){
@@ -237,6 +239,26 @@ var SocioView = Backbone.View.extend({
                         }); 
                     }
                 });
+
+
+                var memoServicesView = new MemoServicesView(); 
+                var id = data.IdSocio;
+                var collectionServices = new UserServices(id);
+                collectionServices.fetch({
+                    success: function(data){
+                        var data = data.toJSON();
+                        console.log(data);
+                        _.each(data, function(service){
+                            var name = service.Servicio + " => " + service.Cargo + ".";
+                            $("<p>", {
+                                class: "nombreService",
+                                text: name,
+                                idPariente: service.IdCargoF,
+                                idSocio: service.IdSocio,
+                            }).appendTo(".memoFieldServices");
+                        }); 
+                    }
+                });
             },
         });
         $("#editSocio").show();
@@ -391,6 +413,14 @@ var SocioView = Backbone.View.extend({
         });
 
 
+    },
+
+    addServiceRecurrent: function(){
+        console.log("ADD SR");
+    },
+
+    removeServiceRecurrent: function(){
+        console.log("Remove SR");
     },
 
     kill: function(){

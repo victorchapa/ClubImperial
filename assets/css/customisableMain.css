@@ -71,7 +71,7 @@ ul#bigMenu li:hover {
   text-decoration: underline;
 }
 
-.memoField {
+.memoField, .memoFieldServices {
   width: 90%;
   height: 100px;
   border: 1px solid silver;
@@ -85,13 +85,13 @@ ul#bigMenu li:hover {
   height: 75px;
 }
 
-.nombrePariente {
+.nombrePariente, .nombreService {
   margin: 0px;
   cursor: pointer;
   margin-left: 2px;
 }
 
-p.nombrePariente.selected {
+p.nombrePariente.selected, p.nombreService.selected {
   background-color: #5882FA;
 }
 
@@ -296,7 +296,7 @@ input[type="file"].display-none {
   margin-right: 5px;
 }
 
-.btnGroupII a {
+.btnGroupII a, .btnGroupIII a {
   margin: 10px 10px 0 10px;
 }
 

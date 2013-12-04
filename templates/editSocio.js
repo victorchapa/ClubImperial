@@ -91,7 +91,7 @@ TEMPLATES.editSocio =
                     "<% } %>" +
                     "</p>" +
             "</div>" +
-            "<div class='col-md-10'>" +
+            "<div class='col-md-5'>" +
                 "<div class='memoField'>Parientes: </div>" +
                     "<div class='btnGroupII'>" +
                         "<a class='btn btnAddPari btn-default glyphicons btn-icon user_add'><i></i>Agregar Pariente</a>" + 
@@ -101,6 +101,14 @@ TEMPLATES.editSocio =
                 "<div class='btnGroup'>" +
                     "<p><input class='btn btn-success' type='submit' value='Guardar'></p>" +
                 "</div>" +
+            "</div>" +
+            "<div class='col-md-5'>" +
+                "<div class='memoFieldServices'>Servicios Recurrentes: </div>" +
+                    "<div class='btnGroupIII'>" +
+                        "<a class='btn btnAddSR btn-default glyphicons btn-icon plus'><i></i>Agregar Servicio</a>" + 
+                        "<a class='btn btnDelSR btn-default glyphicons btn-icon minus' disabled><i></i>Eliminar Servicio</a>" + 
+                    "</div>" +
+                "<div class='btnGroup'>" +
             "</div>" +
             "</form>" +
         "</div>" +

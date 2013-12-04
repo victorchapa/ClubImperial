@@ -570,6 +570,7 @@
   <script src="assets/js/app/collections/servicios.js"></script>
   <script src="assets/js/app/collections/resumenTable.js"></script>
   <script src="assets/js/app/collections/serviciosR.js"></script>
+  <script src="assets/js/app/collections/userServices.js"></script>
   <!-- Models -->
   <script src="assets/js/app/models/socio.js"></script>
   <script src="assets/js/app/models/deudaSocio.js"></script>
@@ -578,6 +579,7 @@
   <script src="assets/js/app/views/addSocioView.js"></script>
   <script src="assets/js/app/views/socioView.js"></script>
   <script src="assets/js/app/views/memoParientesView.js"></script>
+  <script src="assets/js/app/views/memoServicesView.js"></script>
   <script src="assets/js/app/views/cuotasView.js"></script>
   <script src="assets/js/app/views/socioCargosView.js"></script>
   <script src="assets/js/app/views/allBalanceView.js"></script>
