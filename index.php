@@ -558,6 +558,8 @@
   <script src="templates/balance.js"></script>
   <script src="templates/cargos.js"></script>
   <script src="templates/facturesWindow.js"></script>
+  <script src="templates/formServicios.js"></script>
+  <script src="templates/allServicesTable.js"></script>
 
   <!-- Collections -->
   <script src="assets/js/app/collections/socios.js"></script>
@@ -567,6 +569,7 @@
   <script src="assets/js/app/collections/facturasSocio.js"></script>
   <script src="assets/js/app/collections/servicios.js"></script>
   <script src="assets/js/app/collections/resumenTable.js"></script>
+  <script src="assets/js/app/collections/serviciosR.js"></script>
   <!-- Models -->
   <script src="assets/js/app/models/socio.js"></script>
   <script src="assets/js/app/models/deudaSocio.js"></script>
