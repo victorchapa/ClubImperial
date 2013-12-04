@@ -8,7 +8,7 @@ TEMPLATES.recurrentes =
                 "<p>Servicio: <select name='servicio'>" +
                     "<option value='0'>Seleccione un Servicio</option>" +
                     "<% _.each(recurrentes, function(recurrente) { %>" +
-                        "<option value='<% print(recurrente.Servicio); %>' cargo='<% print(recurrente.Cargo); %>'><% print(recurrente.Servicio); %></option>" +
+                        "<option value='<% print(recurrente.IdServicio); %>' cargo='<% print(recurrente.Cargo); %>'><% print(recurrente.Servicio); %></option>" +
                     "<% }); %>" +
                 "</select></p>" +
                 "<p><input class='btn btn-success' type='submit' value='Guardar'></p>" +

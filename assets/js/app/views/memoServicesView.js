@@ -10,7 +10,6 @@ var MemoServicesView = Backbone.View.extend({
     },
 
     parientSelection: function(e){
-        console.log(e.target);
         $(".nombreService").removeClass("selected");
         $(e.target).addClass("selected");
         $(".btnDelSR").removeAttr("disabled");

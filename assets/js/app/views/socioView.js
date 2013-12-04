@@ -399,7 +399,6 @@ var SocioView = Backbone.View.extend({
                         var span = document.createElement('span');
                         span.innerHTML = ["<img src='"+e.target.result+"'>"].join('');
                         $(".photoReloadII").addClass("display-none");
-                        console.log(span);
                         document.getElementsByClassName("fotoParienteEdit")[0].insertBefore(span, null);
                     }
 
@@ -430,7 +429,6 @@ var SocioView = Backbone.View.extend({
     },
 
     removeServiceRecurrent: function(){
-        console.log("Remove SR");
         var service = $(".selected", ".memoFieldServices");
         var id = $(service).attr("idservice");
 
@@ -448,7 +446,7 @@ var SocioView = Backbone.View.extend({
                                 method: "POST",
                                 url: "api/RemoveServicio.php?id=" + id,
                             }).done(function(){
-                                $(parient).remove();
+                                $(service).remove();
                             }); 
                             notyfy({
                                 force: true,
