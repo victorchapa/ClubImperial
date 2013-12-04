@@ -9,7 +9,9 @@ var SocioView = Backbone.View.extend({
         "click .trSocio"                    : "showWindowAction",
         "click .btnAddPari"                 : "showFormAddPariente",
         "click .btnDelPari"                 : "delPariente",
-        "click .btnEditPari"                 : "editPariente",
+        "click .btnEditPari"                : "editPariente",
+        "click .btnAddSR"                   : "addServiceRecurrent",
+        "click .btnDelSR"                   : "removeServiceRecurrent",
     },
 
     clearMainNav: function(){
@@ -237,6 +239,25 @@ var SocioView = Backbone.View.extend({
                         }); 
                     }
                 });
+
+
+                var memoServicesView = new MemoServicesView(); 
+                var id = data.IdSocio;
+                var collectionServices = new UserServices(id);
+                collectionServices.fetch({
+                    success: function(data){
+                        var data = data.toJSON();
+                        _.each(data, function(service){
+                            var name = service.Servicio + " => " + service.Cargo + ".";
+                            $("<p>", {
+                                class: "nombreService",
+                                text: name,
+                                idService: service.IdCargoF,
+                                idSocio: service.IdSocio,
+                            }).appendTo(".memoFieldServices");
+                        }); 
+                    }
+                });
             },
         });
         $("#editSocio").show();
@@ -378,7 +399,6 @@ var SocioView = Backbone.View.extend({
                         var span = document.createElement('span');
                         span.innerHTML = ["<img src='"+e.target.result+"'>"].join('');
                         $(".photoReloadII").addClass("display-none");
-                        console.log(span);
                         document.getElementsByClassName("fotoParienteEdit")[0].insertBefore(span, null);
                     }
 
@@ -391,6 +411,74 @@ var SocioView = Backbone.View.extend({
         });
 
 
-    }
+    },
 
+    addServiceRecurrent: function(){
+        var template = TEMPLATES.recurrentes;
+        var compiledTemplate = _.template($(template).html());
+        var idSocio = $("input[type='hidden']", ".EditSocioForm").val(); 
+        var serviciosR = new ServiciosRCollection();
+        serviciosR.fetch({
+            success: function(data){
+                var recurrentServices = data.toJSON();
+                var data = {idSocio: idSocio, recurrentes: recurrentServices};
+                $("#modalDisplayerServicios").html(compiledTemplate(data));
+                $("#modalAddServices").modal("show");
+            },
+        });
+    },
+
+    removeServiceRecurrent: function(){
+        var service = $(".selected", ".memoFieldServices");
+        var id = $(service).attr("idservice");
+
+        $("#notyfy_container_top").notyfy({
+            text: "<h3>¿Esta seguro de eliminar el Servicio Recurrente?</h3>",
+            type: "confirm",
+            dismissQueue: true,
+            layout: "top",
+            buttons: [{
+                        addClass: "btn btn-success btn-small",
+                        text: "<i></i> Sí",
+                        onClick: function($notyfy){
+                            $notyfy.close();
+                            $.ajax({
+                                method: "POST",
+                                url: "api/RemoveServicio.php?id=" + id,
+                            }).done(function(){
+                                $(service).remove();
+                            }); 
+                            notyfy({
+                                force: true,
+                                text: "<h4 style='color: white'>Servicio eliminado Exitosamente</h4>",
+                                type: "success",
+                                layout: "top",
+                            });
+                        },
+                    },
+                    {
+                        addClass: "btn btn-danger btn-small",
+                        text: "Cancelar",
+                        onClick: function($notyfy){
+                            $notyfy.close();
+                            notyfy({
+                                force: true,
+                                text: "<h4 style='color: white'>Se ha cancelado la eliminación del Servicio Recurrente</h4>",
+                                type: "error",
+                                layout: "top",
+                            })
+                        },
+                    }]
+        });
+    },
+
+    kill: function(){
+        this.remove();
+        //this.off();
+        //this.model.off(null, null, this);
+
+        var div = document.createElement("div");
+        div.id = "mainDisplayer";
+        $(".rigthPanel").append(div);
+    },
 });

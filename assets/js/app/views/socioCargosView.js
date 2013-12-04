@@ -42,18 +42,26 @@ var SocioCargosView = Backbone.View.extend({
 
         var facturasSocio = new FacturasSocio(this.socioId);
         var deudaSocio = new DeudaSocio(this.socioId);
+        var resumenSocio = new ResumenTableCollection(this.socioId);
         facturasSocio.fetch({
             success: function(data){
                 var facturas = data.toJSON();
                 deudaSocio.fetch({
                     success: function(data){
                         var data = data.toJSON();
-                        deuda = data[0];
+                        var deuda = data[0];
 
-                        var template = TEMPLATES.cargos;
-                        var compiledTemplate = _.template($(template).html());
-                        var socio = {facturas: facturas, deuda: deuda};
-                        $("#factures").html(compiledTemplate(socio));
+                        resumenSocio.fetch({
+                            success: function(data){
+                                var data = data.toJSON();
+                                var resumen = data[0];
+
+                                var template = TEMPLATES.cargos;
+                                var compiledTemplate = _.template($(template).html());
+                                var socio = {facturas: facturas, deuda: deuda, resumen: resumen};
+                                $("#factures").html(compiledTemplate(socio));
+                            },
+                        });
                     },
                 });
 

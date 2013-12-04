@@ -232,6 +232,14 @@
           </ul>
           <span class="count">2</span>
         </li>
+        <li class="hasSubmenu">
+          <a class="glyphicons wallet" href="#menu_servicios" data-toggle="collapse"><i></i><span>Servicios</span></a>
+          <ul class="collapse" id="menu_servicios">
+            <li><a href="#servicios/create" class="glyphicons plus"><i></i><span>Crear Servicio</span></a></li>
+            <li><a href="#servicios/watch" class="glyphicons table"><i></i><span>Ver Servicios</span></a></li>
+          </ul>
+          <span class="count">2</span>
+        </li>
 			</ul>
 			<div class="clearfix"></div>
 			<div class="separator bottom"></div>
@@ -426,6 +434,22 @@
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<div class="modal fade" id="modalAddServices">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title">Favor de agregar el Servicio Recurrente al Socio</h4>
+			</div>
+			<div  id="modalDisplayerServicios" class="modal-body">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <ul id="notyfy_container_top" class="notyfy_container"><!-- Notyfier -->
 
 	<!-- JQuery -->
@@ -550,6 +574,10 @@
   <script src="templates/balance.js"></script>
   <script src="templates/cargos.js"></script>
   <script src="templates/facturesWindow.js"></script>
+  <script src="templates/formServicios.js"></script>
+  <script src="templates/allServicesTable.js"></script>
+  <script src="templates/recurrentes.js"></script>
+  <script src="templates/totales.js"></script>
 
   <!-- Collections -->
   <script src="assets/js/app/collections/socios.js"></script>
@@ -558,17 +586,24 @@
   <script src="assets/js/app/collections/balance.js"></script>
   <script src="assets/js/app/collections/facturasSocio.js"></script>
   <script src="assets/js/app/collections/servicios.js"></script>
+  <script src="assets/js/app/collections/resumenTable.js"></script>
+  <script src="assets/js/app/collections/serviciosR.js"></script>
+  <script src="assets/js/app/collections/userServices.js"></script>
   <!-- Models -->
   <script src="assets/js/app/models/socio.js"></script>
   <script src="assets/js/app/models/deudaSocio.js"></script>
+  <script src="assets/js/app/models/totales.js"></script>
   <!-- Views -->
   <script src="assets/js/app/views/indexView.js"></script>
   <script src="assets/js/app/views/addSocioView.js"></script>
   <script src="assets/js/app/views/socioView.js"></script>
   <script src="assets/js/app/views/memoParientesView.js"></script>
+  <script src="assets/js/app/views/memoServicesView.js"></script>
   <script src="assets/js/app/views/cuotasView.js"></script>
   <script src="assets/js/app/views/socioCargosView.js"></script>
   <script src="assets/js/app/views/allBalanceView.js"></script>
+  <script src="assets/js/app/views/createServiceView.js"></script>
+  <script src="assets/js/app/views/watchServicesView.js"></script>
 
 </body>
 </html>

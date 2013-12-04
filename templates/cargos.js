@@ -27,7 +27,7 @@ TEMPLATES.cargos =
       "</address>" +
     "</div>" +
   "</div>" +
-          "<table class='blue-table table-resumen table table-primary table-bordered' border='1' cellspacing='0'>" +
+          "<table class='blue-table table-factura table table-primary table-bordered' border='1' cellspacing='0'>" +
           "<thead>" +
             "<tr>" +
                 "<th>Socio</th>" +
@@ -37,12 +37,13 @@ TEMPLATES.cargos =
           "</thead>" +
           "<tbody>" +
             "<tr>" +
-              "<td>$<% print(resumen.Nombre); %></td>" +
+              "<td><% print(resumen.Nombre); %></td>" +
               "<td>$<% print(resumen.SaldoAnt); %></td>" +
               "<td>$<% print(resumen.SaldoAct); %></td>" +
             "</tr>" +
           "</tbody>" +
           "</table>" +
+          "<h4>Detalles de Operaciones</h4>" +
           "<table class='blue-table table-factura table table-primary table-bordered' border='1' cellspacing='0'>" +
           "<thead>" +
             "<tr>" +
