@@ -10,5 +10,5 @@
 		$add = add("INSERT INTO recurrentes (Servicio, Cargo)	VALUES ('$servicio', '$cargo')");
 	}
 
-	echo "<script type=text/javascript>window.location.href=\"../index.php\";</script>";
+	echo "<script type=text/javascript>window.location.href=\"../index.php#servicios/watch\";</script>";
 ?>
