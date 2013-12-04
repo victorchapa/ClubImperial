@@ -108,7 +108,8 @@
 		<!-- Top navbar -->
 		<div class="navbar main hidden-print">
 			<!-- Brand -->
-			<a href="index2.php" class="appbrand pull-left"><span>Club Valle Imperial <span>v1.0</span></span></a>
+			<a class="img logo-valle"><img src="assets/img/logoValle.png" alt="Logo Valle" /></a>
+			<a href="index.php" class="appbrand pull-left"><span>Sistema Integral Club Imperial <span>v1.0</span></span></a>
 						<!-- Top Menu -->
 			<ul class="topnav pull-left tn1">
 			</ul>

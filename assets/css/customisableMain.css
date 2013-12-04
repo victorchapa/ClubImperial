@@ -2,6 +2,21 @@
   display: none;
 }
 
+.navbar.main a.img.logo-valle {
+  margin-top: 4px;
+  border: 2px solid #696765;
+  display: block;
+  width: 55px;
+  float: left;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.navbar.main .appbrand {
+  width: 255px;
+}
+
 #content {
   min-height: 600px;
 }
