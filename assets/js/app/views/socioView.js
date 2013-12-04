@@ -252,7 +252,7 @@ var SocioView = Backbone.View.extend({
                             $("<p>", {
                                 class: "nombreService",
                                 text: name,
-                                idPariente: service.IdCargoF,
+                                idService: service.IdCargoF,
                                 idSocio: service.IdSocio,
                             }).appendTo(".memoFieldServices");
                         }); 
@@ -431,6 +431,47 @@ var SocioView = Backbone.View.extend({
 
     removeServiceRecurrent: function(){
         console.log("Remove SR");
+        var service = $(".selected", ".memoFieldServices");
+        var id = $(service).attr("idservice");
+
+        $("#notyfy_container_top").notyfy({
+            text: "<h3>¿Esta seguro de eliminar el Servicio Recurrente?</h3>",
+            type: "confirm",
+            dismissQueue: true,
+            layout: "top",
+            buttons: [{
+                        addClass: "btn btn-success btn-small",
+                        text: "<i></i> Sí",
+                        onClick: function($notyfy){
+                            $notyfy.close();
+                            $.ajax({
+                                method: "POST",
+                                url: "api/RemoveServicio.php?id=" + id,
+                            }).done(function(){
+                                $(parient).remove();
+                            }); 
+                            notyfy({
+                                force: true,
+                                text: "<h4 style='color: white'>Servicio eliminado Exitosamente</h4>",
+                                type: "success",
+                                layout: "top",
+                            });
+                        },
+                    },
+                    {
+                        addClass: "btn btn-danger btn-small",
+                        text: "Cancelar",
+                        onClick: function($notyfy){
+                            $notyfy.close();
+                            notyfy({
+                                force: true,
+                                text: "<h4 style='color: white'>Se ha cancelado la eliminación del Servicio Recurrente</h4>",
+                                type: "error",
+                                layout: "top",
+                            })
+                        },
+                    }]
+        });
     },
 
     kill: function(){
