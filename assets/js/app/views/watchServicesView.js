@@ -5,7 +5,42 @@ var WatchServicesView = Backbone.View.extend({
     events: {},
 
     initialize: function(){
-        console.log("Ver el Socio");
+        var self = this;
+        this.clearMainNav();
+        
+        var servicios = new ServiciosCollection();
+        var serviciosR = new ServiciosRCollection();
+
+        serviciosR.fetch({
+            success: function(data){
+                var recurrentServices = data.toJSON();
+                servicios.fetch({
+                    success: function(data){
+                        var normalServices = data.toJSON();
+                        var allServices = {recurrentes: recurrentServices, normales: normalServices};
+                        self.render(allServices);
+                    }
+                });
+            },
+        });
+    },
+
+    clearMainNav: function(){
+        var targets = $("#miniMenu li");
+        _.each(targets, function(target){
+            $(target).removeClass("active");
+        });
+        $("#miniMenu li:nth-child(4)").addClass("active");
+        $("#activityR").removeClass("in").addClass("collapse");
+        $(".heading-mosaic").text("Lista de Servicios");
+    },
+
+    render: function(allServices){
+        console.log(allServices);
+        var template = TEMPLATES.allServicesTable;
+        var compiledTemplate = _.template($(template).html());
+        $("#mainDisplayer").html(compiledTemplate(allServices));
+
     },
 
     kill: function(){

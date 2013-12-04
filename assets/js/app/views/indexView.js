@@ -1,6 +1,6 @@
 var IndexView = Backbone.View.extend({
     
-    el: ".mainNav",
+    el: "#mainDisplayer", 
 
     events:{
         "click ul li"   :   "render", 
@@ -35,6 +35,16 @@ var IndexView = Backbone.View.extend({
         });
 
         $("#activityR").removeClass("in").addClass("collapse");
+    },
+
+    kill: function(){
+       this.remove();
+       //this.off();
+       //this.model.off(null, null, this);
+
+        var div = document.createElement("div");
+        div.id = "mainDisplayer";
+        $(".rigthPanel").append(div);
     },
     
 });
