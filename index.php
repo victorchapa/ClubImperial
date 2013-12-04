@@ -577,6 +577,7 @@
   <script src="templates/formServicios.js"></script>
   <script src="templates/allServicesTable.js"></script>
   <script src="templates/recurrentes.js"></script>
+  <script src="templates/totales.js"></script>
 
   <!-- Collections -->
   <script src="assets/js/app/collections/socios.js"></script>
@@ -591,6 +592,7 @@
   <!-- Models -->
   <script src="assets/js/app/models/socio.js"></script>
   <script src="assets/js/app/models/deudaSocio.js"></script>
+  <script src="assets/js/app/models/totales.js"></script>
   <!-- Views -->
   <script src="assets/js/app/views/indexView.js"></script>
   <script src="assets/js/app/views/addSocioView.js"></script>

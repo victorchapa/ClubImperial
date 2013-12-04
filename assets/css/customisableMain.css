@@ -277,6 +277,15 @@ input[type="file"].display-none {
   width: 90%;
 }
 
+.blue-table.table-totales {
+  margin: 10px 0 10px 10px;
+  width: 98%;
+}
+
+.blue-table.table-totales tbody tr td {
+  text-align: center;
+}
+
 .blue-table.table-factura .Addabono {
   width: 230px;
 }

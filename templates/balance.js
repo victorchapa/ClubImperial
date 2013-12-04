@@ -6,6 +6,7 @@ TEMPLATES.balance =
             "<div class='tableContent'>" +
             "<table id='balanceTable' class='dynamicTable colVis table table-striped table-bordered table-condensed table-white dataTable'></table>" +
             "</div>" +
+            "<div class='totalTable'></div>" +
             "<div class='emergentWindow actionsSocio'>" +
                 "<div class='idSocio'>" +
                     "<span class='display-none spanIdSocio'></span>" +

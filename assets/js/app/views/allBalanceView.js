@@ -82,6 +82,19 @@ var AllBalanceView = Backbone.View.extend({
         $("#balanceTable tbody").on("click", function(e){
             self.showWindowAction(e);
         });
+
+        var totales = new TotalesModel();
+        totales.fetch({
+            success: function(data){
+                var data = data.toJSON();
+                var template = TEMPLATES.totales;
+                var compiledTemplate = _.template($(template).html());
+                var values = {cargoTotal: data[0], depositoTotal: data[1]};
+                $(".totalTable").html(compiledTemplate(values));
+
+            },
+        });
+
     },
 
     clearMainNav: function(){
